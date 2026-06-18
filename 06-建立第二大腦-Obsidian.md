@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #04：建立第二大腦 Obsidian
+# OpenCode 懶人包 #06：建立第二大腦 Obsidian
 
 > 版本：v0.3
 > 更新日期：2026-06-18

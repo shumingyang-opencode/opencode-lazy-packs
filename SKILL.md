@@ -9,7 +9,7 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 
 ## 步驟一：認識可用懶人包
 
-這個 repo 的 `skills/` 目錄下有 11 個技能。全部支援 `npx skills add` 一鍵安裝。
+這個 repo 的 `skills/` 目錄下有 13 個技能。全部支援 `npx skills add` 一鍵安裝。
 
 | 編號 | Skill 名稱 | 說明 | 前置需求 |
 |------|-----------|------|---------|
@@ -17,13 +17,15 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 | 01 | `01-notebooklm` | 連接 NotebookLM MCP | #00 |
 | 02 | `02-github` | 連接 GitHub CLI + 驗證 push | #00 |
 | 03 | `03-svn` | 連接公司 SVN | 公司內網 |
-| 04 | `04-obsidian` | 連接 Obsidian MCPVault | 有 Obsidian vault |
-| 05 | `05-second-brain` | 建立第二大腦三層結構 | Obsidian |
-| 06 | `06-firebase` | 連接 Firebase MCP | #00 |
-| 07 | `07-browser` | 安裝 Playwright + open-computer-use | #00 |
-| 08 | `08-workflow-skills` | 安裝開工/收工/初始化技能 | Obsidian |
-| 09 | `09-draw` | 安裝 draw 生圖技能（gpt-image-2）| OpenAI API Key |
-| 10 | `10-install-all` | 一次安裝全部（依序執行以上 10 個）| — |
+| 04 | `04-gitlab-internal` | 連接公司 GitLab（SSH） | 公司內網 |
+| 05 | `05-gitlab-personal` | 連接個人 GitLab（HTTPS+PAT） | GitLab 帳號 |
+| 06 | `06-obsidian` | 連接 Obsidian MCPVault | 有 Obsidian vault |
+| 07 | `07-second-brain` | 建立第二大腦三層結構 | Obsidian |
+| 08 | `08-firebase` | 連接 Firebase MCP | #00 |
+| 09 | `09-browser` | 安裝 Playwright + open-computer-use | #00 |
+| 10 | `10-workflow-skills` | 安裝開工/收工/初始化技能 | Obsidian |
+| 11 | `11-draw` | 安裝 draw 生圖技能（gpt-image-2）| OpenAI API Key |
+| 12 | `12-install-all` | 一次安裝全部（依序執行以上 12 個）| — |
 
 ## 步驟二：讓使用者選擇
 
@@ -33,7 +35,7 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 以上是這份懶人包的所有項目。
 
 你可以：
-- 輸入「全部」→ 一次安裝全部（用 09-install-all）
+- 輸入「全部」→ 一次安裝全部（用 12-install-all）
 - 輸入編號組合 → 例如「00, 01, 03」只裝這三個
 - 若有已安裝的項目 → 告訴我跳過
 

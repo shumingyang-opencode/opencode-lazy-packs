@@ -18,7 +18,7 @@
 
 AI 會自動：
 1. 讀取 repo 的 `SKILL.md`（安裝入口）
-2. 列出 11 個懶人包
+2. 列出 12 個懶人包
 3. 問你要裝哪些（可以選「全部」或特定編號）
 4. 自動安裝你選的項目
 
@@ -36,13 +36,15 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 | `01-notebooklm` | 連接 NotebookLM |
 | `02-github` | 連接 GitHub |
 | `03-svn` | 連接公司 SVN |
-| `04-obsidian` | 連接 Obsidian |
-| `05-second-brain` | 第二大腦設定 |
-| `06-firebase` | 連接 Firebase |
-| `07-browser` | 瀏覽器控制 |
-| `08-workflow-skills` | 開工/收工技能 |
-| `09-draw` | 生圖技能 |
-| `10-install-all` | 一次全部安裝 |
+| `04-gitlab-internal` | 連接公司 GitLab |
+| `05-gitlab-personal` | 連接個人 GitLab |
+| `06-obsidian` | 連接 Obsidian |
+| `07-second-brain` | 第二大腦設定 |
+| `08-firebase` | 連接 Firebase |
+| `09-browser` | 瀏覽器控制 |
+| `10-workflow-skills` | 開工/收工技能 |
+| `11-draw` | 生圖技能 |
+| `12-install-all` | 一次全部安裝 |
 
 安裝後對 OpenCode 說該技能對應的關鍵字即可啟動。
 
@@ -85,12 +87,14 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 | 01 | [連接 NotebookLM](01-連接-NotebookLM.md) | — | v0.2 | 安裝 NotebookLM MCP + 產生簡報與圖表 |
 | 02 | [連接 GitHub](02-連接-GitHub.md) | — | v0.1 | GitHub CLI 登入 + Pages 教材上線 |
 | 03 | [連接公司 SVN](03-連接-公司SVN.md) | — | v0.2 | 連接 OmniVision 內部 SVN 伺服器 |
-| 04 | [建立第二大腦 Obsidian](04-建立第二大腦-Obsidian.md) | — | v0.3 | Obsidian MCPVault 連接 |
-| 05 | [第二大腦設定指南](05-第二大腦設定指南.md) | — | v0.2 | 三層結構 + AGENTS.md + 模板 |
-| 06 | [連接 Firebase](06-連接-Firebase.md) | — | v0.1 | Firebase MCP 安裝 |
-| 07 | [安裝瀏覽器控制](07-安裝瀏覽器控制.md) | — | v0.3 | Playwright MCP + open-computer-use |
-| 08 | [開工/收工/初始化技能](08-開工收工初始化技能.md) | — | v0.1 | 全域三技能：startup、shutdown、project-init |
-| 09 | [生圖技能](09-生圖.md) | — | v0.3 | draw skill：OpenAI gpt-image-2 生圖 |
+| 04 | [連接公司 GitLab](04-連接-公司GitLab.md) | — | v0.1 | 透過 SSH 連接內部 GitLab |
+| 05 | [連接個人 GitLab](05-連接-個人GitLab.md) | — | v0.1 | 透過 HTTPS + PAT 連接 GitLab.com |
+| 06 | [建立第二大腦 Obsidian](06-建立第二大腦-Obsidian.md) | — | v0.3 | Obsidian MCPVault 連接 |
+| 07 | [第二大腦設定指南](07-第二大腦設定指南.md) | — | v0.2 | 三層結構 + AGENTS.md + 模板 |
+| 08 | [連接 Firebase](08-連接-Firebase.md) | — | v0.1 | Firebase MCP 安裝 |
+| 09 | [安裝瀏覽器控制](09-安裝瀏覽器控制.md) | — | v0.3 | Playwright MCP + open-computer-use |
+| 10 | [開工/收工/初始化技能](10-開工收工初始化技能.md) | — | v0.1 | 全域三技能：startup、shutdown、project-init |
+| 11 | [生圖技能](11-生圖.md) | — | v0.3 | draw skill：OpenAI gpt-image-2 生圖 |
 
 ---
 

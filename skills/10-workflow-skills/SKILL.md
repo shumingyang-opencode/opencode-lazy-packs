@@ -21,7 +21,7 @@ mkdir -p ~/.config/opencode/skills/project-init
 - **shutdown**：說「收工」→ Git commit/push + Obsidian 同步 + chezmoi
 - **project-init**：說「初始化專案」→ AGENTS.md + Git + GitHub + Obsidian
 
-（完整內容見原懶人包 #07）
+（完整內容見原懶人包 #09）
 
 ### 3. 設定 opencode.json 權限
 ```json
