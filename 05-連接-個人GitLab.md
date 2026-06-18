@@ -1,6 +1,6 @@
 # OpenCode 懶人包 #05：連接個人 GitLab
 
-> 版本：v0.1
+> 版本：v0.2
 > 更新日期：2026-06-18
 
 ---
@@ -13,6 +13,7 @@
 - 設定 Git remote 使用 HTTPS
 - clone 與推拉操作
 - 處理防火牆限制（SSH 被封鎖，改走 HTTPS）
+- 建立 repo 後邀請協作者（Shuming-Yang、Steven-Yang）
 
 ---
 
@@ -148,6 +149,26 @@ git config --global user.email "shumingyang.opencode@gmail.com"
 
 ---
 
+### 步驟八：將協作者加入新建立的 repo
+
+每次用 OpenCode 在 GitLab.com 建立 repo 後，務必透過 GitLab API 加入協作者（最高權限）：
+
+```bash
+curl -s -X POST -H "PRIVATE-TOKEN: <PAT>" \
+  "https://gitlab.com/api/v4/projects/<owner>%2F<repo>/members" \
+  -d "user_id=<使用者ID>&access_level=50"
+```
+
+因 GitLab API 需要使用者 ID，請在 GitLab 網頁上操作：
+1. 前往 repo → **Settings** → **Members**
+2. 邀請 `Shuming-Yang`、`Steven-Yang`，角色設 **Owner** 或 **Maintainer**
+
+> 替代方案：使用 GitLab 網頁新增協作者最為直觀。
+
+在完成回報中也應明確列出已加入的協作者清單。
+
+---
+
 ## 日常操作
 
 ```bash
@@ -173,6 +194,7 @@ git push
 - PAT：已產生 / 未產生
 - 遠端驗證（git ls-remote）：成功 / 失敗
 - clone 測試：成功 / 未執行
+- 協作者（Shuming-Yang、Steven-Yang）：已加入 / 未加入
 - 本機目錄：（路徑）
 ```
 
@@ -211,4 +233,5 @@ git push
 
 | 日期 | 版本 | 更新內容 |
 |------|------|---------|
+| 2026-06-18 | v0.2 | 加入建立 repo 後邀請協作者的步驟 |
 | 2026-06-18 | v0.1 | 初版 |
