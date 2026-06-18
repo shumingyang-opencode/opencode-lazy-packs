@@ -17,13 +17,13 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 | 01 | `01-notebooklm` | 連接 NotebookLM MCP | #00 |
 | 02 | `02-github` | 連接 GitHub CLI + 驗證 push | #00 |
 | 03 | `03-svn` | 連接公司 SVN | 公司內網 |
-| 04 | `03-obsidian` | 連接 Obsidian MCPVault | 有 Obsidian vault |
-| 05 | `04-second-brain` | 建立第二大腦三層結構 | Obsidian |
-| 06 | `05-firebase` | 連接 Firebase MCP | #00 |
-| 07 | `06-browser` | 安裝 Playwright + open-computer-use | #00 |
-| 08 | `07-workflow-skills` | 安裝開工/收工/初始化技能 | Obsidian |
-| 09 | `08-draw` | 安裝 draw 生圖技能（gpt-image-2）| OpenAI API Key |
-| 10 | `09-install-all` | 一次安裝全部（依序執行以上 10 個）| — |
+| 04 | `04-obsidian` | 連接 Obsidian MCPVault | 有 Obsidian vault |
+| 05 | `05-second-brain` | 建立第二大腦三層結構 | Obsidian |
+| 06 | `06-firebase` | 連接 Firebase MCP | #00 |
+| 07 | `07-browser` | 安裝 Playwright + open-computer-use | #00 |
+| 08 | `08-workflow-skills` | 安裝開工/收工/初始化技能 | Obsidian |
+| 09 | `09-draw` | 安裝 draw 生圖技能（gpt-image-2）| OpenAI API Key |
+| 10 | `10-install-all` | 一次安裝全部（依序執行以上 10 個）| — |
 
 ## 步驟二：讓使用者選擇
 
