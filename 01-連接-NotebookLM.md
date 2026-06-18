@@ -136,7 +136,8 @@ nlm doctor
 ```
 
 > ⚠️ **重要：路徑陷阱！**
-> 電腦上可能同時存在兩個 `notebooklm-mcp.exe`：
+>
+> **Windows：** 電腦上可能同時存在兩個 `notebooklm-mcp.exe`：
 > - ✅ **正確**：pip/uv 安裝的，位於 `Python3xx\Scripts\notebooklm-mcp.exe`（或 uv 的 bin 目錄）
 > - ❌ **錯誤**：獨立的 `.local\bin\notebooklm-mcp.EXE`，此為 PyInstaller 打包的獨立執行檔，**已損壞**，會報 `ModuleNotFoundError: No module named 'notebooklm_tools'`
 >
@@ -147,6 +148,8 @@ nlm doctor
 > where notebooklm-mcp.exe   (Windows)
 > which notebooklm-mcp       (macOS/Linux)
 > ```
+>
+> **macOS / Linux：** 無此問題，直接使用 `which notebooklm-mcp` 取得的唯一路徑即可。
 
 ---
 
@@ -210,7 +213,9 @@ Documents/
 復原步驟：
 1. 從 `opencode.json` 的 `mcp` 區塊移除 `notebooklm` 項目
 2. 移除 nlm：`uv tool uninstall notebooklm-mcp-cli`（或 `pip uninstall notebooklm-mcp-cli`）
-3. 清除登入：`nlm logout`（或刪除 `~\.notebooklm-mcp-cli\` 目錄）
+3. 清除登入：`nlm logout`
+   - Windows：或刪除 `~\.notebooklm-mcp-cli\` 目錄
+   - macOS / Linux：或刪除 `~/.notebooklm-mcp-cli/` 目錄
 4. 從步驟零重新開始
 
 ---
@@ -227,7 +232,7 @@ Documents/
 | `ModuleNotFoundError: No module named 'notebooklm_tools'` | ❌ 你用的是 `.local\bin\` 中損壞的獨立 exe！改用 pip/uv 安裝的版本 |
 | opencode.json 格式錯誤 | JSON 最後一項不能有逗號；確認 `mcp` 在頂層，不要巢狀到其他項目裡 |
 | Windows 上指令格式錯誤 | 使用 PowerShell，不要用 CMD |
-| `nlm list` 在 Windows 顯示亂碼 | 設定 `$env:PYTHONIOENCODING = "utf-8"`，這是已知的 cp950 編碼問題，不影響功能 |
+| `nlm list` 顯示亂碼 | Windows 限定：設定 `$env:PYTHONIOENCODING = "utf-8"`，這是 cp950 編碼問題，不影響功能 |
 
 ---
 

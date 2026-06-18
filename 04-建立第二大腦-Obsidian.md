@@ -1,7 +1,7 @@
-# OpenCode 懶人包 #03：建立第二大腦 Obsidian
+# OpenCode 懶人包 #04：建立第二大腦 Obsidian
 
-> 版本：v0.2
-> 更新日期：2026-05-25
+> 版本：v0.3
+> 更新日期：2026-06-18
 
 ---
 
@@ -26,19 +26,30 @@
 
 ### 步驟一：找到使用者的 Obsidian vault
 
-先問使用者筆記本位置。常見位置：
+先問使用者筆記本位置。
 
-| 同步方式 | 常見路徑 |
-|----------|----------|
-| OneDrive | `C:\Users\<你>\OneDrive\文件\<vault名稱>` |
-| Google Drive | `G:\我的雲端硬碟\<vault名稱>` |
-| Documents | `C:\Users\<你>\Documents\<vault名稱>` |
+常見位置：
+
+| 平台 | 常見路徑 |
+|------|----------|
+| Windows | `C:\Users\<你>\Documents\<vault名稱>` |
+| Windows（OneDrive） | `C:\Users\<你>\OneDrive\文件\<vault名稱>` |
+| macOS | `~/Documents/<vault名稱>` |
+| macOS（iCloud） | `~/Library/Mobile Documents/com~apple~CloudDocs/<vault名稱>` |
 
 如果不知道，可搜尋：
-```bash
-# Windows（PowerShell）
+
+**Windows（PowerShell）：**
+```powershell
 Get-ChildItem -Path "$env:USERPROFILE\OneDrive" -Recurse -Directory -Force |
   Where-Object { Test-Path (Join-Path $_.FullName ".obsidian") }
+```
+
+**macOS：**
+```bash
+mdfind "kMDItemFSName == '.obsidian'" | head -20
+# 或
+find ~/Documents -name ".obsidian" -type d 2>/dev/null
 ```
 
 確認條件：
@@ -55,11 +66,14 @@ npm install -g @bitbonsai/mcpvault
 ```
 
 確認安裝位置：
-```bash
-# Windows
-where.exe mcpvault
 
-# macOS / Linux
+**Windows：**
+```bash
+where.exe mcpvault
+```
+
+**macOS / Linux：**
+```bash
 which mcpvault
 ```
 
@@ -81,13 +95,26 @@ which mcpvault
 }
 ```
 
-Windows 範例：
+**Windows 範例：**
 ```json
 {
   "mcp": {
     "obsidian": {
       "type": "local",
-      "command": ["npx", "@bitbonsai/mcpvault", "C:\\Users\\mathr\\OneDrive\\文件\\Secondbrain"],
+      "command": ["npx", "@bitbonsai/mcpvault", "C:\\Users\\mathr\\Documents\\Secondbrain"],
+      "enabled": true
+    }
+  }
+}
+```
+
+**macOS 範例：**
+```json
+{
+  "mcp": {
+    "obsidian": {
+      "type": "local",
+      "command": ["npx", "@bitbonsai/mcpvault", "/Users/mathr/Documents/Secondbrain"],
       "enabled": true
     }
   }
@@ -153,11 +180,12 @@ cli-anything-obsidian note get "專案工作流程.md"
 
 ## 常見問題
 
-| 問題 | 解法 |
-|------|------|
-| `npm install -g` 出現 EPERM | Windows 以系統管理員身分執行 |
-| 找不到 vault | 搜尋 `.obsidian` 資料夾位置 |
-| opencode.json 格式錯誤 | JSON 最後一項不能有逗號，路徑雙引號 |
+| 問題 | 平台 | 解法 |
+|------|------|------|
+| `npm install -g` 出現 EPERM | Windows | 以系統管理員身分執行 |
+| `npm install -g` 出現 EACCES | macOS | 使用 `sudo npm install -g` 或設定 npm prefix |
+| 找不到 vault | 通用 | 搜尋 `.obsidian` 資料夾位置（見步驟一） |
+| opencode.json 格式錯誤 | 通用 | JSON 最後一項不能有逗號，路徑需加雙引號 |
 
 ---
 
@@ -165,5 +193,6 @@ cli-anything-obsidian note get "專案工作流程.md"
 
 | 日期 | 版本 | 更新內容 |
 |------|------|---------|
+| 2026-06-18 | v0.3 | 拆分 Windows/macOS 章節，加入 macOS 專屬路徑與搜尋指令 |
 | 2026-05-25 | v0.2 | 補充 CLI-Anything Obsidian CLI 進階方案 |
 | 2026-05-19 | v0.1 | 初版 |

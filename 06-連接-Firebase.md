@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #05：連接 Firebase
+# OpenCode 懶人包 #06：連接 Firebase
 
 > 版本：v0.1
 > 更新日期：2026-05-19
