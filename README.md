@@ -18,7 +18,7 @@
 
 AI 會自動：
 1. 讀取 repo 的 `SKILL.md`（安裝入口）
-2. 列出 10 個懶人包
+2. 列出 11 個懶人包
 3. 問你要裝哪些（可以選「全部」或特定編號）
 4. 自動安裝你選的項目
 
@@ -35,6 +35,7 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 | `00-env-setup` | 環境建置 |
 | `01-notebooklm` | 連接 NotebookLM |
 | `02-github` | 連接 GitHub |
+| `03-svn` | 連接公司 SVN |
 | `03-obsidian` | 連接 Obsidian |
 | `04-second-brain` | 第二大腦設定 |
 | `05-firebase` | 連接 Firebase |
@@ -80,15 +81,16 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 
 | 編號 | 名稱 | 對應影片 | 狀態 | 說明 |
 |------|------|---------|------|------|
-| 00 | [環境建置](00-環境建置.md) | — | v0.1 | 安裝 OpenCode、Node.js、Git、GitHub CLI、uv |
-| 01 | [連接 NotebookLM](01-連接-NotebookLM.md) | — | v0.1 | 安裝 NotebookLM MCP + 產生簡報與圖表 |
+| 00 | [環境建置](00-環境建置.md) | — | v0.3 | 安裝 OpenCode、Node.js、uv |
+| 01 | [連接 NotebookLM](01-連接-NotebookLM.md) | — | v0.2 | 安裝 NotebookLM MCP + 產生簡報與圖表 |
 | 02 | [連接 GitHub](02-連接-GitHub.md) | — | v0.1 | GitHub CLI 登入 + Pages 教材上線 |
-| 03 | [建立第二大腦 Obsidian](03-建立第二大腦-Obsidian.md) | — | v0.1 | Obsidian MCPVault 連接 |
-| 04 | [第二大腦設定指南](04-第二大腦設定指南.md) | — | v0.1 | 三層結構 + AGENTS.md + 模板 |
-| 05 | [連接 Firebase](05-連接-Firebase.md) | — | v0.1 | Firebase MCP 安裝 |
-| 06 | [安裝瀏覽器控制](06-安裝瀏覽器控制.md) | — | v0.1 | Playwright MCP + open-computer-use |
-| 07 | [開工/收工/初始化技能](07-開工收工初始化技能.md) | — | v0.1 | 全域三技能：startup、shutdown、project-init |
-| 08 | [生圖技能](08-生圖.md) | — | v0.1 | draw skill：OpenAI gpt-image-2 生圖 |
+| 03 | [連接公司 SVN](03-連接-公司SVN.md) | — | v0.2 | 連接 OmniVision 內部 SVN 伺服器 |
+| 04 | [建立第二大腦 Obsidian](04-建立第二大腦-Obsidian.md) | — | v0.3 | Obsidian MCPVault 連接 |
+| 05 | [第二大腦設定指南](05-第二大腦設定指南.md) | — | v0.2 | 三層結構 + AGENTS.md + 模板 |
+| 06 | [連接 Firebase](06-連接-Firebase.md) | — | v0.1 | Firebase MCP 安裝 |
+| 07 | [安裝瀏覽器控制](07-安裝瀏覽器控制.md) | — | v0.3 | Playwright MCP + open-computer-use |
+| 08 | [開工/收工/初始化技能](08-開工收工初始化技能.md) | — | v0.1 | 全域三技能：startup、shutdown、project-init |
+| 09 | [生圖技能](09-生圖.md) | — | v0.3 | draw skill：OpenAI gpt-image-2 生圖 |
 
 ---
 
