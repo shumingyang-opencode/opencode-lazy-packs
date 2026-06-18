@@ -5,7 +5,7 @@ description: 連接個人 GitLab.com 帳號。說「連接個人 GitLab」「設
 
 # 連接個人 GitLab
 
-讓 OpenCode 幫你連接到 `gitlab.com`（個人帳號 `Shuming-Yang`，走 HTTPS + PAT）。
+讓 OpenCode 幫你連接到 `gitlab.com`（個人帳號 `shumingyang-opencode`，走 HTTPS + PAT）。
 
 ## 步驟
 
@@ -14,20 +14,20 @@ description: 連接個人 GitLab.com 帳號。說「連接個人 GitLab」「設
 
 ### 2. 設定 credential helper
 ```bash
-echo "https://Shuming-Yang:<PAT>@gitlab.com" > ~/.git-credentials-gitlab-com
+echo "https://shumingyang-opencode:<PAT>@gitlab.com" > ~/.git-credentials-gitlab-com
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-com"
 ```
 
 ### 3. 驗證
 ```bash
-git ls-remote https://gitlab.com/Shuming-Yang/opencode-lazy-packs.git
+git ls-remote https://gitlab.com/shumingyang-opencode/opencode-lazy-packs.git
 ```
 
 ### 4. Clone 測試
 ```bash
 mkdir -p ~/Documents/gitlab-personal
 cd ~/Documents/gitlab-personal
-git clone https://gitlab.com/Shuming-Yang/opencode-lazy-packs.git
+git clone https://gitlab.com/shumingyang-opencode/opencode-lazy-packs.git
 ```
 
 ## 日常操作
