@@ -3,7 +3,7 @@
 ## 這個資料夾是什麼
 
 OpenCode 專用的懶人包倉庫，對應 repo：
-**mathruffian-dot/opencode-lazy-packs**
+**shumingyang-opencode/opencode-lazy-packs**
 
 與 `claude-code-lazy-packs/`、`codex-lazy-packs/` 平行：
 同一套教學流程，分別給三個 AI 編碼代理使用。
@@ -23,6 +23,13 @@ OpenCode 專用的懶人包倉庫，對應 repo：
 - 修改主流程時三邊都要更新
 - Obsidian 閱讀版：`OpenCode 懶人包/`
 - GitHub 版：`opencode-lazy-packs/`
+
+## Obsidian 關聯資料
+
+- Obsidian vault：`/Users/stevenyang/Documents/obsidian/obsidian`
+- 每日筆記：`每日筆記/<日期>.md`
+- 創作庫：`創作庫/`
+- 知識庫：`知識庫/`
 
 ## 提醒
 
