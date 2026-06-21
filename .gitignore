@@ -26,3 +26,4 @@ build/
 *.key
 credentials.*
 secrets.*
+graphify-out/
