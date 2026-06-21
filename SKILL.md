@@ -9,7 +9,7 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 
 ## 步驟一：認識可用懶人包
 
-這個 repo 的 `skills/` 目錄下有 16 個技能。全部支援 `npx skills add` 一鍵安裝。
+這個 repo 的 `skills/` 目錄下有 17 個技能。全部支援 `npx skills add` 一鍵安裝。
 
 | 編號 | Skill 名稱 | 說明 | 前置需求 |
 |------|-----------|------|---------|
@@ -30,7 +30,8 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 | 14 | `14-awesome-design-md` | 安裝 Awesome DESIGN.md 品牌設計技能 | #00 |
 | 15 | `15-ui-ux-pro-max` | 安裝 UI/UX Pro Max 設計智能（67 風格、161 規則） | #00 |
 | 16 | `16-oh-my-opencode-slim` | 安裝 oh-my-opencode-slim 多 Agent 編排（7 Agent、背景任務） | #00 |
-| 99 | `99-install-all` | 一次安裝全部（依序執行以上 17 個）| — |
+| 17 | `17-find-skills` | 安裝 Find Skills — 從 5000+ 開放技能中搜尋並安裝 | 無 |
+| 99 | `99-install-all` | 一次安裝全部（依序執行以上 18 個）| — |
 
 ## 步驟二：讓使用者選擇
 

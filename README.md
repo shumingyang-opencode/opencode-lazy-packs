@@ -49,6 +49,7 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 | `14-awesome-design-md` | 品牌設計套用技能 |
 | `15-ui-ux-pro-max` | UI/UX Pro Max 設計智能 |
 | `16-oh-my-opencode-slim` | oh-my-opencode-slim 多 Agent 編排 |
+| `17-find-skills` | Find Skills — 技能搜尋與安裝 |
 | `99-install-all` | 一次全部安裝 |
 
 安裝後對 OpenCode 說該技能對應的關鍵字即可啟動。
@@ -105,6 +106,7 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 | 14 | [Awesome DESIGN.md 品牌設計](14-awesome-design-md.md) | — | v0.1 | 一鍵套用 73 個真實品牌的 DESIGN.md |
 | 15 | [UI/UX Pro Max 設計智能](15-ui-ux-pro-max.md) | — | v0.1 | 67 種 UI 風格、161 推理規則、57 字體搭配、99 UX 指南 |
 | 16 | [oh-my-opencode-slim 多 Agent 編排](16-oh-my-opencode-slim.md) | — | v0.1 | 7 專用 Agent、背景任務、TUI、Companion、7 Bundled Skills |
+| 17 | [Find Skills 技能搜尋與安裝](17-find-skills.md) | — | v0.1 | 從 5000+ 開放技能中搜尋並一鍵安裝 |
 
 ---
 
