@@ -9,7 +9,7 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 
 ## 步驟一：認識可用懶人包
 
-這個 repo 的 `skills/` 目錄下有 15 個技能。全部支援 `npx skills add` 一鍵安裝。
+這個 repo 的 `skills/` 目錄下有 16 個技能。全部支援 `npx skills add` 一鍵安裝。
 
 | 編號 | Skill 名稱 | 說明 | 前置需求 |
 |------|-----------|------|---------|
@@ -27,7 +27,8 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 | 11 | `11-draw` | 安裝 draw 生圖技能（gpt-image-2）| OpenAI API Key |
 | 12 | `12-markitdown` | 安裝 MarkItDown 文件轉換技能 | #00 |
 | 13 | `13-graphify` | 安裝 Graphify 知識圖譜技能 | #00 + uv |
-| 99 | `99-install-all` | 一次安裝全部（依序執行以上 14 個）| — |
+| 14 | `14-awesome-design-md` | 安裝 Awesome DESIGN.md 品牌設計技能 | #00 |
+| 99 | `99-install-all` | 一次安裝全部（依序執行以上 15 個）| — |
 
 ## 步驟二：讓使用者選擇
 
