@@ -48,7 +48,7 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 | `13-graphify` | 知識圖譜技能 |
 | `14-awesome-design-md` | 品牌設計套用技能 |
 | `15-ui-ux-pro-max` | UI/UX Pro Max 設計智能 |
-| `16-oh-my-opencode-slim` | oh-my-opencode-slim 多 Agent 編排 |
+| `16-superpowers` | Superpowers — 完整的 AI 軟體開發方法論（14 skills, 1.9M 安裝） |
 | `17-find-skills` | Find Skills — 技能搜尋與安裝 |
 | `18-frontend-design` | Frontend Design — 辨識度優先的前端設計 |
 | `99-install-all` | 一次全部安裝 |
@@ -106,7 +106,7 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 | 13 | [Graphify 知識圖譜](13-graphify.md) | — | v0.1 | 將專案轉為知識圖譜，用自然語言查詢取代 grep |
 | 14 | [Awesome DESIGN.md 品牌設計](14-awesome-design-md.md) | — | v0.1 | 一鍵套用 73 個真實品牌的 DESIGN.md |
 | 15 | [UI/UX Pro Max 設計智能](15-ui-ux-pro-max.md) | — | v0.1 | 67 種 UI 風格、161 推理規則、57 字體搭配、99 UX 指南 |
-| 16 | [oh-my-opencode-slim 多 Agent 編排](16-oh-my-opencode-slim.md) | — | v0.1 | 7 專用 Agent、背景任務、TUI、Companion、7 Bundled Skills |
+| 16 | [Superpowers 完整 AI 開發方法論](16-superpowers.md) | — | v6.0.3 | 14 skills、brainstorm→plan→TDD→review→merge、1.9M 安裝 |
 | 17 | [Find Skills 技能搜尋與安裝](17-find-skills.md) | — | v0.1 | 從 5000+ 開放技能中搜尋並一鍵安裝 |
 | 18 | [Frontend Design 辨識度優先前端設計](18-frontend-design.md) | — | v0.1 | Anthropic 出品 572K 安裝：拒絕 AI 模板化美學 |
 

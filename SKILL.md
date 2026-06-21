@@ -29,7 +29,7 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 | 13 | `13-graphify` | 安裝 Graphify 知識圖譜技能 | #00 + uv |
 | 14 | `14-awesome-design-md` | 安裝 Awesome DESIGN.md 品牌設計技能 | #00 |
 | 15 | `15-ui-ux-pro-max` | 安裝 UI/UX Pro Max 設計智能（67 風格、161 規則） | #00 |
-| 16 | `16-oh-my-opencode-slim` | 安裝 oh-my-opencode-slim 多 Agent 編排（7 Agent、背景任務） | #00 |
+| 16 | `16-superpowers` | 安裝 Superpowers — obra/superpowers v6.0.3（14 skills、完整 SDLC 方法論） | 無 |
 | 17 | `17-find-skills` | 安裝 Find Skills — 從 5000+ 開放技能中搜尋並安裝 | 無 |
 | 18 | `18-frontend-design` | 安裝 Frontend Design — Anthropic 出品 572K 安裝前端設計 | 無 |
 | 99 | `99-install-all` | 一次安裝全部（依序執行以上 19 個）| — |
