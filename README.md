@@ -18,7 +18,7 @@
 
 AI 會自動：
 1. 讀取 repo 的 `SKILL.md`（安裝入口）
-2. 列出 12 個懶人包
+2. 列出 13 個懶人包
 3. 問你要裝哪些（可以選「全部」或特定編號）
 4. 自動安裝你選的項目
 
@@ -44,7 +44,8 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 | `09-browser` | 瀏覽器控制 |
 | `10-workflow-skills` | 開工/收工技能 |
 | `11-draw` | 生圖技能 |
-| `12-install-all` | 一次全部安裝 |
+| `12-markitdown` | 文件轉換技能 |
+| `99-install-all` | 一次全部安裝 |
 
 安裝後對 OpenCode 說該技能對應的關鍵字即可啟動。
 
@@ -95,6 +96,7 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 | 09 | [安裝瀏覽器控制](09-安裝瀏覽器控制.md) | — | v0.3 | Playwright MCP + open-computer-use |
 | 10 | [開工/收工/初始化技能](10-開工收工初始化技能.md) | — | v0.1 | 全域三技能：startup、shutdown、project-init |
 | 11 | [生圖技能](11-生圖.md) | — | v0.3 | draw skill：OpenAI gpt-image-2 生圖 |
+| 12 | [MarkItDown 文件轉換](12-markitdown.md) | — | v0.1 | markitdown skill：各種文件轉 Markdown 格式 |
 
 ---
 

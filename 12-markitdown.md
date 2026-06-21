@@ -1,0 +1,127 @@
+# OpenCode 懶人包 #12：MarkItDown 文件轉換技能
+
+> 版本：v0.1
+> 更新日期：2026-06-21
+
+---
+
+## 這個懶人包會幫你做什麼？
+
+讓 OpenCode 可以自動將非 Markdown 文件（PDF、Word、Excel、PowerPoint、HTML、CSV、JSON、XML、圖片等）轉換為 Markdown 格式：
+
+- 安裝 MarkItDown（Microsoft 官方文件轉換工具）
+- 安裝 markitdown skill（SKILL.md + convert.py）
+- 設定 opencode.json 權限
+- 測試文件轉換
+- 完成後遇到檔案自動先轉 MD 再處理
+
+---
+
+## 先備條件
+
+- [ ] 已完成 **懶人包 #00：環境建置**
+- [ ] Python 3.10+ 已安裝
+- [ ] uv 已安裝
+
+---
+
+## 請 OpenCode 幫我執行以下步驟
+
+### 步驟一：安裝 MarkItDown 工具
+
+```bash
+uv tool install markitdown
+```
+
+確認版本：
+```bash
+markitdown --version
+```
+
+### 步驟二：安裝 markitdown skill 檔案
+
+建立目錄：
+```bash
+mkdir -p ~/.config/opencode/skills/markitdown
+```
+
+從本 repo 複製 SKILL.md：
+```bash
+curl -o ~/.config/opencode/skills/markitdown/SKILL.md https://raw.githubusercontent.com/shumingyang-opencode/opencode-lazy-packs/main/skills/12-markitdown/SKILL.md
+```
+
+複製 convert.py：
+```bash
+curl -o ~/.config/opencode/skills/markitdown/convert.py https://raw.githubusercontent.com/shumingyang-opencode/opencode-lazy-packs/main/scripts/convert.py
+```
+
+### 步驟三：設定 opencode.json 權限
+
+編輯 `~/.config/opencode/opencode.json`，在 `permission.skill` 加入：
+
+```json
+"markitdown": "allow"
+```
+
+### 步驟四：測試轉換
+
+```bash
+python ~/.config/opencode/skills/markitdown/convert.py <任意 PDF 或 DOCX 檔案路徑>
+```
+
+### 步驟五：驗證
+
+重啟 OpenCode 後提供一個 PDF 檔案給它，說：
+```
+幫我解析這個檔案
+```
+
+---
+
+## 支援的檔案格式
+
+| 格式 | 副檔名 | 支援程度 |
+|------|--------|---------|
+| PDF | .pdf | ✅ 完整支援 |
+| Word | .docx | ✅ 完整支援 |
+| Excel | .xlsx | ✅ 完整支援 |
+| PowerPoint | .pptx | ✅ 完整支援 |
+| HTML | .html, .htm | ✅ 完整支援 |
+| CSV | .csv | ✅ 完整支援 |
+| JSON | .json | ✅ 完整支援 |
+| XML | .xml | ✅ 完整支援 |
+| 圖片 | .jpg, .png, .gif, .webp | ✅ OCR 文字提取 |
+| EPUB | .epub | ✅ 完整支援 |
+| ZIP | .zip | ✅ 壓縮包內文件 |
+| Outlook 郵件 | .msg | ✅ 郵件轉換 |
+
+---
+
+## 完成回報格式
+
+```md
+## MarkItDown 技能安裝完成
+
+- MarkItDown：v<版本> ✅ / ⚠️ 已補裝
+- convert.py：✅ 已安裝 / ⚠️ 待下載
+- opencode.json 權限：✅ markitdown: allow
+- 測試轉換：✅ 成功 / ❌ 失敗
+```
+
+---
+
+## 常見問題
+
+| 問題 | 解法 |
+|------|------|
+| `markitdown` 指令找不到 | 確認 `uv tool list` 有列出 markitdown，並確認 `~/.local/bin` 在 PATH 中 |
+| 轉換中文 PDF 亂碼 | 安裝中文字型：`brew install font-noto-sans-cjk` (macOS) 或 `apt install fonts-noto-cjk` (Linux) |
+| 不支援的格式 | 確認檔案類型，或先用 `file` 指令檢查 |
+
+---
+
+## 更新紀錄
+
+| 日期 | 版本 | 更新內容 |
+|------|------|---------|
+| 2026-06-21 | v0.1 | 初版 |
