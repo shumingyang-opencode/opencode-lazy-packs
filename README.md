@@ -18,7 +18,7 @@
 
 AI 會自動：
 1. 讀取 repo 的 `SKILL.md`（安裝入口）
-2. 列出 16 個懶人包
+2. 列出 17 個懶人包
 3. 問你要裝哪些（可以選「全部」或特定編號）
 4. 自動安裝你選的項目
 
@@ -48,6 +48,7 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 | `13-graphify` | 知識圖譜技能 |
 | `14-awesome-design-md` | 品牌設計套用技能 |
 | `15-ui-ux-pro-max` | UI/UX Pro Max 設計智能 |
+| `16-ecc` | ECC 跨平台 Agent 系統 |
 | `99-install-all` | 一次全部安裝 |
 
 安裝後對 OpenCode 說該技能對應的關鍵字即可啟動。
@@ -103,6 +104,7 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 | 13 | [Graphify 知識圖譜](13-graphify.md) | — | v0.1 | 將專案轉為知識圖譜，用自然語言查詢取代 grep |
 | 14 | [Awesome DESIGN.md 品牌設計](14-awesome-design-md.md) | — | v0.1 | 一鍵套用 73 個真實品牌的 DESIGN.md |
 | 15 | [UI/UX Pro Max 設計智能](15-ui-ux-pro-max.md) | — | v0.1 | 67 種 UI 風格、161 推理規則、57 字體搭配、99 UX 指南 |
+| 16 | [ECC 跨平台 Agent 系統](16-ecc.md) | — | v0.1 | 271 技能、67 子代理、92 命令、17 規則、8+ 平台支援 |
 
 ---
 
