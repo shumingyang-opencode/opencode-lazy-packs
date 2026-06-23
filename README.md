@@ -66,6 +66,40 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 
 ---
 
+## 新功能：個人帳號與服務清單 🆕
+
+本懶人包新增 **中央帳號資訊管理系統**，讓 AI agent 自動讀取你的服務帳號，不需每次重複詢問。
+
+### 功能說明
+
+- 建立 `.md` 檔案集中管理 SVN、GitLab、GitHub、JIRA、Confluence、飛書等服務資訊
+- 所有懶人包（#02~#05、#20）在開始操作前，會先讀取此檔案
+- 資訊不足時才會詢問，問到的資料自動回寫永久留存
+
+### 如何啟用
+
+1. **複製範本**：將 `個人帳號與服務清單.sample.md` 複製為 `個人帳號與服務清單.md`
+2. **填寫資訊**：將所有 `<...>` 佔位符改為你的實際帳號資訊
+3. **放置位置**：將該檔案放在 **OpenCode 工作根目錄**（建議同時做為 Obsidian vault 根目錄）
+4. **設定全域規則**：建立 `~/.config/opencode/AGENTS.md`（內容詳見範本底部說明）
+
+### 懶人包支援一覽
+
+| 懶人包 | 自動讀取項目 |
+|--------|-------------|
+| #02 連接 GitHub | GitHub 帳號名稱 |
+| #03 連接公司 SVN | SVN URL、登入帳號 |
+| #04 連接公司 GitLab | GitLab URL、SSH 設定 |
+| #05 連接個人 GitLab | GitLab URL、認證方式 |
+| #06 建立 Obsidian | vault 根目錄路徑 |
+| #20 JIRA & Confluence | JIRA / Confluence URL |
+
+### 安全提醒
+
+PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 MCP 環境變數中。詳見範本中的「操作規範」與「安全規範」。
+
+---
+
 ## 為什麼有這份？
 
 原本的懶人包是給 Claude Code 和 OpenAI Codex 用的。OpenCode 是第三個 AI 編碼代理工具，設定方式與前兩者不同：

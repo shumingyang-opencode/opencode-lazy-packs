@@ -70,3 +70,9 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名稱> -g
 - `00-env-setup` 幾乎所有 pack 的前置，建議優先安裝
 - 已安裝的工具（如 Node.js、Git 等）安裝時會自動跳過
 - 全部 skill 內容都在 `skills/<名稱>/SKILL.md`，需要詳細步驟時直接讀取
+
+## 帳號資訊管理
+
+本 repo 提供 `個人帳號與服務清單.sample.md` 作為**中央帳號資訊範本**，可存放於 OpenCode 工作根目錄（兼 Obsidian vault），讓所有懶人包自動讀取你的 SVN、GitLab、GitHub、JIRA、Confluence、飛書等帳號資訊，不需重複詢問。
+
+詳見 README.md 的「新功能：個人帳號與服務清單」一節。
