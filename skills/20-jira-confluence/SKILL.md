@@ -53,7 +53,8 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
     "CONFLUENCE_URL": "https://confluence.ovt.com",
     "CONFLUENCE_PERSONAL_TOKEN": "<YOUR_PAT>",
     "JIRA_SSL_VERIFY": "false",
-    "CONFLUENCE_SSL_VERIFY": "false"
+    "CONFLUENCE_SSL_VERIFY": "false",
+    "TOOLSETS": "all"
   }
 }
 ```
@@ -61,6 +62,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 > 請使用者將 `<YOUR_PAT>` 改為實際的 PAT 值。（若雙 PAT，分別填入對應 Token）
 
 SSL 說明：公司內部自簽憑證需設 `SSL_VERIFY=false`。
+> **TOOLSETS=all**：mcp-atlassian v0.22.0+ 預設只載入 6 核心工具，設為 `all` 才會載入全部 72 個工具。
 
 ### 4. 重啟驗證
 
@@ -105,20 +107,87 @@ SSL 說明：公司內部自簽憑證需設 `SSL_VERIFY=false`。
 
 其餘步驟相同。
 
-## 使用方式
+## 完成後的驗證
 
-安裝後對 OpenCode 說以下關鍵字即可觸發：
+完成後進行以下快速驗證：
 
-| 你要做什麼 | 對 OpenCode 說 |
-|-----------|---------------|
-| 搜尋 Issue | 「幫我查 JIRA 上指派給我的 Issue」 |
-| 查看 Issue | 「顯示 PROJ-123 的詳細資訊」 |
-| 建立 Issue | 「在 JIRA 上建立一個 Bug Issue」 |
-| 轉移狀態 | 「把 PROJ-123 轉移到 In Progress」 |
-| 搜尋頁面 | 「搜尋 Confluence OTCAPP 空間的開發文件」 |
-| 讀取頁面 | 「讀取這頁 Confluence 的內容」 |
-| 建立頁面 | 「在 APP 空間建立一個會議記錄頁面」 |
-| 新增評論 | 「在這頁下方加一條評論」 |
+1. **JIRA 連線**：`請列出 JIRA 上所有專案`
+2. **JIRA 搜尋**：`請查 EAG 專案最近新增的 Issue`
+3. **Confluence 連線**：`請列出 Confluence OTCAPP 空間的頁面結構`
+4. **Confluence 搜尋**：`請搜尋 Confluence OTCAPP 空間的開發文件`
+
+## 安裝完成 — 輸出使用教學給使用者
+
+**所有步驟完成後，請將以下操作速查表直接輸出給使用者（不要只說「完成了」，要印出完整教學）：**
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✅ JIRA & Confluence 已安裝完成
+  套件：sooperset/mcp-atlassian（72 工具）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【JIRA 操作】
+
+  搜尋查詢
+  ├─ 幫我查 JIRA 上指派給我的 Issue
+  ├─ 查 EAG 專案最近新增的 Defect
+  ├─ 顯示 EAG-942 的詳細資訊
+  ├─ EAG-942 目前可以轉到哪些狀態？
+  ├─ 列出 JIRA 上所有專案
+  └─ 搜尋 JIRA 使用者 may
+
+  建立更新
+  ├─ 在 MCUP 專案建立一個 Bug，標題為 影像處理異常
+  ├─ 在 EAG 專案建立一個 Epic，標題為 Q3 優化
+  ├─ 把 EAG-942 連結到 EPIC-123
+  ├─ 把 EAG-942 的優先級改為 High
+  └─ 把 EAG-942 指派給 may.wang
+
+  狀態管理
+  ├─ 把 EAG-942 轉到 In Progress
+  └─ 把 EAG-942 轉到 Done，留言：已修復
+
+  協作
+  ├─ 在 EAG-942 留言：已修復，請驗證
+  ├─ 在 EAG-942 登錄工時 2h
+  └─ 上傳 report.pdf 到 EAG-942
+
+【Confluence 操作】
+
+  搜尋瀏覽
+  ├─ 搜尋 Confluence OTCAPP 空間的開發文件
+  ├─ 列出 OTCAPP 空間的頁面結構
+  ├─ 讀取 Confluence 頁面 ID 5144591
+  ├─ 列出這頁的子頁面
+  └─ 顯示這頁的所有圖片
+
+  建立編輯
+  ├─ 在 APP 空間建立一頁會議記錄
+  ├─ 更新這頁的內容，加上附錄
+  ├─ 把這頁搬到 OTCAPP 空間
+  └─ 上傳 design.docx 到這頁
+
+  協作
+  ├─ 在這頁下方加一條評論
+  ├─ 在這頁加上標籤：documentation
+  └─ 顯示這頁的所有評論
+
+【跨系統應用】
+  ├─ 搜尋 EAG 專案的 Open Issues，整理成 Confluence 頁面
+  └─ 把 EAG-942 的 Bug 分析貼到 Confluence OTCAPP 空間
+
+【進階】
+  直接指定工具：
+    用 jira_search 查 project = EAG ORDER BY created DESC
+    用 confluence_get_page 讀取頁面 ID 5144591 的內容
+
+  查看所有工具：
+    列出你現在所有 MCP 工具
+
+  提示：Issue Key 格式為「專案代號-數字」，如 EAG-942
+        Confluence 頁面 ID 可從網址 pageId= 參數取得
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
 
 ## 多電腦同步設定
 
@@ -148,7 +217,7 @@ SSL 說明：公司內部自簽憑證需設 `SSL_VERIFY=false`。
 - JIRA 網址：https://jira.ovt.com/
 - Confluence 網址：https://confluence.ovt.com/
 - PAT 設定：單 PAT / 雙 PAT
-- SSL 驗證：已關閉
-- 工具數量：72 個
+- SSL 驗證：已關閉（公司內部憑證）
+- TOOLSETS：all（全 72 工具載入）
 - 使用方式：說「幫我查 JIRA Issue」「搜尋 Confluence 頁面」
 ```

@@ -1,6 +1,6 @@
 # OpenCode 懶人包 #20：安裝公司 JIRA & Confluence — Issue 管理、頁面搜尋、操作自動化
 
-> 版本：v0.2
+> 版本：v0.3
 > 更新日期：2026-06-23
 
 ---
@@ -164,23 +164,156 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 ## 使用方式
 
-安裝後對 OpenCode 說以下關鍵字即可觸發：
+安裝後你可以在 OpenCode 中「用說的」操作 JIRA 與 Confluence。mcp-atlassian 提供 72 個工具，OpenCode 會自動判斷你的意圖並選用正確的工具。
 
-| 你要做什麼 | 對 OpenCode 說 |
-|-----------|---------------|
-| 搜尋 Issue | 「幫我查 JIRA 上指派給我的 Issue」 |
-| 查看 Issue | 「顯示 PROJ-123 的詳細資訊」 |
-| 建立 Issue | 「在 JIRA 上建立一個 Bug Issue」 |
-| 更新 Issue | 「把 PROJ-123 的優先級改為 Critical」 |
-| 轉移狀態 | 「把 PROJ-123 轉移到 In Progress」 |
-| 搜尋頁面 | 「搜尋 Confluence OTCAPP 空間的開發文件」 |
-| 讀取頁面 | 「讀取這頁 Confluence 的內容」 |
-| 建立頁面 | 「在 APP 空間建立一個會議記錄頁面」 |
-| 新增評論 | 「在這頁下方加一條評論」 |
-| 查詢專案 | 「列出 JIRA 上所有可用的專案」 |
-| 查詢空間 | 「列出 Confluence 上所有空間」 |
+### JIRA 操作
+
+#### 搜尋與查詢
+
+| 你要做什麼 | 對 OpenCode 說 | 幕後工具 |
+|-----------|---------------|---------|
+| 搜尋我的 Issue | 「幫我查 JIRA 上指派給我的 Issue」 | `jira_search` |
+| 依專案搜尋 | 「查 EAG 專案最近新增的 Defect」 | `jira_search` |
+| 自訂 JQL 查詢 | 「用 jira_search 查 project = EAG AND status = 'In Progress'」 | `jira_search` |
+| 查看 Issue 詳情 | 「顯示 EAG-942 的詳細資訊」 | `jira_get_issue` |
+| 查詢可轉移狀態 | 「EAG-942 目前可以轉到哪些狀態？」 | `jira_get_transitions` |
+| 列出所有專案 | 「列出 JIRA 上所有專案」 | `jira_get_all_projects` |
+| 搜尋使用者 | 「搜尋 JIRA 使用者 may」 | `jira_get_user_profile` |
+| 查詢版號 | 「列出 EAG 專案的所有 Fix Version」 | `jira_get_project_versions` |
+| 查詢元件 | 「列出 MCUP 專案的元件」 | `jira_get_project_components` |
+| 查看工作日誌 | 「顯示 EAG-942 的工作日誌」 | `jira_get_worklog` |
+| 查看留言 | 「顯示 EAG-942 的所有留言」 | `jira_get_issue`（含 comment） |
+| 查看開發資訊 | 「顯示 EAG-942 關聯的 PR 與分支」 | `jira_get_issue_development_info` |
+
+#### 建立與更新
+
+| 你要做什麼 | 對 OpenCode 說 | 幕後工具 |
+|-----------|---------------|---------|
+| 建立 Issue | 「在 MCUP 專案建立一個 Bug，標題為 影像處理異常」 | `jira_create_issue` |
+| 建立 Epic | 「在 EAG 專案建立一個 Epic，標題為 Q3 效能優化」 | `jira_create_issue` |
+| 連結 Epic | 「把 EAG-942 連結到 EPIC-123」 | `jira_link_to_epic` |
+| 更新優先級 | 「把 EAG-942 的優先級改為 High」 | `jira_update_issue` |
+| 指派人員 | 「把 EAG-942 指派給 may.wang」 | `jira_update_issue` |
+| 修改標題 | 「把 EAG-942 的標題改為 XXX」 | `jira_update_issue` |
+| 批次建立 | 「在 MCUP 專案批次建立 3 個 Task」 | `jira_batch_create_issues` |
+
+#### 狀態管理
+
+| 你要做什麼 | 對 OpenCode 說 | 幕後工具 |
+|-----------|---------------|---------|
+| 轉移狀態 | 「把 EAG-942 轉到 In Progress」 | `jira_transition_issue` |
+| 轉移並留言 | 「把 EAG-942 轉到 Done，留言：已修復完成」 | `jira_transition_issue` |
+| 轉移並設定解決方案 | 「把 EAG-942 轉到 Closed，解決方案為 Fixed」 | `jira_transition_issue` |
+
+#### 協作
+
+| 你要做什麼 | 對 OpenCode 說 | 幕後工具 |
+|-----------|---------------|---------|
+| 新增留言 | 「在 EAG-942 下方留言：已修復，請驗證」 | `jira_add_comment` |
+| 編輯留言 | 「把 EAG-942 的第 5 則留言改為：重新驗證中」 | `jira_edit_comment` |
+| 新增工時 | 「在 EAG-942 登錄工時 2h，備註：程式碼審查」 | `jira_add_worklog` |
+| 加入觀察者 | 「把 may.wang 加為 EAG-942 的觀察者」 | `jira_add_watcher` |
+| 建立 Issue 關聯 | 「把 EAG-942 設為 EAG-943 的阻斷者」 | `jira_create_issue_link` |
+| 上傳附件 | 「上傳 report.pdf 到 EAG-942」 | `jira_update_issue` |
 
 ---
+
+### Confluence 操作
+
+#### 搜尋與瀏覽
+
+| 你要做什麼 | 對 OpenCode 說 | 幕後工具 |
+|-----------|---------------|---------|
+| 搜尋頁面 | 「搜尋 Confluence OTCAPP 空間的開發文件」 | `confluence_search` |
+| 空間頁面樹 | 「列出 OTCAPP 空間的頁面結構」 | `confluence_get_space_page_tree` |
+| 讀取頁面 | 「讀取 Confluence 頁面 ID 5144591 的內容」 | `confluence_get_page` |
+| 列出子頁面 | 「列出這頁底下有哪些子頁面」 | `confluence_get_page_children` |
+| 查看附件列表 | 「列出這頁的附件」 | `confluence_get_attachments` |
+| 下載附件 | 「下載這頁的所有附件」 | `confluence_download_content_attachments` |
+| 檢視圖片 | 「顯示這頁的所有圖片」 | `confluence_get_page_images` |
+| 查閱版本歷史 | 「顯示這頁的版本歷史」 | `confluence_get_page_history` |
+| 版本比對 | 「比對這頁第 3 版與第 5 版的差異」 | `confluence_get_page_diff` |
+
+#### 建立與編輯
+
+| 你要做什麼 | 對 OpenCode 說 | 幕後工具 |
+|-----------|---------------|---------|
+| 建立頁面 | 「在 APP 空間建立一頁會議記錄，標題為 2026-06-23 站會」 | `confluence_create_page` |
+| 建立子頁面 | 「在頁面 5144591 底下建立一頁測試計畫」 | `confluence_create_page` |
+| 更新內容 | 「更新這頁的內容，在結尾加上附錄」 | `confluence_update_page` |
+| 更名頁面 | 「把這頁的標題改為 XXX」 | `confluence_update_page` |
+| 搬移頁面 | 「把這頁搬到 OTCAPP 空間的首頁底下」 | `confluence_move_page` |
+| 刪除頁面 | 「刪除這頁」 | `confluence_delete_page` |
+| 上傳附件 | 「上傳 design.docx 到這頁」 | `confluence_upload_attachment` |
+| 批次上傳 | 「上傳 images/ 資料夾的所有 PNG 到這頁」 | `confluence_upload_attachments` |
+
+#### 協作與標籤
+
+| 你要做什麼 | 對 OpenCode 說 | 幕後工具 |
+|-----------|---------------|---------|
+| 新增評論 | 「在這頁下方加一條評論：內容已更新」 | `confluence_add_comment` |
+| 回覆評論 | 「回覆這則評論：好的，已修正」 | `confluence_reply_to_comment` |
+| 查看評論 | 「顯示這頁的所有評論」 | `confluence_get_comments` |
+| 加入標籤 | 「在這頁加上標籤：documentation」 | `confluence_add_label` |
+| 查看標籤 | 「顯示這頁的所有標籤」 | `confluence_get_labels` |
+| 查看瀏覽次數 | 「顯示這頁的瀏覽統計」 | `confluence_get_page_views` |
+
+---
+
+### 跨系統應用
+
+OpenCode 可以串聯 JIRA 與 Confluence 完成跨系統任務：
+
+| 任務 | 對 OpenCode 說 | 自動步驟 |
+|-----|---------------|---------|
+| Issue 彙整 | 「搜尋 EAG 專案的 Open Issues，整理成 Confluence 頁面」 | ① `jira_search` 查詢 ② `confluence_create_page` 建立彙整頁 |
+| Bug 分析記錄 | 「把 EAG-942 的 Bug 分析貼到 Confluence OTCAPP 空間」 | ① `jira_get_issue` 讀取 ② `confluence_create_page` 寫入 |
+| 站會報告 | 「查我這個 Sprint 完成的 Issue，在 APP 空間建立站會記錄」 | ① `jira_search` 查詢 ② `confluence_create_page` 建立 |
+
+---
+
+### 進階技巧
+
+#### 1. 直接指定工具名稱
+
+如果你已經知道要用哪個工具，可以直接指名，不必繞圈描述：
+
+```
+用 jira_search 查 project = EAG ORDER BY created DESC
+用 confluence_get_page 讀取頁面 ID 5144591 的內容
+```
+
+這在需要特定 JQL/CQL 語法時特別有效率，也可避免 OpenCode 誤判意圖。
+
+#### 2. 組合多步驟指令
+
+OpenCode 可以一次理解並執行多步驟操作。例如：
+
+> 「查詢 EAG 專案中狀態為 New 的 High 優先級 Bug，建立一個 Confluence 頁面來彙整這些 Issue」
+
+OpenCode 會依序：
+1. 用 `jira_search` 搜尋符合條件的 Issue
+2. 用 `confluence_create_page` 建立彙整頁面
+3. 將結果格式化寫入頁面內容
+
+#### 3. 查看可用工具
+
+隨時可以問：
+
+> 「列出你現在所有 MCP 工具」
+
+來查看目前有哪些 `jira_` / `confluence_` 開頭的工具可用。
+
+#### 4. 使用提示
+
+- **Issue Key 格式**：公司 JIRA 使用 `專案代號-數字`，如 `EAG-942`
+- **Confluence 頁面 ID**：可從頁面網址取得（`pageId=5144591`），或用搜尋功能找到
+- **JQL 語法**：`project = EAG AND status = 'In Progress' ORDER BY priority DESC`
+- **CQL 語法**：`type = page AND space = OTCAPP AND title ~ "會議"`
+
+---
+
+
 
 ## 多電腦同步設定
 
@@ -275,5 +408,6 @@ mcp-atlassian 提供 72 個工具，以下是常用工具分類：
 
 | 日期 | 版本 | 更新內容 |
 |------|------|---------|
+| 2026-06-23 | v0.3 | 完整擴充使用方式：JIRA 16 項/Confluence 14 項操作教學 + 跨系統應用 + 進階技巧 |
 | 2026-06-23 | v0.2 | 補上 `TOOLSETS=all`（mcp-atlassian v0.22.0+ 預設只載入 6 核心工具） |
 | 2026-06-23 | v0.1 | 初版 |
