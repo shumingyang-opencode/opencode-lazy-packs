@@ -145,7 +145,15 @@ python $SCRIPT_PATH login
 
 **10.4 確認清空**：`請重新讀取這個文檔的內容並顯示` → 確認內容為空白（length: 0）
 
-**10.5 清理**：測試完成後可保留或手動刪除此文檔
+**10.5 群組測試**：`請建立一個叫「測試群組」的群組` → 確認回傳 chat_id
+
+**10.6 將自己加入群組**：`請查詢我的飛書使用者資訊，然後將我加入測試群組` → 確認 invalid_id_list 為空
+
+**10.7 發送群組訊息**：`請發送訊息到測試群組：大家好，這是 OpenCode 的第一條自動訊息` → 確認回傳 message_id
+
+**10.8 讀取群組訊息**：`請讀取測試群組的最新訊息` → 確認內容正確
+
+**10.9 清理**：測試完成後可保留或手動刪除
 
 ## 多電腦同步設定
 
@@ -199,6 +207,53 @@ rm -rf ~/.agents/skills/feishu-inout
 | Token 過期 | 腳本自動用 refresh_token 續約。若 refresh_token 也過期（30天），重新執行 `login` |
 | 群組管理指令失敗 | 確認 Bot 能力已開啟且應用已發布審核通過 |
 | npx skills add 無法使用 | 手動下載：從 GitHub 下載 feishu-inout 專案，將 `scripts/feishu_mcp.py` 放到本機 |
+
+## 附錄：飛書 CLI 指令速查表
+
+以下為完成安裝後可用的 CLI 指令（$S = 腳本實際路徑）：
+
+### 認證
+| 指令 | 說明 |
+|------|------|
+| `python $S login` | OAuth 登入 |
+| `python $S whoami` | 查看 token 狀態 |
+
+### 文檔
+| 指令 | 說明 |
+|------|------|
+| `python $S fetch-doc <docID>` | 讀取文檔 |
+| `python $S search-doc <關鍵字>` | 搜尋文檔 |
+| `python $S list-docs` | 列出文檔庫 |
+| `python $S create-doc <標題> '<內容>'` | 建立文檔 |
+| `python $S append <docID> '<內容>'` | 追加內容 |
+| `python $S overwrite <docID> '<內容>'` | 覆蓋清空 |
+| `python $S replace <docID> '<舊>' '<新>'` | 定位替換 |
+| `python $S delete-range <docID> '<內容>'` | 刪除範圍 |
+
+### 訊息
+| 指令 | 說明 |
+|------|------|
+| `python $S send-msg <chat_id> '<文字>'` | 發送群組訊息 |
+| `python $S send-msg <open_id> '<文字>' --user` | 私聊訊息 |
+| `python $S reply <message_id> '<文字>'` | 回覆訊息 |
+| `python $S get-msgs <chat_id> today` | 讀取群聊紀錄 |
+| `python $S search-msgs <關鍵字>` | 搜尋訊息 |
+
+### 群組
+| 指令 | 說明 |
+|------|------|
+| `python $S create-group <名稱>` | 建立群組 |
+| `python $S add-members <chat_id> '["id"]'` | 加入成員 |
+| `python $S list-groups` | 列出群組 |
+
+### 日曆 / 多維表格 / 使用者
+| 指令 | 說明 |
+|------|------|
+| `python $S list-events` | 查看日程 |
+| `python $S create-event <標題> <開始> <結束>` | 建立會議 |
+| `python $S list-tables <app_token>` | 列出多維表格 |
+| `python $S get-user` | 查詢自己 |
+| `python $S search-user <關鍵字>` | 搜尋使用者 |
 
 ## 完成回報格式
 

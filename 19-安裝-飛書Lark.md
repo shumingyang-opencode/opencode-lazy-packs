@@ -195,8 +195,32 @@ python3 $SCRIPT_PATH login
 ```
 確認內容為空白（length: 0）。
 
-#### 10.5 清理
-測試完成後，可保留或手動刪除這個測試文檔。
+#### 10.5 群組測試
+```bash
+請建立一個叫「測試群組」的群組
+```
+確認回傳 chat_id 且狀態為 success。
+
+#### 10.6 將自己加入群組
+```bash
+請查詢我的飛書使用者資訊，然後將我加入測試群組
+```
+確認回傳 `invalid_id_list: []`（無無效 ID）。
+
+#### 10.7 發送群組訊息
+```bash
+請發送訊息到測試群組：大家好，這是 OpenCode 的第一條自動訊息
+```
+確認回傳 message_id 且 status 為 success。
+
+#### 10.8 讀取群組訊息
+```bash
+請讀取測試群組的最新訊息
+```
+確認剛才發送的訊息內容正確顯示。
+
+#### 10.9 清理
+測試完成後，可保留或手動刪除這些測試文檔與群組。
 
 ---
 
@@ -273,6 +297,83 @@ rm -rf ~/.agents/skills/feishu-inout
 ```
 
 ---
+
+## 附錄：飛書 CLI 指令速查表
+
+以下為 `feishu_mcp.py` 的完整指令列表，供進階使用者快速參考。
+
+> $S = 實際安裝路徑（替換為步驟一找到的路徑）
+
+### 認證
+| 指令 | 說明 |
+|------|------|
+| `python $S login` | OAuth 瀏覽器登入授權 |
+| `python $S whoami` | 查看目前 token 狀態 |
+
+### 文檔操作
+| 指令 | 說明 |
+|------|------|
+| `python $S fetch-doc <docID>` | 讀取文檔 |
+| `python $S fetch-doc <docID> 0 5000` | 分頁讀取（offset, limit） |
+| `python $S search-doc <關鍵字>` | 搜尋文檔 |
+| `python $S list-docs` | 列出我的文檔庫 |
+| `python $S create-doc <標題> '<內容>'` | 建立文檔 |
+| `python $S append <docID> '<內容>'` | 追加內容 |
+| `python $S overwrite <docID> '<內容>'` | 覆蓋整份文檔 |
+| `python $S replace <docID> '<舊>' '<新>'` | 定位替換 |
+| `python $S insert-after <docID> '<錨點>' '<內容>'` | 後插入 |
+| `python $S insert-before <docID> '<錨點>' '<內容>'` | 前插入 |
+| `python $S delete-range <docID> '<內容>'` | 刪除範圍 |
+
+### 評論與檔案
+| 指令 | 說明 |
+|------|------|
+| `python $S get-comments <docID>` | 取得評論 |
+| `python $S add-comments <docID> '<文字>'` | 新增評論 |
+| `python $S fetch-file <token>` | 下載圖片/附件 |
+
+### 訊息與對話
+| 指令 | 說明 |
+|------|------|
+| `python $S send-msg <chat_id> '<文字>'` | 發送群組訊息 |
+| `python $S send-msg <open_id> '<文字>' --user` | 發送私聊訊息 |
+| `python $S send-card <id> '<json>'` | 發送互動卡片 |
+| `python $S reply <message_id> '<文字>'` | 回覆訊息 |
+| `python $S reply <message_id> '<文字>' --thread` | 話題中回覆 |
+| `python $S get-msgs <chat_id> today` | 讀取今日群聊紀錄 |
+| `python $S get-msgs-user <open_id> today` | 讀取私聊紀錄 |
+| `python $S search-msgs <關鍵字>` | 跨群搜尋訊息 |
+| `python $S get-thread <thread_id>` | 取得話題回覆 |
+
+### 群組管理
+| 指令 | 說明 |
+|------|------|
+| `python $S create-group <名稱>` | 建立群組 |
+| `python $S create-group <名稱> '["open_id1"]'` | 建立群組並加成員 |
+| `python $S add-members <chat_id> '["id1","id2"]'` | 加入成員 |
+| `python $S list-groups` | 列出群組 |
+
+### 使用者
+| 指令 | 說明 |
+|------|------|
+| `python $S get-user` | 查詢自己資訊 |
+| `python $S get-user <open_id>` | 查詢指定使用者 |
+| `python $S search-user <關鍵字>` | 搜尋使用者 |
+
+### 日曆與會議
+| 指令 | 說明 |
+|------|------|
+| `python $S list-events` | 查看今日日程 |
+| `python $S create-event <標題> <開始> <結束>` | 建立日程（自動含視訊會議） |
+| `python $S create-event <標題> <開始> <結束> '["open_id"]'` | 建立日程並邀請 |
+
+### 多維表格
+| 指令 | 說明 |
+|------|------|
+| `python $S list-tables <app_token>` | 列出表格 |
+| `python $S list-records <app_token> <table_id>` | 列出紀錄 |
+| `python $S create-record <app_token> <table_id> '<json>'` | 新增紀錄 |
+| `python $S update-record <app_token> <table_id> <record_id> '<json>'` | 更新紀錄 |
 
 ## 更新紀錄
 
