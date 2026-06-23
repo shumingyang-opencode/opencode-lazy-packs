@@ -27,3 +27,19 @@ build/
 credentials.*
 secrets.*
 graphify-out/
+
+# 本機安裝技能
+.agents/
+
+# 個人帳號與服務清單
+個人帳號與服務清單.md
+
+# 本機鎖定檔案
+skills-lock.json
+
+# 瀏覽器控制本機快取
+.playwright-mcp/
+
+# Firebase 本機設定
+.firebaserc
+firebase.json

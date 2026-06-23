@@ -1,6 +1,12 @@
 {
   "version": 1,
   "skills": {
+    "feishu-inout": {
+      "source": "joe960913/feishu-inout",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "7533cd070a75967e1c96520a8f85d93dd5d232caf4589140a7c085a2c916cb1e"
+    },
     "find-skills": {
       "source": "vercel-labs/skills",
       "sourceType": "github",
