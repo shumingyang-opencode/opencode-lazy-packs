@@ -50,6 +50,14 @@
 
 ## 請 OpenCode 幫我執行以下步驟
 
+### 步驟〇：查閱帳號資訊
+
+先讀取 OpenCode 根目錄的 `個人帳號與服務清單.md`（若存在），取得公司 GitLab 資訊：
+- 若找到伺服器 URL、帳號、SSH 設定 → 直接套用，跳過詢問
+- 若檔案不存在或資訊不足 → 詢問使用者後寫回
+
+> 此檔案位於 Obsidian vault 根目錄，OpenCode 可透過 Obsidian MCP 讀寫。
+
 ### 步驟一：檢查 Git 安裝
 
 ```bash

@@ -166,6 +166,8 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 安裝後你可以在 OpenCode 中「用說的」操作 JIRA 與 Confluence。mcp-atlassian 提供 72 個工具，OpenCode 會自動判斷你的意圖並選用正確的工具。
 
+> 💡 安裝精靈完成後會自動印出本教學。你也可以隨時查閱 Obsidian vault 內的 `個人帳號與服務清單.md` 取得所有服務資訊。
+
 ### JIRA 操作
 
 #### 搜尋與查詢

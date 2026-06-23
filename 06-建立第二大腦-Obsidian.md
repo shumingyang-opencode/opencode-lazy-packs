@@ -24,38 +24,35 @@
 
 ## 請 OpenCode 幫我執行以下步驟
 
-### 步驟一：找到使用者的 Obsidian vault
+### 步驟一：設定 Obsidian vault 根目錄
 
-先問使用者筆記本位置。
+**建議將 vault 設為 OpenCode 工作根目錄**（例如 `D:\workspace\OpenCode\`），原因：
+- OpenCode 的所有專案檔案同時也是 Obsidian 筆記，兩者統一管理
+- OpenCode 的全域規則（AGENTS.md）會自動讀取 vault 內的 `個人帳號與服務清單.md`
+- 不需維護兩套檔案路徑
 
-常見位置：
+若尚未有 vault：
 
-| 平台 | 常見路徑 |
-|------|----------|
-| Windows | `C:\Users\<你>\Documents\<vault名稱>` |
-| Windows（OneDrive） | `C:\Users\<你>\OneDrive\文件\<vault名稱>` |
-| macOS | `~/Documents/<vault名稱>` |
-| macOS（iCloud） | `~/Library/Mobile Documents/com~apple~CloudDocs/<vault名稱>` |
-
-如果不知道，可搜尋：
-
-**Windows（PowerShell）：**
-```powershell
-Get-ChildItem -Path "$env:USERPROFILE\OneDrive" -Recurse -Directory -Force |
-  Where-Object { Test-Path (Join-Path $_.FullName ".obsidian") }
-```
-
-**macOS：**
 ```bash
-mdfind "kMDItemFSName == '.obsidian'" | head -20
-# 或
-find ~/Documents -name ".obsidian" -type d 2>/dev/null
+# 在 OpenCode 根目錄建立 .obsidian 資料夾
+mkdir <OpenCode_ROOT_DIR>/.obsidian
+# 用 Obsidian 應用程式 → 開啟資料夾作為 vault
 ```
+
+若已有 vault，有三種選擇：
+
+| 選項 | 做法 | 適合時機 |
+|------|------|---------|
+| **A（推薦）** | 將既有 vault 搬到 OpenCode 根目錄 | 希望統一管理 |
+| **B** | 直接指向既有 vault，不變動 | 既有 vault 內容龐大不想搬 |
+| **C** | 用 OpenCode 根目錄開新 vault，保留舊 vault | 想分開管理 |
 
 確認條件：
 - 資料夾存在
-- 裡面有 `.obsidian` 子資料夾
-- 使用者確認這是主要筆記本
+- 裡面有 `.obsidian` 子資料夾（或準備建立）
+- 使用者確認 vault 路徑
+
+> vault 路徑設定好後，後續的懶人包（#02~#05、#20）會自動讀取 vault 內的 `個人帳號與服務清單.md` 取得服務資訊。
 
 ---
 
