@@ -1,6 +1,6 @@
 # OpenCode 懶人包 #20：安裝公司 JIRA & Confluence — Issue 管理、頁面搜尋、操作自動化
 
-> 版本：v0.1
+> 版本：v0.2
 > 更新日期：2026-06-23
 
 ---
@@ -78,12 +78,14 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
     "CONFLUENCE_URL": "https://confluence.ovt.com",
     "CONFLUENCE_PERSONAL_TOKEN": "<YOUR_PAT>",
     "JIRA_SSL_VERIFY": "false",
-    "CONFLUENCE_SSL_VERIFY": "false"
+    "CONFLUENCE_SSL_VERIFY": "false",
+    "TOOLSETS": "all"
   }
 }
 ```
 
 > **SSL 說明**：`SSL_VERIFY=false` 是針對公司內部自簽憑證。若你的公司已使用公開信任的 CA 憑證則可省略。
+> **TOOLSETS 說明**：mcp-atlassian v0.22.0+ 預設只載入 6 個核心工具；設為 `"all"` 會載入全部 72 個工具。
 
 ### Step 4：驗證 MCP 工具載入
 
@@ -150,7 +152,8 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
     "CONFLUENCE_URL": "https://confluence.ovt.com",
     "CONFLUENCE_PERSONAL_TOKEN": "<YOUR_CONFLUENCE_PAT>",
     "JIRA_SSL_VERIFY": "false",
-    "CONFLUENCE_SSL_VERIFY": "false"
+    "CONFLUENCE_SSL_VERIFY": "false",
+    "TOOLSETS": "all"
   }
 }
 ```
@@ -272,4 +275,5 @@ mcp-atlassian 提供 72 個工具，以下是常用工具分類：
 
 | 日期 | 版本 | 更新內容 |
 |------|------|---------|
+| 2026-06-23 | v0.2 | 補上 `TOOLSETS=all`（mcp-atlassian v0.22.0+ 預設只載入 6 核心工具） |
 | 2026-06-23 | v0.1 | 初版 |
