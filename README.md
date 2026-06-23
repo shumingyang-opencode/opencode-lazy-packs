@@ -12,20 +12,20 @@
 把這行貼給你的 AI agent：
 
 ```
-這是 OpenCode 懶人包全集 https://github.com/mathruffian-dot/opencode-lazy-packs
+這是 OpenCode 懶人包全集 https://github.com/shumingyang-opencode/opencode-lazy-packs
 請讀取 repo 內容，列出所有可用的懶人包，問我要裝哪些。
 ```
 
 AI 會自動：
 1. 讀取 repo 的 `SKILL.md`（安裝入口）
-2. 列出 17 個懶人包
+2. 列出 19 個懶人包
 3. 問你要裝哪些（可以選「全部」或特定編號）
 4. 自動安裝你選的項目
 
 ### 方式二：一行指令手動裝
 
 ```bash
-npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
+npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 ```
 
 可用的 skill 名：
@@ -51,6 +51,7 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 | `16-superpowers` | Superpowers — 完整的 AI 軟體開發方法論（14 skills, 1.9M 安裝） |
 | `17-find-skills` | Find Skills — 技能搜尋與安裝 |
 | `18-frontend-design` | Frontend Design — 辨識度優先的前端設計 |
+| `19-feishu-lark` | 安裝飛書 Lark — 文檔/訊息/群組/日曆/多維表格 |
 | `99-install-all` | 一次全部安裝 |
 
 安裝後對 OpenCode 說該技能對應的關鍵字即可啟動。
@@ -109,6 +110,7 @@ npx skills add mathruffian-dot/opencode-lazy-packs --skill <skill名> -g -y
 | 16 | [Superpowers 完整 AI 開發方法論](16-superpowers.md) | — | v6.0.3 | 14 skills、brainstorm→plan→TDD→review→merge、1.9M 安裝 |
 | 17 | [Find Skills 技能搜尋與安裝](17-find-skills.md) | — | v0.1 | 從 5000+ 開放技能中搜尋並一鍵安裝 |
 | 18 | [Frontend Design 辨識度優先前端設計](18-frontend-design.md) | — | v0.1 | Anthropic 出品 572K 安裝：拒絕 AI 模板化美學 |
+| 19 | [安裝飛書 Lark](19-安裝-飛書Lark.md) | — | v0.1 | 飛書文檔/訊息/群組/日曆/多維表格整合 |
 
 ---
 
