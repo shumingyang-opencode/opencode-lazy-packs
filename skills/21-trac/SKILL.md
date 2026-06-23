@@ -16,6 +16,27 @@ description: 安裝公司 Trac 整合 — 讓 OpenCode 操作公司內部 Trac T
 
 ## 步驟
 
+### 0. 先讀取帳號資訊
+
+先從使用者的 `個人帳號與服務清單.md` 讀取 Trac 區段的帳號資訊。
+
+若該檔案尚無 Trac 區段，請引導使用者加入：
+
+```markdown
+## Trac
+
+- **app URL**: `https://10.0.0.77/trac/app`
+- **app username**: `<你的 app 登入帳號>`
+- **app password**: 儲存於 `opencode.json` trac 的 `TRAC_APP_PASSWORD`
+- **app_asic URL**: `https://10.0.0.77/trac/app_asic`
+- **app_asic username**: `<你的 app_asic 登入帳號>`
+- **app_asic password**: 儲存於 `opencode.json` trac 的 `TRAC_APP_ASIC_PASSWORD`
+- **SSL**: 自簽憑證（`TRAC_SSL_VERIFY=false`）
+- **操作方式**: 透過 trac-mcp-server MCP 伺服器（`trac_*` 工具）
+```
+
+> 帳號密碼由使用者手動填入 opencode.json，不寫入 Markdown 檔案。
+
 ### 1. 安裝 trac-mcp-server
 
 ```bash
@@ -26,7 +47,7 @@ uv tool install --from "git+https://gitlab.ovt.com:8081/steven.yang/trac-mcp-ser
 
 ### 2. 編輯 opencode.json
 
-讀取使用者當前的 `~/.config/opencode/opencode.json`，在 `mcp` 區塊加入：
+讀取使用者當前的 `~/.config/opencode/opencode.json`，在 `mcp` 區塊加入。帳號資訊從 `個人帳號與服務清單.md` 取得：
 
 ```json
 "trac": {
@@ -35,20 +56,21 @@ uv tool install --from "git+https://gitlab.ovt.com:8081/steven.yang/trac-mcp-ser
   "command": ["trac-mcp"],
   "environment": {
     "TRAC_APP_URL": "https://10.0.0.77/trac/app",
-    "TRAC_APP_USERNAME": "<YOUR_APP_USERNAME>",
-    "TRAC_APP_PASSWORD": "<YOUR_APP_PASSWORD>",
+    "TRAC_APP_USERNAME": "<個人帳號清單中的 app username>",
+    "TRAC_APP_PASSWORD": "<你的 app 密碼>",
     "TRAC_APP_ASIC_URL": "https://10.0.0.77/trac/app_asic",
-    "TRAC_APP_ASIC_USERNAME": "<YOUR_ASIC_USERNAME>",
-    "TRAC_APP_ASIC_PASSWORD": "<YOUR_ASIC_PASSWORD>",
+    "TRAC_APP_ASIC_USERNAME": "<個人帳號清單中的 app_asic username>",
+    "TRAC_APP_ASIC_PASSWORD": "<你的 app_asic 密碼>",
     "TRAC_SSL_VERIFY": "false"
   }
 }
 ```
 
 > SSL 說明：公司內部自簽憑證需設 `TRAC_SSL_VERIFY=false`。
+> 帳號來源：對應 `個人帳號與服務清單.md` 中 Trac 區段的帳號。
 > 雙實例說明：`app` 與 `app_asic` 帳號可能不同（大小寫有區分）。
 
-請使用者將 `<YOUR_APP_USERNAME>` 等改為實際的 Trac 登入資訊。
+請使用者將帳號密碼改為實際的 Trac 登入資訊（參考 Step 0 的帳號清單）。
 
 ### 3. 重啟驗證
 
@@ -132,8 +154,9 @@ uv tool install --from "git+https://gitlab.ovt.com:8081/steven.yang/trac-mcp-ser
   查看所有工具：
     列出你現在所有 MCP 工具
 
-  提示：Trac query 語法使用 key=value，!= 表示不等於
-        兩個實例：app（Steven.Yang@ovt.com）/ app_asic（steven.yang@ovt.com）
+   提示：Trac query 語法使用 key=value，!= 表示不等於
+         帳號資訊存放於「個人帳號與服務清單.md」
+         兩個實例：app / app_asic（帳號可能不同）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
@@ -155,7 +178,7 @@ uv tool uninstall trac-mcp-server
 | 問題 | 解法 |
 |------|------|
 | SSL 錯誤 | 確認 `TRAC_SSL_VERIFY=false` 已設定 |
-| 登入失敗 | 檢查帳號密碼正確性，注意大小寫 |
+| 登入失敗 | 檢查帳號密碼正確性，注意大小寫（查 `個人帳號與服務清單.md`） |
 | 連線逾時 | 檢查內網或 VPN 連線 |
 | uv tool install 失敗 | 確認 GitLab 連線及 git credential 設定 |
 | trac-mcp 找不到 | 確認 `~/.local/bin` 在 PATH 中 |
@@ -167,6 +190,7 @@ uv tool uninstall trac-mcp-server
 - 套件：trac-mcp-server（自建，GitLab 安裝）
 - Trac 實例：app + app_asic（共 2 個）
 - SSL 驗證：已關閉
+- 帳號來源：個人帳號與服務清單.md
 - 工具數量：8 個
 - 使用方式：說「查我的 ticket」「讀取 wiki 頁面」
 ```

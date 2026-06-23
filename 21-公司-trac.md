@@ -1,6 +1,6 @@
 # OpenCode 懶人包 #21：安裝公司 Trac — Ticket 管理、Wiki 查閱、搜尋自動化
 
-> 版本：v0.1
+> 版本：v0.2
 > 更新日期：2026-06-23
 
 ---
@@ -23,6 +23,7 @@
 - [ ] OpenCode 已安裝（若無，先執行 `00-環境建置`）
 - [ ] `uv` 已安裝（`uv --version` 確認）
 - [ ] 公司 GitLab 可存取：`https://gitlab.ovt.com:8081/`
+- [ ] `個人帳號與服務清單.md` 已建立（含 Trac 區段）
 - [ ] Trac 帳號密碼（含 `app` 與 `app_asic` 各自的帳號）
 - [ ] 公司內部網路連線（或 VPN）
 - [ ] 公司 GitLab 的 git credential 已設定
@@ -30,6 +31,26 @@
 ---
 
 ## 讓 OpenCode 幫你一步一步做
+
+### Step 0：先建立／更新個人帳號清單
+
+執行安裝前，先確認你的 `個人帳號與服務清單.md` 中已有 **Trac** 區段。若無，請在該檔案中加入以下內容：
+
+```yaml
+## Trac
+
+- **app URL**: `https://10.0.0.77/trac/app`
+- **app username**: `<你的 app 登入帳號>`
+- **app password**: 儲存於 `opencode.json` trac 的 `TRAC_APP_PASSWORD`
+- **app_asic URL**: `https://10.0.0.77/trac/app_asic`
+- **app_asic username**: `<你的 app_asic 登入帳號>`
+- **app_asic password**: 儲存於 `opencode.json` trac 的 `TRAC_APP_ASIC_PASSWORD`
+- **SSL**: 自簽憑證（`TRAC_SSL_VERIFY=false`）
+- **操作方式**: 透過 trac-mcp-server MCP 伺服器（`trac_*` 工具）
+- **雙實例說明**: `app` 與 `app_asic` 的登入帳號可能不同（大小寫有區分）
+```
+
+> **已初始化過的使用者**：可跳過，直接在後續 opencode.json 設定中填入帳號資訊即可。
 
 ### Step 1：安裝 trac-mcp-server（一次安裝，永久離線使用）
 
@@ -45,7 +66,7 @@ Installed 1 executable: trac-mcp
 
 ### Step 2：編輯 opencode.json
 
-開啟 `~/.config/opencode/opencode.json`，在 `mcp` 區塊中加入：
+開啟 `~/.config/opencode/opencode.json`，在 `mcp` 區塊中加入。帳號資訊從 `個人帳號與服務清單.md` 取得，**無須記憶**：
 
 ```json
 "trac": {
@@ -54,17 +75,18 @@ Installed 1 executable: trac-mcp
   "command": ["trac-mcp"],
   "environment": {
     "TRAC_APP_URL": "https://10.0.0.77/trac/app",
-    "TRAC_APP_USERNAME": "<YOUR_APP_USERNAME>",
-    "TRAC_APP_PASSWORD": "<YOUR_APP_PASSWORD>",
+    "TRAC_APP_USERNAME": "<個人帳號清單中的 app username>",
+    "TRAC_APP_PASSWORD": "<你的 app 密碼>",
     "TRAC_APP_ASIC_URL": "https://10.0.0.77/trac/app_asic",
-    "TRAC_APP_ASIC_USERNAME": "<YOUR_ASIC_USERNAME>",
-    "TRAC_APP_ASIC_PASSWORD": "<YOUR_ASIC_PASSWORD>",
+    "TRAC_APP_ASIC_USERNAME": "<個人帳號清單中的 app_asic username>",
+    "TRAC_APP_ASIC_PASSWORD": "<你的 app_asic 密碼>",
     "TRAC_SSL_VERIFY": "false"
   }
 }
 ```
 
 > **SSL 說明**：`TRAC_SSL_VERIFY=false` 是因為公司 Trac 使用自簽憑證。若後續換成公開 CA 憑證可改為 `true` 或刪除此行。
+> **帳號來源**：`TRAC_APP_USERNAME` 和 `TRAC_APP_ASIC_USERNAME` 對應 `個人帳號與服務清單.md` 中 Trac 區段的帳號。
 > **雙實例說明**：`app` 與 `app_asic` 為兩個獨立的 Trac 專案，帳號可能不同（大小寫有區分）。
 
 ### Step 3：重啟並驗證工具載入
@@ -189,7 +211,8 @@ OpenCode 會依序：
 #### 4. 使用提示
 
 - **雙實例**：大部分工具都需要指定 `instance` 參數（`app` 或 `app_asic`），如果不確定，先執行 `trac_list_projects`
-- **帳號區分大小寫**：`app` 用 `Steven.Yang@ovt.com`、`app_asic` 用 `steven.yang@ovt.com`
+- **帳號來源**：所有服務帳號集中存放於 `個人帳號與服務清單.md`，AI agent 會自動讀取，無須記憶
+- **帳號區分大小寫**：`app` 與 `app_asic` 的登入帳號可能不同（大小寫有區分）
 - **查詢語法**：Trac query 使用 `key=value` 格式，`!=` 表示不等於
 
 ---
@@ -226,6 +249,7 @@ uv tool uninstall trac-mcp-server
 | `uv tool install` 失敗 | 確認 GitLab 連線正常（`git ls-remote https://gitlab.ovt.com:8081/steven.yang/trac-mcp-server.git`） |
 | SSL 錯誤 | 確認 `TRAC_SSL_VERIFY=false` 已設定 |
 | 登入失敗 | 確認帳號密碼正確，注意大小寫區分（app / app_asic 使用不同帳號） |
+| 忘記帳號密碼 | 查閱 `個人帳號與服務清單.md` 中的 Trac 區段，或向 IT 申請重設 |
 | 404 錯誤 | Trac 的 XML-RPC 端點未安裝外掛。此套件已改用 Web Scraping 方式，不需 XML-RPC |
 | `uvx` 找不到 | 確認 uv 已安裝（`uv --version`），若無請執行安裝指令 |
 | 工具未載入 | 檢查 opencode.json JSON 格式是否正確，重啟 OpenCode |
@@ -243,7 +267,7 @@ uv tool uninstall trac-mcp-server
 - 安裝來源：git+https://gitlab.ovt.com:8081/steven.yang/trac-mcp-server.git
 - Trac 實例：app + app_asic（共 2 個）
 - SSL 驗證：已關閉（公司內部自簽憑證）
-- 登入方式：Trac 表單登入
+- 登入方式：Trac 表單登入（帳號儲存於 `個人帳號與服務清單.md`）
 - 工具數量：8 個
 - 使用方式：說「查我的 ticket」「讀取 wiki 頁面」
 ```
@@ -254,4 +278,5 @@ uv tool uninstall trac-mcp-server
 
 | 日期 | 版本 | 更新內容 |
 |------|------|---------|
+| 2026-06-23 | v0.2 | 整合個人帳號與服務清單管理機制（README 同步） |
 | 2026-06-23 | v0.1 | 初版 |

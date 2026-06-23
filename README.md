@@ -18,7 +18,7 @@
 
 AI 會自動：
 1. 讀取 repo 的 `SKILL.md`（安裝入口）
-2. 列出 19 個懶人包
+2. 列出 21 個懶人包
 3. 問你要裝哪些（可以選「全部」或特定編號）
 4. 自動安裝你選的項目
 
@@ -53,6 +53,7 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 | `18-frontend-design` | Frontend Design — 辨識度優先的前端設計 |
 | `19-feishu-lark` | 安裝飛書 Lark — 文檔/訊息/群組/日曆/多維表格 |
 | `20-jira-confluence` | 安裝公司 JIRA & Confluence — Issue 管理、頁面搜尋、操作自動化 |
+| `21-trac` | 安裝公司 Trac — Ticket 管理、Wiki 查閱、搜尋自動化 |
 | `99-install-all` | 一次全部安裝 |
 
 安裝後對 OpenCode 說該技能對應的關鍵字即可啟動。
@@ -95,6 +96,7 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 | #05 連接個人 GitLab | GitLab URL、認證方式 |
 | #06 建立 Obsidian | vault 根目錄路徑 |
 | #20 JIRA & Confluence | JIRA / Confluence URL |
+| #21 Trac | Trac URL、登入帳號 |
 
 ### 安全提醒
 
@@ -149,6 +151,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 | 18 | [Frontend Design 辨識度優先前端設計](18-frontend-design.md) | — | v0.1 | Anthropic 出品 572K 安裝：拒絕 AI 模板化美學 |
 | 19 | [安裝飛書 Lark](19-安裝-飛書Lark.md) | — | v0.1 | 飛書文檔/訊息/群組/日曆/多維表格整合 |
 | 20 | [安裝公司 JIRA & Confluence](20-公司-jira-confluence.md) | — | v0.1 | 公司內部 JIRA Issue 管理 + Confluence 頁面搜尋與操作 |
+| 21 | [安裝公司 Trac](21-公司-trac.md) | — | v0.2 | 公司 Trac Ticket 管理、Wiki 查閱、全文搜尋自動化 |
 
 ---
 
