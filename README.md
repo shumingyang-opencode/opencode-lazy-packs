@@ -73,7 +73,7 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 ### 功能說明
 
 - 建立 `.md` 檔案集中管理 SVN、GitLab、GitHub、JIRA、Confluence、飛書等服務資訊
-- 所有懶人包（#02~#05、#20）在開始操作前，會先讀取此檔案
+- 所有 OpenCode 專案在初始化前，會先透過全域 AGENTS.md 規則讀取此檔案
 - 資訊不足時才會詢問，問到的資料自動回寫永久留存
 
 ### 如何啟用
@@ -83,7 +83,9 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 3. **放置位置**：將該檔案放在 **OpenCode 工作根目錄**（建議同時做為 Obsidian vault 根目錄）
 4. **設定全域規則**：建立 `~/.config/opencode/AGENTS.md`（內容詳見範本底部說明）
 
-### 懶人包支援一覽
+### 懶人包內建支援
+
+部分懶人包在步驟中已內建「查閱帳號資訊」的前置步驟，可直接利用此檔案跳過詢問：
 
 | 懶人包 | 自動讀取項目 |
 |--------|-------------|
