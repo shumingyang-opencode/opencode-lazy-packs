@@ -52,6 +52,7 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 | `17-find-skills` | Find Skills — 技能搜尋與安裝 |
 | `18-frontend-design` | Frontend Design — 辨識度優先的前端設計 |
 | `19-feishu-lark` | 安裝飛書 Lark — 文檔/訊息/群組/日曆/多維表格 |
+| `20-jira-confluence` | 安裝公司 JIRA & Confluence — Issue 管理、頁面搜尋、操作自動化 |
 | `99-install-all` | 一次全部安裝 |
 
 安裝後對 OpenCode 說該技能對應的關鍵字即可啟動。
@@ -111,6 +112,7 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 | 17 | [Find Skills 技能搜尋與安裝](17-find-skills.md) | — | v0.1 | 從 5000+ 開放技能中搜尋並一鍵安裝 |
 | 18 | [Frontend Design 辨識度優先前端設計](18-frontend-design.md) | — | v0.1 | Anthropic 出品 572K 安裝：拒絕 AI 模板化美學 |
 | 19 | [安裝飛書 Lark](19-安裝-飛書Lark.md) | — | v0.1 | 飛書文檔/訊息/群組/日曆/多維表格整合 |
+| 20 | [安裝公司 JIRA & Confluence](20-公司-jira-confluence.md) | — | v0.1 | 公司內部 JIRA Issue 管理 + Confluence 頁面搜尋與操作 |
 
 ---
 

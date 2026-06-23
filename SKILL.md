@@ -9,7 +9,7 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 
 ## 步驟一：認識可用懶人包
 
-這個 repo 的 `skills/` 目錄下有 19 個技能。全部支援 `npx skills add` 一鍵安裝。
+這個 repo 的 `skills/` 目錄下有 20 個技能。全部支援 `npx skills add` 一鍵安裝。
 
 | 編號 | Skill 名稱 | 說明 | 前置需求 |
 |------|-----------|------|---------|
@@ -33,7 +33,8 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 | 17 | `17-find-skills` | 安裝 Find Skills — 從 5000+ 開放技能中搜尋並安裝 | 無 |
 | 18 | `18-frontend-design` | 安裝 Frontend Design — Anthropic 出品 572K 安裝前端設計 | 無 |
 | 19 | `19-feishu-lark` | 安裝飛書 Lark — 文檔/訊息/群組/日曆/多維表格 | #00 + 飛書帳號 |
-| 99 | `99-install-all` | 一次安裝全部（依序執行以上 20 個）| — |
+| 20 | `20-jira-confluence` | 安裝公司 JIRA & Confluence — Issue 管理、頁面搜尋、操作自動化 | 公司內網 + 帳號 |
+| 99 | `99-install-all` | 一次安裝全部（依序執行以上 21 個）| — |
 
 ## 步驟二：讓使用者選擇
 
