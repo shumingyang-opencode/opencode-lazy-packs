@@ -36,6 +36,32 @@ OpenCode 專用的懶人包倉庫，對應 repo：
 - 使用者說「更新 OpenCode 懶人包」→ 只動本資料夾
 - 使用者說「三邊都更新」→ 三個資料夾都改
 
+## MCP / 技能安裝流程
+
+安裝任何涉及 **MCP 伺服器**或**技能**的懶人包時，遵循以下流程：
+
+1. 依照懶人包步驟安裝並驗證
+2. 驗證完成後，**必須詢問使用者**是否要將該服務設為全局（`~/.config/opencode/`）
+3. 使用者回答「是」→ 搬遷到全局設定
+4. 使用者回答「否」→ 保留在專案層級，並告知其他專案如何啟用
+5. 詳見 `SKILL.md` 步驟五
+
+## 全局 MCP 列表
+
+以下 MCP 伺服器已安裝在全局 `~/.config/opencode/opencode.json`：
+
+| MCP | 類型 | 用途 |
+|-----|------|------|
+| obsidian | 筆記 | 讀寫 Obsidian vault |
+| firebase | Firebase | Firebase 專案管理 |
+| playwright | 瀏覽器 | 瀏覽器自動化 |
+| open-computer-use | 桌面 | 桌面 UI 控制 |
+| docker | Docker | 容器操作 |
+| gitlab | GitLab | GitLab API 雙實例 |
+| mcp-atlassian | Atlassian | JIRA + Confluence |
+| trac | Trac | Ticket/Wiki 管理 |
+| codebase-memory-mcp | 程式碼 | 知識圖譜引擎 |
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.

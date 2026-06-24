@@ -67,6 +67,33 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名稱> -g
 
 每安裝完一個，依照該 skill 內的「完成回報格式」回報結果。全部完成後列出總表。
 
+## 步驟五：詢問全局設定
+
+每次安裝涉及 **MCP 伺服器**或**技能**的懶人包，安裝並驗證完成後，須詢問使用者：
+
+```
+這個服務已安裝完成。
+要將它加入【全局設定】（~/.config/opencode/opencode.json）讓所有專案都能用嗎？
+還是保持在【當前專案】就好？
+```
+
+- **使用者回答「是」** → 將該 MCP/skill 設定從專案 `opencode.json` 搬遷到 `~/.config/opencode/opencode.json` 的 `mcp` 區塊中；若專案 `opencode.json` 已無其他設定，可移除或精簡為僅 `$schema` 與空 `mcp: {}`
+- **使用者回答「否」** → 保留在當前專案 `opencode.json`，並告知：
+  ```
+  設定已保留在【當前專案】。其他專案若要使用，請將以下設定複製到該專案
+  的 opencode.json 或 ~/.config/opencode/opencode.json：
+  
+  <顯示對應的 MCP JSON 設定區塊>
+  ```
+
+### 全局 vs 專案設定速查
+
+| | 全局 (`~/.config/opencode/`) | 專案 (`<project>/opencode.json`) |
+|---|---|---|
+| 生效範圍 | 所有專案 | 僅該專案 |
+| 適合什麼 | 通用服務（GitLab、Firebase、Trac、codebase-memory 等） | 專案專屬設定 |
+| 覆蓋規則 | 基礎層 | 專案層會與全局合併，同名 key 會覆蓋 |
+
 ## 補充說明
 
 - `00-env-setup` 幾乎所有 pack 的前置，建議優先安裝
