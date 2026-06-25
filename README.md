@@ -154,6 +154,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 | 20 | [安裝公司 JIRA & Confluence](20-公司-jira-confluence.md) | — | v0.1 | 公司內部 JIRA Issue 管理 + Confluence 頁面搜尋與操作 |
 | 21 | [安裝公司 Trac](21-公司-trac.md) | — | v0.2 | 公司 Trac Ticket 管理、Wiki 查閱、全文搜尋自動化 |
 | 22 | [Codebase Memory MCP](22-codebase-memory-mcp.md) | — | v0.1 | 程式碼知識圖譜引擎 — 純 C 單一二進位、158 語言、Hybrid LSP 型別解析、14 MCP 工具、零依賴 |
+| 23 | [功能規劃技能](23-功能規劃技能.md) | — | v0.1 | project-plan-feature：10 步驟功能規劃、init_plan.py 自動建檔、codebase-memory 索引檢查 |
 
 ---
 
