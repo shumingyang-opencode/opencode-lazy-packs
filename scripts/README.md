@@ -26,3 +26,17 @@ python scripts/draw.py "城市夜景" --name city --size "1024x1024" --quality h
 ```
 
 **相依：** `openai`（`pip install openai`）、`OPENAI_API_KEY`（存放於 `~/.openai.env`）
+
+## `init_plan.py`
+
+透過 10 步驟模板初始化功能規劃目錄，用於 project-plan-feature 技能：
+
+```bash
+# 自動偵測專案根目錄
+python scripts/init_plan.py --name "My_Feature"
+
+# 手動指定路徑
+python scripts/init_plan.py --name "Web_Dashboard" --project-root ~/my-project
+```
+
+**相依：** 無（僅使用 Python 標準函式庫）

@@ -104,7 +104,7 @@ rm -rf ~/.agents/skills/frontend-design
 
 ## 完成回報
 
-```
+```md
 ✅ #18 frontend-design 已安裝完成！
 - 來源：Anthropic（anthropics/skills）
 - 安裝路徑：~/.agents/skills/frontend-design/

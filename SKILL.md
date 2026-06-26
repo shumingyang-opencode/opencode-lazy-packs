@@ -35,7 +35,7 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 | 19 | `19-feishu-lark` | 安裝飛書 Lark — 文檔/訊息/群組/日曆/多維表格 | #00 + 飛書帳號 |
 | 20 | `20-jira-confluence` | 安裝公司 JIRA & Confluence — Issue 管理、頁面搜尋、操作自動化 | 公司內網 + 帳號 |
 | 21 | `21-trac` | 安裝公司 Trac — Ticket 管理、Wiki 查閱、搜尋自動化 | 公司內網 + 帳號 |
-| 22 | `22-cbm` | 安裝 Codebase Memory MCP — 程式碼知識圖譜（158 語言、Hybrid LSP、呼叫圖、Cypher）| 無 |
+| 22 | `22-codebase-memory-mcp` | 安裝 Codebase Memory MCP — 程式碼知識圖譜（158 語言、Hybrid LSP、呼叫圖、Cypher）| 無 |
 | 23 | `23-project-plan-feature` | 安裝功能規劃技能 — 10 步驟規劃 + init_plan.py | #22 |
 | 99 | `99-install-all` | 一次安裝全部（依序執行以上 24 個）| — |
 
@@ -47,7 +47,7 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 以上是這份懶人包的所有項目。
 
 你可以：
-- 輸入「全部」→ 一次安裝全部（用 12-install-all）
+- 輸入「全部」→ 一次安裝全部（用 99-install-all）
 - 輸入編號組合 → 例如「00, 01, 03」只裝這三個
 - 若有已安裝的項目 → 告訴我跳過
 

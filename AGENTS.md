@@ -48,19 +48,19 @@ OpenCode 專用的懶人包倉庫，對應 repo：
 
 ## 全局 MCP 列表
 
-以下 MCP 伺服器已安裝在全局 `~/.config/opencode/opencode.json`：
+以下 MCP 伺服器已安裝在全局 `~/.config/opencode/opencode.json`（部分僅安裝於公司工作機）：
 
-| MCP | 類型 | 用途 |
-|-----|------|------|
-| obsidian | 筆記 | 讀寫 Obsidian vault |
-| firebase | Firebase | Firebase 專案管理 |
-| playwright | 瀏覽器 | 瀏覽器自動化 |
-| open-computer-use | 桌面 | 桌面 UI 控制 |
-| docker | Docker | 容器操作 |
-| gitlab | GitLab | GitLab API 雙實例 |
-| mcp-atlassian | Atlassian | JIRA + Confluence |
-| trac | Trac | Ticket/Wiki 管理 |
-| codebase-memory-mcp | 程式碼 | 知識圖譜引擎 |
+| MCP | 類型 | 用途 | 安裝位置 |
+|-----|------|------|---------|
+| obsidian | 筆記 | 讀寫 Obsidian vault | 所有機器 |
+| firebase | Firebase | Firebase 專案管理 | 所有機器 |
+| playwright | 瀏覽器 | 瀏覽器自動化 | 所有機器 |
+| open-computer-use | 桌面 | 桌面 UI 控制 | 所有機器 |
+| docker | Docker | 容器操作 | 工作機 |
+| gitlab | GitLab | GitLab API 雙實例 | 工作機 |
+| mcp-atlassian | Atlassian | JIRA + Confluence | 工作機 |
+| trac | Trac | Ticket/Wiki 管理 | 工作機 |
+| codebase-memory-mcp | 程式碼 | 知識圖譜引擎 | 所有機器 |
 
 ## graphify
 

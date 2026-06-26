@@ -43,7 +43,7 @@ git --version
 gh --version
 ```
 
-如果 Git 未安裝，先跑 **懶人包 #00：環境建置**。
+如果 Git 未安裝，前往 https://git-scm.com/downloads 下載安裝，或透過套件管理員安裝（macOS: `brew install git`、Windows: `winget install Git.Git`）。
 
 ---
 

@@ -1,7 +1,7 @@
 # OpenCode 懶人包 #22：Codebase Memory MCP
 
 > 版本：v0.1
-> 更新日期：2026-06-23
+> 更新日期：2026-06-26
 
 ---
 
@@ -103,6 +103,18 @@ codebase-memory-mcp uninstall
 ```bash
 codebase-memory-mcp uninstall
 rm -rf ~/.cache/codebase-memory-mcp/
+```
+
+---
+
+## 完成回報格式
+
+```md
+✅ #22 Codebase Memory MCP 安裝完成！
+- 版本：<v版本>
+- 工具數量：14 個
+- 已索引專案：<n> 個
+- 使用方式：說「搜尋函式 XXX」「誰呼叫了 YYY」「架構總覽」
 ```
 
 ---

@@ -286,7 +286,7 @@ rm -rf ~/.agents/skills/feishu-inout
 
 ## 完成回報格式
 
-```
+```md
 ✅ #19 飛書 Lark 已安裝完成！
 - 來源：joe960913/feishu-inout
 - 飛書應用：OpenCode 助手（App ID: cli_xxx）

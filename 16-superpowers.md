@@ -221,7 +221,7 @@ opencode run --print-logs "hello" 2>&1 | grep -i superpowers
 
 ## 完成回報
 
-```
+```md
 ✅ #16 Superpowers 已安裝完成！
 - 來源：obra/superpowers v6.0.3（235K stars）
 - 安裝方式：opencode.json plugin

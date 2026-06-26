@@ -37,6 +37,9 @@ graphify-out/
 # 本機鎖定檔案
 skills-lock.json
 
+# Python 快取
+__pycache__/
+
 # 瀏覽器控制本機快取
 .playwright-mcp/
 

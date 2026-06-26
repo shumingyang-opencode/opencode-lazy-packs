@@ -18,7 +18,7 @@
 
 AI 會自動：
 1. 讀取 repo 的 `SKILL.md`（安裝入口）
-2. 列出 22 個懶人包
+2. 列出 24 個懶人包
 3. 問你要裝哪些（可以選「全部」或特定編號）
 4. 自動安裝你選的項目
 
@@ -54,12 +54,13 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 | `19-feishu-lark` | 安裝飛書 Lark — 文檔/訊息/群組/日曆/多維表格 |
 | `20-jira-confluence` | 安裝公司 JIRA & Confluence — Issue 管理、頁面搜尋、操作自動化 |
 | `21-trac` | 安裝公司 Trac — Ticket 管理、Wiki 查閱、搜尋自動化 |
-| `22-cbm` | 安裝 Codebase Memory MCP — 程式碼知識圖譜（158 語言、Hybrid LSP、呼叫圖分析、Cypher 查詢） |
+| `22-codebase-memory-mcp` | 安裝 Codebase Memory MCP — 程式碼知識圖譜（158 語言、Hybrid LSP、呼叫圖分析、Cypher 查詢） |
+| `23-project-plan-feature` | 功能規劃技能 — 10 步驟規劃 + init_plan.py 自動建檔 |
 | `99-install-all` | 一次全部安裝 |
 
 安裝後對 OpenCode 說該技能對應的關鍵字即可啟動。
 
-### 方式二：手動下載 MD 檔
+### 方式三：手動下載 MD 檔
 
 1. 看影片了解原理
 2. 下載對應的懶人包（MD 檔）
@@ -155,6 +156,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 | 21 | [安裝公司 Trac](21-公司-trac.md) | — | v0.2 | 公司 Trac Ticket 管理、Wiki 查閱、全文搜尋自動化 |
 | 22 | [Codebase Memory MCP](22-codebase-memory-mcp.md) | — | v0.1 | 程式碼知識圖譜引擎 — 純 C 單一二進位、158 語言、Hybrid LSP 型別解析、14 MCP 工具、零依賴 |
 | 23 | [功能規劃技能](23-功能規劃技能.md) | — | v0.1 | project-plan-feature：10 步驟功能規劃、init_plan.py 自動建檔、codebase-memory 索引檢查 |
+| 99 | [全部安裝](skills/99-install-all/SKILL.md) | — | v0.1 | 一次安裝所有懶人包（00-23 全部安裝）|
 
 ---
 

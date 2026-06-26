@@ -1,5 +1,5 @@
 ---
-name: opencode-cbm
+name: opencode-codebase-memory-mcp
 description: 安裝 Codebase Memory MCP — 程式碼知識圖譜引擎。
              支援 158 語言、Hybrid LSP 型別解析（11 語言）、14 個 MCP 工具（search_graph/trace_path/get_architecture/Cypher）。
              單一靜態二進位、零依賴、全本機執行、無需 API Key。

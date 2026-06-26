@@ -16,8 +16,8 @@ description: 安裝 AI 生圖技能（OpenAI gpt-image-2）。說「安裝生圖
 ### 1. 複製技能檔案
 ```bash
 mkdir -p ~/.config/opencode/skills/draw
-curl -o ~/.config/opencode/skills/draw/SKILL.md https://raw.githubusercontent.com/mathruffian-dot/opencode-lazy-packs/main/skills/08-draw/SKILL.md
-curl -o ~/.config/opencode/skills/draw/draw.py https://raw.githubusercontent.com/mathruffian-dot/opencode-lazy-packs/main/scripts/draw.py
+curl -o ~/.config/opencode/skills/draw/SKILL.md https://raw.githubusercontent.com/shumingyang-opencode/opencode-lazy-packs/main/skills/11-draw/SKILL.md
+curl -o ~/.config/opencode/skills/draw/draw.py https://raw.githubusercontent.com/shumingyang-opencode/opencode-lazy-packs/main/scripts/draw.py
 ```
 
 ### 2. 確認 draw.py 位置

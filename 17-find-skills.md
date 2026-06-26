@@ -109,7 +109,7 @@ rm -rf ~/.agents/skills/find-skills
 
 ## 完成回報
 
-```
+```md
 ✅ #17 find-skills 已安裝完成！
 - 來源：Vercel Labs（vercel-labs/skills）
 - 安裝路徑：~/.agents/skills/find-skills/
