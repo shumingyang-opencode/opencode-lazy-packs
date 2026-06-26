@@ -226,5 +226,5 @@ Superpowers 透過 git-backed plugin spec 安裝。更新通常自動生效，�
 
 | 日期 | 版本 | 更新內容 |
 |------|------|---------|
-| 2026-06-12 | v6.0.3 | 由 oh-my-opencode-slim 取代為 Superpowers 完整 SDLC 方法論 |
+| 2026-06-12 | v6.0.3 | 由先前的精簡版取代為 Superpowers 完整 SDLC 方法論 |
 | 2026-05-25 | v0.1 | 初版 |
