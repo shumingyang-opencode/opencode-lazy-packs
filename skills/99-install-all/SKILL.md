@@ -1,11 +1,11 @@
 ---
 name: opencode-install-all
-description: 一次安裝所有 OpenCode 懶人包技能（00-22 全部）。說「全部安裝」「裝完所有懶人包」時載入。
+description: 一次安裝所有 OpenCode 懶人包技能（00-23 全部）。說「全部安裝」「裝完所有懶人包」時載入。
 ---
 
 # 一次安裝全部技能
 
-依序載入並執行所有 23 個懶人包技能：
+依序載入並執行所有 24 個懶人包技能：
 
 1. **00-env-setup** — 安裝 Node.js、OpenCode、Git、gh、uv
 2. **01-notebooklm** — 連接 NotebookLM MCP
@@ -30,12 +30,13 @@ description: 一次安裝所有 OpenCode 懶人包技能（00-22 全部）。說
 21. **20-jira-confluence** — 安裝公司 JIRA & Confluence
 22. **21-trac** — 安裝公司 Trac Ticket 管理
 23. **22-cbm** — 安裝 Codebase Memory MCP 程式碼知識圖譜
+24. **23-project-plan-feature** — 安裝功能規劃技能（10 步驟規劃 + init_plan.py）
 
 ## 執行方式
 
 依序載入每個子技能並執行。每完成一個報告進度。
 跳過已安裝的工具（檢查版本確認）。
-最終回報總表：23 項各別的成功/失敗/已跳過狀態。
+最終回報總表：24 項各別的成功/失敗/已跳過狀態。
 
 > 💡 也可用 `npx skills add` 個別安裝：
 > ```bash

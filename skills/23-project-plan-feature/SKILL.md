@@ -12,6 +12,16 @@ Manage the full lifecycle of a feature planning document set: detect project roo
 - Starting a new feature or enhancement
 - User says "規劃新功能", "feature plan", "new feature", "功能規劃"
 
+## Prerequisites
+
+Before starting, verify the environment:
+
+1. **codebase-memory-mcp** — required for index pre/post-check
+   - Run `codebase-memory-mcp --version` to verify
+   - If missing: tell user to install #22 first
+2. **Python 3** — required for init_plan.py
+   - Run `python3 --version` to verify
+
 ## Workflow
 
 ### Step 0: Confirm project root and plan directory

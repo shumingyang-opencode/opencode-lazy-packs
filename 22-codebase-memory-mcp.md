@@ -107,6 +107,29 @@ rm -rf ~/.cache/codebase-memory-mcp/
 
 ---
 
+## 常見問題
+
+| 問題 | 解法 |
+|------|------|
+| 支援哪些語言？ | 158 種語言（tree-sitter AST），Hybrid LSP 型別解析支援 11 種：TS/JS/Python/Go/Rust/Java/Kotlin/C/C++/C#/PHP |
+| 需要 API Key 嗎？ | 不需要，全本機執行，零網路需求 |
+| 索引速度？ | 一般 repo 毫秒級索引，查詢 <1ms |
+| 如何更新？ | 重新執行安裝指令即可：`curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh \| bash` |
+| 解除安裝後如何重裝？ | 同上，安裝腳本會自動覆蓋舊版 |
+| cache 資料在哪？ | `~/.cache/codebase-memory-mcp/`，刪除後下次索引會重新建立 |
+| 支援 OpenCode 以外的工具嗎？ | 支援 Claude Code、Codex CLI、Gemini CLI、Zed、Antigravity、Aider、KiloCode、VS Code、OpenClaw、Kiro |
+| 3D 圖形化 UI 是什麼？ | 安裝時加上 `--ui` 參數即可啟動 3D 知識圖譜瀏覽器（Electron 視窗） |
+
+---
+
+## 更新紀錄
+
+| 日期 | 版本 | 更新內容 |
+|------|------|---------|
+| 2026-06-26 | v0.1 | 初版 |
+
+---
+
 ## 參考資料
 
 - [GitHub Repo](https://github.com/DeusData/codebase-memory-mcp)
