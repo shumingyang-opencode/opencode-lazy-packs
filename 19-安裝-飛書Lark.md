@@ -21,7 +21,7 @@
 
 ## 先備條件
 
-- [ ] OpenCode 已安裝
+- [ ] 已完成 **懶人包 #00：環境建置**（Node.js + OpenCode）
 - [ ] `open-computer-use` 已安裝（懶人包 #09）
 - [ ] 電腦有網路連線
 - [ ] 有飛書帳號（可用 Google 帳號）

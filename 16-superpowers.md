@@ -229,3 +229,12 @@ opencode run --print-logs "hello" 2>&1 | grep -i superpowers
 - 使用方式：正常問問題，Superpowers 自動觸發對應 skill
 - 首次驗證：說「Tell me about your superpowers」
 ```
+
+---
+
+## 更新紀錄
+
+| 日期 | 版本 | 更新內容 |
+|------|------|---------|
+| 2026-06-12 | v6.0.3 | 由 oh-my-opencode-slim 取代為 Superpowers 完整 SDLC 方法論 |
+| 2026-05-25 | v0.1 | 初版 |

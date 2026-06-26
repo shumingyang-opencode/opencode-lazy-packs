@@ -29,8 +29,7 @@ OpenCode ←(MCP 協定)→ nlm（翻譯官）←(Google 登入)→ NotebookLM
 
 ## 先備條件
 
-- [ ] Node.js 18+ 已安裝
-- [ ] OpenCode 已安裝
+- [ ] 已完成 **懶人包 #00：環境建置**（Node.js + OpenCode）
 - [ ] 有 Google 帳號
 - [ ] 電腦有網路連線
 
