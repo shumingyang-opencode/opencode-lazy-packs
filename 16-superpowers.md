@@ -2,8 +2,6 @@
 
 > 版本：v6.0.3
 > 更新日期：2026-06-21
-> 作者：Jesse Vincent @ Prime Radiant
-> GitHub Stars：235K | 總安裝數：1.9M | 技能數：14
 
 ---
 
