@@ -219,7 +219,7 @@ opencode run --print-logs "hello" 2>&1 | grep -i superpowers
 
 ---
 
-## 完成回報
+## 完成回報格式
 
 ```md
 ✅ #16 Superpowers 已安裝完成！

@@ -5,7 +5,7 @@
 
 ---
 
-## 這個懶人包會幫你什麼
+## 這個懶人包會幫你做什麼？
 
 讓 OpenCode 透過 `mcp-atlassian` 同時操作公司內部的 **JIRA** 與 **Confluence**（Server/Data Center 版本），包含：
 
@@ -17,7 +17,7 @@
 
 ---
 
-## 前置條件
+## 先備條件
 
 - [ ] OpenCode 已安裝（若無，先執行 `00-環境建置`）
 - [ ] Python / uvx 已安裝（mcp-atlassian 基於 Python）
@@ -28,9 +28,9 @@
 
 ---
 
-## 讓 OpenCode 幫你一步一步做
+## 請 OpenCode 幫我執行以下步驟
 
-### Step 1：確認 uvx 環境
+### 步驟一：確認 uvx 環境
 
 ```bash
 uv --version
@@ -43,7 +43,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 安裝後重開終端機，再次執行 `uv --version` 確認。
 
-### Step 2：取得 Personal Access Token (PAT)
+### 步驟二：取得 Personal Access Token (PAT)
 
 登入公司 JIRA 並產生 PAT：
 
@@ -61,9 +61,9 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 > **關於 PAT 共用**：
 > - 若 JIRA 與 Confluence 使用同一個 SSO 帳號，**可以先嘗試共用同一個 PAT**
 > - 若各自獨立登入，則需分別取得兩個 PAT
-> - Step 7 有雙 PAT 的相容設定說明
+> - 步驟七有雙 PAT 的相容設定說明
 
-### Step 3：編輯全域 opencode.json
+### 步驟三：編輯全域 opencode.json
 
 開啟 `~/.config/opencode/opencode.json`，在 `mcp` 區塊中加入：
 
@@ -87,7 +87,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 > **SSL 說明**：`SSL_VERIFY=false` 是針對公司內部自簽憑證。若你的公司已使用公開信任的 CA 憑證則可省略。
 > **TOOLSETS 說明**：mcp-atlassian v0.22.0+ 預設只載入 6 個核心工具；設為 `"all"` 會載入全部 72 個工具。
 
-### Step 4：驗證 MCP 工具載入
+### 步驟四：驗證 MCP 工具載入
 
 儲存後重啟 OpenCode，然後進行驗證：
 
@@ -97,7 +97,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 你應該會看到以 `jira_` 和 `confluence_` 開頭的工具列表（共 72 個工具）。
 
-### Step 5：JIRA 操作測試
+### 步驟五：JIRA 操作測試
 
 依序測試以下功能：
 
@@ -117,7 +117,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 請將剛才建立的測試 Issue 轉移狀態到下一個階段
 ```
 
-### Step 6：Confluence 操作測試
+### 步驟六：Confluence 操作測試
 
 依序測試以下功能：
 
@@ -137,7 +137,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 請在剛才建立的測試頁面下方新增一則評論：此頁面由 OpenCode 自動建立
 ```
 
-### Step 7：若需要雙 PAT（兩套帳號）
+### 步驟七：若需要雙 PAT（兩套帳號）
 
 若 JIRA 與 Confluence 帳號不同（SSO 未整合），請分別取得兩個 PAT，修改 opencode.json：
 
@@ -406,7 +406,7 @@ mcp-atlassian 提供 72 個工具，以下是常用工具分類：
 
 ---
 
-## 版本記錄
+## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |
 |------|------|---------|

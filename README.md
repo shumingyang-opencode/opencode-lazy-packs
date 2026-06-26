@@ -62,8 +62,7 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 
 ### 方式三：手動下載 MD 檔
 
-1. 看影片了解原理
-2. 下載對應的懶人包（MD 檔）
+1. 下載對應的懶人包（MD 檔）
 3. 開啟終端機，在專案目錄執行 `opencode`
 4. 把懶人包內容丟給 OpenCode，它會自動執行
 
@@ -125,6 +124,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 
 - [ ] Node.js 18+ 已安裝
 - [ ] 電腦有網路連線
+- [ ] 各懶人包的詳細先備條件，請參閱 [SKILL.md](SKILL.md) 的「前置需求」欄位
 
 ---
 
@@ -160,6 +160,14 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 
 ---
 
+## 貢獻與回饋
+
+- **問題回報 / 功能建議**：請至 [GitHub Issues](https://github.com/shumingyang-opencode/opencode-lazy-packs/issues) 提出
+- **Pull Request**：歡迎 fork 本專案並提交 PR
+- **討論**：請在 Issues 中發起討論
+
+---
+
 ## 授權
 
-MIT License，與 Claude Code / Codex 懶人包相同。
+[MIT License](LICENSE)，與 Claude Code / Codex 懶人包相同。

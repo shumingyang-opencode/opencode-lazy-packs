@@ -5,7 +5,7 @@
 
 ---
 
-## 這個懶人包會幫你什麼
+## 這個懶人包會幫你做什麼？
 
 讓 OpenCode 透過 `trac-mcp-server` 操作公司內部的 **Trac 1.2.6** 系統，包含：
 
@@ -18,7 +18,7 @@
 
 ---
 
-## 前置條件
+## 先備條件
 
 - [ ] OpenCode 已安裝（若無，先執行 `00-環境建置`）
 - [ ] `uv` 已安裝（`uv --version` 確認）
@@ -30,9 +30,9 @@
 
 ---
 
-## 讓 OpenCode 幫你一步一步做
+## 請 OpenCode 幫我執行以下步驟
 
-### Step 0：先建立／更新個人帳號清單
+### 步驟零：先建立／更新個人帳號清單
 
 執行安裝前，先確認你的 `個人帳號與服務清單.md` 中已有 **Trac** 區段。若無，請在該檔案中加入以下內容：
 
@@ -52,7 +52,7 @@
 
 > **已初始化過的使用者**：可跳過，直接在後續 opencode.json 設定中填入帳號資訊即可。
 
-### Step 1：安裝 trac-mcp-server（一次安裝，永久離線使用）
+### 步驟一：安裝 trac-mcp-server（一次安裝，永久離線使用）
 
 ```bash
 uv tool install --from "git+https://gitlab.ovt.com:8081/steven.yang/trac-mcp-server.git" trac-mcp-server
@@ -64,7 +64,7 @@ Installed 38 packages in ...s
 Installed 1 executable: trac-mcp
 ```
 
-### Step 2：編輯 opencode.json
+### 步驟二：編輯 opencode.json
 
 開啟 `~/.config/opencode/opencode.json`，在 `mcp` 區塊中加入。帳號資訊從 `個人帳號與服務清單.md` 取得，**無須記憶**：
 
@@ -89,7 +89,7 @@ Installed 1 executable: trac-mcp
 > **帳號來源**：`TRAC_APP_USERNAME` 和 `TRAC_APP_ASIC_USERNAME` 對應 `個人帳號與服務清單.md` 中 Trac 區段的帳號。
 > **雙實例說明**：`app` 與 `app_asic` 為兩個獨立的 Trac 專案，帳號可能不同（大小寫有區分）。
 
-### Step 3：重啟並驗證工具載入
+### 步驟三：重啟並驗證工具載入
 
 儲存後重啟 OpenCode，然後輸入：
 
@@ -107,7 +107,7 @@ Installed 1 executable: trac-mcp
 - `trac_get_wiki_page` — 讀取 wiki 頁面
 - `trac_search` — 全文檢索
 
-### Step 4：操作測試
+### 步驟四：操作測試
 
 依序測試以下功能：
 
@@ -274,7 +274,7 @@ uv tool uninstall trac-mcp-server
 
 ---
 
-## 版本記錄
+## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |
 |------|------|---------|
