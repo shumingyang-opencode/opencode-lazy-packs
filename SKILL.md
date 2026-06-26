@@ -9,7 +9,7 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 
 ## 步驟一：認識可用懶人包
 
-這個 repo 的 `skills/` 目錄下有 24 個技能。全部支援 `npx skills add` 一鍵安裝。
+這個 repo 的 `skills/` 目錄下有 27 個技能。全部支援 `npx skills add` 一鍵安裝。
 
 | 編號 | Skill 名稱 | 說明 | 前置需求 |
 |------|-----------|------|---------|
@@ -37,7 +37,10 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 | 21 | `21-trac` | 安裝公司 Trac — Ticket 管理、Wiki 查閱、搜尋自動化 | 公司內網 + 帳號 |
 | 22 | `22-codebase-memory-mcp` | 安裝 Codebase Memory MCP — 程式碼知識圖譜（158 語言、Hybrid LSP、呼叫圖、Cypher）| 無 |
 | 23 | `23-project-plan-feature` | 安裝功能規劃技能 — 10 步驟規劃 + init_plan.py | #22 |
-| 99 | `99-install-all` | 一次安裝全部（依序執行以上 24 個）| — |
+| 24 | `24-skill-reference` | 互動式 SKILL.md 建立教學 — 從 frontmatter、目錄結構到發布 | 無 |
+| 25 | `25-agents-reference` | 互動式 AGENTS.md 建立教學 — 依專案特性客製專案規範 | 無 |
+| 26 | `26-mcp-reference` | 互動式 MCP 設定教學 — 連線模式、安全性、自訂 MCP Server | #00 |
+| 99 | `99-install-all` | 一次安裝全部（依序執行以上 27 個）| — |
 
 ## 步驟二：讓使用者選擇
 
