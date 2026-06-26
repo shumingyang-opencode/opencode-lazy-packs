@@ -203,19 +203,11 @@ Superpowers 透過 git-backed plugin spec 安裝。更新通常自動生效，�
 
 ## 常見問題
 
-### Plugin 沒載入
-
-```bash
-opencode run --print-logs "hello" 2>&1 | grep -i superpowers
-```
-
-### Skills 沒發現
-
-使用 OpenCode 的 `skill` tool 列出可用技能，確認 14 個都在。
-
-### Subagent 無法 dispatch
-
-確認 `agent.general.disable` 沒有被設為 `true`。
+| 問題 | 解法 |
+|------|------|
+| Plugin 沒載入 | 執行 `opencode run --print-logs "hello" 2>&1 \| grep -i superpowers` 檢查日誌 |
+| Skills 沒發現 | 使用 OpenCode 的 `skill` tool 列出可用技能，確認 14 個都在 |
+| Subagent 無法 dispatch | 確認 `agent.general.disable` 沒有被設為 `true` |
 
 ---
 

@@ -392,7 +392,7 @@ mcp-atlassian 提供 72 個工具，以下是常用工具分類：
 
 ## 完成回報格式
 
-```
+```md
 ✅ #20 公司 JIRA & Confluence 已安裝完成！
 - 套件：sooperset/mcp-atlassian
 - JIRA 網址：https://jira.ovt.com/

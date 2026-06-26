@@ -29,7 +29,7 @@ description: 一次安裝所有 OpenCode 懶人包技能（00-23 全部）。說
 20. **19-feishu-lark** — 安裝飛書 Lark 文檔/訊息/群組/日曆整合
 21. **20-jira-confluence** — 安裝公司 JIRA & Confluence
 22. **21-trac** — 安裝公司 Trac Ticket 管理
-23. **22-cbm** — 安裝 Codebase Memory MCP 程式碼知識圖譜
+23. **22-codebase-memory-mcp** — 安裝 Codebase Memory MCP 程式碼知識圖譜
 24. **23-project-plan-feature** — 安裝功能規劃技能（10 步驟規劃 + init_plan.py）
 
 ## 執行方式

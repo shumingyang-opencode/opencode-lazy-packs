@@ -261,7 +261,7 @@ uv tool uninstall trac-mcp-server
 
 ## 完成回報格式
 
-```
+```md
 ✅ #21 公司 Trac 已安裝完成！
 - 套件：trac-mcp-server（自建，已上架 GitLab）
 - 安裝來源：git+https://gitlab.ovt.com:8081/steven.yang/trac-mcp-server.git

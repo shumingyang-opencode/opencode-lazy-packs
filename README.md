@@ -63,8 +63,8 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 ### 方式三：手動下載 MD 檔
 
 1. 下載對應的懶人包（MD 檔）
-3. 開啟終端機，在專案目錄執行 `opencode`
-4. 把懶人包內容丟給 OpenCode，它會自動執行
+2. 開啟終端機，在專案目錄執行 `opencode`
+3. 把懶人包內容丟給 OpenCode，它會自動執行
 
 ---
 
