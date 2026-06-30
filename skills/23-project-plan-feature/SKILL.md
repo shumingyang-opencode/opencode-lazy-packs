@@ -55,6 +55,14 @@ python ~/.config/opencode/skills/project-plan-feature/scripts/init_plan.py \
 
 This creates `<root>/<plan-dir>/<NN>_<name>-計劃中/` with 10 template `.md` files (01~10).
 
+## Status Lifecycle
+
+Advance the directory suffix with `git mv`:
+```
+-計劃中 → -分析中 → -實作中 → -驗證中 → -完成
+                                      ↘ -已取消
+```
+
 ### Step 3: Write the 10 planning documents
 
 Write each file sequentially. For NA steps, append `_NA` to filename.
