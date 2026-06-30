@@ -181,6 +181,22 @@ OpenCode 會自動掃描 `~/.opencode/skills/` 下的所有 SKILL.md，不需額
 - MCP 設定：已寫入 opencode.json
 - 讀取測試：成功 / 失敗
 - 寫入測試：成功 / 失敗
+- kepano/obsidian-skills：已安裝（5 項技能）
+
+---
+
+## 已安裝的 Obsidian 技能說明
+
+安裝來源：kepano/obsidian-skills（39K stars，Obsidian 創辦人開發）
+遵循 [Agent Skills 規格](https://agentskills.io/specification)，相容所有支援 SKILL.md 的 AI agent。
+
+| 技能 | 說明 |
+|------|------|
+| `obsidian-markdown` | 建立和編輯 Obsidian Flavored Markdown（`.md`）— wikilinks、embeds、callouts、properties 等 Obsidian 特有語法 |
+| `obsidian-bases` | 建立和編輯 Obsidian Bases（`.base`）— 資料庫檢視、篩選、公式、摘要 |
+| `json-canvas` | 建立和編輯 JSON Canvas（`.canvas`）— 節點、連線、群組、心智圖 |
+| `obsidian-cli` | 透過 Obsidian CLI 操作 vault — 讀寫筆記、管理插件與佈景主題開發 |
+| `defuddle` | 從網頁提取純淨 Markdown — 去除導覽雜訊節省 Token，取代 WebFetch |
 ```
 
 ---
