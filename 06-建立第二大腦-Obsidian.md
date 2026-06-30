@@ -136,6 +136,41 @@ which mcpvault
 
 ---
 
+### 步驟五：安裝 Obsidian 技能套件（kepano/obsidian-skills）
+
+此套件由 Obsidian 創辦人 [kepano](https://github.com/kepano) 開發，提供 5 個強化 Obsidian 操作能力的技能（**39K stars**）：
+
+| 技能 | 用途 |
+|------|------|
+| `obsidian-markdown` | 建立和編輯 Obsidian 格式 Markdown（wikilinks、callouts、properties） |
+| `obsidian-bases` | 建立和編輯 Obsidian Bases（`.base` 檔案 — 資料庫檢視、篩選、公式） |
+| `json-canvas` | 建立和編輯 JSON Canvas（`.canvas` 檔案 — 節點、連線、心智圖） |
+| `obsidian-cli` | 透過 Obsidian CLI 讀寫筆記、管理插件與佈景主題 |
+| `defuddle` | 從網頁提取純淨 Markdown，去除導覽雜訊節省 Token |
+
+安裝方式：
+
+```bash
+# 複製到 OpenCode 技能目錄
+git clone https://github.com/kepano/obsidian-skills.git ~/.opencode/skills/obsidian-skills
+```
+
+OpenCode 會自動掃描 `~/.opencode/skills/` 下的所有 SKILL.md，不需額外設定。
+
+驗證安裝：
+
+重啟 OpenCode 後問它：
+
+```
+你有哪些 Obsidian 相關的技能可以用？
+```
+
+預期看到 5 個技能：`obsidian-markdown`、`obsidian-bases`、`json-canvas`、`obsidian-cli`、`defuddle`。
+
+> 💡 mcpvault（步驟二）提供基本的 vault 讀寫能力；kepano/obsidian-skills 則提供格式編輯、CLI 操作、網頁內容擷取等進階功能。兩者相輔相成。
+
+---
+
 ## 完成回報格式
 
 ```md

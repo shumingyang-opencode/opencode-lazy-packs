@@ -26,7 +26,7 @@ OpenCode 專用的懶人包倉庫，對應 repo：
 
 ## Obsidian 關聯資料
 
-- Obsidian vault：`/Users/stevenyang/Documents/obsidian/obsidian`
+- Obsidian vault：`/Users/stevenyang/Documents/OpenCode/obsidian`
 - 每日筆記：`每日筆記/<日期>.md`
 - 創作庫：`創作庫/`
 - 知識庫：`知識庫/`

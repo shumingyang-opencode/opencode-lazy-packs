@@ -34,9 +34,16 @@ npm install -g @bitbonsai/mcpvault
 ### 4. 驗證
 重啟 OpenCode 後：「列出 Obsidian vault 根目錄」→ 再建立測試筆記。
 
+### 5. 安裝 kepano/obsidian-skills
+由 Obsidian 創辦人開發，提供 5 個進階技能：
+```bash
+git clone https://github.com/kepano/obsidian-skills.git ~/.opencode/skills/obsidian-skills
+```
+重啟 OpenCode 後確認 5 個技能已載入。
+
 ### 進階：CLI-Anything Obsidian CLI
 若需全文檢索、metadata 操作等進階功能：
 1. 在 Obsidian 安裝 Local REST API plugin
 2. `pip install cli-anything-hub && cli-hub install obsidian`
 
-回報格式：vault 路徑、mcpvault 版本、讀取/寫入測試結果。
+回報格式：vault 路徑、mcpvault 版本、讀取/寫入測試結果、obsidian-skills 5 項。 
