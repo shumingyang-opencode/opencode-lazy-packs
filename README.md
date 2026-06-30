@@ -145,7 +145,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 | 07 | [第二大腦設定指南](07-第二大腦設定指南.md) | — | v0.2 | 三層結構 + AGENTS.md + 模板 |
 | 08 | [連接 Firebase](08-連接-Firebase.md) | — | v0.1 | Firebase MCP 安裝 |
 | 09 | [安裝瀏覽器控制](09-安裝瀏覽器控制.md) | — | v0.3 | Playwright MCP + open-computer-use |
-| 10 | [開工/收工/初始化技能](10-開工收工初始化技能.md) | — | v0.1 | 全域三技能：startup、shutdown、project-init |
+| 10 | [開工/收工/初始化技能](10-開工收工初始化技能.md) | — | v0.2 | 全域三技能：startup、shutdown、project-init（可選接續功能規劃 #23） |
 | 11 | [生圖技能](11-生圖.md) | — | v0.3 | draw skill：OpenAI gpt-image-2 生圖 |
 | 12 | [MarkItDown 文件轉換](12-markitdown.md) | — | v0.1 | markitdown skill：各種文件轉 Markdown 格式 |
 | 13 | [Graphify 知識圖譜](13-graphify.md) | — | v0.1 | 將專案轉為知識圖譜，用自然語言查詢取代 grep |
