@@ -218,9 +218,67 @@ python3 $SCRIPT_PATH login
 請讀取測試群組的最新訊息
 ```
 確認剛才發送的訊息內容正確顯示。
-
 #### 10.9 清理
+
 測試完成後，可保留或手動刪除這些測試文檔與群組。
+
+---
+
+### 步驟十一（選用）：安裝官方 Lark CLI
+
+由飛書團隊官方維護的 CLI 工具（[larksuite/cli](https://github.com/larksuite/cli)，**15K stars**），提供 200+ 指令與 26 個 AI Agent Skills，涵蓋比 feishu-inout 更廣的範圍：
+
+| 範疇 | 功能 |
+|------|------|
+| 📅 日曆 | 檢視、建立、更新行程，查詢空閒時間，找會議室 |
+| 💬 訊息 | 發送/回覆訊息，管理群組，搜尋歷史，上傳下載媒體 |
+| 📄 文檔 | 建立、讀取、更新、搜尋文檔（Markdown 格式） |
+| 📊 多維表格 | 表格、欄位、紀錄、檢視、儀表板、數據分析 |
+| 📈 試算表 | 建立、讀取、寫入、附加、匯出試算表 |
+| 🖼️ 簡報 | 建立與管理簡報，增刪投影片 |
+| ✅ 任務 | 查詢、建立、更新任務，管理任務清單與提醒 |
+| 📚 知識庫 | 建立和管理知識空間與節點 |
+| 👤 通訊錄 | 搜尋使用者，取得個人資料 |
+| 📧 郵件 | 瀏覽、搜尋、讀取、發送、回覆郵件 |
+| 🎥 會議 | 查詢會議記錄與 minutes |
+| ✍️ 審批 | 查詢、核准、拒絕、轉交審批任務 |
+
+**安裝方式：**
+
+```bash
+# 安裝 CLI 工具（npm 全域安裝）
+npx @larksuite/cli@latest install
+
+# 安裝 26 個 AI Agent Skills
+npx skills add larksuite/cli -y -g
+```
+
+**設定與授權：**
+
+```bash
+# 設定應用憑證（互動式引導）
+lark-cli config init
+
+# 登入授權
+lark-cli auth login --recommend
+```
+
+**驗證安裝：**
+
+```bash
+lark-cli auth status
+```
+
+重啟 OpenCode 後問：
+
+> 你有哪些飛書相關的技能可以用？
+
+預期看到 `lark-shared`、`lark-calendar`、`lark-im`、`lark-doc`、`lark-base`、`lark-sheets` 等 26 個技能。
+
+> 💡 **feishu-inout vs lark-cli 的選擇：**
+> - **feishu-inout**（步驟一~十）：Python MCP 方案，適合基本文檔讀寫 + 訊息收發
+> - **lark-cli**（此步驟）：官方 CLI + 26 Skills，涵蓋日曆、多維表格、試算表、簡報、任務、郵件、審批等進階範疇
+> - 兩者可並存，依需求選用
 
 ---
 
@@ -293,6 +351,7 @@ rm -rf ~/.agents/skills/feishu-inout
 - 權限範圍：完整（文檔+訊息+群組+日曆+多維表格）
 - Bot 能力：已啟用（群組管理需發布審核通過）
 - 腳本路徑：{實際路徑}/feishu_mcp.py
+- 官方 Lark CLI：已安裝 / 未安裝（200+ 指令、26 Skills）
 - 使用方式：說「幫我操作飛書文檔」「發送飛書訊息」
 ```
 

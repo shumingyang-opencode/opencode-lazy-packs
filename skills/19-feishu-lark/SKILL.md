@@ -255,6 +255,15 @@ rm -rf ~/.agents/skills/feishu-inout
 | `python $S get-user` | 查詢自己 |
 | `python $S search-user <關鍵字>` | 搜尋使用者 |
 
+### 選用：安裝官方 Lark CLI（larksuite/cli）
+由飛書團隊官方維護，200+ 指令 + 26 Skills：
+```bash
+npx @larksuite/cli@latest install
+npx skills add larksuite/cli -y -g
+lark-cli config init
+lark-cli auth login --recommend
+```
+
 ## 完成回報格式
 
 ```
@@ -264,5 +273,6 @@ rm -rf ~/.agents/skills/feishu-inout
 - 權限：完整（文件+訊息+群組+日曆+多維表格）
 - Bot 能力：已啟用（如需群組管理需發布審核）
 - 腳本路徑：{實際安裝路徑}/feishu_mcp.py
+- 官方 Lark CLI：已安裝 / 未安裝（26 Skills）
 - 使用方式：說「幫我操作飛書文檔」「發送飛書訊息」
 ```
