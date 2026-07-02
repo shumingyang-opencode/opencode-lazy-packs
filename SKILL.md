@@ -40,7 +40,6 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 | 24 | `24-skill-reference` | 互動式 SKILL.md 建立教學 — 從 frontmatter、目錄結構到發布 | 無 |
 | 25 | `25-agents-reference` | 互動式 AGENTS.md 建立教學 — 依專案特性客製專案規範 | 無 |
 | 26 | `26-mcp-reference` | 互動式 MCP 設定教學 — 連線模式、安全性、自訂 MCP Server | #00 |
-| 99 | `99-install-all` | 一次安裝全部（依序執行以上 27 個）| — |
 
 ## 步驟二：讓使用者選擇
 
@@ -50,7 +49,6 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 以上是這份懶人包的所有項目。
 
 你可以：
-- 輸入「全部」→ 一次安裝全部（用 99-install-all）
 - 輸入編號組合 → 例如「00, 01, 03」只裝這三個
 - 若有已安裝的項目 → 告訴我跳過
 

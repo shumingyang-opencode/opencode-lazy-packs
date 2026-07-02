@@ -4,7 +4,7 @@
 
 ## `convert.py`
 
-透過 Microsoft MarkItDown 將 PDF / Word / Excel / PowerPoint / HTML / CSV / 圖片 等檔案轉為 Markdown。
+透過 Microsoft MarkItDown 將 PDF / Word / Excel / PowerPoint / HTML / CSV / JSON / 圖片 / 音訊 等檔案轉為 Markdown。
 
 ```bash
 # 輸出到終端機
@@ -14,7 +14,7 @@ python scripts/convert.py 報告.docx
 python scripts/convert.py 報告.docx -o 報告.md
 ```
 
-**相依：** `markitdown`（`pip install markitdown`）
+**相依：** `markitdown`（`pip install 'markitdown[xls,audio-transcription]'`）
 
 ## `draw.py`
 
