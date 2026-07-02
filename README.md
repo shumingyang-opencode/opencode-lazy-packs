@@ -146,7 +146,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 | 09 | [安裝瀏覽器控制](09-安裝瀏覽器控制.md) | — | v0.3 | Playwright MCP + macOS 桌面 UI 自動化操作 |
 | 10 | [開工/收工/初始化技能](10-開工收工初始化技能.md) | — | v0.1 | 全域三技能：startup（開工自動同步）、shutdown（收工備份）、project-init（新專案初始化） |
 | 11 | [生圖技能](11-生圖.md) | — | v0.3 | draw skill：OpenAI gpt-image-2 生成示意圖與插畫 |
-| 12 | [MarkItDown 文件轉換](12-markitdown.md) | — | v0.2 | 各種文件自動轉 Markdown：PDF/Office/CSV/JSON/圖片/音訊/Email/EPUB |
+| 12 | [MarkItDown 文件轉換](12-markitdown.md) | — | v0.3 | 各種文件自動轉 Markdown：PDF/Office/CSV/JSON/圖片/音訊/Email/EPUB |
 | 13 | [Graphify 知識圖譜](13-graphify.md) | — | v0.1 | 程式碼知識圖譜引擎：自然語言查詢取代 grep，跨檔案結構分析 |
 | 14 | [Awesome DESIGN.md 品牌設計](14-awesome-design-md.md) | — | v0.1 | 一鍵套用 73 個真實品牌 DESIGN.md（Stripe、Vercel、Apple 等） |
 | 15 | [UI/UX Pro Max 設計智能](15-ui-ux-pro-max.md) | — | v0.1 | 67 UI 風格 + 161 推理規則 + 57 字體搭配 + 99 UX 指南 |

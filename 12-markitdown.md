@@ -1,6 +1,6 @@
 # OpenCode 懶人包 #12：MarkItDown 文件轉換技能
 
-> 版本：v0.2
+> 版本：v0.3
 > 更新日期：2026-07-02
 
 ---
@@ -9,7 +9,8 @@
 
 讓 OpenCode 可以自動將非 Markdown 文件（PDF、Word、Excel、PowerPoint、HTML、CSV、JSON、XML、圖片等）轉換為 Markdown 格式：
 
-- 安裝 MarkItDown（Microsoft 官方文件轉換工具）
+- 安裝 MarkItDown（Microsoft 官方文件轉換工具，含音訊轉錄支援）
+- 安裝 ffmpeg（音訊解碼所需）
 - 安裝 markitdown skill（SKILL.md + convert.py）
 - 設定 opencode.json 權限
 - 測試文件轉換
@@ -36,6 +37,26 @@ uv tool install 'markitdown[xls,audio-transcription]'
 確認版本：
 ```bash
 markitdown --version
+```
+
+### 步驟一-b：安裝 ffmpeg（音訊轉錄所需）
+
+MarkItDown 的音訊轉換（.wav / .mp3）需要 ffmpeg 解碼音訊格式：
+
+```bash
+# macOS
+brew install ffmpeg
+
+# Ubuntu / Debian
+sudo apt install ffmpeg
+
+# Windows
+winget install ffmpeg
+```
+
+驗證安裝：
+```bash
+ffmpeg -version
 ```
 
 ### 步驟二：安裝 markitdown skill 檔案
@@ -127,3 +148,4 @@ python ~/.config/opencode/skills/markitdown/convert.py <任意 PDF 或 DOCX 檔�
 |------|------|---------|
 | 2026-06-21 | v0.1 | 初版 |
 | 2026-07-02 | v0.2 | 新增音訊（.wav/.mp3）與舊版 Excel（.xls）支援 |
+| 2026-07-02 | v0.3 | 新增 ffmpeg 安裝步驟（音訊轉解碼所需） |
