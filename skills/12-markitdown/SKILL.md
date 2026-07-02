@@ -1,6 +1,6 @@
 ---
 name: markitdown
-description: 文件轉 Markdown 技能 — 處理任何任務時，若遇到 PDF/Word/Excel/PowerPoint/HTML/CSV/JSON/XML/圖片 等非 MD 檔案，自動用 MarkItDown 轉換為 Markdown 格式再處理。說「解析這個檔案」「幫我讀這份文件」「轉換這個檔案」時載入。
+description: 文件轉 Markdown 技能 — 處理任何任務時，若遇到 PDF/Word/Excel/PowerPoint/HTML/CSV/JSON/XML/圖片/音訊 等非 MD 檔案，自動用 MarkItDown 轉換為 Markdown 格式再處理。說「解析這個檔案」「幫我讀這份文件」「轉換這個檔案」時載入。
 ---
 
 # MarkItDown 文件轉換技能
@@ -24,8 +24,9 @@ description: 文件轉 Markdown 技能 — 處理任何任務時，若遇到 PDF
 |------|--------|
 | PDF | .pdf |
 | Word | .docx |
-| Excel | .xlsx |
+| Excel | .xlsx, .xls |
 | PowerPoint | .pptx |
+| 音訊 | .wav, .mp3 |
 | HTML | .html, .htm |
 | CSV | .csv |
 | JSON | .json |

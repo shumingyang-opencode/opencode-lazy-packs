@@ -1,7 +1,7 @@
 # OpenCode 懶人包 #12：MarkItDown 文件轉換技能
 
-> 版本：v0.1
-> 更新日期：2026-06-21
+> 版本：v0.2
+> 更新日期：2026-07-02
 
 ---
 
@@ -30,7 +30,7 @@
 ### 步驟一：安裝 MarkItDown 工具
 
 ```bash
-uv tool install markitdown
+uv tool install 'markitdown[xls,audio-transcription]'
 ```
 
 確認版本：
@@ -84,8 +84,9 @@ python ~/.config/opencode/skills/markitdown/convert.py <任意 PDF 或 DOCX 檔�
 |------|--------|---------|
 | PDF | .pdf | ✅ 完整支援 |
 | Word | .docx | ✅ 完整支援 |
-| Excel | .xlsx | ✅ 完整支援 |
+| Excel | .xlsx, .xls | ✅ 完整支援（含舊版 .xls） |
 | PowerPoint | .pptx | ✅ 完整支援 |
+| 音訊 | .wav, .mp3 | ✅ 語音轉文字 |
 | HTML | .html, .htm | ✅ 完整支援 |
 | CSV | .csv | ✅ 完整支援 |
 | JSON | .json | ✅ 完整支援 |
@@ -125,3 +126,4 @@ python ~/.config/opencode/skills/markitdown/convert.py <任意 PDF 或 DOCX 檔�
 | 日期 | 版本 | 更新內容 |
 |------|------|---------|
 | 2026-06-21 | v0.1 | 初版 |
+| 2026-07-02 | v0.2 | 新增音訊（.wav/.mp3）與舊版 Excel（.xls）支援 |
