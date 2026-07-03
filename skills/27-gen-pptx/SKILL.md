@@ -12,8 +12,10 @@ description: 工程導向可編輯簡報產製技能。將技術主題、datashe
 前置需求：Python 3.8+、Node.js 18+
 
 ```bash
-# 安裝 PptxGenJS（全域，讓 generate.js 可執行）
-npm install -g pptxgenjs
+# 安裝 PptxGenJS（本機至技能目錄，讓 generate.js 可執行）
+cd ~/.config/opencode/skills/opencode-gen-pptx
+npm init -y
+npm install pptxgenjs
 ```
 
 SKILL.md 與 generate.js 已安裝至 `~/.config/opencode/skills/opencode-gen-pptx/`。

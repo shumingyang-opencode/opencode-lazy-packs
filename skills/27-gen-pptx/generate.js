@@ -1,5 +1,5 @@
-import PptxGenJS from "pptxgenjs";
-import { readFileSync } from "fs";
+const PptxGenJS = require("pptxgenjs");
+const { readFileSync } = require("fs");
 
 const [planPath, outputPath] = process.argv.slice(2);
 if (!planPath || !outputPath) {
