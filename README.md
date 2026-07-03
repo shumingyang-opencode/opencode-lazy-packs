@@ -18,7 +18,7 @@
 
 AI 會自動：
 1. 讀取 repo 的 `SKILL.md`（安裝入口）
-2. 列出 27 個懶人包
+2. 列出 28 個懶人包
 3. 問你要裝哪些（可以選「全部」或特定編號）
 4. 自動安裝你選的項目
 
@@ -59,6 +59,7 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 | `24-skill-reference` | 互動式 SKILL.md 建立教學 — 引導從零建立技能 |
 | `25-agents-reference` | 互動式 AGENTS.md 建立教學 — 依專案客製專案規範 |
 | `26-mcp-reference` | 互動式 MCP 設定教學 — 連線模式、安全性、自訂 Server |
+| `27-gen-pptx` | 通用簡報產製技能 — 六引擎工作流：技術文件/Repo/Spec→可編輯 .pptx |
 
 安裝後對 OpenCode 說該技能對應的關鍵字即可啟動。
 
@@ -161,6 +162,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 | 24 | [SKILL.md 建立教學](24-SKILL.md-建立教學.md) | — | v0.1 | 互動式教學：從 frontmatter、目錄結構到發布，引導建立第一個 OpenCode 技能 |
 | 25 | [AGENTS.md 建立教學](25-AGENTS.md-建立教學.md) | — | v0.1 | 互動式教學：依專案客製 AGENTS.md，涵蓋編碼慣例、測試規範、Git 流程 |
 | 26 | [MCP 設定教學](26-MCP-設定教學.md) | — | v0.1 | 互動式教學：MCP 概念、三種連線模式、安全性原則、自訂 MCP Server |
+| 27 | [通用簡報產製](27-通用簡報產製.md) | — | v0.1 | 六引擎簡報工作流：將技術文件、datasheet、Spec、Repo 轉為可編輯 .pptx，專為 RD/FAE/AE 設計 |
 
 ---
 
