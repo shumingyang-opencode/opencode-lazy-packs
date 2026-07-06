@@ -41,6 +41,7 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 | 25 | `25-agents-reference` | 互動式 AGENTS.md 建立教學 — 依專案特性客製專案規範 | 無 |
 | 26 | `26-mcp-reference` | 互動式 MCP 設定教學 — 連線模式、安全性、自訂 MCP Server | #00 |
 | 27 | `27-gen-pptx` | 通用簡報產製 — 六引擎工作流：技術文件/Repo→可編輯 .pptx，專為 RD/FAE/AE 設計 | #00 |
+| 28 | `28-cli-anything` | 安裝 CLI-Anything — HKUDS/CLI-Anything：50+ 軟體的 Agent-native CLI harness（Blender、GIMP、Obsidian 等），支援 cli-hub 發現與安裝 | 無 |
 
 ## 步驟二：讓使用者選擇
 
