@@ -235,6 +235,60 @@ Documents/
 
 ---
 
+## 解除安裝
+
+### 移除 MCP 設定
+
+編輯 `~/.config/opencode/opencode.json`，從 `"mcp"` 區塊移除 `notebooklm` 段落。
+
+### 移除 CLI 工具
+
+```bash
+uv tool uninstall notebooklm-mcp-cli
+# 或
+pip uninstall notebooklm-mcp-cli
+```
+
+---
+
+## Trae 對應操作
+
+> 若你使用 **Trae IDE**，以下為對應的安裝/更新/移除步驟。
+
+### 在 Trae 上安裝（專案層級）
+
+編輯 `.trae/mcp.json`（若無則建立），在 `"mcpServers"` 區塊加入：
+
+```json
+{
+  "mcpServers": {
+    "notebooklm": {
+      "command": "<nlm完整路徑>",
+      "args": ["--transport", "stdio"]
+    }
+  }
+}
+```
+
+> ⚠️ `command` 需使用 `which nlm` 查到的完整路徑，詳見步驟四的「路徑陷阱」說明。
+
+### 在 Trae 上安裝（全域）
+
+編輯 `~/.cursor/mcp.json`，在 `"mcpServers"` 區塊加入相同設定。
+
+### 在 Trae 上更新
+
+重複安裝步驟，覆蓋原有設定即可。
+
+### 在 Trae 上移除
+
+- **專案**：從 `.trae/mcp.json` 的 `"mcpServers"` 移除 `notebooklm` 區塊
+- **全域**：從 `~/.cursor/mcp.json` 的 `"mcpServers"` 移除 `notebooklm` 區塊
+
+> CLI 工具的安裝/更新/移除方式與 OpenCode 相同，無需額外步驟。
+
+---
+
 ## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |

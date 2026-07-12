@@ -210,6 +210,10 @@ git push
 | 更新 AGENTS.md 後需要重啟嗎？ | 是的，修改後需重啟 OpenCode 才會重新載入 |
 | 多個專案共用規範怎麼辦？ | 把通用規則放全域 AGENTS.md，專案 AGENTS.md 只放專案特有內容 |
 
+## Trae 對應操作
+
+本懶人包為教學性質，無需安裝任何工具，OpenCode 與 Trae 皆適用。
+
 ---
 
 ## 更新紀錄

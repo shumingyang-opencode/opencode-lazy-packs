@@ -181,6 +181,38 @@ test_dir="$HOME/Documents/opencode-github-test"
 
 ---
 
+## 解除安裝
+
+本懶人包未安裝任何 CLI 工具，Git 與 GitHub CLI（\`gh\`）為系統既有或由其他懶人包管理。
+
+### 移除 GitHub CLI（若不再需要）
+
+\`\`\`bash
+brew uninstall gh     # macOS
+winget uninstall GitHub.cli    # Windows
+\`\`\`
+
+---
+
+## Trae 對應操作
+
+> 若你使用 **Trae IDE**，安裝方式與 OpenCode 完全相同。
+> 所有 CLI 工具（git、gh 等）在 Trae 環境中可直接使用。
+
+### 在 Trae 上安裝
+
+與上方步驟完全相同，無需額外設定。
+
+### 在 Trae 上更新
+
+與 OpenCode 相同。
+
+### 在 Trae 上移除
+
+與 OpenCode 相同。
+
+---
+
 ## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |

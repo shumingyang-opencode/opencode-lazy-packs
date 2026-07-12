@@ -237,6 +237,39 @@ git push
 
 ---
 
+## 解除安裝
+
+本懶人包未安裝專屬 CLI 工具，僅設定 Git credential helper 與 PAT。
+
+### 還原設定
+
+```bash
+# 移除自訂的 credential helper
+git config --global --unset credential.helper
+rm -f ~/.git-credentials-gitlab-com
+```
+
+---
+
+## Trae 對應操作
+
+> 若你使用 **Trae IDE**，安裝方式與 OpenCode 完全相同。
+> 所有 Git 工具在 Trae 終端機中可直接使用。
+
+### 在 Trae 上安裝
+
+與上方步驟完全相同。
+
+### 在 Trae 上更新
+
+與 OpenCode 相同。
+
+### 在 Trae 上移除
+
+與 OpenCode 相同。
+
+---
+
 ## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |

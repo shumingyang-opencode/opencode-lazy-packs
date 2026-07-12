@@ -200,6 +200,49 @@ CLI-Anything 不僅能安裝現有工具，還能為**任何 GUI 軟體產生全
 
 ---
 
+## 解除安裝
+
+### 移除 CLI-Hub
+
+```bash
+pipx uninstall cli-anything-hub
+```
+
+### 移除元技能
+
+```bash
+rm -rf ~/.config/opencode/skills/cli-hub-meta-skill/
+```
+
+---
+
+## Trae 對應操作
+
+> 若你使用 **Trae IDE**，以下為對應的安裝/更新/移除步驟。
+
+### 在 Trae 上安裝
+
+CLI-Hub 安裝方式與 OpenCode 相同：
+```bash
+pipx install cli-anything-hub
+```
+
+### 在 Trae 上更新
+
+```bash
+pipx upgrade cli-anything-hub
+```
+
+### 在 Trae 上移除
+
+```bash
+pipx uninstall cli-anything-hub
+```
+
+> 本懶人包的核心是 CLI-Hub 工具，元技能的安裝方式 Trae 與 OpenCode 一致。
+
+---
+
 ## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |

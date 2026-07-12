@@ -149,6 +149,54 @@ graphify-out/
 
 ---
 
+## 解除安裝
+
+### 移除 Skill
+
+```bash
+rm -rf ~/.config/opencode/skills/graphify/
+```
+
+### 移除 Permission
+
+編輯 `~/.config/opencode/opencode.json`，從 `"permission"` 的 `"skill"` 區塊移除 `"graphify": "allow"`。
+
+### 移除 CLI 工具
+
+```bash
+uv tool uninstall graphifyy
+```
+
+---
+
+## Trae 對應操作
+
+> 若你使用 **Trae IDE**，以下為對應的安裝/更新/移除步驟。
+
+### 在 Trae 上安裝
+
+1. 將本技能放入 `.trae/skills/graphify/` 目錄：
+   ```bash
+   mkdir -p .trae/skills/graphify/
+   ```
+2. 從本 repo 的 `skills/13-graphify/SKILL.md` 複製內容到 `.trae/skills/graphify/SKILL.md`
+3. 重新載入 Trae（Cmd+R / Ctrl+R）
+4. 對 Trae 說「/graphify .」，確認可載入
+
+> CLI 工具的安裝方式與 OpenCode 相同（npm/pipx/brew），無需額外步驟。
+
+### 在 Trae 上更新
+
+替換 `.trae/skills/graphify/SKILL.md` 的內容即可。
+
+### 在 Trae 上移除
+
+```bash
+rm -rf .trae/skills/graphify/
+```
+
+---
+
 ## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |

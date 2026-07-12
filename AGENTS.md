@@ -5,17 +5,14 @@
 OpenCode 專用的懶人包倉庫，對應 repo：
 **shumingyang-opencode/opencode-lazy-packs**
 
-與 `claude-code-lazy-packs/`、`codex-lazy-packs/` 平行：
-同一套教學流程，分別給三個 AI 編碼代理使用。
-
 ## 主要差異
 
-| 項目 | opencode | claude-code | codex |
-|------|----------|-------------|-------|
-| 設定檔 | `opencode.json` | `settings.json` | `config.toml` |
-| 專案檔 | `AGENTS.md` | `CLAUDE.md` | `AGENTS.md` |
-| MCP | 編輯 JSON | `claude mcp add` | `codex mcp add` |
-| Skills dir | `~/.config/opencode/skills/` | `~/.claude/skills/` | `~/.codex/skills/` |
+| 項目 | opencode | claude-code | codex | Trae IDE |
+|------|----------|-------------|-------|----------|
+| 設定檔 | `opencode.json` | `settings.json` | `config.toml` | `.trae/mcp.json` |
+| 專案檔 | `AGENTS.md` | `CLAUDE.md` | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
+| MCP | 編輯 JSON | `claude mcp add` | `codex mcp add` | 編輯 JSON / GUI |
+| Skills dir | `~/.config/opencode/skills/` | `~/.claude/skills/` | `~/.codex/skills/` | `.trae/skills/` |
 
 ## 雙倉同步規則
 
@@ -38,15 +35,25 @@ OpenCode 專用的懶人包倉庫，對應 repo：
 
 ## MCP / 技能安裝流程
 
-安裝任何涉及 **MCP 伺服器**或**技能**的懶人包時，遵循以下流程：
+安裝任何涉及 **MCP 伺服器**或**技能**的懶人包時，先確認使用者使用的平台（OpenCode CLI 或 Trae IDE），再遵循以下流程：
 
-1. 依照懶人包步驟安裝並驗證
-2. 驗證完成後，**必須詢問使用者**是否要將該服務設為全局（`~/.config/opencode/`）
-3. 使用者回答「是」→ 搬遷到全局設定
+1. 依照對應平台的懶人包步驟安裝並驗證
+2. 驗證完成後，**必須詢問使用者**是否要將該服務設為全局
+3. 使用者回答「是」→ 搬遷到對應的全域設定路徑
 4. 使用者回答「否」→ 保留在專案層級，並告知其他專案如何啟用
 5. 詳見 `SKILL.md` 步驟五
 
-## 全局 MCP 列表
+### 平台設定路徑速查
+
+| | OpenCode CLI | Trae IDE |
+|---|---|---|
+| 專案 MCP | `opencode.json` 的 `"mcp"` | `.trae/mcp.json` 的 `"mcpServers"` |
+| 全域 MCP | `~/.config/opencode/opencode.json` 的 `"mcp"` | `~/.cursor/mcp.json` 的 `"mcpServers"` |
+| 專案 Skills | `skills/` 目錄 | `.trae/skills/` 或 `.agents/skills/` |
+| 全域 Skills | `~/.config/opencode/skills/` | 無（僅專案層級） |
+| 專案規則 | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
+
+## 全局 MCP 列表（OpenCode CLI）
 
 以下 MCP 伺服器已安裝在全局 `~/.config/opencode/opencode.json`（部分僅安裝於公司工作機）：
 

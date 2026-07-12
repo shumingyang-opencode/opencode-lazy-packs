@@ -237,6 +237,56 @@ cli-anything-obsidian note get "專案工作流程.md"
 
 ---
 
+## 解除安裝
+
+### 移除 MCP 設定
+
+編輯 `~/.config/opencode/opencode.json`，從 `"mcp"` 區塊移除 `obsidian` 段落。
+
+### 移除 CLI 工具
+
+```bash
+npm uninstall -g @bitbonsai/mcpvault
+```
+
+---
+
+## Trae 對應操作
+
+> 若你使用 **Trae IDE**，以下為對應的安裝/更新/移除步驟。
+
+### 在 Trae 上安裝（專案層級）
+
+編輯 `.trae/mcp.json`（若無則建立），在 `"mcpServers"` 區塊加入：
+
+```json
+{
+  "mcpServers": {
+    "obsidian": {
+      "command": "npx",
+      "args": ["@bitbonsai/mcpvault", "<VAULT_PATH>"]
+    }
+  }
+}
+```
+
+### 在 Trae 上安裝（全域）
+
+編輯 `~/.cursor/mcp.json`，在 `"mcpServers"` 區塊加入相同設定。
+
+### 在 Trae 上更新
+
+重複安裝步驟，覆蓋原有設定即可。
+
+### 在 Trae 上移除
+
+- **專案**：從 `.trae/mcp.json` 的 `"mcpServers"` 移除 `obsidian` 區塊
+- **全域**：從 `~/.cursor/mcp.json` 的 `"mcpServers"` 移除 `obsidian` 區塊
+
+> CLI 工具的安裝/更新/移除方式與 OpenCode 相同，無需額外步驟。
+
+---
+
 ## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |

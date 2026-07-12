@@ -274,6 +274,51 @@ uv tool uninstall trac-mcp-server
 
 ---
 
+
+## Trae 對應操作
+
+> 若你使用 **Trae IDE**，以下為對應的安裝/更新/移除步驟。
+
+### 在 Trae 上安裝（專案層級）
+
+編輯 `.trae/mcp.json`（若無則建立），在 `"mcpServers"` 區塊加入：
+
+```json
+{
+  "mcpServers": {
+    "trac": {
+      "command": "trac-mcp",
+      "env": {
+        "TRAC_APP_URL": "https://10.0.0.77/trac/app",
+        "TRAC_APP_USERNAME": "<個人帳號清單中的 app username>",
+        "TRAC_APP_PASSWORD": "<你的 app 密碼>",
+        "TRAC_APP_ASIC_URL": "https://10.0.0.77/trac/app_asic",
+        "TRAC_APP_ASIC_USERNAME": "<個人帳號清單中的 app_asic username>",
+        "TRAC_APP_ASIC_PASSWORD": "<你的 app_asic 密碼>",
+        "TRAC_SSL_VERIFY": "false"
+      }
+    }
+  }
+}
+```
+
+### 在 Trae 上安裝（全域）
+
+編輯 `~/.cursor/mcp.json`，在 `"mcpServers"` 區塊加入相同設定。
+
+### 在 Trae 上更新
+
+重複安裝步驟，覆蓋原有設定即可。
+
+### 在 Trae 上移除
+
+- **專案**：從 `.trae/mcp.json` 的 `"mcpServers"` 移除 `trac` 區塊
+- **全域**：從 `~/.cursor/mcp.json` 的 `"mcpServers"` 移除 `trac` 區塊
+
+> CLI 工具的安裝/更新/移除方式與 OpenCode 相同，無需額外步驟。
+
+---
+
 ## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |

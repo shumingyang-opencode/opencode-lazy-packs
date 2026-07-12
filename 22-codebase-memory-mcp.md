@@ -142,6 +142,44 @@ rm -rf ~/.cache/codebase-memory-mcp/
 
 ---
 
+## Trae 對應操作
+
+> 若你使用 **Trae IDE**，以下為對應的安裝/更新/移除步驟。
+
+### 在 Trae 上安裝（專案層級）
+
+codebase-memory-mcp 的安裝腳本會自動偵測 Trae IDE 並寫入 `.trae/mcp.json`。若需手動設定，編輯 `.trae/mcp.json`（若無則建立），在 `"mcpServers"` 區塊加入：
+
+```json
+{
+  "mcpServers": {
+    "codebase-memory-mcp": {
+      "command": "codebase-memory-mcp"
+    }
+  }
+}
+```
+
+### 在 Trae 上安裝（全域）
+
+編輯 `~/.cursor/mcp.json`，在 `"mcpServers"` 區塊加入相同設定。
+
+### 在 Trae 上更新
+
+重新執行安裝腳本即可：
+```bash
+curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash
+```
+
+### 在 Trae 上移除
+
+- **專案**：從 `.trae/mcp.json` 的 `"mcpServers"` 移除 `codebase-memory-mcp` 區塊
+- **全域**：從 `~/.cursor/mcp.json` 的 `"mcpServers"` 移除 `codebase-memory-mcp` 區塊
+
+> CLI 工具的安裝/更新/移除方式與 OpenCode 相同，無需額外步驟。
+
+---
+
 ## 參考資料
 
 - [GitHub Repo](https://github.com/DeusData/codebase-memory-mcp)

@@ -280,6 +280,10 @@ npx skills add <your-github-repo> --skill <skill-name>
 | 技能跟 plugin 有什麼不同？ | Skill 是指令檔（告訴 AI 怎麼做），Plugin 是程式碼（擴充 OpenCode 本身功能） |
 | 如何測試技能？ | 儲存後重啟 OpenCode，說觸發關鍵字看是否載入 |
 
+## Trae 對應操作
+
+本懶人包為教學性質，無需安裝任何工具，OpenCode 與 Trae 皆適用。
+
 ---
 
 ## 更新紀錄

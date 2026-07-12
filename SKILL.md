@@ -1,15 +1,26 @@
 ---
 name: opencode-lazy-packs
-description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安裝，說「安裝懶人包」「opencode 懶人包」時載入
+description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安裝，支援 OpenCode CLI 與 Trae IDE 雙平台。說「安裝懶人包」「opencode 懶人包」「trae 安裝」時載入
 ---
 
 # OpenCode 懶人包 — AI Agent 自動安裝入口
 
 當使用者給你這個 repo 網址並說要安裝時，請依以下流程執行：
 
-## 步驟一：認識可用懶人包
+## 步驟一：確認使用者平台
 
-這個 repo 的 `skills/` 目錄下有 28 個技能。全部支援 `npx skills add` 一鍵安裝。
+先問使用者用的是哪個平台：
+
+```
+你使用的是 OpenCode CLI 還是 Trae IDE？
+```
+
+- **OpenCode CLI** → 使用 `npx skills add` 一鍵安裝
+- **Trae IDE** → 依照每個懶人包末尾的「Trae 對應操作」區塊手動設定
+
+## 步驟二：認識可用懶人包
+
+這個 repo 的 `skills/` 目錄下有 28 個技能。全部支援 `npx skills add` 一鍵安裝（OpenCode 用戶）。
 
 | 編號 | Skill 名稱 | 說明 | 前置需求 |
 |------|-----------|------|---------|
@@ -43,7 +54,7 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 | 27 | `27-gen-pptx` | 通用簡報產製 — 六引擎工作流：技術文件/Repo→可編輯 .pptx，專為 RD/FAE/AE 設計 | #00 |
 | 28 | `28-cli-anything` | 安裝 CLI-Anything — HKUDS/CLI-Anything：50+ 軟體的 Agent-native CLI harness（Blender、GIMP、Obsidian 等），支援 cli-hub 發現與安裝 | 無 |
 
-## 步驟二：讓使用者選擇
+## 步驟三：讓使用者選擇
 
 列出上表給使用者看，然後問：
 
@@ -57,7 +68,9 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 你要安裝哪些？
 ```
 
-## 步驟三：依序安裝（使用 skill 機制）
+## 步驟四：依序安裝（依平台執行對應步驟）
+
+### OpenCode 用戶
 
 對使用者選取的每個 skill，執行：
 
@@ -65,38 +78,47 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名稱> -g -y
 ```
 
-> ⚠️ 如果 `npx skills add` 無法使用（例如環境不支援），改為手動安裝：讀取 `skills/<名稱>/SKILL.md` 的內容，照裡面的步驟執行。
+### Trae 用戶
 
-## 步驟四：安裝後驗證
+對使用者選取的每個項目，讀取對應的 `.md` 檔末尾的「Trae 對應操作」區塊，依照該區塊的步驟執行。若該區塊說明 CLI 工具安裝方式與 OpenCode 相同，則直接執行對應的 CLI 指令。
+
+> 若 `.md` 檔內無 Trae 區塊（如教學型 #07、#24~#26），則不需要安裝動作。
+
+## 步驟五：安裝後驗證
 
 每安裝完一個，依照該 skill 內的「完成回報格式」回報結果。全部完成後列出總表。
 
-## 步驟五：詢問全局設定
+## 步驟六：詢問全局設定
 
 每次安裝涉及 **MCP 伺服器**或**技能**的懶人包，安裝並驗證完成後，須詢問使用者：
 
 ```
 這個服務已安裝完成。
-要將它加入【全局設定】（~/.config/opencode/opencode.json）讓所有專案都能用嗎？
+要將它加入【全局設定】讓所有專案都能用嗎？
 還是保持在【當前專案】就好？
 ```
 
-- **使用者回答「是」** → 將該 MCP/skill 設定從專案 `opencode.json` 搬遷到 `~/.config/opencode/opencode.json` 的 `mcp` 區塊中；若專案 `opencode.json` 已無其他設定，可移除或精簡為僅 `$schema` 與空 `mcp: {}`
-- **使用者回答「否」** → 保留在當前專案 `opencode.json`，並告知：
-  ```
-  設定已保留在【當前專案】。其他專案若要使用，請將以下設定複製到該專案
-  的 opencode.json 或 ~/.config/opencode/opencode.json：
-  
-  <顯示對應的 MCP JSON 設定區塊>
-  ```
+回答後依平台決定對應路徑：
 
-### 全局 vs 專案設定速查
+### OpenCode
 
-| | 全局 (`~/.config/opencode/`) | 專案 (`<project>/opencode.json`) |
+- **是** → 將 MCP/skill 搬遷到 `~/.config/opencode/opencode.json`
+- **否** → 保留在專案 `opencode.json`，並告知其他專案如何啟用
+
+### Trae
+
+- **是** → 將 MCP 設定搬遷到 `~/.cursor/mcp.json` 的 `"mcpServers"` 區塊
+- **否** → 保留在 `.trae/mcp.json`，並告知其他專案如何啟用
+
+### 平台設定路徑速查
+
+| | OpenCode CLI | Trae IDE |
 |---|---|---|
-| 生效範圍 | 所有專案 | 僅該專案 |
-| 適合什麼 | 通用服務（GitLab、Firebase、Trac、codebase-memory 等） | 專案專屬設定 |
-| 覆蓋規則 | 基礎層 | 專案層會與全局合併，同名 key 會覆蓋 |
+| 專案 MCP | `opencode.json` 的 `"mcp"` | `.trae/mcp.json` 的 `"mcpServers"` |
+| 全域 MCP | `~/.config/opencode/opencode.json` 的 `"mcp"` | `~/.cursor/mcp.json` 的 `"mcpServers"` |
+| 專案 Skills | `skills/` 目錄 | `.trae/skills/` 或 `.agents/skills/` |
+| 全域 Skills | `~/.config/opencode/skills/` | 無（僅專案層級） |
+| 專案規則 | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
 
 ## 補充說明
 

@@ -144,6 +144,56 @@ ui/ux pro max
 
 ---
 
+## 解除安裝
+
+### 移除 Skill
+
+```bash
+rm -rf ~/.config/opencode/skills/ui-ux-pro-max/
+rm -rf ~/.config/opencode/skills/ui-styling/
+rm -rf ~/.config/opencode/skills/design/
+rm -rf ~/.config/opencode/skills/design-system/
+rm -rf ~/.config/opencode/skills/brand/
+rm -rf ~/.config/opencode/skills/banner-design/
+rm -rf ~/.config/opencode/skills/slides/
+```
+
+### 移除 Permission
+
+編輯 `~/.config/opencode/opencode.json`，從 `"permission"` 的 `"skill"` 區塊移除 `"ui-ux-pro-max": "allow"`。
+
+---
+
+## Trae 對應操作
+
+> 若你使用 **Trae IDE**，以下為對應的安裝/更新/移除步驟。
+
+### 在 Trae 上安裝
+
+1. 執行官方安裝器以取得技能檔案：
+   ```bash
+   npx uipr@latest --opencode
+   ```
+2. 將主技能放入 `.trae/skills/ui-ux-pro-max/` 目錄：
+   ```bash
+   mkdir -p .trae/skills/ui-ux-pro-max/
+   cp -r ~/.config/opencode/skills/ui-ux-pro-max/* .trae/skills/ui-ux-pro-max/
+   ```
+3. 重新載入 Trae（Cmd+R / Ctrl+R）
+4. 對 Trae 說「幫我設計一個登入頁面」，確認可載入
+
+### 在 Trae 上更新
+
+重新執行 `npx uipr@latest --opencode`，再將更新的檔案複製到 `.trae/skills/ui-ux-pro-max/`。
+
+### 在 Trae 上移除
+
+```bash
+rm -rf .trae/skills/ui-ux-pro-max/
+```
+
+---
+
 ## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |

@@ -406,6 +406,50 @@ mcp-atlassian 提供 72 個工具，以下是常用工具分類：
 
 ---
 
+
+## Trae 對應操作
+
+> 若你使用 **Trae IDE**，以下為對應的安裝/更新/移除步驟。
+
+### 在 Trae 上安裝（專案層級）
+
+編輯 `.trae/mcp.json`（若無則建立），在 `"mcpServers"` 區塊加入：
+
+```json
+{
+  "mcpServers": {
+    "mcp-atlassian": {
+      "command": "uvx",
+      "args": ["mcp-atlassian"],
+      "env": {
+        "JIRA_URL": "https://jira.ovt.com",
+        "JIRA_PERSONAL_TOKEN": "<YOUR_PAT>",
+        "CONFLUENCE_URL": "https://confluence.ovt.com",
+        "CONFLUENCE_PERSONAL_TOKEN": "<YOUR_PAT>",
+        "JIRA_SSL_VERIFY": "false",
+        "CONFLUENCE_SSL_VERIFY": "false",
+        "TOOLSETS": "all"
+      }
+    }
+  }
+}
+```
+
+### 在 Trae 上安裝（全域）
+
+編輯 `~/.cursor/mcp.json`，在 `"mcpServers"` 區塊加入相同設定。
+
+### 在 Trae 上更新
+
+重複安裝步驟，覆蓋原有設定即可。
+
+### 在 Trae 上移除
+
+- **專案**：從 `.trae/mcp.json` 的 `"mcpServers"` 移除 `mcp-atlassian` 區塊
+- **全域**：從 `~/.cursor/mcp.json` 的 `"mcpServers"` 移除 `mcp-atlassian` 區塊
+
+---
+
 ## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |

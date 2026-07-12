@@ -142,6 +142,54 @@ python ~/.config/opencode/skills/markitdown/convert.py <任意 PDF 或 DOCX 檔�
 
 ---
 
+## 解除安裝
+
+### 移除 Skill
+
+```bash
+rm -rf ~/.config/opencode/skills/markitdown/
+```
+
+### 移除 Permission
+
+編輯 `~/.config/opencode/opencode.json`，從 `"permission"` 的 `"skill"` 區塊移除 `"markitdown": "allow"`。
+
+### 移除 CLI 工具
+
+```bash
+uv tool uninstall markitdown
+```
+
+---
+
+## Trae 對應操作
+
+> 若你使用 **Trae IDE**，以下為對應的安裝/更新/移除步驟。
+
+### 在 Trae 上安裝
+
+1. 將本技能放入 `.trae/skills/markitdown/` 目錄：
+   ```bash
+   mkdir -p .trae/skills/markitdown/
+   ```
+2. 從本 repo 的 `skills/12-markitdown/SKILL.md` 及 `scripts/convert.py` 複製到 `.trae/skills/markitdown/`
+3. 重新載入 Trae（Cmd+R / Ctrl+R）
+4. 對 Trae 說「幫我解析這個檔案」，確認可載入
+
+> CLI 工具的安裝方式與 OpenCode 相同（npm/pipx/brew），無需額外步驟。
+
+### 在 Trae 上更新
+
+替換 `.trae/skills/markitdown/SKILL.md` 的內容即可。
+
+### 在 Trae 上移除
+
+```bash
+rm -rf .trae/skills/markitdown/
+```
+
+---
+
 ## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |

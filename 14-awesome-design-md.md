@@ -132,6 +132,46 @@ head -30 DESIGN.md
 
 ---
 
+## 解除安裝
+
+### 移除 Skill
+
+```bash
+rm -rf ~/.config/opencode/skills/awesome-design-md/
+```
+
+### 移除 Permission
+
+編輯 `~/.config/opencode/opencode.json`，從 `"permission"` 的 `"skill"` 區塊移除 `"awesome-design-md": "allow"`。
+
+---
+
+## Trae 對應操作
+
+> 若你使用 **Trae IDE**，以下為對應的安裝/更新/移除步驟。
+
+### 在 Trae 上安裝
+
+1. 將本技能放入 `.trae/skills/awesome-design-md/` 目錄：
+   ```bash
+   mkdir -p .trae/skills/awesome-design-md/
+   ```
+2. 從本 repo 的 `skills/14-awesome-design-md/SKILL.md` 複製內容到 `.trae/skills/awesome-design-md/SKILL.md`
+3. 重新載入 Trae（Cmd+R / Ctrl+R）
+4. 對 Trae 說「用 Stripe 的設計」，確認可載入
+
+### 在 Trae 上更新
+
+替換 `.trae/skills/awesome-design-md/SKILL.md` 的內容即可。
+
+### 在 Trae 上移除
+
+```bash
+rm -rf .trae/skills/awesome-design-md/
+```
+
+---
+
 ## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |

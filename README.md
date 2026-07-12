@@ -1,7 +1,7 @@
 # OpenCode 懶人包
 
-> 每份 MD 檔丟給 OpenCode 就能自動完成設定。
-> OpenAI Codex 或 Claude Code 的用戶請看對應的懶人包。
+> 支援 **OpenCode CLI** 與 **Trae IDE** 雙平台。
+> 每個懶人包內含各平台的安裝、更新、移除說明。
 
 ---
 
@@ -22,7 +22,7 @@ AI 會自動：
 3. 問你要裝哪些（可以選「全部」或特定編號）
 4. 自動安裝你選的項目
 
-### 方式二：一行指令手動裝
+### 方式二：一行指令手動裝（OpenCode）
 
 ```bash
 npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
@@ -64,11 +64,29 @@ npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 
 安裝後對 OpenCode 說該技能對應的關鍵字即可啟動。
 
-### 方式三：手動下載 MD 檔
+### 方式三：手動安裝（Trae IDE）
+
+若你使用 **Trae IDE**，每個懶人包末尾都有 `## Trae 對應操作` 區塊，說明如何在 Trae 上安裝、更新、移除該服務。
+
+```bash
+# 以 Firebase 為例，開啟專案的 .trae/mcp.json，在 mcpServers 加入：
+# {
+#   "mcpServers": {
+#     "firebase": {
+#       "command": "npx",
+#       "args": ["-y", "firebase-tools@latest", "mcp"]
+#     }
+#   }
+# }
+```
+
+> 全域 MCP 設定請編輯 `~/.cursor/mcp.json`（與 Cursor 相容）。
+
+### 方式四：手動下載 MD 檔
 
 1. 下載對應的懶人包（MD 檔）
-2. 開啟終端機，在專案目錄執行 `opencode`
-3. 把懶人包內容丟給 OpenCode，它會自動執行
+2. 開啟終端機，在專案目錄執行 `opencode`（或開啟 Trae IDE）
+3. 把懶人包內容丟給 AI，它會自動執行
 
 ---
 
@@ -113,20 +131,21 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 
 原本的懶人包是給 Claude Code 和 OpenAI Codex 用的。OpenCode 是第三個 AI 編碼代理工具，設定方式與前兩者不同：
 
-| 差異 | OpenCode | Claude Code | OpenAI Codex |
-|------|----------|-------------|--------------|
-| 安裝 | `npm install -g opencode-ai` | `npm install -g @anthropic-ai/claude-code` | `npm install -g @openai/codex` |
-| 全域設定 | `~/.config/opencode/opencode.json` | `~/.claude/settings.json` | `~/.codex/config.toml` |
-| 專案指令檔 | `AGENTS.md` | `CLAUDE.md` | `AGENTS.md` |
-| MCP 配置 | 編輯 opencode.json | `claude mcp add` | `codex mcp add` |
-| Skill 機制 | 原生支援（SKILL.md） | 原生支援 | Desktop 支援 |
-| 命令 | 有 `/` 內建命令 | 有 `/` 內建命令 | ❌ 沒有 |
+| 差異 | OpenCode | Claude Code | OpenAI Codex | Trae IDE |
+|------|----------|-------------|--------------|----------|
+| 安裝 | `npm install -g opencode-ai` | `npm install -g @anthropic-ai/claude-code` | `npm install -g @openai/codex` | 從 trae.ai 下載 |
+| 全域設定 | `~/.config/opencode/opencode.json` | `~/.claude/settings.json` | `~/.codex/config.toml` | `~/.cursor/mcp.json` |
+| 專案指令檔 | `AGENTS.md` | `CLAUDE.md` | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
+| MCP 配置 | 編輯 opencode.json | `claude mcp add` | `codex mcp add` | 編輯 `.trae/mcp.json` |
+| Skill 機制 | 原生支援（SKILL.md） | 原生支援 | Desktop 支援 | `.trae/skills/` |
+| 命令 | 有 `/` 內建命令 | 有 `/` 內建命令 | ❌ 沒有 | GUI 介面操作 |
 
 ---
 
 ## 最低先備條件
 
-- [ ] Node.js 18+ 已安裝
+- [ ] **OpenCode 用戶**：Node.js 18+ 已安裝
+- [ ] **Trae 用戶**：已安裝 Trae IDE（從 [trae.ai](https://www.trae.ai) 下載）
 - [ ] 電腦有網路連線
 - [ ] 各懶人包的詳細先備條件，請參閱 [SKILL.md](SKILL.md) 的「前置需求」欄位
 
@@ -134,37 +153,37 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 
 ## 懶人包清單
 
-| 編號 | 名稱 | 對應影片 | 狀態 | 說明 |
-|------|------|---------|------|------|
-| 00 | [環境建置](00-環境建置.md) | — | v0.3 | OpenCode CLI + Node.js + uv 基礎環境安裝 |
-| 01 | [連接 NotebookLM](01-連接-NotebookLM.md) | — | v0.2 | NotebookLM MCP 安裝與連線：AI 生成簡報、圖表、音訊、報告 |
-| 02 | [連接 GitHub](02-連接-GitHub.md) | — | v0.2 | GitHub CLI 登入認證 + GitHub Pages 教材上線 |
-| 03 | [連接公司 SVN](03-連接-公司SVN.md) | — | v0.2 | OmniVision 內部 SVN 伺服器連線設定 |
-| 04 | [連接公司 GitLab](04-連接-公司GitLab.md) | — | v0.1 | 透過 SSH 金鑰連接內部 GitLab |
-| 05 | [連接個人 GitLab](05-連接-個人GitLab.md) | — | v0.2 | 透過 HTTPS + PAT 連接 GitLab.com 帳號 |
-| 06 | [建立第二大腦 Obsidian](06-建立第二大腦-Obsidian.md) | — | v0.3 | Obsidian MCP Vault 連接：筆記建立、搜尋、管理 |
-| 07 | [第二大腦設定指南](07-第二大腦設定指南.md) | — | v0.2 | Obsidian 三層目錄結構 + AGENTS.md 規則 + 筆記模板 |
-| 08 | [連接 Firebase](08-連接-Firebase.md) | — | v0.1 | Firebase MCP 安裝：專案管理、資料庫、部署 |
-| 09 | [安裝瀏覽器控制](09-安裝瀏覽器控制.md) | — | v0.3 | Playwright MCP + macOS 桌面 UI 自動化操作 |
-| 10 | [開工/收工/初始化技能](10-開工收工初始化技能.md) | — | v0.1 | 全域三技能：startup（開工自動同步）、shutdown（收工備份）、project-init（新專案初始化） |
-| 11 | [生圖技能](11-生圖.md) | — | v0.3 | draw skill：OpenAI gpt-image-2 生成示意圖與插畫 |
-| 12 | [MarkItDown 文件轉換](12-markitdown.md) | — | v0.3 | 各種文件自動轉 Markdown：PDF/Office/CSV/JSON/圖片/音訊/Email/EPUB |
-| 13 | [Graphify 知識圖譜](13-graphify.md) | — | v0.1 | 程式碼知識圖譜引擎：自然語言查詢取代 grep，跨檔案結構分析 |
-| 14 | [Awesome DESIGN.md 品牌設計](14-awesome-design-md.md) | — | v0.1 | 一鍵套用 73 個真實品牌 DESIGN.md（Stripe、Vercel、Apple 等） |
-| 15 | [UI/UX Pro Max 設計智能](15-ui-ux-pro-max.md) | — | v0.1 | 67 UI 風格 + 161 推理規則 + 57 字體搭配 + 99 UX 指南 |
-| 16 | [Superpowers 完整 AI 開發方法論](16-superpowers.md) | — | v6.0.3 | 14 skills 覆蓋 brainstorm→plan→TDD→review→merge 完整流程（1.9M+ 安裝） |
-| 17 | [Find Skills 技能搜尋與安裝](17-find-skills.md) | — | v0.1 | 從 5000+ 開放技能庫中搜尋並一鍵安裝 |
-| 18 | [Frontend Design 辨識度優先前端設計](18-frontend-design.md) | — | v0.1 | Anthropic 出品（572K 安裝）：拒絕 AI 模板化美學，建立品牌辨識度 |
-| 19 | [安裝飛書 Lark](19-安裝-飛書Lark.md) | — | v0.1 | 飛書文檔/訊息/群組/日曆/多維表格/OA 審批整合 |
-| 20 | [安裝公司 JIRA & Confluence](20-公司-jira-confluence.md) | — | v0.3 | mcp-atlassian：JIRA Issue 管理 + Confluence 頁面搜尋與操作 |
-| 21 | [安裝公司 Trac](21-公司-trac.md) | — | v0.2 | Trac Ticket 管理 + Wiki 查閱 + 全文搜尋自動化 |
-| 22 | [Codebase Memory MCP](22-codebase-memory-mcp.md) | — | v0.1 | 程式碼知識圖譜：158 語言、Hybrid LSP 型別解析、14 MCP 工具、零依賴 |
-| 23 | [功能規劃技能](23-功能規劃技能.md) | — | v0.1 | 10 步驟功能規劃流程 + init_plan.py 自動建檔 + codebase-memory 索引檢查 |
-| 24 | [SKILL.md 建立教學](24-SKILL.md-建立教學.md) | — | v0.1 | 互動式教學：從 frontmatter、目錄結構到發布，引導建立第一個 OpenCode 技能 |
-| 25 | [AGENTS.md 建立教學](25-AGENTS.md-建立教學.md) | — | v0.1 | 互動式教學：依專案客製 AGENTS.md，涵蓋編碼慣例、測試規範、Git 流程 |
-| 26 | [MCP 設定教學](26-MCP-設定教學.md) | — | v0.1 | 互動式教學：MCP 概念、三種連線模式、安全性原則、自訂 MCP Server |
-| 27 | [通用簡報產製](27-通用簡報產製.md) | — | v0.1 | 六引擎簡報工作流：將技術文件、datasheet、Spec、Repo 轉為可編輯 .pptx，專為 RD/FAE/AE 設計 |
-| 28 | [安裝 CLI-Anything](28-安裝-CLI-Anything.md) | — | v0.1 | CLI-Hub Meta-Skill：50+ 軟體的 Agent-native CLI harness 發現與安裝，支援 cli-hub 套件管理器（HKUDS/CLI-Anything, ⭐44.8K） |
+| 編號 | 名稱 | 類型 | 狀態 | 說明 | Trae |
+|------|------|------|------|------|------|
+| 00 | [環境建置](00-環境建置.md) | CLI | v0.3 | OpenCode CLI + Node.js + uv 基礎環境安裝 | ✅ |
+| 01 | [連接 NotebookLM](01-連接-NotebookLM.md) | MCP | v0.2 | NotebookLM MCP 安裝與連線：AI 生成簡報、圖表、音訊、報告 | ✅ |
+| 02 | [連接 GitHub](02-連接-GitHub.md) | MCP | v0.2 | GitHub CLI 登入認證 + GitHub Pages 教材上線 | ✅ |
+| 03 | [連接公司 SVN](03-連接-公司SVN.md) | MCP | v0.2 | OmniVision 內部 SVN 伺服器連線設定 | ✅ |
+| 04 | [連接公司 GitLab](04-連接-公司GitLab.md) | MCP | v0.1 | 透過 SSH 金鑰連接內部 GitLab | ✅ |
+| 05 | [連接個人 GitLab](05-連接-個人GitLab.md) | MCP | v0.2 | 透過 HTTPS + PAT 連接 GitLab.com 帳號 | ✅ |
+| 06 | [建立第二大腦 Obsidian](06-建立第二大腦-Obsidian.md) | MCP | v0.3 | Obsidian MCP Vault 連接：筆記建立、搜尋、管理 | ✅ |
+| 07 | [第二大腦設定指南](07-第二大腦設定指南.md) | 教學 | v0.2 | Obsidian 三層目錄結構 + AGENTS.md 規則 + 筆記模板 | — |
+| 08 | [連接 Firebase](08-連接-Firebase.md) | MCP | v0.1 | Firebase MCP 安裝：專案管理、資料庫、部署 | ✅ |
+| 09 | [安裝瀏覽器控制](09-安裝瀏覽器控制.md) | MCP | v0.3 | Playwright MCP + macOS 桌面 UI 自動化操作 | ✅ |
+| 10 | [開工/收工/初始化技能](10-開工收工初始化技能.md) | Skill | v0.1 | 全域三技能：startup（開工自動同步）、shutdown（收工備份）、project-init（新專案初始化） | ✅ |
+| 11 | [生圖技能](11-生圖.md) | Skill | v0.3 | draw skill：OpenAI gpt-image-2 生成示意圖與插畫 | ✅ |
+| 12 | [MarkItDown 文件轉換](12-markitdown.md) | Skill | v0.3 | 各種文件自動轉 Markdown：PDF/Office/CSV/JSON/圖片/音訊/Email/EPUB | ✅ |
+| 13 | [Graphify 知識圖譜](13-graphify.md) | Skill | v0.1 | 程式碼知識圖譜引擎：自然語言查詢取代 grep，跨檔案結構分析 | ✅ |
+| 14 | [Awesome DESIGN.md 品牌設計](14-awesome-design-md.md) | Skill | v0.1 | 一鍵套用 73 個真實品牌 DESIGN.md（Stripe、Vercel、Apple 等） | ✅ |
+| 15 | [UI/UX Pro Max 設計智能](15-ui-ux-pro-max.md) | Skill | v0.1 | 67 UI 風格 + 161 推理規則 + 57 字體搭配 + 99 UX 指南 | ✅ |
+| 16 | [Superpowers 完整 AI 開發方法論](16-superpowers.md) | Skill | v6.0.3 | 14 skills 覆蓋 brainstorm→plan→TDD→review→merge 完整流程（1.9M+ 安裝） | ✅ |
+| 17 | [Find Skills 技能搜尋與安裝](17-find-skills.md) | Skill | v0.1 | 從 5000+ 開放技能庫中搜尋並一鍵安裝 | ✅ |
+| 18 | [Frontend Design 辨識度優先前端設計](18-frontend-design.md) | Skill | v0.1 | Anthropic 出品（572K 安裝）：拒絕 AI 模板化美學，建立品牌辨識度 | ✅ |
+| 19 | [安裝飛書 Lark](19-安裝-飛書Lark.md) | Skill | v0.1 | 飛書文檔/訊息/群組/日曆/多維表格/OA 審批整合 | ✅ |
+| 20 | [安裝公司 JIRA & Confluence](20-公司-jira-confluence.md) | MCP | v0.3 | mcp-atlassian：JIRA Issue 管理 + Confluence 頁面搜尋與操作 | ✅ |
+| 21 | [安裝公司 Trac](21-公司-trac.md) | MCP | v0.2 | Trac Ticket 管理 + Wiki 查閱 + 全文搜尋自動化 | ✅ |
+| 22 | [Codebase Memory MCP](22-codebase-memory-mcp.md) | MCP | v0.1 | 程式碼知識圖譜：158 語言、Hybrid LSP 型別解析、14 MCP 工具、零依賴 | ✅ |
+| 23 | [功能規劃技能](23-功能規劃技能.md) | Skill | v0.1 | 10 步驟功能規劃流程 + init_plan.py 自動建檔 + codebase-memory 索引檢查 | ✅ |
+| 24 | [SKILL.md 建立教學](24-SKILL.md-建立教學.md) | 教學 | v0.1 | 互動式教學：從 frontmatter、目錄結構到發布，引導建立第一個 OpenCode 技能 | — |
+| 25 | [AGENTS.md 建立教學](25-AGENTS.md-建立教學.md) | 教學 | v0.1 | 互動式教學：依專案客製 AGENTS.md，涵蓋編碼慣例、測試規範、Git 流程 | — |
+| 26 | [MCP 設定教學](26-MCP-設定教學.md) | 教學 | v0.1 | 互動式教學：MCP 概念、三種連線模式、安全性原則、自訂 MCP Server | — |
+| 27 | [通用簡報產製](27-通用簡報產製.md) | Skill | v0.1 | 六引擎簡報工作流：將技術文件、datasheet、Spec、Repo 轉為可編輯 .pptx，專為 RD/FAE/AE 設計 | ✅ |
+| 28 | [安裝 CLI-Anything](28-安裝-CLI-Anything.md) | Skill | v0.1 | CLI-Hub Meta-Skill：50+ 軟體的 Agent-native CLI harness 發現與安裝，支援 cli-hub 套件管理器（HKUDS/CLI-Anything, ⭐44.8K） | ✅ |
 
 ---
 
