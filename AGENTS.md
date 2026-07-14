@@ -4,11 +4,6 @@
 
 多平台 AI Agent 懶人包倉庫，雙倉同步：
 
-| 遠端 | URL |
-|------|-----|
-| GitHub (origin) | `shumingyang-opencode/agents-lazy-packs` — 公開上游 |
-| GitLab (gitlab) | `steven.yang/agents-lazy-packs` — 公司內部獨立版本，供同事安裝 |
-
 ## 主要差異
 
 | 項目 | OpenCode | Codex | Trae IDE |
@@ -23,12 +18,6 @@
 - **不要**把不同平台的版本直接複製過來；MCP 指令、設定檔格式都不同
 - 修改主流程時多平台都要更新
 - Obsidian 閱讀版：`Agents 懶人包/`
-- GitHub 版：`agents-lazy-packs/`
-
-> **給同事**：若你 fork 此 repo，請自行修改 remote URL：
-> ```bash
-> git remote set-url gitlab https://gitlab.ovt.com:8081/<你的帳號>/agents-lazy-packs.git
-> ```
 
 
 ## Obsidian 關聯資料
