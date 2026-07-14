@@ -126,7 +126,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 
 ## Agents 設定對照表
 
-| 項目 | OpenCode CLI | Trae IDE |
+| 項目 | OpenCode | Trae IDE |
 |------|-------------|----------|
 | 安裝 | `npm install -g opencode-ai` | 從 trae.ai 下載 |
 | 全域設定 | `~/.config/opencode/opencode.json` | `~/.cursor/mcp.json` |
