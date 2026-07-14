@@ -195,6 +195,8 @@ PAT / Token **不要**寫入此檔案。它們應存放於對應平台的設定�
 
 ---
 
-## 來源出處
+## 相關專案
 
-本包參考自 [shumingyang-opencode/opencode-lazy-packs](https://github.com/shumingyang-opencode/opencode-lazy-packs)
+- **來源出處**：[shumingyang-opencode/opencode-lazy-packs](https://github.com/shumingyang-opencode/opencode-lazy-packs) — 本包的原始參考
+- **OpenCode**：[anomalyco/opencode](https://github.com/anomalyco/opencode) — 本懶人包所服務的 AI Coding Agent
+- **Trae IDE**：[trae.ai](https://www.trae.ai) — 支援的另一平台
