@@ -190,6 +190,6 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 
 ---
 
-## 授權
+## 來源出處
 
-[MIT License](LICENSE)，與 Claude Code / Codex 懶人包相同。
+本包參考自 [shumingyang-opencode/opencode-lazy-packs](https://github.com/shumingyang-opencode/opencode-lazy-packs)
