@@ -197,20 +197,20 @@ PAT / Token **不要**写入此文件。它们应存放于对应平台的配置�
 
 观看内部分享教学视频：[AI Agent 技术知识库](https://steven.yang.pages.ovt.com/ai-agent-tech/)
 
-| 主题 | 视频数 | 说明 |
-|------|:------:|------|
-| AI 基础概念与原理 | 9 | AI 核心概念、原理深入浅出 |
-| AI 智能体开发与管理 | 7 | Agent Skills 开发与管理实战 |
-| AI 开发生态系统 | 14 | AI 开发工具生态与实战应用 |
-| 命令行工具实战 | 1 | CLI 工具应用技巧 |
-| DuckDB 数据库详解 | 16 | DuckDB 完整教学从入门到进阶 |
-| 知识图谱与代码分析 | 6 | Graphify 与知识图谱技术 |
-| Loop Engineering 工程学 | 7 | 大型结构化工业流程 |
-| MCP vs CLI 工具对比 | 4 | 两种工具模式的比较分析 |
-| AI Agent 基本功能拆解 | 5 | Agent 基础功能与架构 |
-| AI 简报制作与分析 | 2 | AI 简报新革命 |
-| OpenCode 系列详解 | 6 | OpenCode 完整实战教学 |
-| Token 优化策略 | 3 | Token 使用优化技巧 |
+| 主题 | 说明 |
+|------|------|
+| AI 基础概念与原理 | AI 核心概念、原理深入浅出 |
+| AI 智能体开发与管理 | Agent Skills 开发与管理实战 |
+| AI 开发生态系统 | AI 开发工具生态与实战应用 |
+| 命令行工具实战 | CLI 工具应用技巧 |
+| DuckDB 数据库详解 | DuckDB 完整教学从入门到进阶 |
+| 知识图谱与代码分析 | Graphify 与知识图谱技术 |
+| Loop Engineering 工程学 | 大型结构化工业流程 |
+| MCP vs CLI 工具对比 | 两种工具模式的比较分析 |
+| AI Agent 基本功能拆解 | Agent 基础功能与架构 |
+| AI 简报制作与分析 | AI 简报新革命 |
+| OpenCode 系列详解 | OpenCode 完整实战教学 |
+| Token 优化策略 | Token 使用优化技巧 |
 
 ---
 

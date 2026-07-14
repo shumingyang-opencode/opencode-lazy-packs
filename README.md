@@ -197,20 +197,20 @@ See the template's "Operation Rules" and "Security Rules" for details.
 
 Watch internal sharing tutorials at [AI Agent Tech Knowledge Base](https://steven.yang.pages.ovt.com/ai-agent-tech/)
 
-| Topic | Videos | Description |
-|-------|:------:|-------------|
-| AI Fundamentals | 9 | Core AI concepts and principles |
-| Agent Skills | 7 | AI Agent skill development |
-| Dev Tools Ecosystem | 14 | Practical AI development tools |
-| CLI Tools | 1 | Command-line tool applications |
-| DuckDB Tutorials | 16 | Complete DuckDB database guide |
-| Knowledge Graph | 6 | Graphify and knowledge graph tech |
-| Loop Engineering | 7 | Large-scale structured engineering |
-| MCP vs CLI | 4 | Comparing two tool paradigms |
-| AI Agent Basics | 5 | Essential agent capabilities |
-| AI Briefing Revolution | 2 | AI-powered presentation creation |
-| OpenCode Series | 6 | OpenCode hands-on tutorials |
-| Token Optimization | 3 | Token optimization strategies |
+| Topic | Description |
+|-------|-------------|
+| AI Fundamentals | Core AI concepts and principles |
+| Agent Skills | AI Agent skill development |
+| Dev Tools Ecosystem | Practical AI development tools |
+| CLI Tools | Command-line tool applications |
+| DuckDB Tutorials | Complete DuckDB database guide |
+| Knowledge Graph | Graphify and knowledge graph tech |
+| Loop Engineering | Large-scale structured engineering |
+| MCP vs CLI | Comparing two tool paradigms |
+| AI Agent Basics | Essential agent capabilities |
+| AI Briefing Revolution | AI-powered presentation creation |
+| OpenCode Series | OpenCode hands-on tutorials |
+| Token Optimization | Token optimization strategies |
 
 ---
 
