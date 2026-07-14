@@ -193,6 +193,27 @@ See the template's "Operation Rules" and "Security Rules" for details.
 
 ---
 
+## Tutorial Videos
+
+Watch internal sharing tutorials at [AI Agent Tech Knowledge Base](https://steven.yang.pages.ovt.com/ai-agent-tech/)
+
+| Topic | Videos | Description |
+|-------|:------:|-------------|
+| AI Fundamentals | 9 | Core AI concepts and principles |
+| Agent Skills | 7 | AI Agent skill development |
+| Dev Tools Ecosystem | 14 | Practical AI development tools |
+| CLI Tools | 1 | Command-line tool applications |
+| DuckDB Tutorials | 16 | Complete DuckDB database guide |
+| Knowledge Graph | 6 | Graphify and knowledge graph tech |
+| Loop Engineering | 7 | Large-scale structured engineering |
+| MCP vs CLI | 4 | Comparing two tool paradigms |
+| AI Agent Basics | 5 | Essential agent capabilities |
+| AI Briefing Revolution | 2 | AI-powered presentation creation |
+| OpenCode Series | 6 | OpenCode hands-on tutorials |
+| Token Optimization | 3 | Token optimization strategies |
+
+---
+
 ## Feedback
 
 - **Issues / Feature Requests**: [GitLab Issues](https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs/-/issues)
