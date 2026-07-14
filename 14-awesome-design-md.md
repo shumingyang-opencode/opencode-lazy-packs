@@ -57,8 +57,7 @@ curl -o ~/.config/opencode/skills/awesome-design-md/SKILL.md \
 
 或手動測試下載：
 ```bash
-curl -o DESIGN.md \
-  https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/stripe/DESIGN.md
+git clone --depth 1 https://github.com/VoltAgent/awesome-design-md.git /tmp/awesome-design-md && cp /tmp/awesome-design-md/design-md/stripe/DESIGN.md ./
 ```
 
 檢查 DESIGN.md 內容：

@@ -17,3 +17,19 @@
 `npx skills add gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs --skill <skill名> -g -y`
 
 若已 fork 到自己的 namespace，請將 `steven.yang` 改為你自己的帳號。
+
+## 中國鏡像設定
+
+若身處中國大陸，npm 和 pip 等註冊表可能連線緩慢，建議設定鏡像：
+
+```bash
+# npm 鏡像（npmmirror.com）
+npm config set registry https://registry.npmmirror.com
+
+# pip 鏡像（清華 TUNA）
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+# 設定後驗證
+npm config get registry
+pip config list
+```

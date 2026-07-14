@@ -29,7 +29,7 @@
 ### 步驟一：一鍵安裝
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash
+git clone --depth 1 https://github.com/DeusData/codebase-memory-mcp.git /tmp/codebase-memory-mcp && bash /tmp/codebase-memory-mcp/install.sh
 ```
 
 安裝腳本會自動：
@@ -40,7 +40,7 @@ curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/i
 若需圖形化 UI（3D 知識圖譜瀏覽器）：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash -s -- --ui
+git clone --depth 1 https://github.com/DeusData/codebase-memory-mcp.git /tmp/codebase-memory-mcp && bash /tmp/codebase-memory-mcp/install.sh -s -- --ui
 ```
 
 ### 步驟二：驗證安裝
@@ -126,7 +126,7 @@ rm -rf ~/.cache/codebase-memory-mcp/
 | 支援哪些語言？ | 158 種語言（tree-sitter AST），Hybrid LSP 型別解析支援 11 種：TS/JS/Python/Go/Rust/Java/Kotlin/C/C++/C#/PHP |
 | 需要 API Key 嗎？ | 不需要，全本機執行，零網路需求 |
 | 索引速度？ | 一般 repo 毫秒級索引，查詢 <1ms |
-| 如何更新？ | 重新執行安裝指令即可：`curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh \| bash` |
+| 如何更新？ | 重新執行安裝指令即可：`git clone --depth 1 https://github.com/DeusData/codebase-memory-mcp.git /tmp/codebase-memory-mcp && bash /tmp/codebase-memory-mcp/install.sh` |
 | 解除安裝後如何重裝？ | 同上，安裝腳本會自動覆蓋舊版 |
 | cache 資料在哪？ | `~/.cache/codebase-memory-mcp/`，刪除後下次索引會重新建立 |
 | 支援 OpenCode 以外的工具嗎？ | 支援 Claude Code、Codex CLI、Gemini CLI、Zed、Antigravity、Aider、KiloCode、VS Code、OpenClaw、Kiro |
@@ -168,7 +168,7 @@ codebase-memory-mcp 的安裝腳本會自動偵測 Trae IDE 並寫入 `.trae/mcp
 
 重新執行安裝腳本即可：
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash
+git clone --depth 1 https://github.com/DeusData/codebase-memory-mcp.git /tmp/codebase-memory-mcp && bash /tmp/codebase-memory-mcp/install.sh
 ```
 
 ### 在 Trae 上移除

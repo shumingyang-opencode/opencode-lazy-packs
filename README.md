@@ -18,7 +18,7 @@
 
 AI 會自動：
 1. 讀取 repo 的 `SKILL.md`（安裝入口）
-2. 列出 28 個懶人包
+2. 列出 25 個懶人包
 3. 問你要裝哪些（可以選「全部」或特定編號）
 4. 自動安裝你選的項目
 
@@ -33,17 +33,14 @@ npx skills add https://gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs --ski
 | Skill 名 | 對應懶人包 |
 |----------|-----------|
 | `00-env-setup` | 環境建置 |
-| `01-notebooklm` | 連接 NotebookLM |
 | `02-github` | 連接 GitHub |
 | `03-svn` | 連接公司 SVN |
 | `04-gitlab-internal` | 連接公司 GitLab |
 | `05-gitlab-personal` | 連接個人 GitLab |
 | `06-obsidian` | 連接 Obsidian |
 | `07-second-brain` | 第二大腦設定 |
-| `08-firebase` | 連接 Firebase |
 | `09-browser` | 瀏覽器控制 |
 | `10-workflow-skills` | 開工/收工技能 |
-| `11-draw` | 生圖技能 |
 | `12-markitdown` | 文件轉換技能 |
 | `13-graphify` | 知識圖譜技能 |
 | `14-awesome-design-md` | 品牌設計套用技能 |
@@ -156,17 +153,17 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 | 編號 | 名稱 | 類型 | 狀態 | 說明 | Trae |
 |------|------|------|------|------|------|
 | 00 | [環境建置](00-環境建置.md) | CLI | v0.3 | OpenCode CLI + Node.js + uv 基礎環境安裝 | ✅ |
-| 01 | [連接 NotebookLM](01-連接-NotebookLM.md) | MCP | v0.2 | NotebookLM MCP 安裝與連線：AI 生成簡報、圖表、音訊、報告 | ✅ |
+| ~~01~~ | ~~連接 NotebookLM~~ | ~~MCP~~ | ~~v0.2~~ | ~~NotebookLM MCP 安裝與連線：AI 生成簡報、圖表、音訊、報告~~ | ~~已移除~~ |
 | 02 | [連接 GitHub](02-連接-GitHub.md) | MCP | v0.2 | GitHub CLI 登入認證 + GitHub Pages 教材上線 | ✅ |
 | 03 | [連接公司 SVN](03-連接-公司SVN.md) | MCP | v0.2 | OmniVision 內部 SVN 伺服器連線設定 | ✅ |
 | 04 | [連接公司 GitLab](04-連接-公司GitLab.md) | MCP | v0.1 | 透過 SSH 金鑰連接內部 GitLab | ✅ |
 | 05 | [連接個人 GitLab](05-連接-個人GitLab.md) | MCP | v0.2 | 透過 HTTPS + PAT 連接 GitLab.com 帳號 | ✅ |
 | 06 | [建立第二大腦 Obsidian](06-建立第二大腦-Obsidian.md) | MCP | v0.3 | Obsidian MCP Vault 連接：筆記建立、搜尋、管理 | ✅ |
 | 07 | [第二大腦設定指南](07-第二大腦設定指南.md) | 教學 | v0.2 | Obsidian 三層目錄結構 + AGENTS.md 規則 + 筆記模板 | — |
-| 08 | [連接 Firebase](08-連接-Firebase.md) | MCP | v0.1 | Firebase MCP 安裝：專案管理、資料庫、部署 | ✅ |
+| ~~08~~ | ~~連接 Firebase~~ | ~~MCP~~ | ~~v0.1~~ | ~~Firebase MCP 安裝：專案管理、資料庫、部署~~ | ~~已移除~~ |
 | 09 | [安裝瀏覽器控制](09-安裝瀏覽器控制.md) | MCP | v0.3 | Playwright MCP + macOS 桌面 UI 自動化操作 | ✅ |
 | 10 | [開工/收工/初始化技能](10-開工收工初始化技能.md) | Skill | v0.1 | 全域三技能：startup（開工自動同步）、shutdown（收工備份）、project-init（新專案初始化） | ✅ |
-| 11 | [生圖技能](11-生圖.md) | Skill | v0.3 | draw skill：OpenAI gpt-image-2 生成示意圖與插畫 | ✅ |
+| ~~11~~ | ~~生圖技能~~ | ~~Skill~~ | ~~v0.3~~ | ~~draw skill：OpenAI gpt-image-2 生成示意圖與插畫~~ | ~~已移除~~ |
 | 12 | [MarkItDown 文件轉換](12-markitdown.md) | Skill | v0.3 | 各種文件自動轉 Markdown：PDF/Office/CSV/JSON/圖片/音訊/Email/EPUB | ✅ |
 | 13 | [Graphify 知識圖譜](13-graphify.md) | Skill | v0.1 | 程式碼知識圖譜引擎：自然語言查詢取代 grep，跨檔案結構分析 | ✅ |
 | 14 | [Awesome DESIGN.md 品牌設計](14-awesome-design-md.md) | Skill | v0.1 | 一鍵套用 73 個真實品牌 DESIGN.md（Stripe、Vercel、Apple 等） | ✅ |

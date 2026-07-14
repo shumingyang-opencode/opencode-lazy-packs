@@ -22,7 +22,7 @@ description: 安裝 Codebase Memory MCP — 程式碼知識圖譜引擎。
 ### 1. 一鍵安裝
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash
+git clone --depth 1 https://github.com/DeusData/codebase-memory-mcp.git /tmp/codebase-memory-mcp && bash /tmp/codebase-memory-mcp/install.sh
 ```
 
 安裝腳本會自動：
@@ -34,7 +34,7 @@ curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/i
 若需圖形化 UI 版本（3D 知識圖譜瀏覽器）：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/DeusData/codebase-memory-mcp/main/install.sh | bash -s -- --ui
+git clone --depth 1 https://github.com/DeusData/codebase-memory-mcp.git /tmp/codebase-memory-mcp && bash /tmp/codebase-memory-mcp/install.sh -s -- --ui
 ```
 
 ### 2. 驗證安裝

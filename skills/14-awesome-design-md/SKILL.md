@@ -52,9 +52,9 @@ dell-1996, nintendo-2001
 ### 套用品牌設計
 
 1. 用戶指定品牌名稱（如 `stripe`、`vercel`、`apple`）
-2. 從 GitHub raw 下載 DESIGN.md：
-   ```
-   https://raw.githubusercontent.com/VoltAgent/awesome-design-md/main/design-md/<品牌名稱>/DESIGN.md
+2. 從 GitHub clone 取得 DESIGN.md：
+   ```bash
+   git clone --depth 1 https://github.com/VoltAgent/awesome-design-md.git /tmp/awesome-design-md && cp /tmp/awesome-design-md/design-md/<品牌名稱>/DESIGN.md ./
    ```
 3. 寫入專案根目錄 `DESIGN.md`
 4. 若專案已有 DESIGN.md，備份為 `DESIGN.md.bak`

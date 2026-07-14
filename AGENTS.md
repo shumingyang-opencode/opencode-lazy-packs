@@ -70,7 +70,6 @@ OpenCode 專用的懶人包倉庫，雙倉同步：
 | MCP | 類型 | 用途 | 安裝位置 |
 |-----|------|------|---------|
 | obsidian | 筆記 | 讀寫 Obsidian vault | 所有機器 |
-| firebase | Firebase | Firebase 專案管理 | 所有機器 |
 | playwright | 瀏覽器 | 瀏覽器自動化 | 所有機器 |
 | open-computer-use | 桌面 | 桌面 UI 控制 | 所有機器 |
 | docker | Docker | 容器操作 | 工作機 |
