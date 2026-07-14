@@ -193,11 +193,9 @@ See the template's "Operation Rules" and "Security Rules" for details.
 
 ---
 
-## Feedback & Contributions
+## Feedback
 
 - **Issues / Feature Requests**: [GitLab Issues](https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs/-/issues)
-- **Pull Requests**: Fork this project and submit a PR
-- **Discussion**: Start a thread in Issues
 
 ---
 

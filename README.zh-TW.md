@@ -193,11 +193,9 @@ PAT / Token **不要**寫入此檔案。它們應存放於對應平台的設定�
 
 ---
 
-## 貢獻與回饋
+## 意見回饋
 
 - **問題回報 / 功能建議**：請至 [GitLab Issues](https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs/-/issues) 提出
-- **Pull Request**：歡迎 fork 本專案並提交 PR
-- **討論**：請在 Issues 中發起討論
 
 ---
 
