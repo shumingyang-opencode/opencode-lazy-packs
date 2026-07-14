@@ -18,7 +18,7 @@ mkdir -p ~/.config/opencode/skills/project-init
 
 ### 2. 建立三個 SKILL.md
 - **startup**：說「開工」→ 讀 Obsidian 工作筆記 + 檢查 Git
-- **shutdown**：說「收工」→ Git commit/push + Obsidian 同步 + chezmoi
+- **shutdown**：說「收工」→ Git commit/push + Obsidian 工作日誌 + chezmoi
 - **project-init**：說「初始化專案」→ AGENTS.md + Git + GitHub + Obsidian → 可選接續功能規劃
 
 （完整內容見 [懶人包 #10：開工收工初始化技能](../../10-開工收工初始化技能.md) 步驟二至步驟四）
