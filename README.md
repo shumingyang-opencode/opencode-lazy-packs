@@ -1,3 +1,5 @@
+[[_TOC_]]
+
 # Agents 懶人包
 
 > 支援 **OpenCode**、**Trae IDE**、**Codex** 等多平台。
