@@ -124,18 +124,16 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 
 ---
 
-## 為什麼有這份？
+## Agents 設定對照表
 
-原本的懶人包是給 Claude Code 和 OpenAI Codex 用的。OpenCode 是第三個 AI 編碼代理工具，設定方式與前兩者不同：
-
-| 差異 | OpenCode | Claude Code | OpenAI Codex | Trae IDE |
-|------|----------|-------------|--------------|----------|
-| 安裝 | `npm install -g opencode-ai` | `npm install -g @anthropic-ai/claude-code` | `npm install -g @openai/codex` | 從 trae.ai 下載 |
-| 全域設定 | `~/.config/opencode/opencode.json` | `~/.claude/settings.json` | `~/.codex/config.toml` | `~/.cursor/mcp.json` |
-| 專案指令檔 | `AGENTS.md` | `CLAUDE.md` | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
-| MCP 配置 | 編輯 opencode.json | `claude mcp add` | `codex mcp add` | 編輯 `.trae/mcp.json` |
-| Skill 機制 | 原生支援（SKILL.md） | 原生支援 | Desktop 支援 | `.trae/skills/` |
-| 命令 | 有 `/` 內建命令 | 有 `/` 內建命令 | ❌ 沒有 | GUI 介面操作 |
+| 項目 | OpenCode CLI | Trae IDE |
+|------|-------------|----------|
+| 安裝 | `npm install -g opencode-ai` | 從 trae.ai 下載 |
+| 全域設定 | `~/.config/opencode/opencode.json` | `~/.cursor/mcp.json` |
+| 專案指令檔 | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
+| MCP 配置 | 編輯 opencode.json | 編輯 `.trae/mcp.json` |
+| Skill 機制 | 原生支援（SKILL.md） | `.trae/skills/` |
+| 命令 | 有 `/` 內建命令 | GUI 介面操作 |
 
 ---
 
