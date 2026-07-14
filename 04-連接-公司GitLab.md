@@ -23,7 +23,7 @@
 | 伺服器網址 | `https://gitlab.ovt.com:8081` |
 | Git SSH 主機 | `gitlab.ovt.com` |
 | SSH 埠號 | `22` |
-| 使用者名稱 | `steven.yang` |
+| 使用者名稱 | `steven.yang` |<!-- 可替換為你的 GitLab 帳號 -->
 | SSH 金鑰檔案 | `~/.ssh/id_ed25519_gitlab_ovt` |
 | SSH 使用者 | `git` |
 
@@ -79,7 +79,7 @@ ls -la ~/.ssh/id_ed25519_gitlab_ovt
 
 如果不存在，產生新金鑰（不要設 passphrase，或記住 passphrase）：
 ```bash
-ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_gitlab_ovt -C "steven.yang@ovt.com"
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_gitlab_ovt -C "steven.yang@ovt.com"  # 替換為你的 email
 ```
 
 ---
@@ -105,7 +105,7 @@ Host gitlab.ovt.com
 
 請使用者手動操作：
 1. 瀏覽器開啟 `https://gitlab.ovt.com:8081`
-2. 登入（帳號：`steven.yang`）
+2. 登入（帳號：`steven.yang`）<!-- 替換為你的 GitLab 帳號 -->
 3. 右上角頭像 → **Preferences** → **SSH Keys**
 4. 貼上公鑰內容：
 
@@ -125,7 +125,7 @@ ssh -T git@gitlab.ovt.com
 
 預期看到：
 ```
-Welcome to GitLab, @steven.yang!
+Welcome to GitLab, @steven.yang!  <!-- 你的帳號名稱會顯示於此 -->
 ```
 
 如果看到 `The authenticity of host...` 提示，輸入 `yes` 繼續。
@@ -141,7 +141,7 @@ cd ~/Documents/gitlab-projects
 
 clone 一個測試專案（請使用者提供專案 SSH URL，或使用已知專案）：
 ```bash
-git clone git@gitlab.ovt.com:steven.yang/your-project.git
+git clone git@gitlab.ovt.com:steven.yang/your-project.git  # 替換為你的 GitLab 帳號/專案
 cd your-project
 ```
 
@@ -150,8 +150,8 @@ cd your-project
 ### 步驟七：設定本機 Git 使用者（若尚未設定）
 
 ```bash
-git config --global user.name "steven.yang"
-git config --global user.email "steven.yang@ovt.com"
+git config --global user.name "steven.yang"  # 替換為你的姓名
+git config --global user.email "steven.yang@ovt.com"  # 替換為你的 email
 ```
 
 ---

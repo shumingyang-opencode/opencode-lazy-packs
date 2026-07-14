@@ -195,7 +195,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 | 建立 Epic | 「在 EAG 專案建立一個 Epic，標題為 Q3 效能優化」 | `jira_create_issue` |
 | 連結 Epic | 「把 EAG-942 連結到 EPIC-123」 | `jira_link_to_epic` |
 | 更新優先級 | 「把 EAG-942 的優先級改為 High」 | `jira_update_issue` |
-| 指派人員 | 「把 EAG-942 指派給 may.wang」 | `jira_update_issue` |
+| 指派人員 | 「把 EAG-942 指派給 `<COLLEAGUE_ACCOUNT>`」 | `jira_update_issue` |
 | 修改標題 | 「把 EAG-942 的標題改為 XXX」 | `jira_update_issue` |
 | 批次建立 | 「在 MCUP 專案批次建立 3 個 Task」 | `jira_batch_create_issues` |
 
@@ -214,7 +214,7 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 | 新增留言 | 「在 EAG-942 下方留言：已修復，請驗證」 | `jira_add_comment` |
 | 編輯留言 | 「把 EAG-942 的第 5 則留言改為：重新驗證中」 | `jira_edit_comment` |
 | 新增工時 | 「在 EAG-942 登錄工時 2h，備註：程式碼審查」 | `jira_add_worklog` |
-| 加入觀察者 | 「把 may.wang 加為 EAG-942 的觀察者」 | `jira_add_watcher` |
+| 加入觀察者 | 「把 `<COLLEAGUE_ACCOUNT>` 加為 EAG-942 的觀察者」 | `jira_add_watcher` |
 | 建立 Issue 關聯 | 「把 EAG-942 設為 EAG-943 的阻斷者」 | `jira_create_issue_link` |
 | 上傳附件 | 「上傳 report.pdf 到 EAG-942」 | `jira_update_issue` |
 

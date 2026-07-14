@@ -2,8 +2,12 @@
 
 ## 這個資料夾是什麼
 
-OpenCode 專用的懶人包倉庫，對應 repo：
-**shumingyang-opencode/opencode-lazy-packs**
+OpenCode 專用的懶人包倉庫，雙倉同步：
+
+| 遠端 | URL |
+|------|-----|
+| GitHub (origin) | `shumingyang-opencode/opencode-lazy-packs` — 公開上游 |
+| GitLab (gitlab) | `steven.yang/opencode-lazy-packs` — 公司內部獨立版本，供同事安裝 |
 
 ## 主要差異
 
@@ -21,9 +25,15 @@ OpenCode 專用的懶人包倉庫，對應 repo：
 - Obsidian 閱讀版：`OpenCode 懶人包/`
 - GitHub 版：`opencode-lazy-packs/`
 
+> **給同事**：若你 fork 此 repo，請自行修改 remote URL：
+> ```bash
+> git remote set-url gitlab https://gitlab.ovt.com:8081/<你的帳號>/opencode-lazy-packs.git
+> ```
+
+
 ## Obsidian 關聯資料
 
-- Obsidian vault：`/Users/stevenyang/Documents/OpenCode/obsidian`
+- Obsidian vault：`<OBSIDIAN_VAULT_PATH>`
 - 每日筆記：`每日筆記/<日期>.md`
 - 創作庫：`創作庫/`
 - 知識庫：`知識庫/`

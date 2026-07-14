@@ -22,7 +22,7 @@ ls -la ~/.ssh/id_ed25519_gitlab_ovt
 ```
 若不存在：
 ```bash
-ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_gitlab_ovt -C "steven.yang@ovt.com"
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_gitlab_ovt -C "steven.yang@ovt.com"  # 替換為你的 email
 ```
 
 ### 2. 設定 SSH config

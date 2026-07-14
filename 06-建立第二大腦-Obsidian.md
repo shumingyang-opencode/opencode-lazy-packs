@@ -98,7 +98,7 @@ which mcpvault
   "mcp": {
     "obsidian": {
       "type": "local",
-      "command": ["npx", "@bitbonsai/mcpvault", "C:\\Users\\mathr\\Documents\\Secondbrain"],
+      "command": ["npx", "@bitbonsai/mcpvault", "C:\\Users\\<USERNAME>\\Documents\\Secondbrain"],
       "enabled": true
     }
   }
@@ -111,7 +111,7 @@ which mcpvault
   "mcp": {
     "obsidian": {
       "type": "local",
-      "command": ["npx", "@bitbonsai/mcpvault", "/Users/mathr/Documents/Secondbrain"],
+      "command": ["npx", "@bitbonsai/mcpvault", "/Users/<USERNAME>/Documents/Secondbrain"],
       "enabled": true
     }
   }

@@ -68,12 +68,12 @@ mkdir -p ~/.config/opencode/skills/markitdown
 
 從本 repo 複製 SKILL.md：
 ```bash
-curl -o ~/.config/opencode/skills/markitdown/SKILL.md https://raw.githubusercontent.com/shumingyang-opencode/opencode-lazy-packs/main/skills/12-markitdown/SKILL.md
+curl -o ~/.config/opencode/skills/markitdown/SKILL.md https://gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs/-/raw/main/skills/12-markitdown/SKILL.md
 ```
 
 複製 convert.py：
 ```bash
-curl -o ~/.config/opencode/skills/markitdown/convert.py https://raw.githubusercontent.com/shumingyang-opencode/opencode-lazy-packs/main/scripts/convert.py
+curl -o ~/.config/opencode/skills/markitdown/convert.py https://gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs/-/raw/main/scripts/convert.py
 ```
 
 ### 步驟三：設定 opencode.json 權限

@@ -12,7 +12,7 @@ description: 安裝飛書 Lark 整合 — 讓 OpenCode 讀寫飛書文檔、發�
 - [ ] OpenCode 已安裝
 - [ ] `open-computer-use` 已安裝（用於瀏覽器操作飛書開放平台）
 - [ ] 網路連線
-- [ ] 飛書帳號（可用 Google 帳號 `shumingyang-opencode@gmail.com`）
+- [ ] 飛書帳號（可用 Google 帳號 `<FEISHU_EMAIL>`）
 
 ## 步驟
 
@@ -44,7 +44,7 @@ if (Test-Path "$env:USERPROFILE\.config\opencode\skills\feishu-inout\scripts\fei
 
 操作流程：
 1. 開啟瀏覽器至 `https://open.feishu.cn/app`
-2. 使用者手動登入（帳號：`shumingyang-opencode@gmail.com`）
+2. 使用者手動登入（帳號：`<FEISHU_EMAIL>`）
 3. 點擊「建立自建應用」
 4. 輸入應用名稱（如「OpenCode 助手」）、描述
 5. 建立完成後，至 **Credentials & Basic Info** 頁面

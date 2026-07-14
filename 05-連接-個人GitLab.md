@@ -24,14 +24,14 @@
 | 伺服器網址 | `https://gitlab.com` |
 | 協定 | HTTPS（因防火牆封鎖 SSH 22 埠） |
 | Git remote 格式 | `https://gitlab.com/<使用者>/<專案>.git` |
-| 使用者名稱 | `shumingyang-opencode` |
+| 使用者名稱 | `<GITLAB_PERSONAL_USERNAME>` |
 
 ---
 
 ## 先備條件
 
 - [ ] Git 已安裝（若無，先跑**懶人包 #00：環境建置**）
-- [ ] 有 `gitlab.com` 帳號（使用者名稱 `shumingyang-opencode`）
+- [ ] 有 `gitlab.com` 帳號（使用者名稱 `<GITLAB_PERSONAL_USERNAME>`）
 - [ ] 電腦有網路連線
 
 ---
@@ -83,7 +83,7 @@ git config --global credential.helper <helper>
 
 請使用者手動操作（PAT 無法從 CLI 自動建立）：
 1. 瀏覽器開啟 `https://gitlab.com/-/user_settings/personal_access_tokens`
-2. 登入帳號 `shumingyang-opencode`
+2. 登入帳號 `<GITLAB_PERSONAL_USERNAME>`
 3. 填寫：
    - **Token name**：`opencode-local`
    - **Expiration date**：自選（建議不留空，設 1 年後）
@@ -102,12 +102,12 @@ git config --global credential.helper <helper>
 git credential-manager reject https://gitlab.com
 ```
 
-然後第一次 push/clone 時會跳出對話框，使用者名稱填 `shumingyang-opencode`，密碼填 PAT。
+然後第一次 push/clone 時會跳出對話框，使用者名稱填 `<GITLAB_PERSONAL_USERNAME>`，密碼填 PAT。
 
 或者直接寫入 credential store：
 
 ```powershell
-Set-Content -Path "$env:USERPROFILE\.git-credentials-gitlab-com" -Value "https://shumingyang-opencode:<PAT>@gitlab.com"
+Set-Content -Path "$env:USERPROFILE\.git-credentials-gitlab-com" -Value "https://<GITLAB_PERSONAL_USERNAME>:<PAT>@gitlab.com"
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-com"
 ```
 
@@ -115,7 +115,7 @@ git config --global credential.helper "store --file ~/.git-credentials-gitlab-co
 
 **macOS：**
 ```bash
-echo "https://shumingyang-opencode:<PAT>@gitlab.com" > ~/.git-credentials-gitlab-com
+echo "https://<GITLAB_PERSONAL_USERNAME>:<PAT>@gitlab.com" > ~/.git-credentials-gitlab-com
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-com"
 ```
 
@@ -124,7 +124,7 @@ git config --global credential.helper "store --file ~/.git-credentials-gitlab-co
 ### 步驟五：驗證連線
 
 ```bash
-git ls-remote https://gitlab.com/shumingyang-opencode/opencode-lazy-packs.git
+git ls-remote https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/opencode-lazy-packs.git
 ```
 
 預期看到類似輸出（包含 commit hash 和 ref 列表）。
@@ -142,7 +142,7 @@ remote: HTTP Basic: Access denied
 ```bash
 mkdir -p ~/Documents/gitlab-personal
 cd ~/Documents/gitlab-personal
-git clone https://gitlab.com/shumingyang-opencode/opencode-lazy-packs.git
+git clone https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/opencode-lazy-packs.git
 cd opencode-lazy-packs
 ```
 
@@ -151,8 +151,8 @@ cd opencode-lazy-packs
 ### 步驟七：設定本機 Git 使用者（若尚未設定）
 
 ```bash
-git config --global user.name "shumingyang-opencode"
-git config --global user.email "shumingyang.opencode@gmail.com"
+git config --global user.name "<GITLAB_PERSONAL_USERNAME>"
+git config --global user.email "<YOUR_EMAIL>"
 ```
 
 ---
@@ -169,7 +169,7 @@ curl -s -X POST -H "PRIVATE-TOKEN: <PAT>" \
 
 因 GitLab API 需要使用者 ID，請在 GitLab 網頁上操作：
 1. 前往 repo → **Settings** → **Members**
-2. 邀請 `Shuming-Yang`、`Steven-Yang`，角色設 **Owner** 或 **Maintainer**
+2. 邀請 `<COLLABORATOR_1>`、`<COLLABORATOR_2>`，角色設 **Owner** 或 **Maintainer**
 
 > 替代方案：使用 GitLab 網頁新增協作者最為直觀。
 
@@ -202,7 +202,7 @@ git push
 - PAT：已產生 / 未產生
 - 遠端驗證（git ls-remote）：成功 / 失敗
 - clone 測試：成功 / 未執行
-- 協作者（Shuming-Yang、Steven-Yang）：已加入 / 未加入
+- 協作者（<COLLABORATOR_1>、<COLLABORATOR_2>）：已加入 / 未加入
 - 本機目錄：（路徑）
 ```
 
@@ -227,7 +227,7 @@ git push
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-com"
 
 # 驗證
-git ls-remote https://gitlab.com/shumingyang-opencode/opencode-lazy-packs.git
+git ls-remote https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/opencode-lazy-packs.git
 
 # 日常
 git clone https://gitlab.com/<使用者>/<專案>.git

@@ -12,7 +12,7 @@
 把這行貼給你的 AI agent：
 
 ```
-這是 OpenCode 懶人包全集 https://github.com/shumingyang-opencode/opencode-lazy-packs
+這是 OpenCode 懶人包全集 https://gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs
 請讀取 repo 內容，列出所有可用的懶人包，問我要裝哪些。
 ```
 
@@ -25,7 +25,7 @@ AI 會自動：
 ### 方式二：一行指令手動裝（OpenCode）
 
 ```bash
-npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
+npx skills add https://gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs --skill <skill名> -g -y
 ```
 
 可用的 skill 名：
@@ -189,7 +189,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 M
 
 ## 貢獻與回饋
 
-- **問題回報 / 功能建議**：請至 [GitHub Issues](https://github.com/shumingyang-opencode/opencode-lazy-packs/issues) 提出
+- **問題回報 / 功能建議**：請至 [GitLab Issues](https://gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs/-/issues) 提出
 - **Pull Request**：歡迎 fork 本專案並提交 PR
 - **討論**：請在 Issues 中發起討論
 

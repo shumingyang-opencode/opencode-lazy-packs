@@ -33,7 +33,7 @@
 | 項目 | 內容 |
 |------|------|
 | 伺服器網址 | `http://10.0.0.78/svn/development` |
-| 帳號 | `ovt\steven.yang`（Windows）/ `steven.yang`（macOS） |
+| 帳號 | `ovt\steven.yang`（Windows）/ `steven.yang`（macOS） |<!-- 可替換為你的 SVN 帳號 -->
 | 協定 | HTTP（ra_serf） |
 | 本機工作目錄 | `D:\workspace\svn-projects`（Windows）/ `~/Documents/svn-projects`（macOS） |
 
@@ -85,7 +85,7 @@ ping -n 1 10.0.0.78
 SVN 會記住第一次輸入的帳號密碼，但建議先設定使用者名稱：
 
 ```bash
-svn info http://10.0.0.78/svn/development --username ovt\steven.yang
+svn info http://10.0.0.78/svn/development --username ovt\steven.yang  # 替換為你的 SVN 帳號
 ```
 
 執行後會提示輸入密碼，第一次輸入後會被 **Windows Wincrypt** 快取，後續不需重複輸入。
@@ -99,12 +99,12 @@ cd D:\workspace\svn-projects
 
 簽出整個 development 專案：
 ```bash
-svn checkout http://10.0.0.78/svn/development/trunk ./development --username ovt\steven.yang
+svn checkout http://10.0.0.78/svn/development/trunk ./development --username ovt\steven.yang  # 替換為你的 SVN 帳號
 ```
 
 或只簽出特定子目錄：
 ```bash
-svn checkout http://10.0.0.78/svn/development/trunk/your-project ./your-project --username ovt\steven.yang
+svn checkout http://10.0.0.78/svn/development/trunk/your-project ./your-project --username ovt\steven.yang  # 替換為你的 SVN 帳號
 ```
 
 ### 步驟五（Windows）：日常操作
@@ -147,7 +147,7 @@ ping -c 1 10.0.0.78
 SVN 會記住第一次輸入的帳號密碼，建議先設定使用者名稱：
 
 ```bash
-svn info http://10.0.0.78/svn/development --username steven.yang
+svn info http://10.0.0.78/svn/development --username steven.yang  # 替換為你的 SVN 帳號
 ```
 
 執行後會提示輸入密碼，第一次輸入後會被 **macOS Keychain** 快取，後續不需重複輸入。
@@ -161,7 +161,7 @@ cd ~/Documents/svn-projects
 
 簽出整個 development 專案：
 ```bash
-svn checkout http://10.0.0.78/svn/development/trunk ./development --username steven.yang
+svn checkout http://10.0.0.78/svn/development/trunk ./development --username steven.yang  # 替換為你的 SVN 帳號
 ```
 
 ### 步驟五（macOS）：日常操作

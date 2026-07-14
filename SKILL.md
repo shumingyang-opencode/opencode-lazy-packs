@@ -75,7 +75,7 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 對使用者選取的每個 skill，執行：
 
 ```bash
-npx skills add shumingyang-opencode/opencode-lazy-packs --skill <skill名稱> -g -y
+npx skills add https://gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs --skill <skill名稱> -g -y
 ```
 
 ### Trae 用戶

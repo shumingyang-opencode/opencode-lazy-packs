@@ -20,7 +20,7 @@ description: 連接公司內部 SVN 伺服器。說「連接 SVN」「設定 SVN
 | 項目 | 內容 |
 |------|------|
 | 網址 | `http://10.0.0.78/svn/development` |
-| 帳號 | `ovt\steven.yang`（Windows）／ `steven.yang`（macOS） |
+| 帳號 | `ovt\steven.yang`（Windows）／ `steven.yang`（macOS） |<!-- 可替換為你的 SVN 帳號 -->
 | 本機目錄 | `D:\workspace\svn-projects`（Windows）／ `~/Documents/svn-projects`（macOS） |
 
 ## Windows
@@ -32,7 +32,7 @@ ping -n 1 10.0.0.78
 
 ### 2. 設定使用者
 ```bash
-svn info http://10.0.0.78/svn/development --username ovt\steven.yang
+svn info http://10.0.0.78/svn/development --username ovt\steven.yang  # 替換為你的 SVN 帳號
 ```
 密碼第一次輸入後會被 Wincrypt 快取。
 
@@ -40,7 +40,7 @@ svn info http://10.0.0.78/svn/development --username ovt\steven.yang
 ```bash
 mkdir D:\workspace\svn-projects
 cd D:\workspace\svn-projects
-svn checkout http://10.0.0.78/svn/development/trunk ./development --username ovt\steven.yang
+svn checkout http://10.0.0.78/svn/development/trunk ./development --username ovt\steven.yang  # 替換為你的 SVN 帳號
 ```
 
 ### 4. 日常操作
@@ -60,7 +60,7 @@ ping -c 1 10.0.0.78
 
 ### 2. 設定使用者
 ```bash
-svn info http://10.0.0.78/svn/development --username steven.yang
+svn info http://10.0.0.78/svn/development --username steven.yang  # 替換為你的 SVN 帳號
 ```
 密碼第一次輸入後會被 Keychain 快取。
 
@@ -68,7 +68,7 @@ svn info http://10.0.0.78/svn/development --username steven.yang
 ```bash
 mkdir -p ~/Documents/svn-projects
 cd ~/Documents/svn-projects
-svn checkout http://10.0.0.78/svn/development/trunk ./development --username steven.yang
+svn checkout http://10.0.0.78/svn/development/trunk ./development --username steven.yang  # 替換為你的 SVN 帳號
 ```
 
 ### 4. 日常操作

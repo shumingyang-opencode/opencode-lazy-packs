@@ -141,7 +141,7 @@ SSL 說明：公司內部自簽憑證需設 `SSL_VERIFY=false`。
   ├─ 在 EAG 專案建立一個 Epic，標題為 Q3 優化
   ├─ 把 EAG-942 連結到 EPIC-123
   ├─ 把 EAG-942 的優先級改為 High
-  └─ 把 EAG-942 指派給 may.wang
+  └─ 把 EAG-942 指派給 <COLLEAGUE_ACCOUNT>
 
   狀態管理
   ├─ 把 EAG-942 轉到 In Progress
