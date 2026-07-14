@@ -120,7 +120,12 @@ npx skills add https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs --skill
 
 ### 安全提醒
 
-PAT / Token **不要**寫入此檔案。它們應存放於 `opencode.json` 的 MCP 環境變數中。詳見範本中的「操作規範」與「安全規範」。
+PAT / Token **不要**寫入此檔案。它們應存放於對應平台的設定檔中：
+
+- **OpenCode**：`~/.config/opencode/opencode.json` 的 MCP 環境變數
+- **Trae IDE**：`.trae/mcp.json` 或 `~/.cursor/mcp.json` 的 env 區塊
+
+詳見範本中的「操作規範」與「安全規範」。
 
 ---
 
