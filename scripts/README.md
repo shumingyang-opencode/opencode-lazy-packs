@@ -16,17 +16,6 @@ python scripts/convert.py 報告.docx -o 報告.md
 
 **相依：** `markitdown`（`pip install 'markitdown[xls,audio-transcription]'`）
 
-## `draw.py`
-
-透過 OpenAI gpt-image-2 模型生圖，輸出至 `slides/generated/` 或 `generated/`。
-
-```bash
-python scripts/draw.py "一隻坐在筆電前的貓工程師"
-python scripts/draw.py "城市夜景" --name city --size "1024x1024" --quality high
-```
-
-**相依：** `openai`（`pip install openai`）、`OPENAI_API_KEY`（存放於 `~/.openai.env`）
-
 ## `init_plan.py`
 
 透過 10 步驟模板初始化功能規劃目錄，用於 project-plan-feature 技能：
