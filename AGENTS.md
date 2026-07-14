@@ -13,13 +13,6 @@
 | MCP | 編輯 JSON | `codex mcp add` | 編輯 JSON / GUI |
 | Skills dir | `~/.config/opencode/skills/` | `~/.codex/skills/` | `.trae/skills/` |
 
-## 雙倉同步規則
-
-- **不要**把不同平台的版本直接複製過來；MCP 指令、設定檔格式都不同
-- 修改主流程時多平台都要更新
-- Obsidian 閱讀版：`Agents 懶人包/`
-
-
 ## Obsidian 關聯資料
 
 - Obsidian vault：`<OBSIDIAN_VAULT_PATH>`
