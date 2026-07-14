@@ -161,7 +161,7 @@ PAT / Token **不要**写入此文件。它们应存放于对应平台的配置�
 
 | 编号 | 名称 | 类型 | 版本 | 说明 | 支持状态 |
 |------|------|------|------|------|---------|
-| 00 | [环境建置](00-環境建置.md) | CLI | v0.3 | OpenCode CLI + Node.js + uv 基础环境安装 | ✅ |
+| 00 | [环境建置](00-環境建置.md) | CLI | v0.3 | OpenCode + Node.js + uv 基础环境安装 | ✅ |
 | ~~01~~ | ~~连接 NotebookLM~~ | ~~MCP~~ | ~~v0.2~~ | ~~NotebookLM MCP 安装与连線：AI 生成简报、图表、音讯、报告~~ | ~~已移除~~ |
 | 02 | [连接 GitHub](02-連接-GitHub.md) | MCP | v0.2 | GitHub CLI 登录认证 + GitHub Pages 教材上线 | ✅ |
 | 03 | [连接公司 SVN](03-連接-公司SVN.md) | MCP | v0.2 | OmniVision 内部 SVN 服务器连線设定 | ✅ |

@@ -26,7 +26,7 @@
 
 ## MCP / 技能安裝流程
 
-安裝任何涉及 **MCP 伺服器**或**技能**的懶人包時，先確認使用者使用的平台（OpenCode CLI 或 Trae IDE），再遵循以下流程：
+安裝任何涉及 **MCP 伺服器**或**技能**的懶人包時，先確認使用者使用的平台（OpenCode 或 Trae IDE），再遵循以下流程：
 
 1. 依照對應平台的懶人包步驟安裝並驗證
 2. 驗證完成後，**必須詢問使用者**是否要將該服務設為全局
@@ -36,7 +36,7 @@
 
 ### 平台設定路徑速查
 
-| | OpenCode CLI | Trae IDE |
+| | OpenCode | Trae IDE |
 |---|---|---|
 | 專案 MCP | `opencode.json` 的 `"mcp"` | `.trae/mcp.json` 的 `"mcpServers"` |
 | 全域 MCP | `~/.config/opencode/opencode.json` 的 `"mcp"` | `~/.cursor/mcp.json` 的 `"mcpServers"` |
@@ -44,7 +44,7 @@
 | 全域 Skills | `~/.config/opencode/skills/` | 無（僅專案層級） |
 | 專案規則 | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
 
-## 全局 MCP 列表（OpenCode CLI）
+## 全局 MCP 列表（OpenCode）
 
 以下 MCP 伺服器已安裝在全局 `~/.config/opencode/opencode.json`（部分僅安裝於公司工作機）：
 

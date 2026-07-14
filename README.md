@@ -161,7 +161,7 @@ See the template's "Operation Rules" and "Security Rules" for details.
 
 | # | Name | Type | Version | Description | Support |
 |---|------|------|---------|-------------|---------|
-| 00 | [Environment Setup](00-環境建置.md) | CLI | v0.3 | OpenCode CLI + Node.js + uv basic env setup | ✅ |
+| 00 | [Environment Setup](00-環境建置.md) | CLI | v0.3 | OpenCode + Node.js + uv basic env setup | ✅ |
 | ~~01~~ | ~~Connect NotebookLM~~ | ~~MCP~~ | ~~v0.2~~ | ~~NotebookLM MCP - AI presentations, audio, reports~~ | ~~Removed~~ |
 | 02 | [Connect GitHub](02-連接-GitHub.md) | MCP | v0.2 | GitHub CLI auth + GitHub Pages publishing | ✅ |
 | 03 | [Connect Company SVN](03-連接-公司SVN.md) | MCP | v0.2 | OmniVision internal SVN server setup | ✅ |

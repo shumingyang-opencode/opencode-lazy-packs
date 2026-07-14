@@ -76,7 +76,7 @@ The repository mandates a five-step process for installing any new MCP server or
 
 ## Actionable Insights for Implementation
 
-*   **Prioritize Environment Setup:** Skill `00-env-setup` is a prerequisite for almost all other packs. It handles the installation of Node.js, the OpenCode CLI, and `uv`.
+*   **Prioritize Environment Setup:** Skill `00-env-setup` is a prerequisite for almost all other packs. It handles the installation of Node.js, the OpenCode, and `uv`.
 *   **Standardize Account Templates:** Before deploying multiple skills, ensure `个人账号与服务清单.sample.md` is converted to a live `.md` file at the root level to prevent the agent from repeatedly asking for SVN or GitLab URLs.
 *   **Utilize Native MCPs for Corporate Tools:** For users in corporate environments, the global installation of JIRA, Confluence, and Trac MCPs (Skills #20 and #21) is recommended to integrate ticket management directly into the coding workflow.
 *   **Knowledge Graph Maintenance:** When modifying code, the agent must execute `graphify update .` to ensure the internal knowledge graph accurately reflects the new structure, facilitating better future queries.

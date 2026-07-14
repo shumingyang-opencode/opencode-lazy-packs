@@ -12,10 +12,10 @@ description: Agents 懶人包全集 — 環境建置、MCP 串接、技能安裝
 先問使用者用的是哪個平台：
 
 ```
-你使用的是 OpenCode CLI 還是 Trae IDE？
+你使用的是 OpenCode 還是 Trae IDE？
 ```
 
-- **OpenCode CLI** → 使用 `npx skills add` 一鍵安裝
+- **OpenCode** → 使用 `npx skills add` 一鍵安裝
 - **Trae IDE** → 依照每個懶人包末尾的「Trae 對應操作」區塊手動設定
 
 ## 步驟二：認識可用懶人包
@@ -109,7 +109,7 @@ npx skills add https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs --skill
 
 ### 平台設定路徑速查
 
-| | OpenCode CLI | Trae IDE |
+| | OpenCode | Trae IDE |
 |---|---|---|
 | 專案 MCP | `opencode.json` 的 `"mcp"` | `.trae/mcp.json` 的 `"mcpServers"` |
 | 全域 MCP | `~/.config/opencode/opencode.json` 的 `"mcp"` | `~/.cursor/mcp.json` 的 `"mcpServers"` |
