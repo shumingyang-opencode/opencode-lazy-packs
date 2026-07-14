@@ -66,12 +66,12 @@ npx skills add https://gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs --ski
 若你使用 **Trae IDE**，每個懶人包末尾都有 `## Trae 對應操作` 區塊，說明如何在 Trae 上安裝、更新、移除該服務。
 
 ```bash
-# 以 Firebase 為例，開啟專案的 .trae/mcp.json，在 mcpServers 加入：
+# 以 Obsidian 為例，開啟專案的 .trae/mcp.json，在 mcpServers 加入：
 # {
 #   "mcpServers": {
-#     "firebase": {
+#     "obsidian": {
 #       "command": "npx",
-#       "args": ["-y", "firebase-tools@latest", "mcp"]
+#       "args": ["@bitbonsai/mcpvault", "<VAULT_PATH>"]
 #     }
 #   }
 # }
