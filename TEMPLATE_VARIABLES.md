@@ -14,7 +14,7 @@
 ## 安裝來源
 
 本 repo 安裝指令使用公司 GitLab 來源：
-`npx skills add gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs --skill <skill名> -g -y`
+`npx skills add gitlab.ovt.com:8081/steven.yang/agents-lazy-packs --skill <skill名> -g -y`
 
 若已 fork 到自己的 namespace，請將 `steven.yang` 改為你自己的帳號。
 

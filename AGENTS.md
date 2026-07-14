@@ -1,33 +1,33 @@
-# AGENTS.md — opencode-lazy-packs
+# AGENTS.md — agents-lazy-packs
 
 ## 這個資料夾是什麼
 
-OpenCode 專用的懶人包倉庫，雙倉同步：
+多平台 AI Agent 懶人包倉庫，雙倉同步：
 
 | 遠端 | URL |
 |------|-----|
-| GitHub (origin) | `shumingyang-opencode/opencode-lazy-packs` — 公開上游 |
-| GitLab (gitlab) | `steven.yang/opencode-lazy-packs` — 公司內部獨立版本，供同事安裝 |
+| GitHub (origin) | `shumingyang-opencode/agents-lazy-packs` — 公開上游 |
+| GitLab (gitlab) | `steven.yang/agents-lazy-packs` — 公司內部獨立版本，供同事安裝 |
 
 ## 主要差異
 
-| 項目 | opencode | claude-code | codex | Trae IDE |
-|------|----------|-------------|-------|----------|
-| 設定檔 | `opencode.json` | `settings.json` | `config.toml` | `.trae/mcp.json` |
-| 專案檔 | `AGENTS.md` | `CLAUDE.md` | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
-| MCP | 編輯 JSON | `claude mcp add` | `codex mcp add` | 編輯 JSON / GUI |
-| Skills dir | `~/.config/opencode/skills/` | `~/.claude/skills/` | `~/.codex/skills/` | `.trae/skills/` |
+| 項目 | OpenCode | Codex | Trae IDE |
+|------|----------|-------|----------|
+| 設定檔 | `opencode.json` | `config.toml` | `.trae/mcp.json` |
+| 專案檔 | `AGENTS.md` | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
+| MCP | 編輯 JSON | `codex mcp add` | 編輯 JSON / GUI |
+| Skills dir | `~/.config/opencode/skills/` | `~/.codex/skills/` | `.trae/skills/` |
 
 ## 雙倉同步規則
 
-- **不要**把 Claude Code 或 Codex 版直接複製過來；MCP 指令、設定檔格式都不同
-- 修改主流程時三邊都要更新
-- Obsidian 閱讀版：`OpenCode 懶人包/`
-- GitHub 版：`opencode-lazy-packs/`
+- **不要**把不同平台的版本直接複製過來；MCP 指令、設定檔格式都不同
+- 修改主流程時多平台都要更新
+- Obsidian 閱讀版：`Agents 懶人包/`
+- GitHub 版：`agents-lazy-packs/`
 
 > **給同事**：若你 fork 此 repo，請自行修改 remote URL：
 > ```bash
-> git remote set-url gitlab https://gitlab.ovt.com:8081/<你的帳號>/opencode-lazy-packs.git
+> git remote set-url gitlab https://gitlab.ovt.com:8081/<你的帳號>/agents-lazy-packs.git
 > ```
 
 
@@ -40,7 +40,7 @@ OpenCode 專用的懶人包倉庫，雙倉同步：
 
 ## 提醒
 
-- 使用者說「更新 OpenCode 懶人包」→ 只動本資料夾
+- 使用者說「更新 Agents 懶人包」→ 只動本資料夾
 - 使用者說「三邊都更新」→ 三個資料夾都改
 
 ## MCP / 技能安裝流程

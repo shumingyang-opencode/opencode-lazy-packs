@@ -124,7 +124,7 @@ git config --global credential.helper "store --file ~/.git-credentials-gitlab-co
 ### 步驟五：驗證連線
 
 ```bash
-git ls-remote https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/opencode-lazy-packs.git
+git ls-remote https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/agents-lazy-packs.git
 ```
 
 預期看到類似輸出（包含 commit hash 和 ref 列表）。
@@ -142,8 +142,8 @@ remote: HTTP Basic: Access denied
 ```bash
 mkdir -p ~/Documents/gitlab-personal
 cd ~/Documents/gitlab-personal
-git clone https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/opencode-lazy-packs.git
-cd opencode-lazy-packs
+git clone https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/agents-lazy-packs.git
+cd agents-lazy-packs
 ```
 
 ---
@@ -180,7 +180,7 @@ curl -s -X POST -H "PRIVATE-TOKEN: <PAT>" \
 ## 日常操作
 
 ```bash
-cd ~/Documents/gitlab-personal/opencode-lazy-packs
+cd ~/Documents/gitlab-personal/agents-lazy-packs
 git pull
 git status
 git add <檔案>
@@ -227,7 +227,7 @@ git push
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-com"
 
 # 驗證
-git ls-remote https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/opencode-lazy-packs.git
+git ls-remote https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/agents-lazy-packs.git
 
 # 日常
 git clone https://gitlab.com/<使用者>/<專案>.git

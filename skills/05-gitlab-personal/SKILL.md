@@ -20,14 +20,14 @@ git config --global credential.helper "store --file ~/.git-credentials-gitlab-co
 
 ### 3. 驗證
 ```bash
-git ls-remote https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/opencode-lazy-packs.git
+git ls-remote https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/agents-lazy-packs.git
 ```
 
 ### 4. Clone 測試
 ```bash
 mkdir -p ~/Documents/gitlab-personal
 cd ~/Documents/gitlab-personal
-git clone https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/opencode-lazy-packs.git
+git clone https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/agents-lazy-packs.git
 ```
 
 ## 日常操作

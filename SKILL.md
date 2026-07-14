@@ -1,9 +1,9 @@
 ---
-name: opencode-lazy-packs
-description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安裝，支援 OpenCode CLI 與 Trae IDE 雙平台。說「安裝懶人包」「opencode 懶人包」「trae 安裝」時載入
+name: agents-lazy-packs
+description: Agents 懶人包全集 — 環境建置、MCP 串接、技能安裝，支援 OpenCode、Trae IDE、Codex 等多平台。說「安裝懶人包」「agents 懶人包」「trae 安裝」時載入
 ---
 
-# OpenCode 懶人包 — AI Agent 自動安裝入口
+# Agents 懶人包 — AI Agent 自動安裝入口
 
 當使用者給你這個 repo 網址並說要安裝時，請依以下流程執行：
 
@@ -72,7 +72,7 @@ description: OpenCode 懶人包全集 — 環境建置、MCP 串接、技能安�
 對使用者選取的每個 skill，執行：
 
 ```bash
-npx skills add https://gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs --skill <skill名稱> -g -y
+npx skills add https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs --skill <skill名稱> -g -y
 ```
 
 ### Trae 用戶

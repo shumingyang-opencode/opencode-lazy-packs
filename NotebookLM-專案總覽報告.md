@@ -1,6 +1,6 @@
 # OpenCode Lazy Packs: Technical Briefing and Implementation Guide
 
-The OpenCode Lazy Packs repository (`steven.yang/opencode-lazy-packs`) serves as a comprehensive automation and configuration hub for the OpenCode AI coding agent. It provides a structured environment for installing "skills" (automated tasks) and Model Context Protocol (MCP) servers, enabling a streamlined development workflow that integrates with diverse tools such as GitHub, GitLab, Obsidian, JIRA, and specialized knowledge graph engines.
+The OpenCode Lazy Packs repository (`steven.yang/agents-lazy-packs`) serves as a comprehensive automation and configuration hub for the OpenCode AI coding agent. It provides a structured environment for installing "skills" (automated tasks) and Model Context Protocol (MCP) servers, enabling a streamlined development workflow that integrates with diverse tools such as GitHub, GitLab, Obsidian, JIRA, and specialized knowledge graph engines.
 
 ## Executive Summary
 
