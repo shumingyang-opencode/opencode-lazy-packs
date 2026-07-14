@@ -1,3 +1,7 @@
+[**English**](README.md) | [**繁体中文**]() | [**简体中文**](README.zh-CN.md)
+
+---
+
 [[_TOC_]]
 
 # Agents 懶人包
