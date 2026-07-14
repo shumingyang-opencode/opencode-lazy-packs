@@ -87,7 +87,7 @@ npx skills add https://gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs --ski
 
 ---
 
-## 新功能：個人帳號與服務清單 🆕
+## 個人帳號與服務清單
 
 本懶人包新增 **中央帳號資訊管理系統**，讓 AI agent 自動讀取你的服務帳號，不需每次重複詢問。
 
