@@ -200,17 +200,21 @@ Watch internal sharing tutorials at [AI Agent Tech Knowledge Base](https://steve
 | Topic | Description |
 |-------|-------------|
 | AI Fundamentals | Core AI concepts and principles |
-| Agent Skills | AI Agent skill development |
+| AI Agent Basics | Essential agent capabilities |
 | Dev Tools Ecosystem | Practical AI development tools |
 | CLI Tools | Command-line tool applications |
+| MarkItDown | File conversion with MarkItDown |
+| Dify LLM App Development | Build LLM applications with Dify |
 | DuckDB Tutorials | Complete DuckDB database guide |
 | Knowledge Graph | Graphify and knowledge graph tech |
 | Loop Engineering | Large-scale structured engineering |
 | MCP vs CLI | Comparing two tool paradigms |
-| AI Agent Basics | Essential agent capabilities |
-| AI Briefing Revolution | AI-powered presentation creation |
-| OpenCode Series | OpenCode hands-on tutorials |
 | Token Optimization | Token optimization strategies |
+| Agent Skills | AI Agent skill development |
+| OpenCode Ecosystem | OpenCode tools and ecosystem |
+| OpenCode Series | OpenCode hands-on tutorials |
+| Karpathy Lectures | Deep learning series by Karpathy |
+| AI Briefing Revolution | AI-powered presentation creation |
 
 ---
 
