@@ -23,6 +23,8 @@ mkdir -p ~/.config/opencode/skills/project-init
 
 （完整內容見 [懶人包 #10：開工收工初始化技能](../../10-開工收工初始化技能.md) 步驟二至步驟四）
 
+> **⚠️ 已知坑：** `project-init` 技能產生 `opencode.json` 時，key 必須用 `"command"` 而非 `"customCommands"`（OpenCode IDE 不支援後者）。詳見 `SKILL.md` 中的 JSON 範本與下方修正後的內容。**若你已手動建立此技能，請確認該 key 是 `command`。**
+
 ### 3. 設定 opencode.json 權限
 ```json
 "permission": {
