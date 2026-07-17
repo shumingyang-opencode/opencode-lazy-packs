@@ -171,7 +171,7 @@ See the template's "Operation Rules" and "Security Rules" for details.
 | 07 | [Second Brain Setup Guide](07-第二大腦設定指南.md) | Tutorial | v0.2 | Obsidian 3-layer dir structure + templates | — |
 | ~~08~~ | ~~Connect Firebase~~ | ~~MCP~~ | ~~v0.1~~ | ~~Firebase MCP - project management, database, deploy~~ | ~~Removed~~ |
 | 09 | [Install Browser Control](09-安裝瀏覽器控制.md) | MCP | v0.3 | Playwright MCP + macOS desktop UI automation | ✅ |
-| 10 | [Start/Shutdown/Init Skills](10-開工收工初始化技能.md) | Skill | v0.2 | 3 global skills: startup (multi-session), shutdown (structured log), project-init | ✅ |
+| 10 | [Start/Shutdown/Init Skills](10-開工收工初始化技能.md) | Skill | v0.3 | 3 global skills + weekly-report extension: startup (multi-session), shutdown (structured log), project-init, weekly-report | ✅ |
 | ~~11~~ | ~~Draw Skill~~ | ~~Skill~~ | ~~v0.3~~ | ~~draw skill: OpenAI gpt-image-2 image generation~~ | ~~Removed~~ |
 | 12 | [MarkItDown Document Convert](12-markitdown.md) | Skill | v0.3 | Auto-convert PDF/Office/CSV/JSON/Image/Audio to MD | ✅ |
 | 13 | [Graphify Knowledge Graph](13-graphify.md) | Skill | v0.1 | Code knowledge graph engine - NL queries replace grep | ✅ |
