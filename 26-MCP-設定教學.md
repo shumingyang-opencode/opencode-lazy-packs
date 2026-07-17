@@ -28,7 +28,7 @@ MCP（Model Context Protocol）是 AI agent 與外部工具之間的通訊協定
 
 OpenCode 本身只能操作文字與檔案。當你需要它：
 - 操作瀏覽器 → 需要 Playwright MCP
-- 讀寫資料庫 → 需要 Firebase / PostgreSQL MCP
+- 讀寫資料庫 → 需要 PostgreSQL 等資料庫 MCP
 - 操作 JIRA → 需要 mcp-atlassian
 - 發送訊息 → 需要飛書 MCP
 
@@ -39,7 +39,6 @@ OpenCode 本身只能操作文字與檔案。當你需要它：
 | 懶人包 | MCP 服務 | 用途 |
 |--------|---------|------|
 | #01 | NotebookLM | 操作 Google NotebookLM |
-| #08 | Firebase | Firebase 專案管理 |
 | #09 | Playwright | 瀏覽器自動化 |
 | #09 | open-computer-use | 桌面 UI 控制 |
 | #10 | obsidian | 讀寫 Obsidian vault |
@@ -49,7 +48,7 @@ OpenCode 本身只能操作文字與檔案。當你需要它：
 
 > 你想連接什麼類型的服務？
 > 1. 瀏覽器控制（像 Playwright）
-> 2. 資料庫（Firebase、PostgreSQL）
+> 2. 資料庫（PostgreSQL、MySQL 等）
 > 3. 專案管理工具（JIRA、Trac）
 > 4. 第三方 API（天氣、翻譯、地圖）
 > 5. 自訂工具（我有一個特殊需求）
@@ -184,26 +183,6 @@ MCP 設定寫在 `~/.config/opencode/opencode.json`（全域）或 `<專案>/ope
 }
 ```
 安裝後 OpenCode 就能操作瀏覽器。
-
-**場景 B：連接 Firebase（資料庫管理）**
-
-```json
-{
-  "mcp": {
-    "firebase": {
-      "type": "stdio",
-      "command": ["npx", "-y", "firebase-mcp"],
-      "env": {
-        "FIREBASE_PROJECT_ID": "your-project-id",
-        "FIREBASE_CLIENT_EMAIL": "your-client-email",
-        "FIREBASE_PRIVATE_KEY": "your-private-key"
-      },
-      "enabled": true
-    }
-  }
-}
-```
-注意：敏感資訊（API Key、Token）放在 `env` 區塊，不要寫死在 `command` 或 `args` 中。
 
 **場景 C：連接一個自訂 HTTP API**
 
