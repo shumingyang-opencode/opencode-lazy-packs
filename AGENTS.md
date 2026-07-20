@@ -15,10 +15,11 @@
 
 ## Obsidian 關聯資料
 
-- Obsidian vault：`<OBSIDIAN_VAULT_PATH>`
+- Obsidian vault：`/Users/stevenyang/Documents/OpenCode/obsidian`
 - 每日筆記：`每日筆記/<日期>.md`
 - 創作庫：`創作庫/`
 - 知識庫：`知識庫/`
+- vault git remote：`origin → github.com/shumingyang-opencode/work-notes`
 
 ## 提醒
 
@@ -30,9 +31,22 @@
 
 1. 依照對應平台的懶人包步驟安裝並驗證
 2. 驗證完成後，**必須詢問使用者**是否要將該服務設為全局
-3. 使用者回答「是」→ 搬遷到對應的全域設定路徑
-4. 使用者回答「否」→ 保留在專案層級，並告知其他專案如何啟用
-5. 詳見 `SKILL.md` 步驟五
+3. [新增] **同步資料詢問** — 僅限「涉及跨機器檔案同步」的技能（如 startup/shutdown 的每日筆記）：
+   - 初次安裝 → 詢問是否要同步資料
+   - 升級時 → 讀取 `個人帳號與服務清單.md` 的跨機器同步設定區塊
+     - 有該技能的 entry（狀態: 已設定）→ 直接沿用，不詢問
+     - 無該技能 entry → 重新詢問
+   - 若選「是」：
+     - 詢問平台（GitHub / GitLab / 兩者都要）
+     - 所有 repo **強制私有**
+     - 協助建立私有 repo（`gh repo create --private` / `glab repo create`）
+     - `git remote add`（支援多個 remote 鏡像）
+     - 將 sync config 寫入 `個人帳號與服務清單.md`
+   - 若選「否」→ 跳過，不寫 sync config
+   - 若之後要新增 remote → 由使用者說「幫我加 sync remote」手動追加
+4. 使用者回答「是」→ 搬遷到對應的全域設定路徑
+5. 使用者回答「否」→ 保留在專案層級，並告知其他專案如何啟用
+6. 詳見 `SKILL.md` 步驟五
 
 ### 平台設定路徑速查
 
