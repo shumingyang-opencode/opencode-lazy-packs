@@ -10,6 +10,7 @@
 | `<COLLEAGUE_ACCOUNT>` | `colleague.name` | JIRA 範例中的同事帳號 |
 | `<EXAMPLE_REPO>` | `owner/example-repo` | 教學範例中的 repo 路徑 |
 | `<OBSIDIAN_VAULT_PATH>` | `C:\Users\YourName\Documents\Obsidian` | Obsidian Vault 根目錄路徑 |
+| `<VAULT_GIT_REMOTE>` | `origin → github.com/yourname/work-notes` | 跨機器同步的 vault Git remote |
 
 ## 安裝來源
 
