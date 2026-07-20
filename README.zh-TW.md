@@ -24,7 +24,7 @@
 
 AI 會自動：
 1. 讀取 repo 的 `SKILL.md`（安裝入口）
-2. 列出 25 個懶人包
+2. 列出 26 個懶人包
 3. 問你要裝哪些（可以選「全部」或特定編號）
 4. 自動安裝你選的項目
 
@@ -64,6 +64,7 @@ npx skills add https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs --skill
 | `26-mcp-reference` | 互動式 MCP 設定教學 — 連線模式、安全性、自訂 Server |
 | `27-gen-pptx` | 通用簡報產製技能 — 六引擎工作流：技術文件/Repo/Spec→可編輯 .pptx |
 | `28-cli-anything` | CLI-Anything — 50+ 軟體的 Agent-native CLI harness 發現與安裝（Blender、GIMP、Obsidian 等） |
+| `29-solo-agent` | SOLO Agent — 全自動全棧開發（Plan→Build→Test→Deliver），一次需求自動完成規劃→建構→測試→交付 |
 
 安裝後對 OpenCode 說該技能對應的關鍵字即可啟動。
 
@@ -190,6 +191,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於對應平台的設定�
 | 26 | [MCP 設定教學](26-MCP-設定教學.md) | 教學 | v0.1 | 互動式教學：MCP 概念、三種連線模式、安全性原則、自訂 MCP Server | — |
 | 27 | [通用簡報產製](27-通用簡報產製.md) | Skill | v0.1 | 六引擎簡報工作流：將技術文件、datasheet、Spec、Repo 轉為可編輯 .pptx，專為 RD/FAE/AE 設計 | ✅ |
 | 28 | [安裝 CLI-Anything](28-安裝-CLI-Anything.md) | Skill | v0.1 | CLI-Hub Meta-Skill：50+ 軟體的 Agent-native CLI harness 發現與安裝，支援 cli-hub 套件管理器（HKUDS/CLI-Anything, ⭐44.8K） | ✅ |
+| 29 | [安裝 SOLO Agent](29-安裝-SOLO-Agent.md) | Agent | v0.1 | 全自動全棧開發：一次需求完成規劃→建構→測試→交付，內建自動錯誤修正與重試 | ✅ |
 
 ---
 

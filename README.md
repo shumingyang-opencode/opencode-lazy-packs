@@ -24,7 +24,7 @@ Please read the repo content, list all available packs, and ask me which ones to
 
 The AI will:
 1. Read the repo's `SKILL.md` (entry point)
-2. List all 25 packs
+2. List all 26 packs
 3. Ask which ones you want to install (or "all")
 4. Automatically install your selection
 
@@ -64,6 +64,7 @@ Available skill names:
 | `26-mcp-reference` | Interactive MCP Setup Tutorial |
 | `27-gen-pptx` | Presentation Generator — Spec/Repo → Editable .pptx |
 | `28-cli-anything` | CLI-Anything — 50+ Agent-native CLI Harnesses (Blender, GIMP, Obsidian, etc.) |
+| `29-solo-agent` | SOLO Agent — Auto Plan→Build→Test→Deliver: ONE-SHOT full-stack dev with automatic error recovery |
 
 Once installed, just say the corresponding keyword to OpenCode.
 
@@ -190,6 +191,7 @@ See the template's "Operation Rules" and "Security Rules" for details.
 | 26 | [MCP Setup Tutorial](26-MCP-設定教學.md) | Tutorial | v0.1 | Interactive guide: MCP concepts, modes, security | — |
 | 27 | [Presentation Generator](27-通用簡報產製.md) | Skill | v0.1 | 6-engine workflow: docs/repo/spec → editable .pptx | ✅ |
 | 28 | [Install CLI-Anything](28-安裝-CLI-Anything.md) | Skill | v0.1 | 50+ agent-native CLI harnesses, cli-hub package mgr | ✅ |
+| 29 | [Install SOLO Agent](29-安裝-SOLO-Agent.md) | Agent | v0.1 | ONE-SHOT full-stack dev: plan, build, test, deliver in a single flow with auto error recovery | ✅ |
 
 ---
 
