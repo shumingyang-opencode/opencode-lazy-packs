@@ -15,7 +15,7 @@
 
 ## Obsidian 關聯資料
 
-- Obsidian vault：`/Users/stevenyang/Documents/OpenCode/obsidian`
+- Obsidian vault：`D:\workspace\OpenCode\Obsidian\`（Windows）/ `/Users/stevenyang/Documents/OpenCode/obsidian`（macOS）
 - 每日筆記：`每日筆記/<日期>.md`
 - 創作庫：`創作庫/`
 - 知識庫：`知識庫/`
