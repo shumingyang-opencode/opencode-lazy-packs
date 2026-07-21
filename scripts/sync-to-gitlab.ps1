@@ -59,9 +59,9 @@ try {
         Write-Host "Commit created." -ForegroundColor Green
     }
 
-    # Push to GitLab
+    # Push to GitLab (force to match GitHub:main after restoration)
     Write-Host "Pushing to GitLab..." -ForegroundColor Yellow
-    git -C $tmpDir push gitlab $branch
+    git -C $tmpDir push --force gitlab $branch
 
     Write-Host "=== Sync complete ===" -ForegroundColor Green
 }
