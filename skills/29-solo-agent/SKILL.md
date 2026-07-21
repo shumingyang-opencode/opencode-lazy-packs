@@ -134,10 +134,10 @@ jq --rawfile prompt /tmp/solo-prompt.txt \
   '.agent.solo = {
     "description": "全自動全棧開發 — 一次需求，自動完成規劃→建構→測試→交付",
     "mode": "primary",
-    "permission": [
-      { "permission": "*", "action": "allow", "pattern": "*" },
-      { "permission": "doom_loop", "action": "ask", "pattern": "*" }
-    ],
+    "permission": {
+      "*": "allow",
+      "doom_loop": "ask"
+    },
     "prompt": $prompt
   }' "$TARGET_FILE" > "$TARGET_FILE.tmp" && mv "$TARGET_FILE.tmp" "$TARGET_FILE"
 ```

@@ -200,10 +200,10 @@ jq --rawfile prompt /tmp/solo-prompt.txt \
   '.agent.solo = {
     "description": "全自動全棧開發 — 一次需求，自動完成規劃→建構→測試→交付",
     "mode": "primary",
-    "permission": [
-      { "permission": "*", "action": "allow", "pattern": "*" },
-      { "permission": "doom_loop", "action": "ask", "pattern": "*" }
-    ],
+    "permission": {
+      "*": "allow",
+      "doom_loop": "ask"
+    },
     "prompt": $prompt
   }' "$TARGET_FILE" > "$TARGET_FILE.tmp" && mv "$TARGET_FILE.tmp" "$TARGET_FILE"
 ```
@@ -229,13 +229,13 @@ opencode agent list 2>/dev/null | grep -q "solo" && echo "✅ SOLO Agent 已成�
 
 ### 步驟四：設定權限保護
 
-SOLO Agent 的權限已在步驟三寫入，採用 OpenCode 原生的陣列格式：
+SOLO Agent 的權限已在步驟三寫入，採用 OpenCode 原生的物件格式：
 
 ```json
-"permission": [
-  { "permission": "*", "action": "allow", "pattern": "*" },
-  { "permission": "doom_loop", "action": "ask", "pattern": "*" }
-]
+"permission": {
+  "*": "allow",
+  "doom_loop": "ask"
+}
 ```
 
 - `"*": "allow"` — SOLO 可使用所有工具（bash、edit、read 等）
@@ -287,7 +287,7 @@ SOLO Agent 啟動時會自動讀取此檔案作為上下文。
 - 安裝層級：全域 / 專案
 - 平台：OpenCode
 - SOLO Agent：已啟用
-- 權限設定：全開（陣列格式，含 doom_loop 保護）
+- 權限設定：全開（物件格式，含 doom_loop 保護）
 - 備份檔案：`~/.config/opencode/opencode.json.bak.20260720xxxxxx`
 - 驗證測試：通過 / 失敗
 ```
