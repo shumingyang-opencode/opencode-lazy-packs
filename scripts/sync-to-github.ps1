@@ -67,6 +67,9 @@ try {
         $content = $content -replace 'steven\.yang/trac-mcp-server', '<GITLAB_USERNAME>/trac-mcp-server'
         $content = $content -replace 'steven\.yang/your-project', '<GITLAB_USERNAME>/your-project'
 
+        # Fix Source link for GitHub (repo transferred to mathruffian-dot)
+        $content = $content -replace '- \*\*.*?\*\*.*?shumingyang-opencode/opencode-lazy-packs.*', '- **Source**: https://github.com/mathruffian-dot/opencode-lazy-packs'
+
         if ($content -ne $original) {
             [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.UTF8Encoding]::new($true))
             Write-Host "  Patched: $($file.FullName.Substring($tmpDir.Length + 1))" -ForegroundColor DarkGray
