@@ -51,6 +51,13 @@
 
 ---
 
+> **Trae IDE 使用者注意：**
+> Trae IDE 已內建 SOLO 模式，**無需安裝此懶人包**。
+> 請直接使用 Trae 的 SOLO 模式即可，本教學僅適用於 **OpenCode** 使用者。
+> 若你同時使用 OpenCode 與 Trae IDE，此 Agent 僅安裝在 OpenCode 端，Trae 端使用內建 SOLO 即可。
+
+---
+
 ## 先備條件
 
 - [ ] 已完成 **懶人包 #00：環境建置**（Node.js + OpenCode）
@@ -80,14 +87,14 @@
 
 | 層級 | OpenCode | Trae IDE |
 |------|----------|----------|
-| **全域** | `~/.config/opencode/opencode.json` | `~/.cursor/mcp.json`（不支援自訂 Agent） |
-| **專案** | `./opencode.json` | 不支援 |
+| **全域** | `~/.config/opencode/opencode.json` | 已內建 SOLO 模式，無需安裝 |
+| **專案** | `./opencode.json` | 已內建 SOLO 模式，無需安裝 |
 
 回答後請記錄：後續步驟會根據你的選擇使用對應路徑。
 - 【全域】→ `~/.config/opencode/opencode.json`
 - 【專案】→ `./opencode.json`
 
-> Trae IDE 不支援自訂 Primary Agent，因此 SOLO 模式僅限 OpenCode 使用。
+> Trae IDE 已內建 SOLO 模式，使用者不需安裝此 Agent，請直接使用 Trae 的 SOLO 功能即可。
 
 ---
 
@@ -343,8 +350,8 @@ SOLO Agent 在每次收到需求時，會先詢問要使用哪種模式：
 
 ## Trae 對應操作
 
-> Trae IDE **不支援**自訂 Primary Agent，因此 SOLO 模式無法在 Trae IDE 中使用。
-> 若您同時使用 OpenCode 與 Trae IDE，SOLO 模式僅在 OpenCode 終端機中可用。
+> Trae IDE 已內建 SOLO 模式，使用者**不需安裝此 Agent**，請直接使用 Trae 的 SOLO 功能即可。
+> 若您同時使用 OpenCode 與 Trae IDE，SOLO Agent 僅安裝在 OpenCode 端，Trae 端使用內建 SOLO 模式，兩者不衝突。
 
 ---
 

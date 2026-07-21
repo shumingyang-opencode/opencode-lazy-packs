@@ -11,7 +11,10 @@ description: 安裝 SOLO Agent — 全自動全棧開發模式（環境偵測→
 
 ### 1. 確認使用者平台
 
-先問使用者用的是 OpenCode 還是 Trae IDE。
+先問使用者用的是 **OpenCode** 還是 **Trae IDE**。
+
+- **Trae IDE** → 告知使用者 Trae IDE 已內建 SOLO 模式，直接使用即可，**不需安裝此 Agent**。流程結束。
+- **OpenCode** → 繼續後續安裝步驟。
 
 ### 2. 選擇安裝層級
 
