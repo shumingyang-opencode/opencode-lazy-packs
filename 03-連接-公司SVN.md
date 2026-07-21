@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #03：連接公司 SVN
+﻿# OpenCode 懶人包 #03：連接公司 SVN
 
 > 版本：v0.2
 > 更新日期：2026-06-18
@@ -7,7 +7,7 @@
 
 ## 這個懶人包會幫你做什麼？
 
-讓你可以從本機連接到 OmniVision 內部 SVN 伺服器：
+讓你可以從本機連接到 <COMPANY_NAME> 內部 SVN 伺服器：
 - 檢查 SVN（Subversion）是否已安裝
 - 設定 SVN 使用者資訊
 - 簽出（checkout）開發專案
@@ -20,7 +20,7 @@
 
 > 🖐️ **請 OpenCode 在開始前先詢問使用者：**
 >
-> 「你目前在公司內網或 VPN 中嗎？SVN 伺服器 `10.0.0.78` 需要內網連線。」
+> 「你目前在公司內網或 VPN 中嗎？SVN 伺服器 `<SVN_SERVER_IP>` 需要內網連線。」
 >
 > - **個人 Mac（不在公司）** → 直接跳過，顯示「此懶人包需要公司內網連線，個人 Mac 不適用」
 > - **公司 Mac（在公司內網/VPN）** → 執行下方 macOS 章節
@@ -32,7 +32,7 @@
 
 | 項目 | 內容 |
 |------|------|
-| 伺服器網址 | `http://10.0.0.78/svn/development` |
+| 伺服器網址 | `http://<SVN_SERVER_IP>/svn/development` |
 | 帳號 | `ovt\steven.yang`（Windows）/ `steven.yang`（macOS） |<!-- 可替換為你的 SVN 帳號 -->
 | 協定 | HTTP（ra_serf） |
 | 本機工作目錄 | `D:\workspace\svn-projects`（Windows）/ `~/Documents/svn-projects`（macOS） |
@@ -77,7 +77,7 @@ svn, version 1.14.5 (r1922182)
 ### 步驟二（Windows）：測試伺服器連線
 
 ```bash
-ping -n 1 10.0.0.78
+ping -n 1 <SVN_SERVER_IP>
 ```
 
 ### 步驟三（Windows）：設定 SVN 使用者名稱
@@ -85,7 +85,7 @@ ping -n 1 10.0.0.78
 SVN 會記住第一次輸入的帳號密碼，但建議先設定使用者名稱：
 
 ```bash
-svn info http://10.0.0.78/svn/development --username ovt\steven.yang  # 替換為你的 SVN 帳號
+svn info http://<SVN_SERVER_IP>/svn/development --username ovt\steven.yang  # 替換為你的 SVN 帳號
 ```
 
 執行後會提示輸入密碼，第一次輸入後會被 **Windows Wincrypt** 快取，後續不需重複輸入。
@@ -99,12 +99,12 @@ cd D:\workspace\svn-projects
 
 簽出整個 development 專案：
 ```bash
-svn checkout http://10.0.0.78/svn/development/trunk ./development --username ovt\steven.yang  # 替換為你的 SVN 帳號
+svn checkout http://<SVN_SERVER_IP>/svn/development/trunk ./development --username ovt\steven.yang  # 替換為你的 SVN 帳號
 ```
 
 或只簽出特定子目錄：
 ```bash
-svn checkout http://10.0.0.78/svn/development/trunk/your-project ./your-project --username ovt\steven.yang  # 替換為你的 SVN 帳號
+svn checkout http://<SVN_SERVER_IP>/svn/development/trunk/your-project ./your-project --username ovt\steven.yang  # 替換為你的 SVN 帳號
 ```
 
 ### 步驟五（Windows）：日常操作
@@ -139,7 +139,7 @@ node_modules
 ### 步驟二（macOS）：測試伺服器連線
 
 ```bash
-ping -c 1 10.0.0.78
+ping -c 1 <SVN_SERVER_IP>
 ```
 
 ### 步驟三（macOS）：設定 SVN 使用者名稱
@@ -147,7 +147,7 @@ ping -c 1 10.0.0.78
 SVN 會記住第一次輸入的帳號密碼，建議先設定使用者名稱：
 
 ```bash
-svn info http://10.0.0.78/svn/development --username steven.yang  # 替換為你的 SVN 帳號
+svn info http://<SVN_SERVER_IP>/svn/development --username steven.yang  # 替換為你的 SVN 帳號
 ```
 
 執行後會提示輸入密碼，第一次輸入後會被 **macOS Keychain** 快取，後續不需重複輸入。
@@ -161,7 +161,7 @@ cd ~/Documents/svn-projects
 
 簽出整個 development 專案：
 ```bash
-svn checkout http://10.0.0.78/svn/development/trunk ./development --username steven.yang  # 替換為你的 SVN 帳號
+svn checkout http://<SVN_SERVER_IP>/svn/development/trunk ./development --username steven.yang  # 替換為你的 SVN 帳號
 ```
 
 ### 步驟五（macOS）：日常操作
@@ -269,7 +269,7 @@ svn resolve --accept working file.py      # 手動編輯後標記已解決
 
 | 問題 | 平台 | 解法 |
 |------|------|------|
-| `svn: E170013: Unable to connect` | 通用 | 確認是否在公司內網，ping 10.0.0.78 |
+| `svn: E170013: Unable to connect` | 通用 | 確認是否在公司內網，ping <SVN_SERVER_IP> |
 | `svn: E175013: Access denied` | 通用 | 帳號密碼錯誤，或無此目錄權限 |
 | `svn: E155004: Working copy locked` | 通用 | `svn cleanup` 解鎖 |
 | 忘記快取的密碼 | Windows | 「控制台 → 認證管理員 → Windows 認證」刪除 SVN 記錄 |

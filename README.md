@@ -1,4 +1,4 @@
-[**English**]() | [**繁体中文**](README.zh-TW.md) | [**简体中文**](README.zh-CN.md)
+﻿[**English**]() | [**繁体中文**](README.zh-TW.md) | [**简体中文**](README.zh-CN.md)
 
 ---
 
@@ -18,7 +18,7 @@
 Paste this line to your AI agent:
 
 ```
-This is the Agents Lazy Packs repo https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs
+This is the Agents Lazy Packs repo https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs
 Please read the repo content, list all available packs, and ask me which ones to install.
 ```
 
@@ -31,7 +31,7 @@ The AI will:
 ### Method 2: One-Line CLI Install (OpenCode)
 
 ```bash
-npx skills add https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs --skill <skill-name> -g -y
+npx skills add https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs --skill <skill-name> -g -y
 ```
 
 Available skill names:
@@ -169,7 +169,7 @@ See the template's "Operation Rules" and "Security Rules" for details.
 | 00 | [Environment Setup](00-環境建置.md) | CLI | v0.3 | OpenCode + Node.js + uv basic env setup | ✅ |
 | 01 | [Connect NotebookLM](01-連接-NotebookLM.md) | MCP | v0.2 | NotebookLM MCP - AI presentations, audio, reports | ✅ |
 | 02 | [Connect GitHub](02-連接-GitHub.md) | MCP | v0.2 | GitHub CLI auth + GitHub Pages publishing | ✅ |
-| 03 | [Connect Company SVN](03-連接-公司SVN.md) | MCP | v0.2 | OmniVision internal SVN server setup | ✅ |
+| 03 | [Connect Company SVN](03-連接-公司SVN.md) | MCP | v0.2 | <COMPANY_NAME> internal SVN server setup | ✅ |
 | 04 | [Connect Company GitLab](04-連接-公司GitLab.md) | MCP | v0.1 | Connect via SSH key to internal GitLab | ✅ |
 | 05 | [Connect Personal GitLab](05-連接-個人GitLab.md) | MCP | v0.2 | Connect via HTTPS + PAT to GitLab.com | ✅ |
 | 06 | [Connect Obsidian](06-建立第二大腦-Obsidian.md) | MCP | v0.3 | Obsidian MCP Vault - notes, search, management | ✅ |
@@ -200,39 +200,15 @@ See the template's "Operation Rules" and "Security Rules" for details.
 
 ---
 
-## Tutorial Videos
-
-Watch internal sharing tutorials at [AI Agent Tech Knowledge Base](https://steven.yang.pages.ovt.com/ai-agent-tech/)
-
-| Topic | Description |
-|-------|-------------|
-| AI Fundamentals | Core AI concepts and principles |
-| AI Agent Basics | Essential agent capabilities |
-| Dev Tools Ecosystem | Practical AI development tools |
-| CLI Tools | Command-line tool applications |
-| MarkItDown | File conversion with MarkItDown |
-| Dify LLM App Development | Build LLM applications with Dify |
-| DuckDB Tutorials | Complete DuckDB database guide |
-| Knowledge Graph | Graphify and knowledge graph tech |
-| Loop Engineering | Large-scale structured engineering |
-| MCP vs CLI | Comparing two tool paradigms |
-| Token Optimization | Token optimization strategies |
-| Agent Skills | AI Agent skill development |
-| OpenCode Ecosystem | OpenCode tools and ecosystem |
-| OpenCode Series | OpenCode hands-on tutorials |
-| Karpathy Lectures | Deep learning series by Karpathy |
-| AI Briefing Revolution | AI-powered presentation creation |
-
 ---
-
 ## Feedback
 
-- **Issues / Feature Requests**: [GitLab Issues](https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs/-/issues)
+- **Issues / Feature Requests**: [GitLab Issues](https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs/-/issues)
 
 ---
 
 ## Related Projects
 
-- **Source**: [shumingyang-opencode/opencode-lazy-packs](https://github.com/shumingyang-opencode/opencode-lazy-packs) — Original reference
+- **Source**: https://github.com/mathruffian-dot/opencode-lazy-packs
 - **OpenCode**: [anomalyco/opencode](https://github.com/anomalyco/opencode) — The AI Coding Agent this pack serves
 - **Trae IDE**: [trae.ai](https://www.trae.ai) — Another supported platform

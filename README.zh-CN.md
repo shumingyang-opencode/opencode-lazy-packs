@@ -1,4 +1,4 @@
-[**English**](README.md) | [**繁体中文**](README.zh-TW.md) | [**简体中文**]()
+﻿[**English**](README.md) | [**繁体中文**](README.zh-TW.md) | [**简体中文**]()
 
 ---
 
@@ -18,7 +18,7 @@
 把这行贴给你的 AI agent：
 
 ```
-这是 Agents 懒人包全集 https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs
+这是 Agents 懒人包全集 https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs
 请读取 repo 内容，列出所有可用的懒人包，问我要装哪些。
 ```
 
@@ -31,7 +31,7 @@ AI 会自动：
 ### 方式二：一行指令手动装（OpenCode）
 
 ```bash
-npx skills add https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs --skill <skill名> -g -y
+npx skills add https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs --skill <skill名> -g -y
 ```
 
 可用的 skill 名：
@@ -166,7 +166,7 @@ PAT / Token **不要**写入此文件。它们应存放于对应平台的配置�
 | 00 | [环境建置](00-環境建置.md) | CLI | v0.3 | OpenCode + Node.js + uv 基础环境安装 | ✅ |
 | 01 | [连接 NotebookLM](01-連接-NotebookLM.md) | MCP | v0.2 | NotebookLM MCP 安装与连線：AI 生成简报、图表、音讯、报告 | ✅ |
 | 02 | [连接 GitHub](02-連接-GitHub.md) | MCP | v0.2 | GitHub CLI 登录认证 + GitHub Pages 教材上线 | ✅ |
-| 03 | [连接公司 SVN](03-連接-公司SVN.md) | MCP | v0.2 | OmniVision 内部 SVN 服务器连線设定 | ✅ |
+| 03 | [连接公司 SVN](03-連接-公司SVN.md) | MCP | v0.2 | <COMPANY_NAME> 内部 SVN 服务器连線设定 | ✅ |
 | 04 | [连接公司 GitLab](04-連接-公司GitLab.md) | MCP | v0.1 | 透过 SSH 密钥连接内部 GitLab | ✅ |
 | 05 | [连接个人 GitLab](05-連接-個人GitLab.md) | MCP | v0.2 | 透过 HTTPS + PAT 连接 GitLab.com 账号 | ✅ |
 | 06 | [建立第二大脑 Obsidian](06-建立第二大腦-Obsidian.md) | MCP | v0.3 | Obsidian MCP Vault 连接：笔记建立、搜索、管理 | ✅ |
@@ -224,12 +224,12 @@ PAT / Token **不要**写入此文件。它们应存放于对应平台的配置�
 
 ## 意见反馈
 
-- **问题反馈 / 功能建议**：请至 [GitLab Issues](https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs/-/issues) 提出
+- **问题反馈 / 功能建议**：请至 [GitLab Issues](https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs/-/issues) 提出
 
 ---
 
 ## 相关项目
 
-- **来源出处**：[shumingyang-opencode/opencode-lazy-packs](https://github.com/shumingyang-opencode/opencode-lazy-packs) — 本包的原始参考
+- **Source**: https://github.com/mathruffian-dot/opencode-lazy-packs
 - **OpenCode**：[anomalyco/opencode](https://github.com/anomalyco/opencode) — 本懒人包所服务的 AI Coding Agent
 - **Trae IDE**：[trae.ai](https://www.trae.ai) — 支持的另一个平台

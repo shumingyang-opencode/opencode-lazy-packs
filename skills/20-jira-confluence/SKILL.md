@@ -1,4 +1,4 @@
----
+﻿---
 name: opencode-jira-confluence
 description: 安裝公司 JIRA & Confluence 整合 — 讓 OpenCode 操作公司內部 JIRA Issue 管理與 Confluence 頁面搜尋。說「安裝 JIRA」「安裝 Confluence」「安裝公司 JIRA」「公司 JIRA 設定」時載入。
 ---
@@ -33,8 +33,8 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 向使用者說明：
 
-> 請登入公司 JIRA `https://jira.ovt.com/` → 頭像 → Profile → Personal Access Tokens → Create token
-> 同樣步驟登入 Confluence `https://confluence.ovt.com/` 產生 PAT
+> 請登入公司 JIRA `https://<COMPANY_JIRA_URL>/` → 頭像 → Profile → Personal Access Tokens → Create token
+> 同樣步驟登入 Confluence `https://<COMPANY_CONFLUENCE_URL>/` 產生 PAT
 > 若為同一 SSO 帳號，共用同一個 PAT 即可
 > **建立後請立即複製 Token 給我後面的步驟使用**
 
@@ -48,9 +48,9 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
   "command": ["uvx", "mcp-atlassian"],
   "enabled": true,
   "environment": {
-    "JIRA_URL": "https://jira.ovt.com",
+    "JIRA_URL": "https://<COMPANY_JIRA_URL>",
     "JIRA_PERSONAL_TOKEN": "<YOUR_PAT>",
-    "CONFLUENCE_URL": "https://confluence.ovt.com",
+    "CONFLUENCE_URL": "https://<COMPANY_CONFLUENCE_URL>",
     "CONFLUENCE_PERSONAL_TOKEN": "<YOUR_PAT>",
     "JIRA_SSL_VERIFY": "false",
     "CONFLUENCE_SSL_VERIFY": "false",
@@ -214,8 +214,8 @@ SSL 說明：公司內部自簽憑證需設 `SSL_VERIFY=false`。
 ```
 ✅ #20 公司 JIRA & Confluence 已安裝完成！
 - 套件：sooperset/mcp-atlassian
-- JIRA 網址：https://jira.ovt.com/
-- Confluence 網址：https://confluence.ovt.com/
+- JIRA 網址：https://<COMPANY_JIRA_URL>/
+- Confluence 網址：https://<COMPANY_CONFLUENCE_URL>/
 - PAT 設定：單 PAT / 雙 PAT
 - SSL 驗證：已關閉（公司內部憑證）
 - TOOLSETS：all（全 72 工具載入）

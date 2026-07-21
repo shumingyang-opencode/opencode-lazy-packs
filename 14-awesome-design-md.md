@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #14：Awesome DESIGN.md 品牌設計套用
+﻿# OpenCode 懶人包 #14：Awesome DESIGN.md 品牌設計套用
 
 > 版本：v0.1
 > 更新日期：2026-06-21
@@ -37,7 +37,7 @@ mkdir -p ~/.config/opencode/skills/awesome-design-md/brands
 從本 repo 複製 SKILL.md：
 ```bash
 curl -o ~/.config/opencode/skills/awesome-design-md/SKILL.md \
-  https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs/-/raw/main/skills/14-awesome-design-md/SKILL.md
+  https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs/-/raw/main/skills/14-awesome-design-md/SKILL.md
 ```
 
 ### 步驟三：設定 opencode.json 權限

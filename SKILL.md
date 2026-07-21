@@ -1,4 +1,4 @@
----
+﻿---
 name: agents-lazy-packs
 description: Agents 懶人包全集 — 環境建置、MCP 串接、技能安裝，支援 OpenCode、Trae IDE、Codex 等多平台。說「安裝懶人包」「agents 懶人包」「trae 安裝」時載入
 ---
@@ -77,7 +77,7 @@ description: Agents 懶人包全集 — 環境建置、MCP 串接、技能安裝
 對使用者選取的每個 skill，執行：
 
 ```bash
-npx skills add https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs --skill <skill名稱> -g -y
+npx skills add https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs --skill <skill名稱> -g -y
 ```
 
 ### Trae 用戶

@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #04：連接公司 GitLab
+﻿# OpenCode 懶人包 #04：連接公司 GitLab
 
 > 版本：v0.1
 > 更新日期：2026-06-18
@@ -7,7 +7,7 @@
 
 ## 這個懶人包會幫你做什麼？
 
-讓你可以從本機連接到 OmniVision 內部 GitLab 伺服器：
+讓你可以從本機連接到 <COMPANY_NAME> 內部 GitLab 伺服器：
 - 檢查 SSH 金鑰與連線
 - 設定 SSH config
 - 設定 Git remote 使用 SSH
@@ -20,8 +20,8 @@
 
 | 項目 | 內容 |
 |------|------|
-| 伺服器網址 | `https://gitlab.ovt.com:8081` |
-| Git SSH 主機 | `gitlab.ovt.com` |
+| 伺服器網址 | `https://<COMPANY_GITLAB_URL>` |
+| Git SSH 主機 | `<COMPANY_GITLAB_HOST>` |
 | SSH 埠號 | `22` |
 | 使用者名稱 | `steven.yang` |<!-- 可替換為你的 GitLab 帳號 -->
 | SSH 金鑰檔案 | `~/.ssh/id_ed25519_gitlab_ovt` |
@@ -41,7 +41,7 @@
 
 > 🖐️ **請 OpenCode 在開始前先詢問使用者：**
 >
-> 「你目前在公司內網或 VPN 中嗎？GitLab 伺服器 `gitlab.ovt.com` 需要內網連線。」
+> 「你目前在公司內網或 VPN 中嗎？GitLab 伺服器 `<COMPANY_GITLAB_HOST>` 需要內網連線。」
 >
 > - **個人 Mac（不在公司）** → 直接跳過，顯示「此懶人包需要公司內網連線，個人 Mac 不適用」
 > - **公司環境（Windows/macOS）** → 繼續執行下方步驟
@@ -79,7 +79,7 @@ ls -la ~/.ssh/id_ed25519_gitlab_ovt
 
 如果不存在，產生新金鑰（不要設 passphrase，或記住 passphrase）：
 ```bash
-ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_gitlab_ovt -C "steven.yang@ovt.com"  # 替換為你的 email
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_gitlab_ovt -C "<EMAIL>"  # 替換為你的 email
 ```
 
 ---
@@ -89,8 +89,8 @@ ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_gitlab_ovt -C "steven.yang@ovt.com"  
 確認 `~/.ssh/config` 包含以下內容（若檔案不存在則建立）：
 
 ```
-Host gitlab.ovt.com
-    HostName gitlab.ovt.com
+Host <COMPANY_GITLAB_HOST>
+    HostName <COMPANY_GITLAB_HOST>
     Port 22
     User git
     IdentityFile ~/.ssh/id_ed25519_gitlab_ovt
@@ -104,7 +104,7 @@ Host gitlab.ovt.com
 ### 步驟四：將公鑰新增到 GitLab 網站
 
 請使用者手動操作：
-1. 瀏覽器開啟 `https://gitlab.ovt.com:8081`
+1. 瀏覽器開啟 `https://<COMPANY_GITLAB_URL>`
 2. 登入（帳號：`steven.yang`）<!-- 替換為你的 GitLab 帳號 -->
 3. 右上角頭像 → **Preferences** → **SSH Keys**
 4. 貼上公鑰內容：
@@ -120,7 +120,7 @@ cat ~/.ssh/id_ed25519_gitlab_ovt.pub
 ### 步驟五：驗證 SSH 連線
 
 ```bash
-ssh -T git@gitlab.ovt.com
+ssh -T git@<COMPANY_GITLAB_HOST>
 ```
 
 預期看到：
@@ -141,7 +141,7 @@ cd ~/Documents/gitlab-projects
 
 clone 一個測試專案（請使用者提供專案 SSH URL，或使用已知專案）：
 ```bash
-git clone git@gitlab.ovt.com:steven.yang/your-project.git  # 替換為你的 GitLab 帳號/專案
+git clone git@<COMPANY_GITLAB_HOST>:<GITLAB_USERNAME>/your-project.git  # 替換為你的 GitLab 帳號/專案
 cd your-project
 ```
 
@@ -151,7 +151,7 @@ cd your-project
 
 ```bash
 git config --global user.name "steven.yang"  # 替換為你的姓名
-git config --global user.email "steven.yang@ovt.com"  # 替換為你的 email
+git config --global user.email "<EMAIL>"  # 替換為你的 email
 ```
 
 ---
@@ -189,9 +189,9 @@ git push              # 推送
 
 | 問題 | 平台 | 解法 |
 |------|------|------|
-| `ssh: connect to host gitlab.ovt.com port 22: Connection timed out` | 通用 | 確認在公司內網或 VPN 中 |
+| `ssh: connect to Host <COMPANY_GITLAB_HOST> port 22: Connection timed out` | 通用 | 確認在公司內網或 VPN 中 |
 | `Permission denied (publickey)` | 通用 | 公鑰未上傳到 GitLab 設定頁，或金鑰檔案不對 |
-| `git@gitlab.ovt.com: Permission denied` | 通用 | 確認 SSH config 的 `User` 為 `git` |
+| `git@<COMPANY_GITLAB_HOST>: Permission denied` | 通用 | 確認 SSH config 的 `User` 為 `git` |
 | `StrictHostKeyChecking` 警告 | 通用 | config 中已加 `StrictHostKeyChecking no`，可安全忽略 |
 | `fatal: repository not found` | 通用 | 確認專案路徑正確，且你有存取權限 |
 | SSH config 不生效 | Windows | 確認檔案路徑為 `C:\Users\<你>\.ssh\config`，無 `.txt` 副檔名 |
@@ -201,8 +201,8 @@ git push              # 推送
 ## 快速參考卡
 
 ```bash
-ssh -T git@gitlab.ovt.com              # 驗證連線
-git clone git@gitlab.ovt.com:<群組>/<專案>.git  # clone 專案
+ssh -T git@<COMPANY_GITLAB_HOST>              # 驗證連線
+git clone git@<COMPANY_GITLAB_HOST>:<群組>/<專案>.git  # clone 專案
 git pull                                # 拉取
 git push                                # 推送
 git remote -v                           # 查看 remote URL
@@ -217,7 +217,7 @@ git remote -v                           # 查看 remote URL
 ### 還原設定
 
 ```bash
-# 移除 SSH config 中的 gitlab.ovt.com 段落
+# 移除 SSH config 中的 <COMPANY_GITLAB_HOST> 段落
 # 編輯 ~/.ssh/config，刪除對應區塊
 ```
 

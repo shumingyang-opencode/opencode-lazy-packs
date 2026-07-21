@@ -1,4 +1,4 @@
-#!/usr/bin/env pwsh
+﻿#!/usr/bin/env pwsh
 <#
 .SYNOPSIS
     Sync main branch to GitHub (origin), removing company-sensitive info.
@@ -46,7 +46,7 @@ try {
         # Step 2: Replace company info
 
         # Company name
-        $content = $content -replace "OmniVision", "<COMPANY_NAME>"
+        $content = $content -replace "<COMPANY_NAME>", "<COMPANY_NAME>"
 
         # SSH config host (must be before generic gitlab domain replacement)
         $content = $content -replace 'Host gitlab\.ovt\.com', 'Host <COMPANY_GITLAB_HOST>'

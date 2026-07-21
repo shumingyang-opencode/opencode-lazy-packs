@@ -1,11 +1,11 @@
----
+﻿---
 name: opencode-gitlab-internal
 description: 連接公司內部 GitLab 伺服器。說「連接公司 GitLab」「設定內部 GitLab」時載入。
 ---
 
 # 連接公司 GitLab
 
-讓 OpenCode 幫你連接到 OmniVision 內部 GitLab（gitlab.ovt.com:8081）。
+讓 OpenCode 幫你連接到 <COMPANY_NAME> 內部 GitLab（<COMPANY_GITLAB_URL>）。
 
 ## 平台檢查
 
@@ -22,14 +22,14 @@ ls -la ~/.ssh/id_ed25519_gitlab_ovt
 ```
 若不存在：
 ```bash
-ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_gitlab_ovt -C "steven.yang@ovt.com"  # 替換為你的 email
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_gitlab_ovt -C "<EMAIL>"  # 替換為你的 email
 ```
 
 ### 2. 設定 SSH config
 確認 `~/.ssh/config` 包含：
 ```
-Host gitlab.ovt.com
-    HostName gitlab.ovt.com
+Host <COMPANY_GITLAB_HOST>
+    HostName <COMPANY_GITLAB_HOST>
     Port 22
     User git
     IdentityFile ~/.ssh/id_ed25519_gitlab_ovt
@@ -37,17 +37,17 @@ Host gitlab.ovt.com
 ```
 
 ### 3. 手動上傳公鑰
-請使用者到 `https://gitlab.ovt.com:8081` → Preferences → SSH Keys 貼上 `cat ~/.ssh/id_ed25519_gitlab_ovt.pub`。
+請使用者到 `https://<COMPANY_GITLAB_URL>` → Preferences → SSH Keys 貼上 `cat ~/.ssh/id_ed25519_gitlab_ovt.pub`。
 
 ### 4. 驗證
 ```bash
-ssh -T git@gitlab.ovt.com
+ssh -T git@<COMPANY_GITLAB_HOST>
 ```
 
 ## 日常操作
 
 ```bash
-git clone git@gitlab.ovt.com:<群組>/<專案>.git
+git clone git@<COMPANY_GITLAB_HOST>:<群組>/<專案>.git
 git pull
 git push
 ```

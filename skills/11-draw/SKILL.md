@@ -1,4 +1,4 @@
----
+﻿---
 name: opencode-draw
 description: 安裝 AI 生圖技能（OpenAI gpt-image-2）。說「安裝生圖技能」「設定畫圖」時載入。
 ---
@@ -16,8 +16,8 @@ description: 安裝 AI 生圖技能（OpenAI gpt-image-2）。說「安裝生圖
 ### 1. 複製技能檔案
 ```bash
 mkdir -p ~/.config/opencode/skills/draw
-curl -o ~/.config/opencode/skills/draw/SKILL.md https://gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs/-/raw/main/skills/11-draw/SKILL.md
-curl -o ~/.config/opencode/skills/draw/draw.py https://gitlab.ovt.com:8081/steven.yang/opencode-lazy-packs/-/raw/main/scripts/draw.py
+curl -o ~/.config/opencode/skills/draw/SKILL.md https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/opencode-lazy-packs/-/raw/main/skills/11-draw/SKILL.md
+curl -o ~/.config/opencode/skills/draw/draw.py https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/opencode-lazy-packs/-/raw/main/scripts/draw.py
 ```
 
 ### 2. 確認 draw.py 位置
