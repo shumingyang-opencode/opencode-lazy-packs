@@ -38,7 +38,10 @@ try {
         $original = $content
 
         # Step 1: Remove tutorial video sections (before replacement, uses URL as anchor)
-        $content = $content -replace '(?s)---.*pages\.ovt\.com.*?---(\r?\n|$)', '---'
+        # NOTE: use section header anchor, not generic `---` to avoid deleting entire file content
+        $content = $content -replace '(?s)## Tutorial Videos.*?---(\r?\n|$)', '---'
+        $content = $content -replace '(?s)## 教學影片.*?---(\r?\n|$)', '---'
+        $content = $content -replace '(?s)## 教学视频.*?---(\r?\n|$)', '---'
 
         # Step 2: Replace company info
 
