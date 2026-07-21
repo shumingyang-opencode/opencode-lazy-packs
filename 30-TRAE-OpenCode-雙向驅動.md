@@ -131,6 +131,29 @@ opencode --version
 
 ---
 
+### 補充：公司 TRAE 帳號 vs. 本懶人包
+
+很多使用者會混淆兩個「TRAE」：
+
+| | 公司 TRAE IDE | trae-agent（本懶人包） |
+|--|--------------|---------------------|
+| 產品 | ByteDance AI IDE（完整編輯器） | 開源 CLI 工具（GitHub MIT） |
+| 登入 | 公司帳號 SSO | 不需要帳號，只需 API Key |
+| 用途 | AI 輔助程式開發 | 命令列軟體工程 Agent |
+| 你需要哪個 | 日常編寫程式碼 | 從 OpenCode 呼叫 TRAE 執行任務 |
+
+#### 你有公司 TRAE 帳號，如何搭配本懶人包？
+
+1. **直接使用 Trae IDE** — 登入後即可使用內建 AI Agent，不需額外設定
+2. **在 Trae IDE 中驅動 OpenCode** — 安裝 opencode CLI（見步驟三），並將本 SKILL 檔案放入 Trae IDE 的 skills 目錄，在 Trae IDE 中說「用 OpenCode 幫我...」即可觸發
+3. **在 OpenCode 中驅動 TRAE** — 走 trae-cli（已安裝），不受公司帳號影響
+
+#### 注意
+
+公司 TRAE 帳號無法用在 trae-cli 上，兩者是獨立認證系統。trae-cli 需要自己的 API Key（如 OpenRouter、Anthropic 等）。
+
+---
+
 ### 步驟四：使用範例
 
 #### OpenCode 用戶 — 用 OpenCode 驅動 TRAE
