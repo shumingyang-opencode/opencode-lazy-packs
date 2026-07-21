@@ -1,39 +1,25 @@
 # OpenCode 懶人包 #30：TRAE 與 OpenCode 雙向驅動
 
-> 版本：v0.1
+> 版本：v0.2
 > 更新日期：2026-07-21
 
 ---
 
 ## 這個懶人包會幫你做什麼？
 
-讓 **OpenCode** 與 **TRAE（trae-agent）** 可以互相驅動——根據你的平台自動決定安裝方向：
+讓 **OpenCode** 與 **TRAE（trae-agent）** 可以互相驅動——兩者都是 CLI 工具，透過命令列直接呼叫：
 
 | 你的平台 | 安裝目標 | 效果 |
 |---------|---------|------|
-| **OpenCode** 用戶 | 安裝 TRAE Agent CLI → 註冊為 MCP Server | 在 OpenCode 中用 `trae-cli` 執行任務 |
-| **Trae IDE** 用戶 | 安裝 OpenCode CLI → 註冊為 MCP Server | 在 TRAE Agent 中用 `opencode` 執行任務 |
-
-### 雙向架構
-
-```
-┌─────────────┐      MCP       ┌──────────────────┐
-│  OpenCode   │◄──────────────►│  trae-cli MCP    │
-│  (AI Agent) │    Server       │  (trae-agent)    │
-└─────────────┘                └──────────────────┘
-
-┌─────────────┐      MCP       ┌──────────────────┐
-│  TRAE Agent │◄──────────────►│  opencode MCP    │
-│  (trae-cli) │    Server       │  (opencode-ai)   │
-└─────────────┘                └──────────────────┘
-```
+| **OpenCode** 用戶 | 安裝 TRAE Agent CLI | 在 OpenCode 中用 `trae-cli run` 執行任務 |
+| **Trae IDE** 用戶 | 安裝 OpenCode CLI | 在 TRAE Agent 中用 `opencode` 執行任務 |
 
 ### TRAE Agent 是什麼？
 
 > 出處：ByteDance — https://github.com/bytedance/trae-agent
 > ⭐ 11.9K Stars | MIT License
 >
-> Trae Agent 是字節跳動推出的 LLM-based 軟體工程 Agent，支援多種 LLM Provider（OpenAI、Anthropic、Doubao、Gemini、Ollama），內建 MCP 支援，可透過 `trae-cli` 命令列執行軟體工程任務。
+> Trae Agent 是字節跳動推出的 LLM-based 軟體工程 Agent，支援多種 LLM Provider（OpenAI、Anthropic、Doubao、Gemini、Ollama），可透過 `trae-cli` 命令列執行軟體工程任務。
 
 ---
 
@@ -55,55 +41,30 @@
 
 | 你的回答 | 安裝動作 |
 |---------|---------|
-| **OpenCode** | 安裝 `trae-agent`，註冊 MCP Server 到 OpenCode 設定檔 |
-| **Trae IDE** | 安裝 `opencode` CLI，註冊 MCP Server 到 TRAE 設定檔 |
+| **OpenCode** | 安裝 `trae-agent`，可透過 bash 呼叫 `trae-cli` 執行任務 |
+| **Trae IDE** | 安裝 `opencode` CLI，可透過 bash 呼叫 `opencode` 執行任務 |
 
 ---
 
-### 步驟二：選擇安裝層級
+### 步驟二：OpenCode 用戶專用 — 安裝 TRAE Agent
 
-```
-你希望這個整合安裝在：
+#### 2a. 安裝 TRAE Agent
 
-1. 【全域層級】— 所有專案都能使用（建議）
-2. 【專案層級】— 僅當前專案可用
-```
-
-根據你的選擇與平台，設定會寫入不同的位置：
-
-| 層級 | OpenCode 用戶（寫入位置） | Trae IDE 用戶（寫入位置） |
-|------|--------------------------|--------------------------|
-| **全域** | `~/.config/opencode/opencode.json` | `~/.cursor/mcp.json` |
-| **專案** | `./opencode.json` | `.trae/mcp.json` |
-
-回答後請記錄：後續步驟會根據你的選擇使用對應路徑。
-
----
-
-### 步驟三：OpenCode 用戶專用 — 安裝 TRAE Agent 並註冊 MCP
-
-#### 3a. 安裝 TRAE Agent
-
-**方式一：pip 安裝（建議）**
-```bash
-pip install trae-agent
-```
-
-**方式二：原始碼安裝**
 ```bash
 git clone https://github.com/bytedance/trae-agent.git
 cd trae-agent
 uv sync --all-extras
+pip install -e .
 ```
 
-#### 3b. 驗證安裝
+#### 2b. 驗證安裝
 
 ```bash
 trae-cli --version
-# 預期輸出：顯示版本資訊
+# 預期輸出：trae-cli, version 0.1.0
 ```
 
-#### 3c. 設定 TRAE Agent
+#### 2c. 設定 TRAE Agent
 
 建立設定檔 `~/.trae/trae_config.yaml`：
 
@@ -120,130 +81,57 @@ agents:
       - task_done
 
 model_providers:
-  anthropic:
-    api_key: your_anthropic_api_key
-    provider: anthropic
   openai:
-    api_key: your_openai_api_key
+    api_key: ${OPENROUTER_API_KEY}
     provider: openai
+    base_url: https://openrouter.ai/api/v1
 
 models:
   my_model:
-    model_provider: anthropic
-    model: claude-sonnet-4-20250514
+    model_provider: openai
+    model: deepseek/deepseek-v4-flash-free
     max_tokens: 4096
     temperature: 0.5
 ```
 
-> ⚠️ 請填入你的 LLM API Key（支援 Anthropic、OpenAI、Gemini、Doubao、Ollama 等）
-> 可透過環境變數 `ANTHROPIC_API_KEY` / `OPENAI_API_KEY` 等方式設定
+> ⚠️ 支援多種 Provider（Anthropic、OpenAI、Gemini、Doubao、Ollama 等）
+> 可透過環境變數設定 API Key，不需寫死在設定檔中
 
-#### 3d. 在 OpenCode 中註冊 TRAE 為 MCP Server
+#### 2d. 驗證設定
 
-根據步驟二選擇的層級，設定目標路徑：
-
-- **全域層級**：`TARGET_FILE=~/.config/opencode/opencode.json`
-- **專案層級**：`TARGET_FILE=./opencode.json`
-
-**Step 1 — 備份原始設定檔**
 ```bash
-if [ ! -f "$TARGET_FILE" ]; then
-  echo "⚠️ $TARGET_FILE 不存在，將建立新檔案"
-  echo "{}" > "$TARGET_FILE"
-fi
-BACKUP_FILE="$TARGET_FILE.bak.$(date +%Y%m%d%H%M%S)"
-cp "$TARGET_FILE" "$BACKUP_FILE" && echo "✅ 已備份至 $BACKUP_FILE"
+trae-cli show-config
+# 預期輸出：顯示當前設定內容
 ```
 
-**Step 2 — 使用 `jq` 安全寫入 MCP 設定**
-```bash
-jq '.mcp.trae = {
-  "command": "trae-cli",
-  "args": ["run"],
-  "env": {}
-}' "$TARGET_FILE" > "$TARGET_FILE.tmp" && mv "$TARGET_FILE.tmp" "$TARGET_FILE"
-```
+#### 2e. 安裝 SKILL 檔案
 
-> 若 `jq` 不可用，可直接編輯目標檔案，在 `mcp` 區塊加入：
-> ```json
-> "trae": {
->   "command": "trae-cli",
->   "args": ["run"],
->   "env": {}
-> }
-> ```
-
-**Step 3 — 驗證 JSON 語法**
-```bash
-if jq . "$TARGET_FILE" > /dev/null 2>&1; then
-  echo "✅ JSON 語法驗證通過"
-else
-  echo "❌ JSON 語法錯誤！正在還原備份..."
-  cp "$BACKUP_FILE" "$TARGET_FILE"
-  echo "已自動還原至備份版本。請檢查設定檔後重試。"
-  exit 1
-fi
-```
-
-**Step 4 — 驗證 MCP 已註冊**
-```bash
-opencode mcp list 2>/dev/null | grep -q "trae" && echo "✅ TRAE MCP Server 已成功註冊"
-```
+本懶人包已附帶 SKILL 檔案於 `skills/30-trae-opencode/SKILL.md`，安裝後 AI Agent 會自動讀取。當你說「用 TRAE 幫我...」時，SKILL 會引導 AI 使用正確的 `trae-cli run` 命令。
 
 ---
 
-### 步驟四：Trae IDE 用戶專用 — 安裝 OpenCode CLI 並註冊 MCP
+### 步驟三：Trae IDE 用戶專用 — 安裝 OpenCode CLI
 
-#### 4a. 安裝 OpenCode CLI
+#### 3a. 安裝 OpenCode CLI
 
 ```bash
 npm install -g opencode-ai
 ```
 
-#### 4b. 驗證安裝
+#### 3b. 驗證安裝
 
 ```bash
 opencode --version
 # 預期輸出：顯示版本資訊
 ```
 
-#### 4c. 在 TRAE Agent 設定中註冊 OpenCode 為 MCP Server
+#### 3c. 安裝 SKILL 檔案
 
-編輯 TRAE Agent 的設定檔（預設為 `trae_config.yaml`，路徑取決於你的安裝方式），在 `mcp_servers` 區塊加入：
-
-```yaml
-mcp_servers:
-  opencode:
-    command: npx
-    args:
-      - opencode-ai
-    env:
-      OPENCODE_THEME: dark
-```
-
-若使用 JSON 格式的 TRAE 設定，編輯對應的設定檔：
-
-```json
-{
-  "mcp_servers": {
-    "opencode": {
-      "command": "npx",
-      "args": ["opencode-ai"],
-      "env": {}
-    }
-  }
-}
-```
-
-#### 4d. 驗證
-
-```bash
-trae-cli show-config 2>/dev/null | grep -q "opencode" && echo "✅ OpenCode MCP 已註冊至 TRAE Agent"
-```
+本懶人包已附帶 SKILL 檔案於 `skills/30-trae-opencode/SKILL.md`，安裝後 TRAE Agent 會自動讀取。當你說「用 OpenCode 幫我...」時，SKILL 會引導 AI 使用正確的 `opencode run` 命令。
 
 ---
 
-### 步驟五：使用範例
+### 步驟四：使用範例
 
 #### OpenCode 用戶 — 用 OpenCode 驅動 TRAE
 
@@ -253,9 +141,9 @@ trae-cli show-config 2>/dev/null | grep -q "opencode" && echo "✅ OpenCode MCP 
 用 TRAE 分析這個專案的結構，幫我找出需要重構的模組
 ```
 
-OpenCode 會呼叫 `trae-cli run "..."` 來執行任務，並將結果回傳給你。
+OpenCode 會透過 bash 執行 `trae-cli run "..."` 來執行任務。
 
-你也可以直接要求：
+你也可以直接指定參數：
 
 ```
 幫我用 trae-cli 執行：Fix the bug in main.py --provider openai --model gpt-4o
@@ -263,20 +151,60 @@ OpenCode 會呼叫 `trae-cli run "..."` 來執行任務，並將結果回傳給�
 
 #### Trae IDE 用戶 — 用 TRAE 驅動 OpenCode
 
-在 TRAE Agent 中使用 OpenCode 的執行環境來執行特定任務。TRAE Agent 會透過 MCP 呼叫 `opencode` CLI 來執行。
+在 TRAE Agent 對話中輸入：
+
+```
+用 OpenCode 分析這個專案的結構
+```
+
+TRAE Agent 會透過 bash 執行 `opencode run "..."` 來執行任務。
 
 ---
 
-### 步驟六：驗證
+## 指令速查
+
+### `trae-cli` 命令
+
+| 命令 | 用途 |
+|------|------|
+| `run "任務"` | 執行軟體工程任務 |
+| `interactive` | 互動式對話模式 |
+| `show-config` | 顯示當前設定 |
+| `tools` | 列出可用工具 |
+
+### `trae-cli run` 常用選項
+
+| 選項 | 範例 | 用途 |
+|------|------|------|
+| `--provider` / `-p` | `openai` | 指定 LLM Provider |
+| `--model` / `-m` | `anthropic/claude-3-5-sonnet` | 指定模型 |
+| `--working-dir` / `-w` | `./src` | 工作目錄 |
+| `--max-steps` | `200` | 最大執行步數 |
+| `--file` / `-f` | `task.txt` | 從檔案讀取任務 |
+| `--must-patch` | (flag) | 強制產生 patch |
+| `--trajectory-file` / `-t` | `debug.json` | 記錄執行軌跡 |
+
+### `opencode` 常用命令
+
+| 命令 | 用途 |
+|------|------|
+| `opencode run "訊息"` | 執行任務 |
+| `opencode "路徑"` | 在指定目錄啟動 TUI |
+| `opencode serve` | 啟動無頭伺服器 |
+| `opencode session` | 管理對話 Session |
+| `opencode providers` | 管理 AI Provider |
+
+---
+
+### 步驟五：驗證
 
 1. **OpenCode 用戶**：
    - [ ] `trae-cli --version` 顯示版本號
-   - [ ] `opencode mcp list` 顯示 `trae` MCP Server
+   - [ ] `trae-cli show-config` 設定正確
    - [ ] 對 OpenCode 說「用 TRAE 幫我寫一個 Hello World」確認可運作
 
 2. **Trae IDE 用戶**：
    - [ ] `opencode --version` 顯示版本號
-   - [ ] TRAE Agent 設定檔中包含 `opencode` MCP 區塊
    - [ ] 在 TRAE Agent 中測試呼叫 OpenCode 功能
 
 ---
@@ -287,38 +215,30 @@ OpenCode 會呼叫 `trae-cli run "..."` 來執行任務，並將結果回傳給�
 ## TRAE ↔ OpenCode 雙向驅動安裝完成
 
 - 平台：OpenCode / Trae IDE
-- 安裝層級：全域 / 專案
-- 安裝方向：OpenCode 驅動 TRAE / TRAE 驅動 OpenCode
 - CLI 版本：<trae-cli --version / opencode --version 輸出>
-- MCP 註冊：已啟用
-- 備份檔案：<備份路徑>
+- 設定檔：~/.trae/trae_config.yaml
 ```
 
 ---
 
 ## 解除安裝
 
-### OpenCode 用戶 — 移除 TRAE 整合
+### OpenCode 用戶 — 移除 TRAE
 
 ```bash
-# 1. 移除 MCP 設定（使用 jq）
-TARGET_FILE=~/.config/opencode/opencode.json  # 或 ./opencode.json
-jq 'del(.mcp.trae)' "$TARGET_FILE" > "$TARGET_FILE.tmp" && mv "$TARGET_FILE.tmp" "$TARGET_FILE"
-
-# 2. 移除 TRAE Agent
+# 移除 TRAE Agent
 pip uninstall trae-agent -y
 
-# 3. 移除設定檔（選用）
+# 移除設定檔（選用）
 rm -rf ~/.trae
+
+# 移除原始碼（選用）
+rm -rf trae-agent
 ```
 
-### Trae IDE 用戶 — 移除 OpenCode 整合
+### Trae IDE 用戶 — 移除 OpenCode
 
 ```bash
-# 1. 從 TRAE 設定檔移除 MCP 區塊
-# 編輯 trae_config.yaml，移除 mcp_servers.opencode 段落
-
-# 2. 移除 OpenCode CLI
 npm uninstall -g opencode-ai
 ```
 
@@ -328,31 +248,36 @@ npm uninstall -g opencode-ai
 
 | 問題 | 解法 |
 |------|------|
-| `trae-cli` 找不到 | 確認 `pip install trae-agent` 成功，檢查 PATH 是否有 Python Scripts 目錄 |
+| `trae-cli` 找不到 | 確認 `pip install -e .` 成功，檢查 PATH 是否有 Python Scripts 目錄 |
 | `opencode` 找不到 | 確認 `npm install -g opencode-ai` 成功，檢查 PATH 是否有 npm global bin |
-| MCP Server 無法啟動 | 檢查環境變數 PATH 是否包含 CLI 所在目錄，嘗試用完整路徑 |
-| TRAE Agent 需要 API Key | 在 `trae_config.yaml` 中設定，或透過環境變數 `ANTHROPIC_API_KEY` 等 |
-| 無法同時使用 OpenCode 與 TRAE | 支援同時安裝兩個方向，依步驟三與步驟四分別執行即可 |
-| Windows 用戶注意事項 | `pip install trae-agent` 在 Windows 下需 Python 3.12+；`opencode` 需 Node.js 18+ |
+| TRAE Agent 需要 API Key | 在 `trae_config.yaml` 中設定，或透過環境變數設定 |
+| `trae-cli` 報 `ModuleNotFoundError` | 執行 `pip install docker pexpect` 補安裝缺少的依賴 |
+| trae-agent 能否搭配 OpenRouter / NVIDIA 使用？ | 有限支援 — 見「已知限制」 |
+| Windows 用戶注意事項 | 需 Python 3.12+、Node.js 18+、uv |
 
 ---
 
-## Trae 對應操作
+## 已知限制
 
-### 在 Trae 上安裝（TRAE 驅動 OpenCode）
+### trae-agent 底層 API 相容性
 
-此懶人包已包含 Trae IDE 的完整安裝步驟（步驟四），直接從步驟一開始執行即可。
+trae-agent 使用 OpenAI 新版 **Responses API**（`responses.create()`），而非傳統的 Chat Completions API。這導致以下限制：
 
-### 在 Trae 上更新
+| API 服務 | 相容性 | 原因 |
+|----------|--------|------|
+| OpenAI 直連 | ✅ 原生支援 | Responses API 原生支援 |
+| Anthropic 直連 | ✅ 原生支援 | 走 Anthropic SDK |
+| OpenRouter（`provider: openai`） | ⚠️ 有限支援 | 僅部分模型支援 Responses API |
+| NVIDIA（`provider: openai`） | ❌ 不相容 | NVIDIA API 僅支援 Chat Completions |
+| 其他 OpenAI 相容服務 | ⚠️ 需測試 | 需確認是否支援 Responses API |
 
-```bash
-# 更新 OpenCode CLI
-npm update -g opencode-ai
-```
+### Windows 編碼問題
 
-### 在 Trae 上移除
+trae-agent 使用 `rich` 套件輸出終端訊息，在繁體中文 Windows（cp950）環境下會因 Unicode 字元（如 ✅）導致編碼錯誤。此問題不影響 macOS/Linux 用戶。解決方式：使用 `--console-type simple` 可部分緩解。
 
-見上方「解除安裝 — Trae IDE 用戶」章節。
+### 建議
+
+若你的 LLM API 是透過 OpenRouter、NVIDIA 等第三方代理服務，建議直接在 **OpenCode** 中使用（OpenCode 已正確支援這些服務），不需透過 trae-agent 中間層。
 
 ---
 
@@ -360,4 +285,5 @@ npm update -g opencode-ai
 
 | 日期 | 版本 | 更新內容 |
 |------|------|---------|
+| 2026-07-21 | v0.2 | 移除 MCP 註冊，改為純 CLI 呼叫；新增指令速查表、已知限制 |
 | 2026-07-21 | v0.1 | 初版 |

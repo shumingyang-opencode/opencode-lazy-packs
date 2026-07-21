@@ -68,7 +68,7 @@ Available skill names:
 | `27-gen-pptx` | Presentation Generator — Spec/Repo → Editable .pptx |
 | `28-cli-anything` | CLI-Anything — 50+ Agent-native CLI Harnesses (Blender, GIMP, Obsidian, etc.) |
 | `29-solo-agent` | SOLO Agent — Auto Plan→Build→Test→Deliver: ONE-SHOT full-stack dev with automatic error recovery |
-| `30-trae-opencode` | TRAE ↔ OpenCode Bridge — Bidirectional MCP Server integration (bytedance/trae-agent) |
+| `30-trae-opencode` | TRAE ↔ OpenCode Bridge — Bidirectional CLI integration (bytedance/trae-agent) |
 
 Once installed, just say the corresponding keyword to OpenCode.
 
@@ -196,7 +196,7 @@ See the template's "Operation Rules" and "Security Rules" for details.
 | 27 | [Presentation Generator](27-通用簡報產製.md) | Skill | v0.1 | 6-engine workflow: docs/repo/spec → editable .pptx | ✅ |
 | 28 | [Install CLI-Anything](28-安裝-CLI-Anything.md) | Skill | v0.1 | 50+ agent-native CLI harnesses, cli-hub package mgr | ✅ |
 | 29 | [Install SOLO Agent](29-安裝-SOLO-Agent.md) | Agent | v0.1 | ONE-SHOT full-stack dev: plan, build, test, deliver in a single flow with auto error recovery | ✅ |
-| 30 | [TRAE ↔ OpenCode Bridge](30-TRAE-OpenCode-雙向驅動.md) | MCP | v0.1 | Bidirectional MCP Server — auto-installs trae-agent or opencode-ai based on your platform | ✅ |
+| 30 | [TRAE ↔ OpenCode Bridge](30-TRAE-OpenCode-雙向驅動.md) | Skill | v0.2 | Bidirectional CLI Bridge — auto-installs trae-agent or opencode-ai based on your platform | ✅ |
 
 ---
 

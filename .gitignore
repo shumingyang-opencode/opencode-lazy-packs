@@ -43,6 +43,12 @@ __pycache__/
 # 瀏覽器控制本機快取
 .playwright-mcp/
 
+# trae-cli 測試產物
+trajectories/
+
+# 重複複本
+Env/
+
 # Firebase 本機設定
 .firebaserc
 firebase.json

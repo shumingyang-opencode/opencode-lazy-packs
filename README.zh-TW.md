@@ -65,7 +65,7 @@ npx skills add https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs --skill
 | `27-gen-pptx` | 通用簡報產製技能 — 六引擎工作流：技術文件/Repo/Spec→可編輯 .pptx |
 | `28-cli-anything` | CLI-Anything — 50+ 軟體的 Agent-native CLI harness 發現與安裝（Blender、GIMP、Obsidian 等） |
 | `29-solo-agent` | SOLO Agent — 全自動全棧開發（Plan→Build→Test→Deliver），一次需求自動完成規劃→建構→測試→交付 |
-| `30-trae-opencode` | TRAE & OpenCode 雙向驅動 — OpenCode↔TRAE 互相呼叫 MCP Server（bytedance/trae-agent） |
+| `30-trae-opencode` | TRAE & OpenCode 雙向驅動 — OpenCode↔TRAE 雙向 CLI 驅動（bytedance/trae-agent） |
 
 安裝後對 OpenCode 說該技能對應的關鍵字即可啟動。
 
@@ -193,7 +193,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於對應平台的設定�
 | 27 | [通用簡報產製](27-通用簡報產製.md) | Skill | v0.1 | 六引擎簡報工作流：將技術文件、datasheet、Spec、Repo 轉為可編輯 .pptx，專為 RD/FAE/AE 設計 | ✅ |
 | 28 | [安裝 CLI-Anything](28-安裝-CLI-Anything.md) | Skill | v0.1 | CLI-Hub Meta-Skill：50+ 軟體的 Agent-native CLI harness 發現與安裝，支援 cli-hub 套件管理器（HKUDS/CLI-Anything, ⭐44.8K） | ✅ |
 | 29 | [安裝 SOLO Agent](29-安裝-SOLO-Agent.md) | Agent | v0.1 | 全自動全棧開發：一次需求完成規劃→建構→測試→交付，內建自動錯誤修正與重試 | ✅ |
-| 30 | [TRAE & OpenCode 雙向驅動](30-TRAE-OpenCode-雙向驅動.md) | MCP | v0.1 | OpenCode↔TRAE 互相呼叫 MCP Server — 根據平台自動安裝 trae-agent 或 opencode-ai | ✅ |
+| 30 | [TRAE & OpenCode 雙向驅動](30-TRAE-OpenCode-雙向驅動.md) | Skill | v0.2 | OpenCode↔TRAE 雙向 CLI 驅動 — 根據平台自動安裝 trae-agent 或 opencode-ai | ✅ |
 
 ---
 

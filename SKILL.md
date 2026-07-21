@@ -54,7 +54,7 @@ description: Agents 懶人包全集 — 環境建置、MCP 串接、技能安裝
 | 27 | `27-gen-pptx` | 通用簡報產製 — 六引擎工作流：技術文件/Repo→可編輯 .pptx，專為 RD/FAE/AE 設計 | #00 |
 | 28 | `28-cli-anything` | 安裝 CLI-Anything — HKUDS/CLI-Anything：50+ 軟體的 Agent-native CLI harness（Blender、GIMP、Obsidian 等），支援 cli-hub 發現與安裝 | 無 |
 | 29 | `29-solo-agent` | 安裝 SOLO Agent — 全自動全棧開發模式（Plan→Build→Test→Deliver），一次需求自動完成規劃→建構→測試→交付 | #00 |
-| 30 | `30-trae-opencode` | 安裝 TRAE & OpenCode 雙向驅動 — OpenCode↔TRAE 互相呼叫 MCP Server（bytedance/trae-agent） | #00 |
+| 30 | `30-trae-opencode` | 安裝 TRAE & OpenCode 雙向驅動 — OpenCode↔TRAE 雙向 CLI 驅動（bytedance/trae-agent） | #00 |
 
 ## 步驟三：讓使用者選擇
 
