@@ -24,7 +24,7 @@
 
 AI 会自动：
 1. 读取 repo 的 `SKILL.md`（安装入口）
-2. 列出 29 个懒人包
+2. 列出 30 个懒人包
 3. 问你要装哪些（可以选择「全部」或特定编号）
 4. 自动安装你选的项目
 
@@ -65,6 +65,7 @@ npx skills add https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs --skill
 | `27-gen-pptx` | 通用简报产制技能 — 六引擎工作流：技术文件/Repo/Spec→可编辑 .pptx |
 | `28-cli-anything` | CLI-Anything — 50+ 软件的 Agent-native CLI harness（Blender、GIMP、Obsidian 等） |
 | `29-solo-agent` | SOLO Agent — 全自动全栈开发（Plan→Build→Test→Deliver），一次需求自动完成规划→构建→测试→交付 |
+| `30-trae-opencode` | TRAE & OpenCode 双向驱动 — OpenCode↔TRAE 互相呼叫 MCP Server（bytedance/trae-agent） |
 
 安装后对 OpenCode 说该技能对应的关键字即可启动。
 
@@ -192,6 +193,7 @@ PAT / Token **不要**写入此文件。它们应存放于对应平台的配置�
 | 27 | [通用简报产制](27-通用簡報產製.md) | Skill | v0.1 | 六引擎简报工作流：将技术文件、datasheet、Spec、Repo 转为可编辑 .pptx | ✅ |
 | 28 | [安装 CLI-Anything](28-安裝-CLI-Anything.md) | Skill | v0.1 | CLI-Hub Meta-Skill：50+ 软件的 Agent-native CLI harness 安装与发现（HKUDS/CLI-Anything, ⭐44.8K） | ✅ |
 | 29 | [安装 SOLO Agent](29-安裝-SOLO-Agent.md) | Agent | v0.1 | 全自动全栈开发：一次需求完成规划→构建→测试→交付，内建自动错误修正与重试 | ✅ |
+| 30 | [TRAE & OpenCode 双向驱动](30-TRAE-OpenCode-雙向驅動.md) | MCP | v0.1 | OpenCode↔TRAE 互相呼叫 MCP Server — 根据平台自动安装 trae-agent 或 opencode-ai | ✅ |
 
 ---
 
