@@ -135,12 +135,12 @@ opencode --version
 
 很多使用者會混淆兩個「TRAE」：
 
-| | 公司 TRAE IDE | trae-agent（本懶人包） |
-|--|--------------|---------------------|
-| 產品 | ByteDance AI IDE（完整編輯器） | 開源 CLI 工具（GitHub MIT） |
-| 登入 | 公司帳號 SSO | 不需要帳號，只需 API Key |
-| 用途 | AI 輔助程式開發 | 命令列軟體工程 Agent |
-| 你需要哪個 | 日常編寫程式碼 | 從 OpenCode 呼叫 TRAE 執行任務 |
+| | VS Code TRAE 套件 | 公司 TRAE IDE | trae-agent（本懶人包） |
+|--|------------------|--------------|---------------------|
+| 產品 | VS Code 擴充套件（公司 SSO） | ByteDance AI IDE（完整編輯器） | 開源 CLI 工具（GitHub MIT） |
+| 認證 | 公司 SSO | 公司 SSO | API Key（OpenRouter 等） |
+| 用途 | VS Code 內 AI 輔助開發 | 獨立 IDE 開發 | 命令列軟體工程 Agent |
+| 你需要哪個 | 日常 VS Code 寫程式 | 用 Trae IDE 寫程式 | 從 OpenCode 呼叫 TRAE 執行任務 |
 
 #### 你有公司 TRAE 帳號，如何搭配本懶人包？
 
