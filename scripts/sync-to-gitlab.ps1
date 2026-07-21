@@ -46,14 +46,11 @@ try {
     git -C $tmpDir add --update .
     git -C $tmpDir commit -m "sync: remove #01 NotebookLM / #08 Firebase / #11 Draw for GitLab (GitHub-only packs)"
 
-    # Push to GitLab via temp branch (avoids protected branch / non-fast-forward issues)
-    Write-Host "Pushing to GitLab via temp branch..." -ForegroundColor Yellow
-    $syncBranch = "sync/remove-01-08-11-$(Get-Date -Format 'yyyyMMdd')"
-    git -C $tmpDir push $gitlabUrl HEAD:$syncBranch
+    # Push directly to GitLab main (force push to overwrite any direct pushes)
+    Write-Host "Pushing to GitLab main..." -ForegroundColor Yellow
+    git -C $tmpDir push --force $gitlabUrl HEAD:main
 
-    Write-Host "=== Sync pushed to branch: $syncBranch ===" -ForegroundColor Green
-    Write-Host "To complete sync, create a merge request on GitLab:" -ForegroundColor Cyan
-    Write-Host "  From: $syncBranch → To: main"
+    Write-Host "=== Sync complete ===" -ForegroundColor Green
 }
 catch {
     Write-Error "Sync failed: $_"
