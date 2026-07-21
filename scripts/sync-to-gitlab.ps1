@@ -35,37 +35,26 @@ try {
 
     # Remove items 01/08/11
     Write-Host "Removing items 01/08/11..." -ForegroundColor Yellow
-    $removals = @(
-        "skills/01-notebooklm"
-        "skills/08-firebase"
-        "skills/11-draw"
-        "01-連接-NotebookLM.md"
-        "08-連接-Firebase.md"
-        "11-生圖.md"
-        "scripts/draw.py"
-    )
 
-    $anyRemoved = $false
-    foreach ($item in $removals) {
-        $fullPath = Join-Path $tmpDir $item
-        if (Test-Path $fullPath) {
-            if ((Get-Item $fullPath) -is [System.IO.DirectoryInfo]) {
-                Remove-Item -Recurse -Force $fullPath
-            } else {
-                Remove-Item -Force $fullPath
-            }
-            Write-Host "  Removed: $item"
-            $anyRemoved = $true
-        } else {
-            Write-Host "  Skipped (not found): $item" -ForegroundColor DarkYellow
-        }
-    }
+    # Use filesystem wildcards (reliable for Unicode filenames on Windows)
+    Remove-Item -Path (Join-Path $tmpDir "skills\01-notebooklm") -Recurse -Force -ErrorAction SilentlyContinue
+    Remove-Item -Path (Join-Path $tmpDir "skills\08-firebase") -Recurse -Force -ErrorAction SilentlyContinue
+    Remove-Item -Path (Join-Path $tmpDir "skills\11-draw") -Recurse -Force -ErrorAction SilentlyContinue
+    Remove-Item -Path (Join-Path $tmpDir "scripts\draw.py") -Force -ErrorAction SilentlyContinue
 
-    if (-not $anyRemoved) {
-        Write-Host "Nothing to remove — already clean. Pushing as-is." -ForegroundColor Green
+    # Root MD files - use wildcards to avoid Chinese character encoding issues
+    Remove-Item -Path (Join-Path $tmpDir "01-*-NotebookLM.md") -Force -ErrorAction SilentlyContinue
+    Remove-Item -Path (Join-Path $tmpDir "08-*-Firebase.md") -Force -ErrorAction SilentlyContinue
+    Remove-Item -Path (Join-Path $tmpDir "11-*.md") -Force -ErrorAction SilentlyContinue
+
+    # Let git detect all removals
+    git -C $tmpDir add --update .
+
+    # Check if anything changed
+    $status = git -C $tmpDir status --porcelain
+    if (-not $status) {
+        Write-Host "Nothing to remove - already clean. Pushing as-is." -ForegroundColor Green
     } else {
-        # Commit removal
-        git -C $tmpDir add -A
         git -C $tmpDir commit -m "sync: remove #01 NotebookLM / #08 Firebase / #11 Draw for GitLab (GitHub-only packs)"
         Write-Host "Commit created." -ForegroundColor Green
     }
