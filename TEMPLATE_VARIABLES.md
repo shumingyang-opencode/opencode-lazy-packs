@@ -11,13 +11,18 @@
 | `<EXAMPLE_REPO>` | `owner/example-repo` | 教學範例中的 repo 路徑 |
 | `<OBSIDIAN_VAULT_PATH>` | `C:\Users\YourName\Documents\Obsidian` | Obsidian Vault 根目錄路徑 |
 | `<VAULT_GIT_REMOTE>` | `origin → github.com/yourname/work-notes` | 跨機器同步的 vault Git remote |
+| `<COMPANY_NAME>` | `YourCompany` | 公司名稱（GitHub 版去敏用）|
+| `<COMPANY_GITLAB_URL>` | `gitlab.example.com:8081` | 公司 GitLab 伺服器 |
+| `<COMPANY_GITLAB_HOST>` | `gitlab.example.com` | 公司 GitLab SSH 主機 |
+| `<COMPANY_JIRA_URL>` | `jira.example.com` | 公司 JIRA 網址 |
+| `<COMPANY_CONFLUENCE_URL>` | `confluence.example.com` | 公司 Confluence 網址 |
+| `<SVN_SERVER_IP>` | `192.168.0.1` | SVN 伺服器 IP |
+| `<GITLAB_USERNAME>` | `your-gitlab-username` | GitLab 上的 namespace 名稱 |
+| `<EMAIL>` | `your.name@company.com` | 公司 Email |
 
 ## 安裝來源
 
-本 repo 安裝指令使用公司 GitLab 來源：
-`npx skills add gitlab.ovt.com:8081/steven.yang/agents-lazy-packs --skill <skill名> -g -y`
-
-若已 fork 到自己的 namespace，請將 `steven.yang` 改為你自己的帳號。
+本地與 GitLab 版使用真實安裝來源，GitHub 版會自動去敏。
 
 ## 中國鏡像設定
 

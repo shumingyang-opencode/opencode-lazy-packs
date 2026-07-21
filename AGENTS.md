@@ -25,6 +25,17 @@
 
 - 使用者說「更新 Agents 懶人包」→ 只動本資料夾
 
+## 雙倉同步流程
+
+本 repo 使用兩個 sync script 管理 GitHub 與 GitLab 的差異：
+
+| 指令 | 目標 | 特性 |
+|------|------|------|
+| `scripts/sync-to-gitlab.ps1` | GitLab | 完整公司資訊 + 不含 01/08/11 |
+| `scripts/sync-to-github.ps1` | GitHub | 公司資訊去敏（→ `<PLACEHOLDER>`）+ 含 01/08/11 |
+
+請勿直接 `git push origin main` — GitHub 版需要先去敏後再推送。
+
 ## MCP / 技能安裝流程
 
 安裝任何涉及 **MCP 伺服器**或**技能**的懶人包時，先確認使用者使用的平台（OpenCode 或 Trae IDE），再遵循以下流程：
