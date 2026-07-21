@@ -148,9 +148,13 @@ opencode --version
 2. **在 Trae IDE 中驅動 OpenCode** — 安裝 opencode CLI（見步驟三），並將本 SKILL 檔案放入 Trae IDE 的 skills 目錄，在 Trae IDE 中說「用 OpenCode 幫我...」即可觸發
 3. **在 OpenCode 中驅動 TRAE** — 走 trae-cli（已安裝），不受公司帳號影響
 
-#### 注意
+#### 重要：seat 授權 vs. API Key
 
-公司 TRAE 帳號無法用在 trae-cli 上，兩者是獨立認證系統。trae-cli 需要自己的 API Key（如 OpenRouter、Anthropic 等）。
+Trae IDE / VS Code 套件使用**公司 seat 授權（SSO 登入）**，trae-cli 則需要獨立的 **LLM API Key**，兩者無法互通。公司 seat 授權不能轉換為 trae-cli 可用的 API Key。
+
+若你已有公司 TRAE seat 但沒有額外的 API Key：
+→ 請直接在 Trae IDE 或 VS Code 中使用 TRAE 的 AI 功能
+→ trae-cli 需另外準備 API Key（OpenRouter / Doubao / Anthropic 等）
 
 ---
 
