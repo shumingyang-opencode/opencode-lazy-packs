@@ -222,24 +222,56 @@ rm -rf ~/.config/opencode/skills/cli-hub-meta-skill/
 
 ### 在 Trae 上安裝
 
-CLI-Hub 安裝方式與 OpenCode 相同：
+#### 1. 安裝 CLI-Hub 工具
+
+CLI-Hub 安裝方式與 OpenCode 相同（系統層級工具）：
+
 ```bash
 pipx install cli-anything-hub
 ```
 
+#### 2. 安裝元技能（選擇安裝層級）
+
+1. 選擇安裝層級：
+   - **全域（推薦，所有專案可用）**：`~/.agents/skills/cli-anything/`
+   - **專案（僅當前專案）**：`.trae/skills/cli-anything/` 或 `.agents/skills/cli-anything/`
+
+   ```bash
+   # 全域
+   mkdir -p ~/.agents/skills/cli-anything/
+   cp skills/28-cli-anything/SKILL.md ~/.agents/skills/cli-anything/
+   # 或專案
+   mkdir -p .trae/skills/cli-anything/
+   cp skills/28-cli-anything/SKILL.md .trae/skills/cli-anything/
+   ```
+
+2. 驗證：在 Trae IDE 中說「搜尋 CLI 工具」或「用 Blender 建模」，確認技能被觸發。
+
 ### 在 Trae 上更新
 
 ```bash
+# 更新 CLI-Hub 工具
 pipx upgrade cli-anything-hub
+
+# 更新元技能（重新複製 SKILL.md）
+# 全域
+cp skills/28-cli-anything/SKILL.md ~/.agents/skills/cli-anything/
+# 或專案
+cp skills/28-cli-anything/SKILL.md .trae/skills/cli-anything/
 ```
 
 ### 在 Trae 上移除
 
 ```bash
+# 移除 CLI-Hub 工具
 pipx uninstall cli-anything-hub
-```
 
-> 本懶人包的核心是 CLI-Hub 工具，元技能的安裝方式 Trae 與 OpenCode 一致。
+# 移除元技能
+# 全域
+rm -rf ~/.agents/skills/cli-anything/
+# 或專案
+rm -rf .trae/skills/cli-anything/
+```
 
 ---
 

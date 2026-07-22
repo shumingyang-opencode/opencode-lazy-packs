@@ -308,6 +308,70 @@ trae-agent 使用 `rich` 套件輸出終端訊息，在繁體中文 Windows（cp
 
 ---
 
+## Trae 對應操作
+
+> 若你使用 **Trae IDE**，以下為對應的安裝/更新/移除步驟。
+> Trae IDE 用戶需安裝 OpenCode CLI，並將元技能放入 Trae skills 目錄。
+
+### 在 Trae 上安裝
+
+#### 1. 安裝 OpenCode CLI（系統層級工具）
+
+```bash
+npm install -g opencode-ai
+```
+
+驗證：
+
+```bash
+opencode --version
+```
+
+#### 2. 安裝元技能（選擇安裝層級）
+
+1. 選擇安裝層級：
+   - **全域（推薦，所有專案可用）**：`~/.agents/skills/trae-opencode/`
+   - **專案（僅當前專案）**：`.trae/skills/trae-opencode/` 或 `.agents/skills/trae-opencode/`
+
+   ```bash
+   # 全域
+   mkdir -p ~/.agents/skills/trae-opencode/
+   cp skills/30-trae-opencode/SKILL.md ~/.agents/skills/trae-opencode/
+   # 或專案
+   mkdir -p .trae/skills/trae-opencode/
+   cp skills/30-trae-opencode/SKILL.md .trae/skills/trae-opencode/
+   ```
+
+2. 驗證：在 Trae IDE 中說「用 OpenCode 幫我...」，確認技能被觸發並執行 `opencode run`。
+
+### 在 Trae 上更新
+
+```bash
+# 更新 OpenCode CLI
+npm update -g opencode-ai
+
+# 更新元技能（重新複製 SKILL.md）
+# 全域
+cp skills/30-trae-opencode/SKILL.md ~/.agents/skills/trae-opencode/
+# 或專案
+cp skills/30-trae-opencode/SKILL.md .trae/skills/trae-opencode/
+```
+
+### 在 Trae 上移除
+
+```bash
+# 移除 OpenCode CLI
+npm uninstall -g opencode-ai
+
+# 移除元技能
+# 全域
+rm -rf ~/.agents/skills/trae-opencode/
+# 或專案
+rm -rf .trae/skills/trae-opencode/
+```
+
+---
+
 ## 更新紀錄
 
 | 日期 | 版本 | 更新內容 |

@@ -1,4 +1,4 @@
-﻿---
+---
 name: agents-lazy-packs
 description: Agents 懶人包全集 — 環境建置、MCP 串接、技能安裝，支援 OpenCode、Trae IDE、Codex 等多平台。說「安裝懶人包」「agents 懶人包」「trae 安裝」時載入
 ---
@@ -86,36 +86,28 @@ npx skills add https://github.com/shumingyang-opencode/opencode-lazy-packs --ski
 
 > 若 `.md` 檔內無 Trae 區塊（如教學型 #07、#24~#26），則不需要安裝動作。
 
+### Trae 安裝層級詢問（安裝前）
+
+Trae 用戶在安裝每個技能/MCP 前，必須先詢問：
+
+```
+這個服務要安裝到哪裡？
+- 全域（推薦，所有專案可用）
+- 專案（僅當前專案）
+```
+
+依選擇決定路徑：
+
+| 類型 | 全域路徑 | 專案路徑 |
+|------|---------|---------|
+| MCP | `~/.cursor/mcp.json` 的 `"mcpServers"` | `.trae/mcp.json` 的 `"mcpServers"` |
+| Skill | `~/.agents/skills/<技能目錄>/` | `.trae/skills/<技能目錄>/` 或 `.agents/skills/<技能目錄>/` |
+
+> 各懶人包的「Trae 對應操作」區塊已內建此詢問與對應路徑。
+
 ## 步驟五：安裝後驗證
 
 每安裝完一個，依照該 skill 內的「完成回報格式」回報結果。全部完成後列出總表。
-
-## 步驟六：詢問全局設定
-
-每次安裝涉及 **MCP 伺服器**或**技能**的懶人包，安裝並驗證完成後，須詢問使用者：
-
-```
-這個服務已安裝完成。
-要將它加入【全局設定】讓所有專案都能用嗎？
-還是保持在【當前專案】就好？
-```
-
-回答後依平台決定對應路徑：
-
-### OpenCode
-
-- **是** → 將 MCP/skill 搬遷到 `~/.config/opencode/opencode.json`
-- **否** → 保留在專案 `opencode.json`，並告知其他專案如何啟用
-
-### Trae
-
-- **是** → 
-  - MCP 設定搬遷到 `~/.cursor/mcp.json` 的 `"mcpServers"` 區塊
-  - Skill 搬遷到 `~/.agents/skills/` 目錄
-- **否** → 
-  - MCP 保留在 `.trae/mcp.json`
-  - Skill 保留在 `.agents/skills/` 或 `.trae/skills/`
-  - 並告知其他專案如何啟用
 
 ### 平台設定路徑速查
 
