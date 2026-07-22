@@ -1,5 +1,5 @@
 ﻿---
-name: opencode-draw
+name: draw
 description: 安裝 AI 生圖技能（OpenAI gpt-image-2）。說「安裝生圖技能」「設定畫圖」時載入。
 ---
 

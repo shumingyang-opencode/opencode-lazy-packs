@@ -1,5 +1,5 @@
----
-name: opencode-env-setup
+﻿---
+name: env-setup
 description: 安裝 OpenCode 開發環境（Node.js, OpenCode, uv）。說「建置環境」「安裝開發環境」時載入。
 ---
 

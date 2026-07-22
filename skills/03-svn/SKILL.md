@@ -1,5 +1,5 @@
 ﻿---
-name: opencode-svn
+name: svn
 description: 連接公司內部 SVN 伺服器。說「連接 SVN」「設定 SVN」時載入。
 ---
 

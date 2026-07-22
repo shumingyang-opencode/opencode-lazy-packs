@@ -1,5 +1,5 @@
 ﻿---
-name: opencode-gitlab-internal
+name: gitlab-internal
 description: 連接公司內部 GitLab 伺服器。說「連接公司 GitLab」「設定內部 GitLab」時載入。
 ---
 

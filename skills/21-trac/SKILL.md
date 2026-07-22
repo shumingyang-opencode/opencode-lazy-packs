@@ -1,5 +1,5 @@
 ﻿---
-name: opencode-trac
+name: trac
 description: 安裝公司 Trac 整合 — 讓 OpenCode 操作公司內部 Trac Ticket 管理與 Wiki 查閱。說「安裝 Trac」「安裝公司 Trac」「公司 Trac 設定」「Trac 安裝」時載入。
 ---
 

@@ -1,5 +1,5 @@
----
-name: opencode-feishu-lark
+﻿---
+name: feishu-lark
 description: 安裝飛書 Lark 整合 — 讓 OpenCode 讀寫飛書文檔、發送訊息、管理群組、操作日曆與多維表格。說「安裝飛書」「安裝 Lark」「連接飛書」時載入。
 ---
 

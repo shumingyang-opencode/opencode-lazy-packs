@@ -1,5 +1,5 @@
----
-name: opencode-second-brain
+﻿---
+name: second-brain
 description: 建立 Obsidian 第二大腦三層結構（每日筆記/創作庫/知識庫）。說「建立第二大腦」「設定知識管理」時載入。
 ---
 

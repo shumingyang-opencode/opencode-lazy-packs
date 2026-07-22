@@ -1,5 +1,5 @@
----
-name: opencode-solo-agent
+﻿---
+name: solo-agent
 description: 安裝 SOLO Agent — 全自動全棧開發模式（環境偵測→參考文件→規劃→建構→測試→交付），支援批次確認模式、備份還原機制。說「安裝 SOLO」「solo agent」「SOLO 模式」時載入
 ---
 

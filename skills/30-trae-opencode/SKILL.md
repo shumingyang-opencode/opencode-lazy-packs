@@ -1,5 +1,5 @@
 ---
-name: opencode-30-trae-opencode
+name: trae-opencode
 description: >-
   雙向 TRAE ↔ OpenCode CLI 驅動。
   OpenCode → TRAE：用 trae-cli 執行任務；

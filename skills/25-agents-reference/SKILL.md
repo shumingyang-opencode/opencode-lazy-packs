@@ -1,5 +1,5 @@
----
-name: opencode-agents-reference
+﻿---
+name: agents-reference
 description: 互動式 AGENTS.md 建立教學 — 依專案特性引導產出客製化 AGENTS.md，涵蓋目錄結構、編碼慣例、測試規範、Git 流程。說「建立 AGENTS.md」「AGENTS.md 教學」「專案設定教學」時載入。
 ---
 

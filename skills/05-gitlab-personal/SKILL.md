@@ -1,5 +1,5 @@
----
-name: opencode-gitlab-personal
+﻿---
+name: gitlab-personal
 description: 連接個人 GitLab.com 帳號。說「連接個人 GitLab」「設定 GitLab.com」時載入。
 ---
 

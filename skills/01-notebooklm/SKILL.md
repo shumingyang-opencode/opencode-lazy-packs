@@ -1,5 +1,5 @@
----
-name: opencode-notebooklm
+﻿---
+name: notebooklm
 description: 連接 NotebookLM，讓 OpenCode 讀寫 Google NotebookLM 筆記本。說「連接 NotebookLM」「裝 NotebookLM」時載入。
 ---
 

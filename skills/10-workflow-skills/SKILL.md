@@ -1,5 +1,5 @@
----
-name: opencode-workflow-skills
+﻿---
+name: workflow-skills
 description: 安裝開工/收工/初始化三大技能。說「裝工作流程技能」「安裝 startup shutdown skills」時載入。
 ---
 

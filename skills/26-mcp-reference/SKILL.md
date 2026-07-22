@@ -1,5 +1,5 @@
----
-name: opencode-mcp-reference
+﻿---
+name: mcp-reference
 description: 互動式 MCP 設定教學 — 從概念到實作，引導選擇連線模式（local/stdio/http）、設定 opencode.json、安全性原則，以及自行撰寫 MCP Server。說「MCP 教學」「MCP 設定」「連接外部工具」時載入。
 ---
 

@@ -1,5 +1,5 @@
 ﻿---
-name: opencode-jira-confluence
+name: jira-confluence
 description: 安裝公司 JIRA & Confluence 整合 — 讓 OpenCode 操作公司內部 JIRA Issue 管理與 Confluence 頁面搜尋。說「安裝 JIRA」「安裝 Confluence」「安裝公司 JIRA」「公司 JIRA 設定」時載入。
 ---
 

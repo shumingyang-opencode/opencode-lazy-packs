@@ -1,5 +1,5 @@
----
-name: opencode-browser
+﻿---
+name: browser
 description: 安裝瀏覽器控制工具（Playwright MCP + open-computer-use）。說「裝瀏覽器控制」「瀏覽器自動化」時載入。
 ---
 

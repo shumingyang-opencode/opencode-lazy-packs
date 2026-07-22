@@ -1,5 +1,5 @@
----
-name: opencode-gen-pptx
+﻿---
+name: gen-pptx
 description: 工程導向可編輯簡報產製技能。將技術主題、datasheet、spec 文件、FW/SW 架構筆記、SDK 文件、或另一個 repo 的 README/docs/code 轉為結構清楚的可編輯 .pptx 簡報。專為軟韌體工程師、半導體工程師、FAE/AE 團隊設計。說「做簡報」「產出簡報」「做成投影片」「generate presentation」「turn this into slides」時載入。
 ---
 

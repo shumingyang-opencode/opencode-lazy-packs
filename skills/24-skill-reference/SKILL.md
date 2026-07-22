@@ -1,5 +1,5 @@
----
-name: opencode-skill-reference
+﻿---
+name: skill-reference
 description: 互動式 SKILL.md 建立教學 — 從 frontmatter、目錄結構、腳本打包到權限設定，逐步引導建立第一個 OpenCode 技能。說「建立技能」「SKILL.md 教學」「技能開發教學」時載入。
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: opencode-28-cli-anything
+name: cli-anything
 description: >-
   安裝 CLI-Anything（HKUDS/CLI-Anything）— 讓 OpenCode 發現、安裝、使用 50+ 真實軟體的 Agent-native CLI
   harness。說「安裝 CLI-Anything」「搜尋 CLI 工具」「用 Blender 建模」「編輯圖片」「操控 Obsidian」
