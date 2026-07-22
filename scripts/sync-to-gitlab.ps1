@@ -1,4 +1,4 @@
-#!/usr/bin/env pwsh
+﻿#!/usr/bin/env pwsh
 <#
 .SYNOPSIS
     Sync main branch to GitLab, removing items 01/08/11 (GitHub-only packs).
