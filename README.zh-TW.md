@@ -1,4 +1,4 @@
-[**English**](README.md) | [**繁体中文**]() | [**简体中文**](README.zh-CN.md)
+﻿[**English**](README.md) | [**繁体中文**]() | [**简体中文**](README.zh-CN.md)
 
 ---
 
@@ -200,7 +200,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於對應平台的設定�
 ---
 ## 意見回饋
 
-- **問題回報 / 功能建議**：請至 [GitLab Issues](https://github.com/shumingyang-opencode/opencode-lazy-packs/issues) 提出
+- **Source**: https://github.com/mathruffian-dot/opencode-lazy-packs
 
 ---
 

@@ -1,4 +1,4 @@
-[**English**]() | [**繁体中文**](README.zh-TW.md) | [**简体中文**](README.zh-CN.md)
+﻿[**English**]() | [**繁体中文**](README.zh-TW.md) | [**简体中文**](README.zh-CN.md)
 
 ---
 
@@ -203,7 +203,7 @@ See the template's "Operation Rules" and "Security Rules" for details.
 ---
 ## Feedback
 
-- **Issues / Feature Requests**: [GitLab Issues](https://github.com/shumingyang-opencode/opencode-lazy-packs/issues)
+- **Source**: https://github.com/mathruffian-dot/opencode-lazy-packs
 
 ---
 
