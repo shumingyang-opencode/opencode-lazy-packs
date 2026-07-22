@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #13：Graphify 知識圖譜技能
+﻿# OpenCode 懶人包 #13：Graphify 知識圖譜技能
 
 > 版本：v0.1
 > 更新日期：2026-06-21
@@ -46,8 +46,8 @@ graphify install --platform opencode
 ```
 
 這會建立以下檔案：
-- `~/.config/opencode/skills/graphify/SKILL.md`
-- `~/.config/opencode/skills/graphify/references/`（含 extraction-spec、query、hooks 等說明文件）
+- `~/.agents/skills/graphify/SKILL.md`
+- `~/.agents/skills/graphify/references/`（含 extraction-spec、query、hooks 等說明文件）
 
 ### 步驟三：註冊專案層級整合
 
@@ -70,7 +70,7 @@ graphify install --project --platform opencode
 
 ```bash
 graphify --help
-ls ~/.config/opencode/skills/graphify/SKILL.md
+ls ~/.agents/skills/graphify/SKILL.md
 ls .opencode/plugins/graphify.js
 ```
 
@@ -154,7 +154,7 @@ graphify-out/
 ### 移除 Skill
 
 ```bash
-rm -rf ~/.config/opencode/skills/graphify/
+rm -rf ~/.agents/skills/graphify/
 ```
 
 ### 移除 Permission
@@ -177,13 +177,13 @@ uv tool uninstall graphifyy
 
 1. 選擇安裝層級：
    - **全域（推薦，所有專案可用）**：`~/.agents/skills/graphify/`
-   - **專案（僅當前專案）**：`.trae/skills/graphify/` 或 `.agents/skills/graphify/`
+   - **專案（僅當前專案）**：`.agents/skills/graphify/`
 
    ```bash
    # 全域
    mkdir -p ~/.agents/skills/graphify/
    # 或專案
-   mkdir -p .trae/skills/graphify/
+   mkdir -p .agents/skills/graphify/
    ```
 2. 從本 repo 的 `skills/13-graphify/SKILL.md` 複製內容到對應目錄的 `SKILL.md`
 3. 重新載入 Trae（Cmd+R / Ctrl+R）
@@ -195,7 +195,7 @@ uv tool uninstall graphifyy
 
 替換對應目錄中的 `SKILL.md` 內容即可：
 - 全域：`~/.agents/skills/graphify/SKILL.md`
-- 專案：`.trae/skills/graphify/SKILL.md` 或 `.agents/skills/graphify/SKILL.md`
+- 專案：`.agents/skills/graphify/SKILL.md`
 
 ### 在 Trae 上移除
 
@@ -203,7 +203,7 @@ uv tool uninstall graphifyy
 # 全域
 rm -rf ~/.agents/skills/graphify/
 # 或專案
-rm -rf .trae/skills/graphify/
+rm -rf .agents/skills/graphify/
 ```
 
 ---

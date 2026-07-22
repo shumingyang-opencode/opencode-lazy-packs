@@ -1,4 +1,4 @@
----
+﻿---
 name: markitdown
 description: 文件轉 Markdown 技能 — 處理任何任務時，若遇到 PDF/Word/Excel/PowerPoint/HTML/CSV/JSON/XML/圖片/音訊 等非 MD 檔案，自動用 MarkItDown 轉換為 Markdown 格式再處理。說「解析這個檔案」「幫我讀這份文件」「轉換這個檔案」時載入。
 ---
@@ -41,13 +41,13 @@ description: 文件轉 Markdown 技能 — 處理任何任務時，若遇到 PDF
 ### CLI 直接轉換（由 AI 自動呼叫）
 
 ```bash
-python ~/.config/opencode/skills/markitdown/convert.py <檔案路徑>
+python ~/.agents/skills/markitdown/convert.py <檔案路徑>
 ```
 
 ### 轉換並存檔
 
 ```bash
-python ~/.config/opencode/skills/markitdown/convert.py <檔案路徑> -o <輸出.md>
+python ~/.agents/skills/markitdown/convert.py <檔案路徑> -o <輸出.md>
 ```
 
 ## AI 使用流程
@@ -60,7 +60,7 @@ python ~/.config/opencode/skills/markitdown/convert.py <檔案路徑> -o <輸出
 
 ## 安裝與權限
 
-技能檔案位置：`~/.config/opencode/skills/markitdown/`
+技能檔案位置：`~/.agents/skills/markitdown/`
 - `SKILL.md` — 本檔案
 - `convert.py` — 轉換腳本
 

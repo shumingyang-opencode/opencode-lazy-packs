@@ -11,9 +11,9 @@ description: 安裝開工/收工/初始化三大技能。說「裝工作流程�
 
 ### 1. 建立技能目錄
 ```bash
-mkdir -p ~/.config/opencode/skills/startup
-mkdir -p ~/.config/opencode/skills/shutdown
-mkdir -p ~/.config/opencode/skills/project-init
+mkdir -p ~/.agents/skills/startup
+mkdir -p ~/.agents/skills/shutdown
+mkdir -p ~/.agents/skills/project-init
 ```
 
 ### 2. 建立三個 SKILL.md

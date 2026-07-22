@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #18：Frontend Design — 辨識度優先的前端設計
+﻿# OpenCode 懶人包 #18：Frontend Design — 辨識度優先的前端設計
 
 > 版本：v0.1
 > 更新日期：2026-06-21
@@ -131,13 +131,13 @@ rm -rf ~/.agents/skills/frontend-design
 
 1. 選擇安裝層級：
    - **全域（推薦，所有專案可用）**：`~/.agents/skills/frontend-design/`
-   - **專案（僅當前專案）**：`.trae/skills/frontend-design/` 或 `.agents/skills/frontend-design/`
+   - **專案（僅當前專案）**：`.agents/skills/frontend-design/`
 
    ```bash
    # 全域
    mkdir -p ~/.agents/skills/frontend-design/
    # 或專案
-   mkdir -p .trae/skills/frontend-design/
+   mkdir -p .agents/skills/frontend-design/
    ```
 2. 從本 repo 的 `skills/18-frontend-design/SKILL.md` 複製內容到對應目錄的 `SKILL.md`
 3. 重新載入 Trae（Cmd+R / Ctrl+R）
@@ -147,7 +147,7 @@ rm -rf ~/.agents/skills/frontend-design
 
 替換對應目錄中的 `SKILL.md` 內容即可：
 - 全域：`~/.agents/skills/frontend-design/SKILL.md`
-- 專案：`.trae/skills/frontend-design/SKILL.md` 或 `.agents/skills/frontend-design/SKILL.md`
+- 專案：`.agents/skills/frontend-design/SKILL.md`
 
 ### 在 Trae 上移除
 
@@ -155,7 +155,7 @@ rm -rf ~/.agents/skills/frontend-design
 # 全域
 rm -rf ~/.agents/skills/frontend-design/
 # 或專案
-rm -rf .trae/skills/frontend-design/
+rm -rf .agents/skills/frontend-design/
 ```
 
 ---

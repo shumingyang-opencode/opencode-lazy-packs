@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #15：UI/UX Pro Max 設計智能
+﻿# OpenCode 懶人包 #15：UI/UX Pro Max 設計智能
 
 > 版本：v0.1
 > 更新日期：2026-06-21
@@ -32,7 +32,7 @@
 npx uipr@latest --opencode
 ```
 
-此指令會自動安裝到 `~/.config/opencode/skills/` 下：
+此指令會自動安裝到 `~/.agents/skills/` 下：
 - `ui-ux-pro-max/` — 主技能（設計智能核心）
 - `ui-styling/` — UI 樣式（含 25 個 OFL 字體）
 - `design/` — 設計生成（CIP 品牌識別、標誌、圖示）
@@ -52,13 +52,13 @@ npx uipr@latest --opencode
 ### 步驟三：驗證安裝
 
 ```bash
-ls -la ~/.config/opencode/skills/ui-ux-pro-max/SKILL.md
+ls -la ~/.agents/skills/ui-ux-pro-max/SKILL.md
 ```
 
 預期看到 SKILL.md 存在。也可確認共 7 個相關技能目錄：
 
 ```bash
-ls -d ~/.config/opencode/skills/ui-*/
+ls -d ~/.agents/skills/ui-*/
 ```
 
 ### 步驟四：測試
@@ -124,7 +124,7 @@ ui/ux pro max
 ## UI/UX Pro Max 技能安裝完成
 
 - npx uipr@latest --opencode：✅ 成功 / ❌ 失敗
-- 主技能目錄：~/.config/opencode/skills/ui-ux-pro-max/ ✅
+- 主技能目錄：~/.agents/skills/ui-ux-pro-max/ ✅
 - 子技能：6 個全部安裝 / ⚠️ 部分安裝
 - opencode.json 權限：✅ ui-ux-pro-max: allow
 - 對話測試：✅ 成功 / ❌ 失敗
@@ -139,7 +139,7 @@ ui/ux pro max
 | `npx uipr@latest` 找不到 | 確認 Node.js 18+ 已安裝，執行 `node --version` |
 | 安裝後沒反應 | 確認 opencode.json 有加入 `"ui-ux-pro-max": "allow"` |
 | 技能未載入 | 直接說「ui/ux pro max」強制觸發 |
-| 想移除 | 刪除 `~/.config/opencode/skills/ui-ux-pro-max/` 目錄 |
+| 想移除 | 刪除 `~/.agents/skills/ui-ux-pro-max/` 目錄 |
 | 更多資訊 | 官網 https://uupm.cc / GitHub: nextlevelbuilder/ui-ux-pro-max-skill |
 
 ---
@@ -149,13 +149,13 @@ ui/ux pro max
 ### 移除 Skill
 
 ```bash
-rm -rf ~/.config/opencode/skills/ui-ux-pro-max/
-rm -rf ~/.config/opencode/skills/ui-styling/
-rm -rf ~/.config/opencode/skills/design/
-rm -rf ~/.config/opencode/skills/design-system/
-rm -rf ~/.config/opencode/skills/brand/
-rm -rf ~/.config/opencode/skills/banner-design/
-rm -rf ~/.config/opencode/skills/slides/
+rm -rf ~/.agents/skills/ui-ux-pro-max/
+rm -rf ~/.agents/skills/ui-styling/
+rm -rf ~/.agents/skills/design/
+rm -rf ~/.agents/skills/design-system/
+rm -rf ~/.agents/skills/brand/
+rm -rf ~/.agents/skills/banner-design/
+rm -rf ~/.agents/skills/slides/
 ```
 
 ### 移除 Permission
@@ -176,15 +176,15 @@ rm -rf ~/.config/opencode/skills/slides/
    ```
 2. 選擇安裝層級：
    - **全域（推薦，所有專案可用）**：`~/.agents/skills/ui-ux-pro-max/`
-   - **專案（僅當前專案）**：`.trae/skills/ui-ux-pro-max/` 或 `.agents/skills/ui-ux-pro-max/`
+   - **專案（僅當前專案）**：`.agents/skills/ui-ux-pro-max/`
 
    ```bash
    # 全域
    mkdir -p ~/.agents/skills/ui-ux-pro-max/
-   cp -r ~/.config/opencode/skills/ui-ux-pro-max/* ~/.agents/skills/ui-ux-pro-max/
+   cp -r ~/.agents/skills/ui-ux-pro-max/* ~/.agents/skills/ui-ux-pro-max/
    # 或專案
-   mkdir -p .trae/skills/ui-ux-pro-max/
-   cp -r ~/.config/opencode/skills/ui-ux-pro-max/* .trae/skills/ui-ux-pro-max/
+   mkdir -p .agents/skills/ui-ux-pro-max/
+   cp -r ~/.agents/skills/ui-ux-pro-max/* .agents/skills/ui-ux-pro-max/
    ```
 3. 重新載入 Trae（Cmd+R / Ctrl+R）
 4. 對 Trae 說「幫我設計一個登入頁面」，確認可載入
@@ -193,7 +193,7 @@ rm -rf ~/.config/opencode/skills/slides/
 
 重新執行 `npx uipr@latest --opencode`，再將更新的檔案複製到對應目錄：
 - 全域：`~/.agents/skills/ui-ux-pro-max/`
-- 專案：`.trae/skills/ui-ux-pro-max/` 或 `.agents/skills/ui-ux-pro-max/`
+- 專案：`.agents/skills/ui-ux-pro-max/`
 
 ### 在 Trae 上移除
 
@@ -201,7 +201,7 @@ rm -rf ~/.config/opencode/skills/slides/
 # 全域
 rm -rf ~/.agents/skills/ui-ux-pro-max/
 # 或專案
-rm -rf .trae/skills/ui-ux-pro-max/
+rm -rf .agents/skills/ui-ux-pro-max/
 ```
 
 ---

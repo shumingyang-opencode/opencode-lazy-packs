@@ -1,4 +1,4 @@
----
+﻿---
 name: agents-lazy-packs
 description: Agents 懶人包全集 — 環境建置、MCP 串接、技能安裝，支援 OpenCode、Trae IDE、Codex 等多平台。說「安裝懶人包」「agents 懶人包」「trae 安裝」時載入
 ---
@@ -101,7 +101,7 @@ Trae 用戶在安裝每個技能/MCP 前，必須先詢問：
 | 類型 | 全域路徑 | 專案路徑 |
 |------|---------|---------|
 | MCP | `~/.cursor/mcp.json` 的 `"mcpServers"` | `.trae/mcp.json` 的 `"mcpServers"` |
-| Skill | `~/.agents/skills/<技能目錄>/` | `.trae/skills/<技能目錄>/` 或 `.agents/skills/<技能目錄>/` |
+| Skill | `~/.agents/skills/<技能目錄>/` | `.agents/skills/<技能目錄>/` |
 
 > 各懶人包的「Trae 對應操作」區塊已內建此詢問與對應路徑。
 
@@ -115,8 +115,8 @@ Trae 用戶在安裝每個技能/MCP 前，必須先詢問：
 |---|---|---|
 | 專案 MCP | `opencode.json` 的 `"mcp"` | `.trae/mcp.json` 的 `"mcpServers"` |
 | 全域 MCP | `~/.config/opencode/opencode.json` 的 `"mcp"` | `~/.cursor/mcp.json` 的 `"mcpServers"` |
-| 專案 Skills | `skills/` 目錄 | `.trae/skills/` 或 `.agents/skills/` |
-| 全域 Skills | `~/.config/opencode/skills/` | `~/.agents/skills/` |
+| 專案 Skills | `.agents/skills/` | `.agents/skills/` |
+| 全域 Skills | `~/.agents/skills/` | `~/.agents/skills/` |
 | 專案規則 | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
 
 ## 補充說明

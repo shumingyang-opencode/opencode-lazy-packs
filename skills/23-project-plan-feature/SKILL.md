@@ -1,4 +1,4 @@
----
+﻿---
 name: project-plan-feature
 description: Initialize and manage a feature planning document set using a standard 10-step planning convention. Use when starting a new feature, enhancement, or development initiative in any project.
 ---
@@ -47,7 +47,7 @@ Before starting, verify the environment:
 Run the init script:
 
 ```bash
-python ~/.config/opencode/skills/project-plan-feature/scripts/init_plan.py \
+python ~/.agents/skills/project-plan-feature/scripts/init_plan.py \
     --name "Short_Description" \
     --project-root /path/to/project \
     --plan-dir docs

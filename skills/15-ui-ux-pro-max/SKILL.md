@@ -1,4 +1,4 @@
----
+﻿---
 name: ui-ux-pro-max
 description: UI/UX Pro Max 設計智能技能 — 67 種 UI 風格、161 個設計推理規則、57 組字體搭配、
              99 條 UX 指南、25 種圖表類型，覆蓋 15+ 技術棧。說「ui/ux pro max」「設計一下」
@@ -29,7 +29,7 @@ npx uipr@latest --opencode
 ```
 
 此指令會自動：
-1. 安裝主技能至 `~/.config/opencode/skills/ui-ux-pro-max/`
+1. 安裝主技能至 `~/.agents/skills/ui-ux-pro-max/`
 2. 安裝 6 個子技能（ui-styling, design, design-system, brand, banner-design, slides）
 3. 每個子技能包含 SKILL.md + 參考資料 + 腳本
 
@@ -44,8 +44,8 @@ npx uipr@latest --opencode
 ### 步驟三：驗證安裝
 
 ```bash
-ls -la ~/.config/opencode/skills/ui-ux-pro-max/SKILL.md
-ls ~/.config/opencode/skills/  # 應看到 7 個 ui-ux-pro-max 相關目錄
+ls -la ~/.agents/skills/ui-ux-pro-max/SKILL.md
+ls ~/.agents/skills/  # 應看到 7 個 ui-ux-pro-max 相關目錄
 ```
 
 ### 步驟四：測試
@@ -88,7 +88,7 @@ ls ~/.config/opencode/skills/  # 應看到 7 個 ui-ux-pro-max 相關目錄
 ## UI/UX Pro Max 技能安裝完成
 
 - npx uipr@latest --opencode：✅ 成功 / ❌ 失敗
-- 主技能目錄：~/.config/opencode/skills/ui-ux-pro-max/ ✅
+- 主技能目錄：~/.agents/skills/ui-ux-pro-max/ ✅
 - 子技能：6 個全部安裝 / ⚠️ 部分安裝
 - opencode.json 權限：✅ ui-ux-pro-max: allow
 - 驗證測試：✅ 成功 / ❌ 失敗

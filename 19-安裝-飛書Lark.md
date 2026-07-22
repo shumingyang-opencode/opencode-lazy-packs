@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #19：安裝飛書 Lark — 文檔、訊息、群組、日曆、多維表格
+﻿# OpenCode 懶人包 #19：安裝飛書 Lark — 文檔、訊息、群組、日曆、多維表格
 
 > 版本：v0.1
 > 更新日期：2026-06-23
@@ -36,7 +36,7 @@
 npx skills add joe960913/feishu-inout
 ```
 
-> ⚠️ **路徑注意**：feishu-inout 的說明文件預設使用 `~/.claude/skills/`（Claude Code 路徑），OpenCode 會安裝在 `~/.config/opencode/skills/` 或 `~/.agents/skills/` 下。安裝後請用以下指令找到實際路徑：
+> ⚠️ **路徑注意**：feishu-inout 的說明文件預設使用 `~/.claude/skills/`（Claude Code 路徑），OpenCode 會安裝在 `~/.agents/skills/` 或 `~/.agents/skills/` 下。安裝後請用以下指令找到實際路徑：
 >
 > **Windows (PowerShell)：**
 > ```powershell
@@ -45,7 +45,7 @@ npx skills add joe960913/feishu-inout
 >
 > **macOS / Linux：**
 > ```bash
-> find ~/.config/opencode/skills ~/.agents/skills ~/.claude/skills -name "feishu_mcp.py" 2>/dev/null | head -1
+> find ~/.agents/skills ~/.agents/skills ~/.claude/skills -name "feishu_mcp.py" 2>/dev/null | head -1
 > ```
 
 ### 步驟二：透過瀏覽器建立飛書應用
@@ -321,7 +321,7 @@ lark-cli auth status
 ```bash
 # 從 opencode.json 移除 "feishu-inout": "allow"
 # 移除 skill 目錄
-rm -rf ~/.config/opencode/skills/feishu-inout
+rm -rf ~/.agents/skills/feishu-inout
 # 或（視安裝路徑）
 rm -rf ~/.agents/skills/feishu-inout
 ```
@@ -442,13 +442,13 @@ rm -rf ~/.agents/skills/feishu-inout
 
 1. 選擇安裝層級：
    - **全域（推薦，所有專案可用）**：`~/.agents/skills/feishu-inout/`
-   - **專案（僅當前專案）**：`.trae/skills/feishu-inout/` 或 `.agents/skills/feishu-inout/`
+   - **專案（僅當前專案）**：`.agents/skills/feishu-inout/`
 
    ```bash
    # 全域
    mkdir -p ~/.agents/skills/feishu-inout/
    # 或專案
-   mkdir -p .trae/skills/feishu-inout/
+   mkdir -p .agents/skills/feishu-inout/
    ```
 2. 從本 repo 的 `skills/19-feishu-inout/SKILL.md` 複製內容到對應目錄的 `SKILL.md`
 3. 重新載入 Trae（Cmd+R / Ctrl+R）
@@ -458,7 +458,7 @@ rm -rf ~/.agents/skills/feishu-inout
 
 替換對應目錄中的 `SKILL.md` 內容即可：
 - 全域：`~/.agents/skills/feishu-inout/SKILL.md`
-- 專案：`.trae/skills/feishu-inout/SKILL.md` 或 `.agents/skills/feishu-inout/SKILL.md`
+- 專案：`.agents/skills/feishu-inout/SKILL.md`
 
 ### 在 Trae 上移除
 
@@ -466,7 +466,7 @@ rm -rf ~/.agents/skills/feishu-inout
 # 全域
 rm -rf ~/.agents/skills/feishu-inout/
 # 或專案
-rm -rf .trae/skills/feishu-inout/
+rm -rf .agents/skills/feishu-inout/
 ```
 
 ---

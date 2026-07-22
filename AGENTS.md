@@ -11,7 +11,7 @@
 | 設定檔 | `opencode.json` | `config.toml` | `.trae/mcp.json` |
 | 專案檔 | `AGENTS.md` | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
 | MCP | 編輯 JSON | `codex mcp add` | 編輯 JSON / GUI |
-| Skills dir | `~/.config/opencode/skills/` | `~/.codex/skills/` | `~/.agents/skills/`（全域）或 `.trae/skills/`（專案） |
+| Skills dir | `~/.agents/skills/`（全域）或 `.agents/skills/`（專案） | `~/.codex/skills/` | `~/.agents/skills/`（全域）或 `.agents/skills/`（專案） |
 
 ## Obsidian 關聯資料
 
@@ -66,8 +66,8 @@
 |---|---|---|
 | 專案 MCP | `opencode.json` 的 `"mcp"` | `.trae/mcp.json` 的 `"mcpServers"` |
 | 全域 MCP | `~/.config/opencode/opencode.json` 的 `"mcp"` | `~/.cursor/mcp.json` 的 `"mcpServers"` |
-| 專案 Skills | `skills/` 目錄 | `.trae/skills/` 或 `.agents/skills/` |
-| 全域 Skills | `~/.config/opencode/skills/` | `~/.agents/skills/` |
+| 專案 Skills | `.agents/skills/` | `.agents/skills/` |
+| 全域 Skills | `~/.agents/skills/` | `~/.agents/skills/` |
 | 專案規則 | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
 
 ## 全局 MCP 列表（OpenCode）

@@ -1,4 +1,4 @@
-﻿---
+---
 name: gen-pptx
 description: 工程導向可編輯簡報產製技能。將技術主題、datasheet、spec 文件、FW/SW 架構筆記、SDK 文件、或另一個 repo 的 README/docs/code 轉為結構清楚的可編輯 .pptx 簡報。專為軟韌體工程師、半導體工程師、FAE/AE 團隊設計。說「做簡報」「產出簡報」「做成投影片」「generate presentation」「turn this into slides」時載入。
 ---
@@ -13,12 +13,12 @@ description: 工程導向可編輯簡報產製技能。將技術主題、datashe
 
 ```bash
 # 安裝 PptxGenJS（本機至技能目錄，讓 generate.js 可執行）
-cd ~/.config/opencode/skills/opencode-gen-pptx
+cd ~/.agents/skills/gen-pptx
 npm init -y
 npm install pptxgenjs
 ```
 
-SKILL.md 與 generate.js 已安裝至 `~/.config/opencode/skills/opencode-gen-pptx/`。
+SKILL.md 與 generate.js 已安裝至 `~/.agents/skills/gen-pptx/`。
 
 ## 先判斷工作模式
 
@@ -174,7 +174,7 @@ SKILL.md 與 generate.js 已安裝至 `~/.config/opencode/skills/opencode-gen-pp
 使用內建 `generate.js` 快速產出：
 
 ```bash
-node ~/.config/opencode/skills/opencode-gen-pptx/generate.js plan.json output.pptx
+node ~/.agents/skills/gen-pptx/generate.js plan.json output.pptx
 ```
 
 ## 完成前檢查

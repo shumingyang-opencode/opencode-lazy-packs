@@ -1,4 +1,4 @@
-﻿---
+---
 name: feishu-lark
 description: 安裝飛書 Lark 整合 — 讓 OpenCode 讀寫飛書文檔、發送訊息、管理群組、操作日曆與多維表格。說「安裝飛書」「安裝 Lark」「連接飛書」時載入。
 ---
@@ -36,7 +36,7 @@ if (Test-Path "$env:USERPROFILE\.config\opencode\skills\feishu-inout\scripts\fei
 }
 ```
 
-> **路徑陷阱**：feishu-inout 的 SKILL.md 預設寫 `~/.claude/skills/`（Claude Code 路徑），但 OpenCode 會裝在 `~/.config/opencode/skills/` 或 `~/.agents/skills/`。務必用以上指令找到實際路徑。
+> **路徑陷阱**：feishu-inout 的 SKILL.md 預設寫 `~/.claude/skills/`（Claude Code 路徑），但 OpenCode 會裝在 `~/.agents/skills/`。務必用以上指令找到實際路徑。
 
 ### 2. 透過瀏覽器建立飛書應用
 
@@ -192,7 +192,7 @@ python $SCRIPT_PATH login
 ```bash
 # 從 opencode.json 移除 feishu-inout 權限
 # 移除 skill
-rm -rf ~/.config/opencode/skills/feishu-inout
+rm -rf ~/.agents/skills/feishu-inout
 # 或（視安裝路徑而定）
 rm -rf ~/.agents/skills/feishu-inout
 ```

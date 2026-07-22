@@ -63,17 +63,17 @@ ffmpeg -version
 
 建立目錄：
 ```bash
-mkdir -p ~/.config/opencode/skills/markitdown
+mkdir -p ~/.agents/skills/markitdown
 ```
 
 從本 repo 複製 SKILL.md：
 ```bash
-curl -o ~/.config/opencode/skills/markitdown/SKILL.md https://github.com/shumingyang-opencode/opencode-lazy-packs/-/raw/main/skills/12-markitdown/SKILL.md
+curl -o ~/.agents/skills/markitdown/SKILL.md https://github.com/shumingyang-opencode/opencode-lazy-packs/-/raw/main/skills/12-markitdown/SKILL.md
 ```
 
 複製 convert.py：
 ```bash
-curl -o ~/.config/opencode/skills/markitdown/convert.py https://github.com/shumingyang-opencode/opencode-lazy-packs/-/raw/main/scripts/convert.py
+curl -o ~/.agents/skills/markitdown/convert.py https://github.com/shumingyang-opencode/opencode-lazy-packs/-/raw/main/scripts/convert.py
 ```
 
 ### 步驟三：設定 opencode.json 權限
@@ -87,7 +87,7 @@ curl -o ~/.config/opencode/skills/markitdown/convert.py https://github.com/shumi
 ### 步驟四：測試轉換
 
 ```bash
-python ~/.config/opencode/skills/markitdown/convert.py <任意 PDF 或 DOCX 檔案路徑>
+python ~/.agents/skills/markitdown/convert.py <任意 PDF 或 DOCX 檔案路徑>
 ```
 
 ### 步驟五：驗證
@@ -147,7 +147,7 @@ python ~/.config/opencode/skills/markitdown/convert.py <任意 PDF 或 DOCX 檔�
 ### 移除 Skill
 
 ```bash
-rm -rf ~/.config/opencode/skills/markitdown/
+rm -rf ~/.agents/skills/markitdown/
 ```
 
 ### 移除 Permission
@@ -170,13 +170,13 @@ uv tool uninstall markitdown
 
 1. 選擇安裝層級：
    - **全域（推薦，所有專案可用）**：`~/.agents/skills/markitdown/`
-   - **專案（僅當前專案）**：`.trae/skills/markitdown/` 或 `.agents/skills/markitdown/`
+   - **專案（僅當前專案）**：`.agents/skills/markitdown/`
 
    ```bash
    # 全域
    mkdir -p ~/.agents/skills/markitdown/
    # 或專案
-   mkdir -p .trae/skills/markitdown/
+   mkdir -p .agents/skills/markitdown/
    ```
 2. 從本 repo 的 `skills/12-markitdown/SKILL.md` 及 `scripts/convert.py` 複製到對應目錄
 3. 重新載入 Trae（Cmd+R / Ctrl+R）
@@ -188,7 +188,7 @@ uv tool uninstall markitdown
 
 替換對應目錄中的 `SKILL.md` 內容即可：
 - 全域：`~/.agents/skills/markitdown/SKILL.md`
-- 專案：`.trae/skills/markitdown/SKILL.md` 或 `.agents/skills/markitdown/SKILL.md`
+- 專案：`.agents/skills/markitdown/SKILL.md`
 
 ### 在 Trae 上移除
 
@@ -196,7 +196,7 @@ uv tool uninstall markitdown
 # 全域
 rm -rf ~/.agents/skills/markitdown/
 # 或專案
-rm -rf .trae/skills/markitdown/
+rm -rf .agents/skills/markitdown/
 ```
 
 ---

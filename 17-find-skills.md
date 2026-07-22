@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #17：Find Skills — 技能搜尋與安裝
+﻿# OpenCode 懶人包 #17：Find Skills — 技能搜尋與安裝
 
 > 版本：v0.1
 > 更新日期：2026-06-21
@@ -136,13 +136,13 @@ rm -rf ~/.agents/skills/find-skills
 
 1. 選擇安裝層級：
    - **全域（推薦，所有專案可用）**：`~/.agents/skills/find-skills/`
-   - **專案（僅當前專案）**：`.trae/skills/find-skills/` 或 `.agents/skills/find-skills/`
+   - **專案（僅當前專案）**：`.agents/skills/find-skills/`
 
    ```bash
    # 全域
    mkdir -p ~/.agents/skills/find-skills/
    # 或專案
-   mkdir -p .trae/skills/find-skills/
+   mkdir -p .agents/skills/find-skills/
    ```
 2. 從本 repo 的 `skills/17-find-skills/SKILL.md` 複製內容到對應目錄的 `SKILL.md`
 3. 重新載入 Trae（Cmd+R / Ctrl+R）
@@ -152,7 +152,7 @@ rm -rf ~/.agents/skills/find-skills
 
 替換對應目錄中的 `SKILL.md` 內容即可：
 - 全域：`~/.agents/skills/find-skills/SKILL.md`
-- 專案：`.trae/skills/find-skills/SKILL.md` 或 `.agents/skills/find-skills/SKILL.md`
+- 專案：`.agents/skills/find-skills/SKILL.md`
 
 ### 在 Trae 上移除
 
@@ -160,7 +160,7 @@ rm -rf ~/.agents/skills/find-skills
 # 全域
 rm -rf ~/.agents/skills/find-skills/
 # 或專案
-rm -rf .trae/skills/find-skills/
+rm -rf .agents/skills/find-skills/
 ```
 
 ---

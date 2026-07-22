@@ -29,14 +29,14 @@
 ### 步驟一：建立快取目錄
 
 ```bash
-mkdir -p ~/.config/opencode/skills/awesome-design-md/brands
+mkdir -p ~/.agents/skills/awesome-design-md/brands
 ```
 
 ### 步驟二：安裝 skill 檔案
 
 從本 repo 複製 SKILL.md：
 ```bash
-curl -o ~/.config/opencode/skills/awesome-design-md/SKILL.md \
+curl -o ~/.agents/skills/awesome-design-md/SKILL.md \
   https://github.com/shumingyang-opencode/opencode-lazy-packs/-/raw/main/skills/14-awesome-design-md/SKILL.md
 ```
 
@@ -112,7 +112,7 @@ head -30 DESIGN.md
 ```md
 ## Awesome DESIGN.md 技能安裝完成
 
-- 快取目錄：~/.config/opencode/skills/awesome-design-md/brands/ ✅
+- 快取目錄：~/.agents/skills/awesome-design-md/brands/ ✅
 - SKILL.md：✅ 已安裝 / ⚠️ 待下載
 - opencode.json 權限：✅ awesome-design-md: allow
 - 測試下載：✅ 成功 / ❌ 失敗
@@ -136,7 +136,7 @@ head -30 DESIGN.md
 ### 移除 Skill
 
 ```bash
-rm -rf ~/.config/opencode/skills/awesome-design-md/
+rm -rf ~/.agents/skills/awesome-design-md/
 ```
 
 ### 移除 Permission
@@ -153,13 +153,13 @@ rm -rf ~/.config/opencode/skills/awesome-design-md/
 
 1. 選擇安裝層級：
    - **全域（推薦，所有專案可用）**：`~/.agents/skills/awesome-design-md/`
-   - **專案（僅當前專案）**：`.trae/skills/awesome-design-md/` 或 `.agents/skills/awesome-design-md/`
+   - **專案（僅當前專案）**：`.agents/skills/awesome-design-md/`
 
    ```bash
    # 全域
    mkdir -p ~/.agents/skills/awesome-design-md/
    # 或專案
-   mkdir -p .trae/skills/awesome-design-md/
+   mkdir -p .agents/skills/awesome-design-md/
    ```
 2. 從本 repo 的 `skills/14-awesome-design-md/SKILL.md` 複製內容到對應目錄的 `SKILL.md`
 3. 重新載入 Trae（Cmd+R / Ctrl+R）
@@ -169,7 +169,7 @@ rm -rf ~/.config/opencode/skills/awesome-design-md/
 
 替換對應目錄中的 `SKILL.md` 內容即可：
 - 全域：`~/.agents/skills/awesome-design-md/SKILL.md`
-- 專案：`.trae/skills/awesome-design-md/SKILL.md` 或 `.agents/skills/awesome-design-md/SKILL.md`
+- 專案：`.agents/skills/awesome-design-md/SKILL.md`
 
 ### 在 Trae 上移除
 
@@ -177,7 +177,7 @@ rm -rf ~/.config/opencode/skills/awesome-design-md/
 # 全域
 rm -rf ~/.agents/skills/awesome-design-md/
 # 或專案
-rm -rf .trae/skills/awesome-design-md/
+rm -rf .agents/skills/awesome-design-md/
 ```
 
 ---

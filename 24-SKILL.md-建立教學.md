@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #24：SKILL.md 建立教學
+﻿# OpenCode 懶人包 #24：SKILL.md 建立教學
 
 > 版本：v0.1
 > 更新日期：2026-06-26
@@ -59,7 +59,7 @@ OpenCode 會從以下路徑掃描技能：
 
 | 存放位置 | 生效範圍 | 適合場景 |
 |---------|---------|---------|
-| `~/.config/opencode/skills/<name>/SKILL.md` | **全域** — 所有專案 | 通用技能（你想在任何地方都能用） |
+| `~/.agents/skills/<name>/SKILL.md` | **全域** — 所有專案 | 通用技能（你想在任何地方都能用） |
 | `<專案>/.opencode/skills/<name>/SKILL.md` | **專案層級** — 單一專案 | 專屬技能（只在這專案中有用） |
 | `<專案>/.claude/skills/<name>/SKILL.md` | **相容層級** — 跨 agent | 同時給 Claude Code 使用的技能 |
 | `<專案>/.agents/skills/<name>/SKILL.md` | **相容層級** — 跨 agent | 同時給 Codex CLI 使用的技能 |

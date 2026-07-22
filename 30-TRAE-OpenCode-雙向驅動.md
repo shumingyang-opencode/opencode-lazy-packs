@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #30：TRAE 與 OpenCode 雙向驅動
+﻿# OpenCode 懶人包 #30：TRAE 與 OpenCode 雙向驅動
 
 > 版本：v0.2
 > 更新日期：2026-07-21
@@ -331,15 +331,15 @@ opencode --version
 
 1. 選擇安裝層級：
    - **全域（推薦，所有專案可用）**：`~/.agents/skills/trae-opencode/`
-   - **專案（僅當前專案）**：`.trae/skills/trae-opencode/` 或 `.agents/skills/trae-opencode/`
+   - **專案（僅當前專案）**：`.agents/skills/trae-opencode/`
 
    ```bash
    # 全域
    mkdir -p ~/.agents/skills/trae-opencode/
    cp skills/30-trae-opencode/SKILL.md ~/.agents/skills/trae-opencode/
    # 或專案
-   mkdir -p .trae/skills/trae-opencode/
-   cp skills/30-trae-opencode/SKILL.md .trae/skills/trae-opencode/
+   mkdir -p .agents/skills/trae-opencode/
+   cp skills/30-trae-opencode/SKILL.md .agents/skills/trae-opencode/
    ```
 
 2. 驗證：在 Trae IDE 中說「用 OpenCode 幫我...」，確認技能被觸發並執行 `opencode run`。
@@ -354,7 +354,7 @@ npm update -g opencode-ai
 # 全域
 cp skills/30-trae-opencode/SKILL.md ~/.agents/skills/trae-opencode/
 # 或專案
-cp skills/30-trae-opencode/SKILL.md .trae/skills/trae-opencode/
+cp skills/30-trae-opencode/SKILL.md .agents/skills/trae-opencode/
 ```
 
 ### 在 Trae 上移除
@@ -367,7 +367,7 @@ npm uninstall -g opencode-ai
 # 全域
 rm -rf ~/.agents/skills/trae-opencode/
 # 或專案
-rm -rf .trae/skills/trae-opencode/
+rm -rf .agents/skills/trae-opencode/
 ```
 
 ---

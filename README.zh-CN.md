@@ -1,4 +1,4 @@
-﻿[**English**](README.md) | [**繁体中文**](README.zh-TW.md) | [**简体中文**]()
+[**English**](README.md) | [**繁体中文**](README.zh-TW.md) | [**简体中文**]()
 
 ---
 
@@ -145,7 +145,7 @@ PAT / Token **不要**写入此文件。它们应存放于对应平台的配置�
 | 全域设定 | `~/.config/opencode/opencode.json` | `~/.cursor/mcp.json` |
 | 项目指令文件 | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
 | MCP 配置 | 编辑 opencode.json | 编辑 `.trae/mcp.json` |
-| Skill 机制 | 原生支持（SKILL.md） | `.trae/skills/` 或 `~/.agents/skills/`（全局） |
+| Skill 机制 | `.agents/skills/` 或 `~/.agents/skills/`（全局） | `.agents/skills/` 或 `~/.agents/skills/`（全局） |
 | 命令 | 有 `/` 内置命令 | GUI 界面操作 |
 
 ---

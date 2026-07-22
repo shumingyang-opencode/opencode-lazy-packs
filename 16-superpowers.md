@@ -236,15 +236,15 @@ Trae 不支援 OpenCode 的 plugin 系統，請手動安裝 Superpowers 的 14 �
    ```
 2. 選擇安裝層級：
    - **全域（推薦，所有專案可用）**：`~/.agents/skills/`
-   - **專案（僅當前專案）**：`.trae/skills/` 或 `.agents/skills/`
+   - **專案（僅當前專案）**：`.agents/skills/`
 
    ```bash
    # 全域
    mkdir -p ~/.agents/skills/
    cp -r /tmp/superpowers/skills/* ~/.agents/skills/
    # 或專案
-   mkdir -p .trae/skills/
-   cp -r /tmp/superpowers/skills/* .trae/skills/
+   mkdir -p .agents/skills/
+   cp -r /tmp/superpowers/skills/* .agents/skills/
    rm -rf /tmp/superpowers
    ```
 3. 重新載入 Trae（Cmd+R / Ctrl+R）
@@ -258,7 +258,7 @@ git clone https://github.com/obra/superpowers.git /tmp/superpowers
 # 全域
 cp -r /tmp/superpowers/skills/* ~/.agents/skills/
 # 或專案
-cp -r /tmp/superpowers/skills/* .trae/skills/
+cp -r /tmp/superpowers/skills/* .agents/skills/
 
 rm -rf /tmp/superpowers
 ```
@@ -269,7 +269,7 @@ rm -rf /tmp/superpowers
 # 全域
 rm -rf ~/.agents/skills/{using-superpowers,brainstorming,systematic-debugging,writing-plans,subagent-driven-development,executing-plans,test-driven-development,requesting-code-review,receiving-code-review,using-git-worktrees,finishing-a-development-branch,dispatching-parallel-agents,verification-before-completion,writing-skills}/
 # 或專案
-rm -rf .trae/skills/{using-superpowers,brainstorming,systematic-debugging,writing-plans,subagent-driven-development,executing-plans,test-driven-development,requesting-code-review,receiving-code-review,using-git-worktrees,finishing-a-development-branch,dispatching-parallel-agents,verification-before-completion,writing-skills}/
+rm -rf .agents/skills/{using-superpowers,brainstorming,systematic-debugging,writing-plans,subagent-driven-development,executing-plans,test-driven-development,requesting-code-review,receiving-code-review,using-git-worktrees,finishing-a-development-branch,dispatching-parallel-agents,verification-before-completion,writing-skills}/
 ```
 
 ---

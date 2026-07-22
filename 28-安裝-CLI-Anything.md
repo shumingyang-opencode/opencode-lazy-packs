@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #28：安裝 CLI-Anything
+﻿# OpenCode 懶人包 #28：安裝 CLI-Anything
 
 > 版本：v0.1
 > 更新日期：2026-07-06
@@ -181,7 +181,7 @@ CLI-Anything 不僅能安裝現有工具，還能為**任何 GUI 軟體產生全
 ✅ CLI-Anything 已安裝完成！
 - 套件版本：<cli-hub --version 輸出>
 - 可用工具數量：<cli-hub list 統計數量>
-- 元技能路徑：~/.config/opencode/skills/cli-hub-meta-skill/
+- 元技能路徑：~/.agents/skills/cli-hub-meta-skill/
 - 使用方式：說「幫我找 xxx 工具」「用 Blender 建模」「搜尋影片編輯工具」
 - 進階指令：/cli-anything 可產生新的 CLI harness
 ```
@@ -211,7 +211,7 @@ pipx uninstall cli-anything-hub
 ### 移除元技能
 
 ```bash
-rm -rf ~/.config/opencode/skills/cli-hub-meta-skill/
+rm -rf ~/.agents/skills/cli-hub-meta-skill/
 ```
 
 ---
@@ -234,15 +234,15 @@ pipx install cli-anything-hub
 
 1. 選擇安裝層級：
    - **全域（推薦，所有專案可用）**：`~/.agents/skills/cli-anything/`
-   - **專案（僅當前專案）**：`.trae/skills/cli-anything/` 或 `.agents/skills/cli-anything/`
+   - **專案（僅當前專案）**：`.agents/skills/cli-anything/`
 
    ```bash
    # 全域
    mkdir -p ~/.agents/skills/cli-anything/
    cp skills/28-cli-anything/SKILL.md ~/.agents/skills/cli-anything/
    # 或專案
-   mkdir -p .trae/skills/cli-anything/
-   cp skills/28-cli-anything/SKILL.md .trae/skills/cli-anything/
+   mkdir -p .agents/skills/cli-anything/
+   cp skills/28-cli-anything/SKILL.md .agents/skills/cli-anything/
    ```
 
 2. 驗證：在 Trae IDE 中說「搜尋 CLI 工具」或「用 Blender 建模」，確認技能被觸發。
@@ -257,7 +257,7 @@ pipx upgrade cli-anything-hub
 # 全域
 cp skills/28-cli-anything/SKILL.md ~/.agents/skills/cli-anything/
 # 或專案
-cp skills/28-cli-anything/SKILL.md .trae/skills/cli-anything/
+cp skills/28-cli-anything/SKILL.md .agents/skills/cli-anything/
 ```
 
 ### 在 Trae 上移除
@@ -270,7 +270,7 @@ pipx uninstall cli-anything-hub
 # 全域
 rm -rf ~/.agents/skills/cli-anything/
 # 或專案
-rm -rf .trae/skills/cli-anything/
+rm -rf .agents/skills/cli-anything/
 ```
 
 ---
