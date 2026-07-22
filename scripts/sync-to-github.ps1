@@ -76,11 +76,11 @@ try {
         # Step 3: Replace install/usage URLs with GitHub URL (so users can copy-paste directly)
         # Keep other company info (jira, confluence, svn, etc.) as placeholders
         # Use generic pattern to cover all repos (agents-lazy-packs, trac-mcp-server, opencode-lazy-packs, etc.)
-        $content = $content -replace 'https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs', 'https://github.com/shumingyang-opencode/opencode-lazy-packs'
-        $content = $content -replace 'https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/opencode-lazy-packs', 'https://github.com/shumingyang-opencode/opencode-lazy-packs'
-        # Fix GitLab-style issues URL to GitHub-style (/-/issues -> /issues)
+        $content = $content -replace 'https://github.com/shumingyang-opencode/opencode-lazy-packs', 'https://github.com/shumingyang-opencode/opencode-lazy-packs'
+        $content = $content -replace 'https://github.com/shumingyang-opencode/opencode-lazy-packs', 'https://github.com/shumingyang-opencode/opencode-lazy-packs'
+        # Fix GitLab-style issues URL to GitHub-style (/issues -> /issues)
         # Must run AFTER the URL replacement above, and use a simple pattern that matches the already-replaced URL
-        $content = $content -replace '/-/issues', '/issues'
+        $content = $content -replace '/issues', '/issues'
         # trac-mcp-server is a GitLab-only internal fork (no GitHub mirror) — kept as placeholder
         # since #21 Trac is a company-internal pack and the dep URL would leak company info on public GitHub
 

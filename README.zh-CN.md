@@ -1,4 +1,4 @@
-[**English**](README.md) | [**繁体中文**](README.zh-TW.md) | [**简体中文**]()
+﻿[**English**](README.md) | [**繁体中文**](README.zh-TW.md) | [**简体中文**]()
 
 ---
 
@@ -18,7 +18,7 @@
 把这行贴给你的 AI agent：
 
 ```
-这是 Agents 懒人包全集 https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs
+这是 Agents 懒人包全集 https://github.com/shumingyang-opencode/opencode-lazy-packs
 请读取 repo 内容，列出所有可用的懒人包，问我要装哪些。
 ```
 
@@ -31,7 +31,7 @@ AI 会自动：
 ### 方式二：一行指令手动装（OpenCode）
 
 ```bash
-npx skills add https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs --skill <skill名> -g -y
+npx skills add https://github.com/shumingyang-opencode/opencode-lazy-packs --skill <skill名> -g -y
 ```
 
 可用的 skill 名：
@@ -197,34 +197,10 @@ PAT / Token **不要**写入此文件。它们应存放于对应平台的配置�
 
 ---
 
-## 教学视频
-
-观看内部分享教学视频：[AI Agent 技术知识库](https://steven.yang.pages.ovt.com/ai-agent-tech/)
-
-| 主题 | 说明 |
-|------|------|
-| AI 基础概念与原理 | AI 核心概念、原理深入浅出 |
-| AI Agent 基本功能拆解 | Agent 基础功能与架构 |
-| AI 开发生态系统 | AI 开发工具生态与实战应用 |
-| 命令行工具实战 | CLI 工具应用技巧 |
-| MarkItDown 文件转换 | 文件格式转换实战 |
-| Dify LLM 应用开发 | 使用 Dify 平台开发 LLM 应用 |
-| DuckDB 数据库详解 | DuckDB 完整教学从入门到进阶 |
-| 知识图谱与代码分析 | Graphify 与知识图谱技术 |
-| Loop Engineering 工程学 | 大型结构化工业流程 |
-| MCP vs CLI 工具对比 | 两种工具模式的比较分析 |
-| Token 优化策略 | Token 使用优化技巧 |
-| AI 智能体开发与管理 | Agent Skills 开发与管理实战 |
-| OpenCode 工具生态系统 | OpenCode 工具与生态系统 |
-| OpenCode 系列详解 | OpenCode 完整实战教学 |
-| Karpathy 系列课程 | Karpathy 深度学习系列 |
-| AI 简报制作与分析 | AI 简报新革命 |
-
 ---
-
 ## 意见反馈
 
-- **问题反馈 / 功能建议**：请至 [GitLab Issues](https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs/-/issues) 提出
+- **问题反馈 / 功能建议**：请至 [GitLab Issues](https://github.com/shumingyang-opencode/opencode-lazy-packs/issues) 提出
 
 ---
 

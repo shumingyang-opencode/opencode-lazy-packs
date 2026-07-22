@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #12：MarkItDown 文件轉換技能
+﻿# OpenCode 懶人包 #12：MarkItDown 文件轉換技能
 
 > 版本：v0.3
 > 更新日期：2026-07-02
@@ -68,12 +68,12 @@ mkdir -p ~/.config/opencode/skills/markitdown
 
 從本 repo 複製 SKILL.md：
 ```bash
-curl -o ~/.config/opencode/skills/markitdown/SKILL.md https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs/-/raw/main/skills/12-markitdown/SKILL.md
+curl -o ~/.config/opencode/skills/markitdown/SKILL.md https://github.com/shumingyang-opencode/opencode-lazy-packs/-/raw/main/skills/12-markitdown/SKILL.md
 ```
 
 複製 convert.py：
 ```bash
-curl -o ~/.config/opencode/skills/markitdown/convert.py https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs/-/raw/main/scripts/convert.py
+curl -o ~/.config/opencode/skills/markitdown/convert.py https://github.com/shumingyang-opencode/opencode-lazy-packs/-/raw/main/scripts/convert.py
 ```
 
 ### 步驟三：設定 opencode.json 權限

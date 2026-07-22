@@ -1,4 +1,4 @@
-[**English**]() | [**繁体中文**](README.zh-TW.md) | [**简体中文**](README.zh-CN.md)
+﻿[**English**]() | [**繁体中文**](README.zh-TW.md) | [**简体中文**](README.zh-CN.md)
 
 ---
 
@@ -18,7 +18,7 @@
 Paste this line to your AI agent:
 
 ```
-This is the Agents Lazy Packs repo https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs
+This is the Agents Lazy Packs repo https://github.com/shumingyang-opencode/opencode-lazy-packs
 Please read the repo content, list all available packs, and ask me which ones to install.
 ```
 
@@ -31,7 +31,7 @@ The AI will:
 ### Method 2: One-Line CLI Install (OpenCode)
 
 ```bash
-npx skills add https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs --skill <skill-name> -g -y
+npx skills add https://github.com/shumingyang-opencode/opencode-lazy-packs --skill <skill-name> -g -y
 ```
 
 Available skill names:
@@ -203,7 +203,7 @@ See the template's "Operation Rules" and "Security Rules" for details.
 ---
 ## Feedback
 
-- **Issues / Feature Requests**: [GitLab Issues](https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs/-/issues)
+- **Issues / Feature Requests**: [GitLab Issues](https://github.com/shumingyang-opencode/opencode-lazy-packs/issues)
 
 ---
 

@@ -96,7 +96,7 @@ try {
         # Replace placeholders with actual GitLab URL for install/usage commands
         # Use generic pattern to cover all repos (agents-lazy-packs, trac-mcp-server, opencode-lazy-packs, etc.)
         # Only HTTPS URLs are replaced; SSH URLs (git@host:user/repo) and standalone <COMPANY_GITLAB_URL> in config tables are kept as placeholders for users to fill in
-        $content = $content -replace 'https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>', 'https://gitlab.ovt.com:8081/steven.yang'
+        $content = $content -replace 'https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>', 'https://<COMPANY_GITLAB_URL>/steven.yang'
 
         if ($content -ne $original) {
             [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.UTF8Encoding]::new($true))
