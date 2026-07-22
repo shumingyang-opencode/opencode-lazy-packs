@@ -234,8 +234,15 @@ Trae 不支援 OpenCode 的 plugin 系統，請手動安裝 Superpowers 的 14 �
    ```bash
    git clone https://github.com/obra/superpowers.git /tmp/superpowers
    ```
-2. 複製所有技能到 `.trae/skills/`：
+2. 選擇安裝層級：
+   - **全域（推薦，所有專案可用）**：`~/.agents/skills/`
+   - **專案（僅當前專案）**：`.trae/skills/` 或 `.agents/skills/`
+
    ```bash
+   # 全域
+   mkdir -p ~/.agents/skills/
+   cp -r /tmp/superpowers/skills/* ~/.agents/skills/
+   # 或專案
    mkdir -p .trae/skills/
    cp -r /tmp/superpowers/skills/* .trae/skills/
    rm -rf /tmp/superpowers
@@ -246,12 +253,22 @@ Trae 不支援 OpenCode 的 plugin 系統，請手動安裝 Superpowers 的 14 �
 ### 在 Trae 上更新
 
 ```bash
-git clone https://github.com/obra/superpowers.git /tmp/superpowers && cp -r /tmp/superpowers/skills/* .trae/skills/ && rm -rf /tmp/superpowers
+git clone https://github.com/obra/superpowers.git /tmp/superpowers
+
+# 全域
+cp -r /tmp/superpowers/skills/* ~/.agents/skills/
+# 或專案
+cp -r /tmp/superpowers/skills/* .trae/skills/
+
+rm -rf /tmp/superpowers
 ```
 
 ### 在 Trae 上移除
 
 ```bash
+# 全域
+rm -rf ~/.agents/skills/{using-superpowers,brainstorming,systematic-debugging,writing-plans,subagent-driven-development,executing-plans,test-driven-development,requesting-code-review,receiving-code-review,using-git-worktrees,finishing-a-development-branch,dispatching-parallel-agents,verification-before-completion,writing-skills}/
+# 或專案
 rm -rf .trae/skills/{using-superpowers,brainstorming,systematic-debugging,writing-plans,subagent-driven-development,executing-plans,test-driven-development,requesting-code-review,receiving-code-review,using-git-worktrees,finishing-a-development-branch,dispatching-parallel-agents,verification-before-completion,writing-skills}/
 ```
 

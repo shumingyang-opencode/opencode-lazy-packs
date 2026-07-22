@@ -134,21 +134,32 @@ rm -rf ~/.agents/skills/find-skills
 
 ### 在 Trae 上安裝
 
-1. 將本技能放入 `.trae/skills/find-skills/` 目錄：
+1. 選擇安裝層級：
+   - **全域（推薦，所有專案可用）**：`~/.agents/skills/find-skills/`
+   - **專案（僅當前專案）**：`.trae/skills/find-skills/` 或 `.agents/skills/find-skills/`
+
    ```bash
+   # 全域
+   mkdir -p ~/.agents/skills/find-skills/
+   # 或專案
    mkdir -p .trae/skills/find-skills/
    ```
-2. 從本 repo 的 `skills/17-find-skills/SKILL.md` 複製內容到 `.trae/skills/find-skills/SKILL.md`
+2. 從本 repo 的 `skills/17-find-skills/SKILL.md` 複製內容到對應目錄的 `SKILL.md`
 3. 重新載入 Trae（Cmd+R / Ctrl+R）
 4. 對 Trae 說「找一個能幫我寫測試的技能」，確認可載入
 
 ### 在 Trae 上更新
 
-替換 `.trae/skills/find-skills/SKILL.md` 的內容即可。
+替換對應目錄中的 `SKILL.md` 內容即可：
+- 全域：`~/.agents/skills/find-skills/SKILL.md`
+- 專案：`.trae/skills/find-skills/SKILL.md` 或 `.agents/skills/find-skills/SKILL.md`
 
 ### 在 Trae 上移除
 
 ```bash
+# 全域
+rm -rf ~/.agents/skills/find-skills/
+# 或專案
 rm -rf .trae/skills/find-skills/
 ```
 

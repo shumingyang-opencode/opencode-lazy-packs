@@ -1,4 +1,4 @@
-﻿[**English**]() | [**繁体中文**](README.zh-TW.md) | [**简体中文**](README.zh-CN.md)
+[**English**]() | [**繁体中文**](README.zh-TW.md) | [**简体中文**](README.zh-CN.md)
 
 ---
 
@@ -148,7 +148,7 @@ See the template's "Operation Rules" and "Security Rules" for details.
 | Global Config | `~/.config/opencode/opencode.json` | `~/.cursor/mcp.json` |
 | Project Instruction File | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
 | MCP Configuration | Edit opencode.json | Edit `.trae/mcp.json` |
-| Skill Mechanism | Native (SKILL.md) | `.trae/skills/` |
+| Skill Mechanism | Native (SKILL.md) | `.trae/skills/` or `~/.agents/skills/` (global) |
 | Commands | `/` built-in commands | GUI interface |
 
 ---

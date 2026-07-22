@@ -1,4 +1,4 @@
-﻿# OpenCode 懶人包 #14：Awesome DESIGN.md 品牌設計套用
+# OpenCode 懶人包 #14：Awesome DESIGN.md 品牌設計套用
 
 > 版本：v0.1
 > 更新日期：2026-06-21
@@ -151,21 +151,32 @@ rm -rf ~/.config/opencode/skills/awesome-design-md/
 
 ### 在 Trae 上安裝
 
-1. 將本技能放入 `.trae/skills/awesome-design-md/` 目錄：
+1. 選擇安裝層級：
+   - **全域（推薦，所有專案可用）**：`~/.agents/skills/awesome-design-md/`
+   - **專案（僅當前專案）**：`.trae/skills/awesome-design-md/` 或 `.agents/skills/awesome-design-md/`
+
    ```bash
+   # 全域
+   mkdir -p ~/.agents/skills/awesome-design-md/
+   # 或專案
    mkdir -p .trae/skills/awesome-design-md/
    ```
-2. 從本 repo 的 `skills/14-awesome-design-md/SKILL.md` 複製內容到 `.trae/skills/awesome-design-md/SKILL.md`
+2. 從本 repo 的 `skills/14-awesome-design-md/SKILL.md` 複製內容到對應目錄的 `SKILL.md`
 3. 重新載入 Trae（Cmd+R / Ctrl+R）
 4. 對 Trae 說「用 Stripe 的設計」，確認可載入
 
 ### 在 Trae 上更新
 
-替換 `.trae/skills/awesome-design-md/SKILL.md` 的內容即可。
+替換對應目錄中的 `SKILL.md` 內容即可：
+- 全域：`~/.agents/skills/awesome-design-md/SKILL.md`
+- 專案：`.trae/skills/awesome-design-md/SKILL.md` 或 `.agents/skills/awesome-design-md/SKILL.md`
 
 ### 在 Trae 上移除
 
 ```bash
+# 全域
+rm -rf ~/.agents/skills/awesome-design-md/
+# 或專案
 rm -rf .trae/skills/awesome-design-md/
 ```
 

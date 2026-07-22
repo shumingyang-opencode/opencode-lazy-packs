@@ -1,4 +1,4 @@
-﻿---
+---
 name: agents-lazy-packs
 description: Agents 懶人包全集 — 環境建置、MCP 串接、技能安裝，支援 OpenCode、Trae IDE、Codex 等多平台。說「安裝懶人包」「agents 懶人包」「trae 安裝」時載入
 ---
@@ -109,8 +109,13 @@ npx skills add https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs 
 
 ### Trae
 
-- **是** → 將 MCP 設定搬遷到 `~/.cursor/mcp.json` 的 `"mcpServers"` 區塊
-- **否** → 保留在 `.trae/mcp.json`，並告知其他專案如何啟用
+- **是** → 
+  - MCP 設定搬遷到 `~/.cursor/mcp.json` 的 `"mcpServers"` 區塊
+  - Skill 搬遷到 `~/.agents/skills/` 目錄
+- **否** → 
+  - MCP 保留在 `.trae/mcp.json`
+  - Skill 保留在 `.agents/skills/` 或 `.trae/skills/`
+  - 並告知其他專案如何啟用
 
 ### 平台設定路徑速查
 
@@ -119,7 +124,7 @@ npx skills add https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs 
 | 專案 MCP | `opencode.json` 的 `"mcp"` | `.trae/mcp.json` 的 `"mcpServers"` |
 | 全域 MCP | `~/.config/opencode/opencode.json` 的 `"mcp"` | `~/.cursor/mcp.json` 的 `"mcpServers"` |
 | 專案 Skills | `skills/` 目錄 | `.trae/skills/` 或 `.agents/skills/` |
-| 全域 Skills | `~/.config/opencode/skills/` | 無（僅專案層級） |
+| 全域 Skills | `~/.config/opencode/skills/` | `~/.agents/skills/` |
 | 專案規則 | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
 
 ## 補充說明

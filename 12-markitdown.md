@@ -1,4 +1,4 @@
-﻿# OpenCode 懶人包 #12：MarkItDown 文件轉換技能
+# OpenCode 懶人包 #12：MarkItDown 文件轉換技能
 
 > 版本：v0.3
 > 更新日期：2026-07-02
@@ -168,11 +168,17 @@ uv tool uninstall markitdown
 
 ### 在 Trae 上安裝
 
-1. 將本技能放入 `.trae/skills/markitdown/` 目錄：
+1. 選擇安裝層級：
+   - **全域（推薦，所有專案可用）**：`~/.agents/skills/markitdown/`
+   - **專案（僅當前專案）**：`.trae/skills/markitdown/` 或 `.agents/skills/markitdown/`
+
    ```bash
+   # 全域
+   mkdir -p ~/.agents/skills/markitdown/
+   # 或專案
    mkdir -p .trae/skills/markitdown/
    ```
-2. 從本 repo 的 `skills/12-markitdown/SKILL.md` 及 `scripts/convert.py` 複製到 `.trae/skills/markitdown/`
+2. 從本 repo 的 `skills/12-markitdown/SKILL.md` 及 `scripts/convert.py` 複製到對應目錄
 3. 重新載入 Trae（Cmd+R / Ctrl+R）
 4. 對 Trae 說「幫我解析這個檔案」，確認可載入
 
@@ -180,11 +186,16 @@ uv tool uninstall markitdown
 
 ### 在 Trae 上更新
 
-替換 `.trae/skills/markitdown/SKILL.md` 的內容即可。
+替換對應目錄中的 `SKILL.md` 內容即可：
+- 全域：`~/.agents/skills/markitdown/SKILL.md`
+- 專案：`.trae/skills/markitdown/SKILL.md` 或 `.agents/skills/markitdown/SKILL.md`
 
 ### 在 Trae 上移除
 
 ```bash
+# 全域
+rm -rf ~/.agents/skills/markitdown/
+# 或專案
 rm -rf .trae/skills/markitdown/
 ```
 

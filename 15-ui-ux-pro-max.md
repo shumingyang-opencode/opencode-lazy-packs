@@ -174,8 +174,15 @@ rm -rf ~/.config/opencode/skills/slides/
    ```bash
    npx uipr@latest --opencode
    ```
-2. 將主技能放入 `.trae/skills/ui-ux-pro-max/` 目錄：
+2. 選擇安裝層級：
+   - **全域（推薦，所有專案可用）**：`~/.agents/skills/ui-ux-pro-max/`
+   - **專案（僅當前專案）**：`.trae/skills/ui-ux-pro-max/` 或 `.agents/skills/ui-ux-pro-max/`
+
    ```bash
+   # 全域
+   mkdir -p ~/.agents/skills/ui-ux-pro-max/
+   cp -r ~/.config/opencode/skills/ui-ux-pro-max/* ~/.agents/skills/ui-ux-pro-max/
+   # 或專案
    mkdir -p .trae/skills/ui-ux-pro-max/
    cp -r ~/.config/opencode/skills/ui-ux-pro-max/* .trae/skills/ui-ux-pro-max/
    ```
@@ -184,11 +191,16 @@ rm -rf ~/.config/opencode/skills/slides/
 
 ### 在 Trae 上更新
 
-重新執行 `npx uipr@latest --opencode`，再將更新的檔案複製到 `.trae/skills/ui-ux-pro-max/`。
+重新執行 `npx uipr@latest --opencode`，再將更新的檔案複製到對應目錄：
+- 全域：`~/.agents/skills/ui-ux-pro-max/`
+- 專案：`.trae/skills/ui-ux-pro-max/` 或 `.agents/skills/ui-ux-pro-max/`
 
 ### 在 Trae 上移除
 
 ```bash
+# 全域
+rm -rf ~/.agents/skills/ui-ux-pro-max/
+# 或專案
 rm -rf .trae/skills/ui-ux-pro-max/
 ```
 
