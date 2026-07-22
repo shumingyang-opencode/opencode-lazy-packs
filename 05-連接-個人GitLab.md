@@ -1,7 +1,7 @@
 # OpenCode 懶人包 #05：連接個人 GitLab
 
-> 版本：v0.2
-> 更新日期：2026-06-18
+> 版本：v0.4
+> 更新日期：2026-07-22
 
 ---
 
@@ -13,7 +13,6 @@
 - 設定 Git remote 使用 HTTPS
 - clone 與推拉操作
 - 處理防火牆限制（SSH 被封鎖，改走 HTTPS）
-- 建立 repo 後邀請協作者（Shuming-Yang、Steven-Yang）
 
 ---
 
@@ -56,72 +55,42 @@ git --version
 
 ---
 
-### 步驟二：檢查是否已有 GitLab 設定
-
-查看目前 Git 全域設定中的 credential helper：
-
-**Windows：**
-```bash
-git config --global credential.helper
-```
-預設為 `manager`（Windows Credential Manager）。
-
-**macOS：**
-```bash
-git config --global credential.helper
-```
-預設為 `osxkeychain`。
-
-如果未設定，請設定：
-```bash
-git config --global credential.helper <helper>
-```
-
----
-
-### 步驟三：建立 Personal Access Token
+### 步驟二：建立 Personal Access Token
 
 請使用者手動操作（PAT 無法從 CLI 自動建立）：
 1. 瀏覽器開啟 `https://gitlab.com/-/user_settings/personal_access_tokens`
 2. 登入帳號 `<GITLAB_PERSONAL_USERNAME>`
 3. 填寫：
    - **Token name**：`opencode-local`
-   - **Expiration date**：自選（建議不留空，設 1 年後）
+   - **Expiration date**：自選（建議設 1 年後）
    - **Scopes**：勾選 `read_repository`、`write_repository`
 4. 點 **Create personal access token**
 5. **立即複製**產生的 token（離開頁面後無法再看到）
 
 ---
 
-### 步驟四：設定 Git credential 儲存 PAT
+### 步驟三：設定 Git credential 儲存 PAT
 
-將 PAT 存入 Git credential helper：
+將 PAT 存入獨立的 credential 檔案（與公司 GitLab 分開管理）：
 
 **Windows（PowerShell）：**
-```powershell
-git credential-manager reject https://gitlab.com
-```
-
-然後第一次 push/clone 時會跳出對話框，使用者名稱填 `<GITLAB_PERSONAL_USERNAME>`，密碼填 PAT。
-
-或者直接寫入 credential store：
-
 ```powershell
 Set-Content -Path "$env:USERPROFILE\.git-credentials-gitlab-com" -Value "https://<GITLAB_PERSONAL_USERNAME>:<PAT>@gitlab.com"
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-com"
 ```
 
-> ⚠️ 確認將 `<PAT>` 替換為步驟三複製的 token。
-
 **macOS：**
 ```bash
 echo "https://<GITLAB_PERSONAL_USERNAME>:<PAT>@gitlab.com" > ~/.git-credentials-gitlab-com
+chmod 600 ~/.git-credentials-gitlab-com
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-com"
 ```
 
+> ⚠️ 確認將 `<PAT>` 替換為步驟二複製的 token。
+
 ---
 
-### 步驟五：驗證連線
+### 步驟四：驗證連線
 
 ```bash
 git ls-remote https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/agents-lazy-packs.git
@@ -133,11 +102,11 @@ git ls-remote https://gitlab.com/<GITLAB_PERSONAL_USERNAME>/agents-lazy-packs.gi
 ```
 remote: HTTP Basic: Access denied
 ```
-表示 PAT 無效或權限不足，請回到步驟三重建 PAT。
+表示 PAT 無效或權限不足，請回到步驟二重建 PAT。
 
 ---
 
-### 步驟六：clone 測試專案
+### 步驟五：clone 測試專案
 
 ```bash
 mkdir -p ~/Documents/gitlab-personal
@@ -148,32 +117,12 @@ cd agents-lazy-packs
 
 ---
 
-### 步驟七：設定本機 Git 使用者（若尚未設定）
+### 步驟六：設定本機 Git 使用者（若尚未設定）
 
 ```bash
 git config --global user.name "<GITLAB_PERSONAL_USERNAME>"
 git config --global user.email "<YOUR_EMAIL>"
 ```
-
----
-
-### 步驟八：將協作者加入新建立的 repo
-
-每次用 OpenCode 在 GitLab.com 建立 repo 後，務必透過 GitLab API 加入協作者（最高權限）：
-
-```bash
-curl -s -X POST -H "PRIVATE-TOKEN: <PAT>" \
-  "https://gitlab.com/api/v4/projects/<owner>%2F<repo>/members" \
-  -d "user_id=<使用者ID>&access_level=50"
-```
-
-因 GitLab API 需要使用者 ID，請在 GitLab 網頁上操作：
-1. 前往 repo → **Settings** → **Members**
-2. 邀請 `<COLLABORATOR_1>`、`<COLLABORATOR_2>`，角色設 **Owner** 或 **Maintainer**
-
-> 替代方案：使用 GitLab 網頁新增協作者最為直觀。
-
-在完成回報中也應明確列出已加入的協作者清單。
 
 ---
 
@@ -198,11 +147,10 @@ git push
 ## 個人 GitLab 連接完成
 
 - Git 版本：（版本號）
-- credential helper：manager / osxkeychain / store
+- credential helper：store（~/.git-credentials-gitlab-com）
 - PAT：已產生 / 未產生
 - 遠端驗證（git ls-remote）：成功 / 失敗
 - clone 測試：成功 / 未執行
-- 協作者（<COLLABORATOR_1>、<COLLABORATOR_2>）：已加入 / 未加入
 - 本機目錄：（路徑）
 ```
 
@@ -212,7 +160,7 @@ git push
 
 | 問題 | 平台 | 解法 |
 |------|------|------|
-| `fatal: Authentication failed` | 通用 | PAT 過期或無效，回步驟三重建 |
+| `fatal: Authentication failed` | 通用 | PAT 過期或無效，回步驟二重建 |
 | `could not read Password for 'https://gitlab.com'` | 通用 | credential helper 未設定，或 store 檔案遺失 |
 | `remote: HTTP Basic: Access denied` | 通用 | PAT scope 缺少 `write_repository` |
 | `ssh: connect to host gitlab.com port 22: Connection timed out` | 通用 | 防火牆封鎖 SSH，請改用 HTTPS 協定 |
@@ -244,9 +192,11 @@ git push
 ### 還原設定
 
 ```bash
-# 移除自訂的 credential helper
-git config --global --unset credential.helper
+# 移除個人 GitLab 的 credential 檔案
 rm -f ~/.git-credentials-gitlab-com
+
+# 若不再使用任何 Git credential store（含公司 GitLab），才執行下列指令：
+# git config --global --unset credential.helper
 ```
 
 ---
@@ -274,5 +224,7 @@ rm -f ~/.git-credentials-gitlab-com
 
 | 日期 | 版本 | 更新內容 |
 |------|------|---------|
+| 2026-07-22 | v0.4 | 移除協作者設定步驟（已手動完成，不再自動化） |
+| 2026-07-22 | v0.3 | 統一使用明文 store credential；步驟重新編號；解除安裝改為精確移除 |
 | 2026-06-18 | v0.2 | 加入建立 repo 後邀請協作者的步驟 |
 | 2026-06-18 | v0.1 | 初版 |

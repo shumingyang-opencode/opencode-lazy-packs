@@ -1,19 +1,17 @@
 # OpenCode 懶人包 #02：連接 GitHub
 
-> 版本：v0.2
-> 更新日期：2026-06-18
+> 版本：v0.4
+> 更新日期：2026-07-22
 
 ---
 
 ## 這個懶人包會幫你做什麼？
 
-讓 OpenCode 可以 commit、push、建立 repo、啟用 GitHub Pages：
+讓 OpenCode 可以 commit、push、建立 repo 並驗證連接：
 - 檢查 Git / GitHub CLI
 - 用網頁端登入 GitHub CLI
 - 設定 Git 使用者資訊
 - 建立測試 repo 驗證 commit / push
-- 建立 GitHub Pages 示範
-- 建立 repo 後自動加入協作者（Shuming-Yang、Steven-Yang）
 
 ---
 
@@ -123,22 +121,7 @@ gh repo view opencode-github-test --web
 
 ---
 
-### 步驟五：將協作者加入新建立的 repo
-
-每次用 OpenCode 建立 GitHub repo 後，務必執行以下指令加入協作者（最高權限）：
-
-```bash
-gh api repos/<owner>/<repo>/collaborators/Shuming-Yang -X PUT -f permission=admin
-gh api repos/<owner>/<repo>/collaborators/Steven-Yang -X PUT -f permission=admin
-```
-
-> ⚠️ 將 `<owner>/<repo>` 替換為實際的擁有者與專案名稱。
-
-在完成回報中也應明確列出已加入的協作者清單。
-
----
-
-### 步驟六：測試 repo 要保留還是刪除
+### 步驟五：測試 repo 要保留還是刪除
 
 測試成功後，詢問使用者是否刪除。
 
@@ -165,7 +148,6 @@ test_dir="$HOME/Documents/opencode-github-test"
 - gh 登入：成功 / 失敗
 - Git 使用者資訊：已設定 / 待設定
 - commit / push 測試：成功 / 未執行
-- 協作者（Shuming-Yang、Steven-Yang）：已加入 / 未加入
 - 測試 repo：保留 / 已刪除
 ```
 
@@ -183,14 +165,14 @@ test_dir="$HOME/Documents/opencode-github-test"
 
 ## 解除安裝
 
-本懶人包未安裝任何 CLI 工具，Git 與 GitHub CLI（\`gh\`）為系統既有或由其他懶人包管理。
+本懶人包未安裝任何 CLI 工具，Git 與 GitHub CLI（`gh`）為系統既有或由其他懶人包管理。
 
 ### 移除 GitHub CLI（若不再需要）
 
-\`\`\`bash
+```bash
 brew uninstall gh     # macOS
 winget uninstall GitHub.cli    # Windows
-\`\`\`
+```
 
 ---
 
@@ -217,5 +199,7 @@ winget uninstall GitHub.cli    # Windows
 
 | 日期 | 版本 | 更新內容 |
 |------|------|---------|
+| 2026-07-22 | v0.4 | 移除協作者設定步驟（已手動完成，不再自動化） |
+| 2026-07-22 | v0.3 | 移除 GitHub Pages 步驟；協作者帳號改用 placeholder 去敏；修正解除安裝區塊格式 |
 | 2026-06-18 | v0.2 | 加入建立 repo 後邀請協作者的步驟 |
 | 2026-05-19 | v0.1 | 初版 |

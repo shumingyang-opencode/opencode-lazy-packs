@@ -1,4 +1,4 @@
-﻿---
+---
 name: gitlab-personal
 description: 連接個人 GitLab.com 帳號。說「連接個人 GitLab」「設定 GitLab.com」時載入。
 ---
@@ -15,6 +15,7 @@ description: 連接個人 GitLab.com 帳號。說「連接個人 GitLab」「設
 ### 2. 設定 credential helper
 ```bash
 echo "https://<GITLAB_PERSONAL_USERNAME>:<PAT>@gitlab.com" > ~/.git-credentials-gitlab-com
+chmod 600 ~/.git-credentials-gitlab-com
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-com"
 ```
 

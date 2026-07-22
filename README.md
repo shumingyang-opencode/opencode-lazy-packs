@@ -123,7 +123,7 @@ Some packs have a built-in "read account info" step that can use this file:
 |------|------------|
 | #02 Connect GitHub | GitHub username |
 | #03 Connect Company SVN | SVN URL, login |
-| #04 Connect Company GitLab | GitLab URL, SSH settings |
+| #04 Connect Company GitLab | GitLab URL, PAT credential |
 | #05 Connect Personal GitLab | GitLab URL, auth method |
 | #06 Connect Obsidian | Vault root path |
 | #20 JIRA & Confluence | JIRA / Confluence URL |
@@ -168,10 +168,10 @@ See the template's "Operation Rules" and "Security Rules" for details.
 |---|------|------|---------|-------------|---------|
 | 00 | [Environment Setup](00-環境建置.md) | CLI | v0.3 | OpenCode + Node.js + uv basic env setup | ✅ |
 | 01 | [Connect NotebookLM](01-連接-NotebookLM.md) | MCP | v0.2 | NotebookLM MCP - AI presentations, audio, reports | ✅ |
-| 02 | [Connect GitHub](02-連接-GitHub.md) | MCP | v0.2 | GitHub CLI auth + GitHub Pages publishing | ✅ |
+| 02 | [Connect GitHub](02-連接-GitHub.md) | MCP | v0.4 | GitHub CLI auth + repo commit/push verification | ✅ |
 | 03 | [Connect Company SVN](03-連接-公司SVN.md) | MCP | v0.2 | <COMPANY_NAME> internal SVN server setup | ✅ |
-| 04 | [Connect Company GitLab](04-連接-公司GitLab.md) | MCP | v0.1 | Connect via SSH key to internal GitLab | ✅ |
-| 05 | [Connect Personal GitLab](05-連接-個人GitLab.md) | MCP | v0.2 | Connect via HTTPS + PAT to GitLab.com | ✅ |
+| 04 | [Connect Company GitLab](04-連接-公司GitLab.md) | MCP | v0.2 | Connect via HTTPS + PAT to internal GitLab | ✅ |
+| 05 | [Connect Personal GitLab](05-連接-個人GitLab.md) | MCP | v0.4 | Connect via HTTPS + PAT to GitLab.com | ✅ |
 | 06 | [Connect Obsidian](06-建立第二大腦-Obsidian.md) | MCP | v0.3 | Obsidian MCP Vault - notes, search, management | ✅ |
 | 07 | [Second Brain Setup Guide](07-第二大腦設定指南.md) | Tutorial | v0.2 | Obsidian 3-layer dir structure + templates | — |
 | 08 | [Connect Firebase](08-連接-Firebase.md) | MCP | v0.1 | Firebase MCP - project management, database, deploy | ✅ |
