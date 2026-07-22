@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env pwsh
+#!/usr/bin/env pwsh
 <#
 .SYNOPSIS
     Sync main branch to GitHub (origin), removing company-sensitive info.
@@ -72,6 +72,10 @@ try {
 
         # Fix Source link for GitHub (repo transferred to mathruffian-dot)
         $content = $content -replace '- \*\*.*?\*\*.*?shumingyang-opencode/opencode-lazy-packs.*', '- **Source**: https://github.com/mathruffian-dot/opencode-lazy-packs'
+
+        # Step 3: Replace install/usage URLs with GitHub URL (so users can copy-paste directly)
+        # Keep other company info (jira, confluence, svn, etc.) as placeholders
+        $content = $content -replace 'https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs', 'https://github.com/shumingyang-opencode/opencode-lazy-packs'
 
         if ($content -ne $original) {
             [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.UTF8Encoding]::new($true))

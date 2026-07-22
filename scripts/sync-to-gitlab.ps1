@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env pwsh
+#!/usr/bin/env pwsh
 <#
 .SYNOPSIS
     Sync main branch to GitLab, removing items 01/08/11 (GitHub-only packs).
@@ -82,6 +82,25 @@ try {
     $lines = $lines -replace '^\| 08 \| .+$', '| ~~08~~ | ~~连接 Firebase~~ | ~~MCP~~ | ~~v0.1~~ | ~~Firebase MCP 安装：项目管理、数据库、部署~~ | ~~已移除~~ |'
     $lines = $lines -replace '^\| 11 \| .+$', '| ~~11~~ | ~~生图技能~~ | ~~Skill~~ | ~~v0.3~~ | ~~draw skill：OpenAI gpt-image-2 生成示意图与插画~~ | ~~已移除~~ |'
     Set-Content $zc $lines -Encoding UTF8
+
+    # --- Replace install/usage URLs with actual GitLab URL (so users can copy-paste directly) ---
+    Write-Host "Replacing install URLs with GitLab URL..." -ForegroundColor Yellow
+
+    $allFiles = Get-ChildItem $tmpDir -File -Recurse -Include "*.md" |
+        Where-Object { $_.FullName -notmatch '\\.git\\' -and $_.FullName -notmatch 'node_modules\\' }
+
+    foreach ($file in $allFiles) {
+        $content = Get-Content $file.FullName -Raw -Encoding UTF8
+        $original = $content
+
+        # Replace placeholders with actual GitLab URL for install/usage commands
+        $content = $content -replace 'https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/agents-lazy-packs', 'https://gitlab.ovt.com:8081/steven.yang/agents-lazy-packs'
+
+        if ($content -ne $original) {
+            [System.IO.File]::WriteAllText($file.FullName, $content, [System.Text.UTF8Encoding]::new($true))
+            Write-Host "  Patched: $($file.FullName.Substring($tmpDir.Length + 1))" -ForegroundColor DarkGray
+        }
+    }
 
     # Let git detect all changes
     git -C $tmpDir add --update .
