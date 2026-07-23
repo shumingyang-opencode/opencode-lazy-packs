@@ -28,7 +28,7 @@ git config --global credential.helper "store --file ~/.git-credentials-gitlab-ov
 
 ### 3. 驗證
 ```bash
-git ls-remote https://<COMPANY_GITLAB_URL>/steven.yang/your-project.git
+git ls-remote https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/your-project.git
 ```
 
 ## 日常操作
