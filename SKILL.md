@@ -25,17 +25,14 @@ description: Agents 懶人包全集 — 環境建置、MCP 串接、技能安裝
 | 編號 | Skill 名稱 | 說明 | 前置需求 |
 |------|-----------|------|---------|
 | 00 | `00-env-setup` | 安裝 Node.js、OpenCode、uv | 無 |
-| 01 | `01-notebooklm` | 連接 NotebookLM MCP | #00 |
 | 02 | `02-github` | 連接 GitHub CLI + 驗證 push | #00 |
 | 03 | `03-svn` | 連接公司 SVN | 公司內網 |
 | 04 | `04-gitlab-internal` | 連接公司 GitLab（SSH） | 公司內網 |
 | 05 | `05-gitlab-personal` | 連接個人 GitLab（HTTPS+PAT） | GitLab 帳號 |
 | 06 | `06-obsidian` | 連接 Obsidian MCPVault | 有 Obsidian vault |
 | 07 | `07-second-brain` | 建立第二大腦三層結構 | Obsidian |
-| 08 | `08-firebase` | 連接 Firebase MCP | #00 |
 | 09 | `09-browser` | 安裝 Playwright + open-computer-use | #00 |
 | 10 | `10-workflow-skills` | 安裝開工/收工/初始化技能 | Obsidian |
-| 11 | `11-draw` | 安裝 AI 生圖技能（OpenAI gpt-image-2） | OpenAI API Key |
 | 12 | `12-markitdown` | 安裝 MarkItDown 文件轉換技能 | #00 |
 | 13 | `13-graphify` | 安裝 Graphify 知識圖譜技能 | #00 + uv |
 | 14 | `14-awesome-design-md` | 安裝 Awesome DESIGN.md 品牌設計技能 | #00 |

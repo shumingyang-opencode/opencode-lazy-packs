@@ -164,17 +164,17 @@ PAT / Token **不要**写入此文件。它们应存放于对应平台的配置�
 | 编号 | 名称 | 类型 | 版本 | 说明 | 支持状态 |
 |------|------|------|------|------|---------|
 | 00 | [环境建置](00-環境建置.md) | CLI | v0.3 | OpenCode + Node.js + uv 基础环境安装 | ✅ |
-| 01 | [连接 NotebookLM](01-連接-NotebookLM.md) | MCP | v0.2 | NotebookLM MCP 安装与连線：AI 生成简报、图表、音讯、报告 | ✅ |
+| ~~01~~ | ~~连接 NotebookLM~~ | ~~MCP~~ | ~~v0.2~~ | ~~NotebookLM MCP 安装与连線：AI 生成简报、图表、音讯、报告~~ | ~~已移除~~ |
 | 02 | [连接 GitHub](02-連接-GitHub.md) | MCP | v0.4 | GitHub CLI 登录认证 + repo commit/push 验证 | ✅ |
 | 03 | [连接公司 SVN](03-連接-公司SVN.md) | MCP | v0.2 | <COMPANY_NAME> 内部 SVN 服务器连線设定 | ✅ |
 | 04 | [连接公司 GitLab](04-連接-公司GitLab.md) | MCP | v0.2 | 透过 HTTPS + PAT 连接内部 GitLab | ✅ |
 | 05 | [连接个人 GitLab](05-連接-個人GitLab.md) | MCP | v0.4 | 透过 HTTPS + PAT 连接 GitLab.com 账号 | ✅ |
 | 06 | [建立第二大脑 Obsidian](06-建立第二大腦-Obsidian.md) | MCP | v0.3 | Obsidian MCP Vault 连接：笔记建立、搜索、管理 | ✅ |
 | 07 | [第二大脑设定指南](07-第二大腦設定指南.md) | 教学 | v0.2 | Obsidian 三层目录结构 + AGENTS.md 规则 + 笔记模板 | — |
-| 08 | [连接 Firebase](08-連接-Firebase.md) | MCP | v0.1 | Firebase MCP 安装：项目管理、数据库、部署 | ✅ |
+| ~~08~~ | ~~连接 Firebase~~ | ~~MCP~~ | ~~v0.1~~ | ~~Firebase MCP 安装：项目管理、数据库、部署~~ | ~~已移除~~ |
 | 09 | [安装浏览器控制](09-安裝瀏覽器控制.md) | MCP | v0.3 | Playwright MCP + macOS 桌面 UI 自动化操作 | ✅ |
 | 10 | [开工/收工/初始化技能](10-開工收工初始化技能.md) | Skill | v0.1 | 全域三技能：startup（开工自动同步）、shutdown（收工备份）、project-init（新项目初始化） | ✅ |
-| 11 | [生图技能](11-生圖.md) | Skill | v0.3 | draw skill：OpenAI gpt-image-2 生成示意图与插画 | ✅ |
+| ~~11~~ | ~~生图技能~~ | ~~Skill~~ | ~~v0.3~~ | ~~draw skill：OpenAI gpt-image-2 生成示意图与插画~~ | ~~已移除~~ |
 | 12 | [MarkItDown 文件转换](12-markitdown.md) | Skill | v0.3 | 各种文件自动转 Markdown：PDF/Office/CSV/JSON/图片/音讯/Email/EPUB | ✅ |
 | 13 | [Graphify 知识图谱](13-graphify.md) | Skill | v0.1 | 代码知识图谱引擎：自然语言查询取代 grep，跨文件结构分析 | ✅ |
 | 14 | [Awesome DESIGN.md 品牌设计](14-awesome-design-md.md) | Skill | v0.1 | 一键套用 73 个真实品牌 DESIGN.md（Stripe、Vercel、Apple 等） | ✅ |

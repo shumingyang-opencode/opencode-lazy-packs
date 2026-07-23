@@ -39,17 +39,17 @@ Available skill names:
 | Skill Name | Corresponding Pack |
 |------------|-------------------|
 | `00-env-setup` | Environment Setup |
-| `01-notebooklm` | Connect NotebookLM |
+| ~~01-notebooklm~~ | ~~Connect NotebookLM~~ |
 | `02-github` | Connect GitHub |
 | `03-svn` | Connect Company SVN |
 | `04-gitlab-internal` | Connect Company GitLab |
 | `05-gitlab-personal` | Connect Personal GitLab |
 | `06-obsidian` | Connect Obsidian |
 | `07-second-brain` | Second Brain Setup |
-| `08-firebase` | Connect Firebase |
+| ~~08-firebase~~ | ~~Connect Firebase~~ |
 | `09-browser` | Browser Control |
 | `10-workflow-skills` | Start/Shutdown Workflow Skills |
-| `11-draw` | Draw Skill (OpenAI gpt-image-2) |
+| ~~11-draw~~ | ~~Draw Skill (OpenAI gpt-image-2)~~ |
 | `12-markitdown` | Document Conversion (MarkItDown) |
 | `13-graphify` | Knowledge Graph (Graphify) |
 | `14-awesome-design-md` | Brand Design (Awesome DESIGN.md) |
@@ -167,17 +167,17 @@ See the template's "Operation Rules" and "Security Rules" for details.
 | # | Name | Type | Version | Description | Support |
 |---|------|------|---------|-------------|---------|
 | 00 | [Environment Setup](00-環境建置.md) | CLI | v0.3 | OpenCode + Node.js + uv basic env setup | ✅ |
-| 01 | [Connect NotebookLM](01-連接-NotebookLM.md) | MCP | v0.2 | NotebookLM MCP - AI presentations, audio, reports | ✅ |
+| ~~01~~ | ~~Connect NotebookLM~~ | ~~MCP~~ | ~~v0.2~~ | ~~NotebookLM MCP - AI presentations, audio, reports~~ | ~~Removed~~ |
 | 02 | [Connect GitHub](02-連接-GitHub.md) | MCP | v0.4 | GitHub CLI auth + repo commit/push verification | ✅ |
 | 03 | [Connect Company SVN](03-連接-公司SVN.md) | MCP | v0.2 | <COMPANY_NAME> internal SVN server setup | ✅ |
 | 04 | [Connect Company GitLab](04-連接-公司GitLab.md) | MCP | v0.2 | Connect via HTTPS + PAT to internal GitLab | ✅ |
 | 05 | [Connect Personal GitLab](05-連接-個人GitLab.md) | MCP | v0.4 | Connect via HTTPS + PAT to GitLab.com | ✅ |
 | 06 | [Connect Obsidian](06-建立第二大腦-Obsidian.md) | MCP | v0.3 | Obsidian MCP Vault - notes, search, management | ✅ |
 | 07 | [Second Brain Setup Guide](07-第二大腦設定指南.md) | Tutorial | v0.2 | Obsidian 3-layer dir structure + templates | — |
-| 08 | [Connect Firebase](08-連接-Firebase.md) | MCP | v0.1 | Firebase MCP - project management, database, deploy | ✅ |
+| ~~08~~ | ~~Connect Firebase~~ | ~~MCP~~ | ~~v0.1~~ | ~~Firebase MCP - project management, database, deploy~~ | ~~Removed~~ |
 | 09 | [Install Browser Control](09-安裝瀏覽器控制.md) | MCP | v0.3 | Playwright MCP + macOS desktop UI automation | ✅ |
 | 10 | [Start/Shutdown/Init Skills](10-開工收工初始化技能.md) | Skill | v0.3 | 3 global skills + weekly-report extension: startup (multi-session), shutdown (structured log), project-init, weekly-report | ✅ |
-| 11 | [Draw Skill](11-生圖.md) | Skill | v0.3 | draw skill: OpenAI gpt-image-2 image generation | ✅ |
+| ~~11~~ | ~~Draw Skill~~ | ~~Skill~~ | ~~v0.3~~ | ~~draw skill: OpenAI gpt-image-2 image generation~~ | ~~Removed~~ |
 | 12 | [MarkItDown Document Convert](12-markitdown.md) | Skill | v0.3 | Auto-convert PDF/Office/CSV/JSON/Image/Audio to MD | ✅ |
 | 13 | [Graphify Knowledge Graph](13-graphify.md) | Skill | v0.1 | Code knowledge graph engine - NL queries replace grep | ✅ |
 | 14 | [Awesome DESIGN.md Brand Design](14-awesome-design-md.md) | Skill | v0.1 | One-click apply 73 real brand DESIGN.md files | ✅ |

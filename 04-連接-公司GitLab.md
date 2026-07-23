@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #04：連接公司 GitLab
+﻿# OpenCode 懶人包 #04：連接公司 GitLab
 
 > 版本：v0.2
 > 更新日期：2026-07-22
@@ -23,7 +23,7 @@
 |------|------|
 | 伺服器網址 | `https://<COMPANY_GITLAB_URL>` |
 | 協定 | HTTPS（使用 PAT 認證） |
-| Git remote 格式 | `https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/<專案>.git` |
+| Git remote 格式 | `https://<COMPANY_GITLAB_URL>/steven.yang/<專案>.git` |
 | 使用者名稱 | `<GITLAB_USERNAME>` |
 | Credential 檔案 | `~/.git-credentials-gitlab-ovt` |
 
@@ -107,7 +107,7 @@ git config --global credential.helper "store --file ~/.git-credentials-gitlab-ov
 ### 步驟四：驗證連線
 
 ```bash
-git ls-remote https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/your-project.git
+git ls-remote https://<COMPANY_GITLAB_URL>/steven.yang/your-project.git
 ```
 
 預期看到類似輸出（包含 commit hash 和 ref 列表）。
@@ -129,7 +129,7 @@ cd ~/Documents/gitlab-projects
 
 clone 一個測試專案（請使用者提供專案 HTTPS URL，或使用已知專案）：
 ```bash
-git clone https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/your-project.git
+git clone https://<COMPANY_GITLAB_URL>/steven.yang/your-project.git
 cd your-project
 ```
 
@@ -195,7 +195,7 @@ git push              # 推送
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-ovt"
 
 # 驗證連線
-git ls-remote https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/your-project.git
+git ls-remote https://<COMPANY_GITLAB_URL>/steven.yang/your-project.git
 
 # 日常
 git clone https://<COMPANY_GITLAB_URL>/<群組>/<專案>.git

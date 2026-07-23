@@ -1,4 +1,4 @@
----
+﻿---
 name: gitlab-internal
 description: 連接公司內部 GitLab 伺服器。說「連接公司 GitLab」「設定內部 GitLab」時載入。
 ---
@@ -28,7 +28,7 @@ git config --global credential.helper "store --file ~/.git-credentials-gitlab-ov
 
 ### 3. 驗證
 ```bash
-git ls-remote https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/your-project.git
+git ls-remote https://<COMPANY_GITLAB_URL>/steven.yang/your-project.git
 ```
 
 ## 日常操作
