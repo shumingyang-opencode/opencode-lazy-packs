@@ -37,7 +37,7 @@ npm install -g @bitbonsai/mcpvault
 ### 5. 安裝 kepano/obsidian-skills
 由 Obsidian 創辦人開發，提供 5 個進階技能：
 ```bash
-git clone https://github.com/kepano/obsidian-skills.git ~/.opencode/skills/obsidian-skills
+git clone https://github.com/kepano/obsidian-skills.git ~/.agents/skills/obsidian-skills
 ```
 重啟 OpenCode 後確認 5 個技能已載入。
 

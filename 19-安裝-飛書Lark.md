@@ -36,7 +36,7 @@
 npx skills add joe960913/feishu-inout
 ```
 
-> ⚠️ **路徑注意**：feishu-inout 的說明文件預設使用 `~/.claude/skills/`（Claude Code 路徑），OpenCode 會安裝在 `~/.agents/skills/` 或 `~/.agents/skills/` 下。安裝後請用以下指令找到實際路徑：
+> ⚠️ **路徑注意**：feishu-inout 的說明文件預設使用 `~/.claude/skills/`（Claude Code 路徑），OpenCode 會安裝在 `~/.agents/skills/`（全域）或 `.agents/skills/`（專案）下。安裝後請用以下指令找到實際路徑：
 >
 > **Windows (PowerShell)：**
 > ```powershell
@@ -45,7 +45,7 @@ npx skills add joe960913/feishu-inout
 >
 > **macOS / Linux：**
 > ```bash
-> find ~/.agents/skills ~/.agents/skills ~/.claude/skills -name "feishu_mcp.py" 2>/dev/null | head -1
+> find ~/.agents/skills ~/.config/opencode/skills ~/.claude/skills -name "feishu_mcp.py" 2>/dev/null | head -1
 > ```
 
 ### 步驟二：透過瀏覽器建立飛書應用

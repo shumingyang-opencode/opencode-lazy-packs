@@ -152,10 +152,10 @@ which mcpvault
 
 ```bash
 # 複製到 OpenCode 技能目錄
-git clone https://github.com/kepano/obsidian-skills.git ~/.opencode/skills/obsidian-skills
+git clone https://github.com/kepano/obsidian-skills.git ~/.agents/skills/obsidian-skills
 ```
 
-OpenCode 會自動掃描 `~/.opencode/skills/` 下的所有 SKILL.md，不需額外設定。
+OpenCode 會自動掃描 `~/.agents/skills/` 下的所有 SKILL.md，不需額外設定。
 
 驗證安裝：
 
