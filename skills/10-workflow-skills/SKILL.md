@@ -18,7 +18,7 @@ mkdir -p ~/.agents/skills/project-init
 
 ### 2. 建立三個 SKILL.md
 - **startup**：說「開工」→ 判斷當前專案 + 讀 Obsidian session 紀錄 + 檢查 Git
-- **shutdown**：說「收工」→ Git commit/push + 補結構化 session 區塊（討論/問題/解決/下一步）至 Obsidian
+- **shutdown**：說「收工」→ Git commit/push + 補結構化 session 區塊（討論/問題/解決/下一步）至 Obsidian + 待辦事項彙整分析
 - **project-init**：說「初始化專案」→ AGENTS.md + Git + GitHub + Obsidian → 可選接續功能規劃
 
 （完整內容見 [懶人包 #10：開工收工初始化技能](../../10-開工收工初始化技能.md) 步驟二至步驟四）
