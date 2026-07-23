@@ -88,7 +88,7 @@ If you use **Trae IDE**, each pack has a `## Trae 對應操作` section at the e
 # }
 ```
 
-> For global MCP settings, edit `~/.cursor/mcp.json` (compatible with Cursor).
+> For global MCP settings, edit `%APPDATA%\Trae\User\mcp.json` (compatible with Cursor).
 
 ### Method 4: Manual Download (MD Files)
 
@@ -134,7 +134,7 @@ Some packs have a built-in "read account info" step that can use this file:
 PAT / Tokens should **NOT** be written to this file. Store them in your platform config:
 
 - **OpenCode**: `~/.config/opencode/opencode.json` MCP environment variables
-- **Trae IDE**: `.trae/mcp.json` or `~/.cursor/mcp.json` env block
+- **Trae IDE**: `.trae/mcp.json` or `%APPDATA%\Trae\User\mcp.json` env block
 
 See the template's "Operation Rules" and "Security Rules" for details.
 
@@ -145,7 +145,7 @@ See the template's "Operation Rules" and "Security Rules" for details.
 | Item | OpenCode | Trae IDE |
 |------|----------|----------|
 | Install | `npm install -g opencode-ai` | Download from trae.ai |
-| Global Config | `~/.config/opencode/opencode.json` | `~/.cursor/mcp.json` |
+| Global Config | `~/.config/opencode/opencode.json` | `%APPDATA%\Trae\User\mcp.json` |
 | Project Instruction File | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
 | MCP Configuration | Edit opencode.json | Edit `.trae/mcp.json` |
 | Skill Mechanism | `.agents/skills/` or `~/.agents/skills/` (global) | `.agents/skills/` or `~/.agents/skills/` (global) |

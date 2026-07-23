@@ -257,24 +257,27 @@ pip uninstall notebooklm-mcp-cli
 
 ### 在 Trae 上安裝（專案層級）
 
+> **重要**：安裝前必須請使用者提供以下資訊（不可使用佔位符）：
+> - `command` — `nlm` 的完整路徑（透過 `where nlm.exe` 或 `which nlm` 查詢）
+
 編輯 `.trae/mcp.json`（若無則建立），在 `"mcpServers"` 區塊加入：
 
 ```json
 {
   "mcpServers": {
     "notebooklm": {
-      "command": "<nlm完整路徑>",
+      "command": "<請使用者提供 nlm 完整路徑>",
       "args": ["--transport", "stdio"]
     }
   }
 }
 ```
 
-> ⚠️ `command` 需使用 `which nlm` 查到的完整路徑，詳見步驟四的「路徑陷阱」說明。
+> ⚠️ `command` 需使用 `where nlm.exe` 查到的完整路徑，詳見步驟四的「路徑陷阱」說明。
 
 ### 在 Trae 上安裝（全域）
 
-編輯 `~/.cursor/mcp.json`，在 `"mcpServers"` 區塊加入相同設定。
+編輯 `%APPDATA%\Trae\User\mcp.json`，在 `"mcpServers"` 區塊加入相同設定。
 
 ### 在 Trae 上更新
 
@@ -283,7 +286,7 @@ pip uninstall notebooklm-mcp-cli
 ### 在 Trae 上移除
 
 - **專案**：從 `.trae/mcp.json` 的 `"mcpServers"` 移除 `notebooklm` 區塊
-- **全域**：從 `~/.cursor/mcp.json` 的 `"mcpServers"` 移除 `notebooklm` 區塊
+- **全域**：從 `%APPDATA%\Trae\User\mcp.json` 的 `"mcpServers"` 移除 `notebooklm` 區塊
 
 > CLI 工具的安裝/更新/移除方式與 OpenCode 相同，無需額外步驟。
 

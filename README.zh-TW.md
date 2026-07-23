@@ -85,7 +85,7 @@ npx skills add https://github.com/shumingyang-opencode/opencode-lazy-packs --ski
 # }
 ```
 
-> 全域 MCP 設定請編輯 `~/.cursor/mcp.json`（與 Cursor 相容）。
+> 全域 MCP 設定請編輯 `%APPDATA%\Trae\User\mcp.json`（與 Cursor 相容）。
 
 ### 方式四：手動下載 MD 檔
 
@@ -131,7 +131,7 @@ npx skills add https://github.com/shumingyang-opencode/opencode-lazy-packs --ski
 PAT / Token **不要**寫入此檔案。它們應存放於對應平台的設定檔中：
 
 - **OpenCode**：`~/.config/opencode/opencode.json` 的 MCP 環境變數
-- **Trae IDE**：`.trae/mcp.json` 或 `~/.cursor/mcp.json` 的 env 區塊
+- **Trae IDE**：`.trae/mcp.json` 或 `%APPDATA%\Trae\User\mcp.json` 的 env 區塊
 
 詳見範本中的「操作規範」與「安全規範」。
 
@@ -142,7 +142,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於對應平台的設定�
 | 項目 | OpenCode | Trae IDE |
 |------|-------------|----------|
 | 安裝 | `npm install -g opencode-ai` | 從 trae.ai 下載 |
-| 全域設定 | `~/.config/opencode/opencode.json` | `~/.cursor/mcp.json` |
+| 全域設定 | `~/.config/opencode/opencode.json` | `%APPDATA%\Trae\User\mcp.json` |
 | 專案指令檔 | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
 | MCP 配置 | 編輯 opencode.json | 編輯 `.trae/mcp.json` |
 | Skill 機制 | `.agents/skills/` 或 `~/.agents/skills/`（全域） | `.agents/skills/` 或 `~/.agents/skills/`（全域） |

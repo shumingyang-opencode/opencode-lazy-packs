@@ -162,7 +162,7 @@ codebase-memory-mcp 的安裝腳本會自動偵測 Trae IDE 並寫入 `.trae/mcp
 
 ### 在 Trae 上安裝（全域）
 
-編輯 `~/.cursor/mcp.json`，在 `"mcpServers"` 區塊加入相同設定。
+編輯 `%APPDATA%\Trae\User\mcp.json`，在 `"mcpServers"` 區塊加入相同設定。
 
 ### 在 Trae 上更新
 
@@ -174,7 +174,7 @@ git clone --depth 1 https://github.com/DeusData/codebase-memory-mcp.git /tmp/cod
 ### 在 Trae 上移除
 
 - **專案**：從 `.trae/mcp.json` 的 `"mcpServers"` 移除 `codebase-memory-mcp` 區塊
-- **全域**：從 `~/.cursor/mcp.json` 的 `"mcpServers"` 移除 `codebase-memory-mcp` 區塊
+- **全域**：從 `%APPDATA%\Trae\User\mcp.json` 的 `"mcpServers"` 移除 `codebase-memory-mcp` 區塊
 
 > CLI 工具的安裝/更新/移除方式與 OpenCode 相同，無需額外步驟。
 

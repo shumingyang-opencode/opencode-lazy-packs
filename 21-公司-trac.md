@@ -1,4 +1,4 @@
-﻿# OpenCode 懶人包 #21：安裝公司 Trac — Ticket 管理、Wiki 查閱、搜尋自動化
+# OpenCode 懶人包 #21：安裝公司 Trac — Ticket 管理、Wiki 查閱、搜尋自動化
 
 > 版本：v0.2
 > 更新日期：2026-06-23
@@ -281,6 +281,12 @@ uv tool uninstall trac-mcp-server
 
 ### 在 Trae 上安裝（專案層級）
 
+> **重要**：安裝前必須請使用者提供以下資訊（不可使用佔位符）：
+> - `TRAC_APP_USERNAME` — app 實例的登入帳號
+> - `TRAC_APP_PASSWORD` — app 實例的登入密碼
+> - `TRAC_APP_ASIC_USERNAME` — app_asic 實例的登入帳號
+> - `TRAC_APP_ASIC_PASSWORD` — app_asic 實例的登入密碼
+
 編輯 `.trae/mcp.json`（若無則建立），在 `"mcpServers"` 區塊加入：
 
 ```json
@@ -290,11 +296,11 @@ uv tool uninstall trac-mcp-server
       "command": "trac-mcp",
       "env": {
         "TRAC_APP_URL": "https://10.0.0.77/trac/app",
-        "TRAC_APP_USERNAME": "<個人帳號清單中的 app username>",
-        "TRAC_APP_PASSWORD": "<你的 app 密碼>",
+        "TRAC_APP_USERNAME": "<請使用者輸入>",
+        "TRAC_APP_PASSWORD": "<請使用者輸入>",
         "TRAC_APP_ASIC_URL": "https://10.0.0.77/trac/app_asic",
-        "TRAC_APP_ASIC_USERNAME": "<個人帳號清單中的 app_asic username>",
-        "TRAC_APP_ASIC_PASSWORD": "<你的 app_asic 密碼>",
+        "TRAC_APP_ASIC_USERNAME": "<請使用者輸入>",
+        "TRAC_APP_ASIC_PASSWORD": "<請使用者輸入>",
         "TRAC_SSL_VERIFY": "false"
       }
     }
@@ -304,7 +310,7 @@ uv tool uninstall trac-mcp-server
 
 ### 在 Trae 上安裝（全域）
 
-編輯 `~/.cursor/mcp.json`，在 `"mcpServers"` 區塊加入相同設定。
+編輯 `%APPDATA%\Trae\User\mcp.json`，在 `"mcpServers"` 區塊加入相同設定。
 
 ### 在 Trae 上更新
 
@@ -313,7 +319,7 @@ uv tool uninstall trac-mcp-server
 ### 在 Trae 上移除
 
 - **專案**：從 `.trae/mcp.json` 的 `"mcpServers"` 移除 `trac` 區塊
-- **全域**：從 `~/.cursor/mcp.json` 的 `"mcpServers"` 移除 `trac` 區塊
+- **全域**：從 `%APPDATA%\Trae\User\mcp.json` 的 `"mcpServers"` 移除 `trac` 區塊
 
 > CLI 工具的安裝/更新/移除方式與 OpenCode 相同，無需額外步驟。
 

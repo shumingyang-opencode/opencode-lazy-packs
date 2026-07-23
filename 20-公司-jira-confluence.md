@@ -437,7 +437,7 @@ mcp-atlassian 提供 72 個工具，以下是常用工具分類：
 
 ### 在 Trae 上安裝（全域）
 
-編輯 `~/.cursor/mcp.json`，在 `"mcpServers"` 區塊加入相同設定。
+編輯 `%APPDATA%\Trae\User\mcp.json`，在 `"mcpServers"` 區塊加入相同設定。
 
 ### 在 Trae 上更新
 
@@ -446,7 +446,7 @@ mcp-atlassian 提供 72 個工具，以下是常用工具分類：
 ### 在 Trae 上移除
 
 - **專案**：從 `.trae/mcp.json` 的 `"mcpServers"` 移除 `mcp-atlassian` 區塊
-- **全域**：從 `~/.cursor/mcp.json` 的 `"mcpServers"` 移除 `mcp-atlassian` 區塊
+- **全域**：從 `%APPDATA%\Trae\User\mcp.json` 的 `"mcpServers"` 移除 `mcp-atlassian` 區塊
 
 ---
 

@@ -65,7 +65,7 @@
 | | OpenCode | Trae IDE |
 |---|---|---|
 | 專案 MCP | `opencode.json` 的 `"mcp"` | `.trae/mcp.json` 的 `"mcpServers"` |
-| 全域 MCP | `~/.config/opencode/opencode.json` 的 `"mcp"` | `~/.cursor/mcp.json` 的 `"mcpServers"` |
+| 全域 MCP | `~/.config/opencode/opencode.json` 的 `"mcp"` | `%APPDATA%\Trae\User\mcp.json` 的 `"mcpServers"` |
 | 專案 Skills | `.agents/skills/` | `.agents/skills/` |
 | 全域 Skills | `~/.agents/skills/` | `~/.agents/skills/` |
 | 專案規則 | `AGENTS.md` | `AGENTS.md` / `.trae/rules/` |
@@ -87,7 +87,7 @@
 
 ## 全局 MCP 列表（Trae IDE）
 
-以下 MCP 伺服器已安裝在全局 `~/.cursor/mcp.json`（與 OpenCode 同一份清單，跨專案共用）：
+以下 MCP 伺服器已安裝在全局 `%APPDATA%\Trae\User\mcp.json`（與 OpenCode 同一份清單，跨專案共用）：
 
 | MCP | 類型 | 用途 | 安裝位置 |
 |-----|------|------|---------|
