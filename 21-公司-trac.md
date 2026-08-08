@@ -22,7 +22,7 @@
 
 - [ ] OpenCode 已安裝（若無，先執行 `00-環境建置`）
 - [ ] `uv` 已安裝（`uv --version` 確認）
-- [ ] 公司 GitLab 可存取：`https://<COMPANY_GITLAB_URL>/`
+- [ ] 公司 GitLab 可存取：`https://gitlab.ovt.com:8081/`
 - [ ] `個人帳號與服務清單.md` 已建立（含 Trac 區段）
 - [ ] Trac 帳號密碼（含 `app` 與 `app_asic` 各自的帳號）
 - [ ] 公司內部網路連線（或 VPN）
@@ -55,7 +55,7 @@
 ### 步驟一：安裝 trac-mcp-server（一次安裝，永久離線使用）
 
 ```bash
-uv tool install --from "git+https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/trac-mcp-server.git" trac-mcp-server  # 可替換為你自己的 fork
+uv tool install --from "git+https://gitlab.ovt.com:8081/steven.yang/trac-mcp-server.git" trac-mcp-server  # 可替換為你自己的 fork
 ```
 
 安裝成功後會顯示：
@@ -173,7 +173,7 @@ Trac query 語法類似 URL query string，多個條件用 `&` 串接：
 |------|------|
 | `status!=closed` | 狀態不等於 closed |
 | `status=closed&priority=major` | 等於 closed 且 priority 為 major |
-| `owner=<EMAIL>` | 負責人為指定使用者 |
+| `owner=steven.yang@ovt.com` | 負責人為指定使用者 |
 | `status!=closed&component=OV495_develop` | 非 closed 且元件為 OV495_develop |
 | `status!=canceled&status!=closed` | 同時排除 canceled 與 closed |
 
@@ -224,7 +224,7 @@ OpenCode 會依序：
 | 電腦 | 設定步驟 |
 |------|---------|
 | **電腦 A（已設定）** | 已可使用 |
-| **電腦 B（新電腦）** | ① 確認 uv 已安裝 ② `uv tool install --from "git+https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/trac-mcp-server.git" trac-mcp-server` ③ 在 opencode.json 加入 trac 設定 ④ 重啟 OpenCode ⑤ 完成 |<!-- 可替換為你自已的 trac-mcp-server fork -->
+| **電腦 B（新電腦）** | ① 確認 uv 已安裝 ② `uv tool install --from "git+https://gitlab.ovt.com:8081/steven.yang/trac-mcp-server.git" trac-mcp-server` ③ 在 opencode.json 加入 trac 設定 ④ 重啟 OpenCode ⑤ 完成 |<!-- 可替換為你自已的 trac-mcp-server fork -->
 
 > **安全提醒**：Trac 密碼相當於你的登入憑證，每台電腦都需手動填入，避免在多台電腦間明文傳遞。
 
@@ -246,7 +246,7 @@ uv tool uninstall trac-mcp-server
 
 | 問題 | 解法 |
 |------|------|
-| `uv tool install` 失敗 | 確認 GitLab 連線正常（`git ls-remote https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/trac-mcp-server.git`） |<!-- 可替換為你的 fork 路徑 -->
+| `uv tool install` 失敗 | 確認 GitLab 連線正常（`git ls-remote https://gitlab.ovt.com:8081/steven.yang/trac-mcp-server.git`） |<!-- 可替換為你的 fork 路徑 -->
 | SSL 錯誤 | 確認 `TRAC_SSL_VERIFY=false` 已設定 |
 | 登入失敗 | 確認帳號密碼正確，注意大小寫區分（app / app_asic 使用不同帳號） |
 | 忘記帳號密碼 | 查閱 `個人帳號與服務清單.md` 中的 Trac 區段，或向 IT 申請重設 |
@@ -264,7 +264,7 @@ uv tool uninstall trac-mcp-server
 ```md
 ✅ #21 公司 Trac 已安裝完成！
 - 套件：trac-mcp-server（自建，已上架 GitLab）
-- 安裝來源：git+https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/trac-mcp-server.git<!-- 可替換為你的 fork 路徑 -->
+- 安裝來源：git+https://gitlab.ovt.com:8081/steven.yang/trac-mcp-server.git<!-- 可替換為你的 fork 路徑 -->
 - Trac 實例：app + app_asic（共 2 個）
 - SSL 驗證：已關閉（公司內部自簽憑證）
 - 登入方式：Trac 表單登入（帳號儲存於 `個人帳號與服務清單.md`）

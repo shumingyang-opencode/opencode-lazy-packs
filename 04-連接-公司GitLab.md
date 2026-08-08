@@ -7,7 +7,7 @@
 
 ## 這個懶人包會幫你做什麼？
 
-讓你可以從本機連接到 <COMPANY_NAME> 內部 GitLab 伺服器：
+讓你可以從本機連接到 OmniVision 內部 GitLab 伺服器：
 - 檢查 Git 安裝
 - 建立 Personal Access Token（PAT）
 - 設定 Git credential helper 記住 PAT
@@ -21,10 +21,10 @@
 
 | 項目 | 內容 |
 |------|------|
-| 伺服器網址 | `https://<COMPANY_GITLAB_URL>` |
+| 伺服器網址 | `https://gitlab.ovt.com:8081` |
 | 協定 | HTTPS（使用 PAT 認證） |
-| Git remote 格式 | `https://<COMPANY_GITLAB_URL>/steven.yang/<專案>.git` |
-| 使用者名稱 | `<GITLAB_USERNAME>` |
+| Git remote 格式 | `https://gitlab.ovt.com:8081/steven.yang/<專案>.git` |
+| 使用者名稱 | `steven.yang` |
 | Credential 檔案 | `~/.git-credentials-gitlab-ovt` |
 
 ---
@@ -41,7 +41,7 @@
 
 > 🖐️ **請 OpenCode 在開始前先詢問使用者：**
 >
-> 「你目前在公司內網或 VPN 中嗎？GitLab 伺服器 `<COMPANY_GITLAB_URL>` 需要內網連線。」
+> 「你目前在公司內網或 VPN 中嗎？GitLab 伺服器 `gitlab.ovt.com:8081` 需要內網連線。」
 >
 > - **不在公司內網且未連 VPN** → 直接跳過，顯示「此懶人包需要公司內網連線，目前環境不適用」
 > - **公司內網或已連 VPN** → 繼續執行下方步驟
@@ -71,8 +71,8 @@ git --version
 ### 步驟二：建立 Personal Access Token
 
 請使用者手動操作（PAT 無法從 CLI 自動建立）：
-1. 瀏覽器開啟 `https://<COMPANY_GITLAB_URL>/-/user_settings/personal_access_tokens`
-2. 登入帳號 `<GITLAB_USERNAME>`
+1. 瀏覽器開啟 `https://gitlab.ovt.com:8081/-/user_settings/personal_access_tokens`
+2. 登入帳號 `steven.yang`
 3. 填寫：
    - **Token name**：`opencode-local`
    - **Expiration date**：自選（建議設 1 年後）
@@ -88,13 +88,13 @@ git --version
 
 **Windows（PowerShell）：**
 ```powershell
-Set-Content -Path "$env:USERPROFILE\.git-credentials-gitlab-ovt" -Value "https://<GITLAB_USERNAME>:<PAT>@<COMPANY_GITLAB_URL>"
+Set-Content -Path "$env:USERPROFILE\.git-credentials-gitlab-ovt" -Value "https://steven.yang:<PAT>@gitlab.ovt.com:8081"
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-ovt"
 ```
 
 **macOS：**
 ```bash
-echo "https://<GITLAB_USERNAME>:<PAT>@<COMPANY_GITLAB_URL>" > ~/.git-credentials-gitlab-ovt
+echo "https://steven.yang:<PAT>@gitlab.ovt.com:8081" > ~/.git-credentials-gitlab-ovt
 chmod 600 ~/.git-credentials-gitlab-ovt
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-ovt"
 ```
@@ -107,7 +107,7 @@ git config --global credential.helper "store --file ~/.git-credentials-gitlab-ov
 ### 步驟四：驗證連線
 
 ```bash
-git ls-remote https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/your-project.git
+git ls-remote https://gitlab.ovt.com:8081/steven.yang/your-project.git
 ```
 
 預期看到類似輸出（包含 commit hash 和 ref 列表）。
@@ -129,7 +129,7 @@ cd ~/Documents/gitlab-projects
 
 clone 一個測試專案（請使用者提供專案 HTTPS URL，或使用已知專案）：
 ```bash
-git clone https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/your-project.git
+git clone https://gitlab.ovt.com:8081/steven.yang/your-project.git
 cd your-project
 ```
 
@@ -138,8 +138,8 @@ cd your-project
 ### 步驟六：設定本機 Git 使用者（若尚未設定）
 
 ```bash
-git config --global user.name "<GITLAB_USERNAME>"
-git config --global user.email "<EMAIL>"
+git config --global user.name "steven.yang"
+git config --global user.email "steven.yang@ovt.com"
 ```
 
 ---
@@ -195,10 +195,10 @@ git push              # 推送
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-ovt"
 
 # 驗證連線
-git ls-remote https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/your-project.git
+git ls-remote https://gitlab.ovt.com:8081/steven.yang/your-project.git
 
 # 日常
-git clone https://<COMPANY_GITLAB_URL>/<群組>/<專案>.git
+git clone https://gitlab.ovt.com:8081/<群組>/<專案>.git
 git pull
 git push
 git remote -v                           # 查看 remote URL

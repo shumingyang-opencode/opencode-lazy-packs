@@ -15,11 +15,11 @@
 
 ## Obsidian 關聯資料
 
-- Obsidian vault：`<OBSIDIAN_VAULT_PATH>`
+- Obsidian vault：`/Users/stevenyang/Documents/OpenCode/obsidian`
 - 每日筆記：`每日筆記/<日期>.md`
 - 創作庫：`創作庫/`
 - 知識庫：`知識庫/`
-- vault git remote：`<VAULT_GIT_REMOTE>`
+- vault git remote：`origin → github.com/shumingyang-opencode/work-notes`
 
 ## 提醒
 

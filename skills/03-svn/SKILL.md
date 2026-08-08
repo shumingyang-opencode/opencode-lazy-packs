@@ -5,7 +5,7 @@ description: 連接公司內部 SVN 伺服器。說「連接 SVN」「設定 SVN
 
 # 連接公司 SVN
 
-讓 OpenCode 幫你連接到 <COMPANY_NAME> 內部 SVN 伺服器。
+讓 OpenCode 幫你連接到 OmniVision 內部 SVN 伺服器。
 
 ## 平台檢查
 
@@ -19,7 +19,7 @@ description: 連接公司內部 SVN 伺服器。說「連接 SVN」「設定 SVN
 
 | 項目 | 內容 |
 |------|------|
-| 網址 | `http://<SVN_SERVER_IP>/svn/development` |
+| 網址 | `http://10.0.0.78/svn/development` |
 | 帳號 | `ovt\steven.yang`（Windows）／ `steven.yang`（macOS） |<!-- 可替換為你的 SVN 帳號 -->
 | 本機目錄 | `D:\workspace\svn-projects`（Windows）／ `~/Documents/svn-projects`（macOS） |
 
@@ -27,12 +27,12 @@ description: 連接公司內部 SVN 伺服器。說「連接 SVN」「設定 SVN
 
 ### 1. 測試連線
 ```bash
-ping -n 1 <SVN_SERVER_IP>
+ping -n 1 10.0.0.78
 ```
 
 ### 2. 設定使用者
 ```bash
-svn info http://<SVN_SERVER_IP>/svn/development --username ovt\steven.yang  # 替換為你的 SVN 帳號
+svn info http://10.0.0.78/svn/development --username ovt\steven.yang  # 替換為你的 SVN 帳號
 ```
 密碼第一次輸入後會被 Wincrypt 快取。
 
@@ -40,7 +40,7 @@ svn info http://<SVN_SERVER_IP>/svn/development --username ovt\steven.yang  # �
 ```bash
 mkdir D:\workspace\svn-projects
 cd D:\workspace\svn-projects
-svn checkout http://<SVN_SERVER_IP>/svn/development/trunk ./development --username ovt\steven.yang  # 替換為你的 SVN 帳號
+svn checkout http://10.0.0.78/svn/development/trunk ./development --username ovt\steven.yang  # 替換為你的 SVN 帳號
 ```
 
 ### 4. 日常操作
@@ -55,12 +55,12 @@ svn commit -m "類型(範圍): 描述"
 
 ### 1. 測試連線
 ```bash
-ping -c 1 <SVN_SERVER_IP>
+ping -c 1 10.0.0.78
 ```
 
 ### 2. 設定使用者
 ```bash
-svn info http://<SVN_SERVER_IP>/svn/development --username steven.yang  # 替換為你的 SVN 帳號
+svn info http://10.0.0.78/svn/development --username steven.yang  # 替換為你的 SVN 帳號
 ```
 密碼第一次輸入後會被 Keychain 快取。
 
@@ -68,7 +68,7 @@ svn info http://<SVN_SERVER_IP>/svn/development --username steven.yang  # 替換
 ```bash
 mkdir -p ~/Documents/svn-projects
 cd ~/Documents/svn-projects
-svn checkout http://<SVN_SERVER_IP>/svn/development/trunk ./development --username steven.yang  # 替換為你的 SVN 帳號
+svn checkout http://10.0.0.78/svn/development/trunk ./development --username steven.yang  # 替換為你的 SVN 帳號
 ```
 
 ### 4. 日常操作
