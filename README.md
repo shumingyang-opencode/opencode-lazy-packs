@@ -11,6 +11,25 @@
 
 ---
 
+## 安裝教學摘要
+
+本 Repo 提供 30+ 個「懶人包」（Lazy Packs），讓你在 OpenCode / Trae IDE / Codex 等 AI 編碼工具中快速安裝各種技能與 MCP 服務。以下是三步驟快速上手：
+
+**Step 1：環境建置**
+- 安裝 OpenCode：`npm install -g opencode-ai`（需 Node.js 18+）
+- 或安裝 Trae IDE：從 [trae.ai](https://www.trae.ai) 下載
+
+**Step 2：MCP 串接**
+- 將所需的 Lazy Pack（MD 檔案）內容貼給 AI，它會自動編輯對應的 MCP 設定檔
+- OpenCode 設定檔路徑：`~/.config/opencode/opencode.json`
+- Trae IDE 設定檔路徑：`.trae/mcp.json`
+
+**Step 3：技能安裝**
+- 對 AI 說「幫我安裝位在 `https://github.com/...` 的技能」即可一鍵安裝
+- 或使用 CLI：`npx skills add https://github.com/shumingyang-opencode/opencode-lazy-packs --skill <skill-name> -g -y`
+
+> 詳細各 Pack 的前置需求與操作步驟，請見 [SKILL.md](SKILL.md) 或各 Pack 的 MD 檔案。
+
 ## How to Use
 
 ### Method 1: Let AI Install for You (Easiest)
