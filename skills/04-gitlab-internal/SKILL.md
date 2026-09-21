@@ -5,7 +5,7 @@ description: 連接公司內部 GitLab 伺服器。說「連接公司 GitLab」�
 
 # 連接公司 GitLab
 
-讓 OpenCode 幫你連接到 OmniVision 內部 GitLab（gitlab.ovt.com:8081），走 HTTPS + PAT。
+讓 OpenCode 幫你連接到 OmniVision 內部 GitLab（<COMPANY_GITLAB_URL>），走 HTTPS + PAT。
 
 ## 平台檢查
 
@@ -17,24 +17,24 @@ description: 連接公司內部 GitLab 伺服器。說「連接公司 GitLab」�
 ## PAT 與 Credential 設定
 
 ### 1. 建立 PAT
-請使用者到 `https://gitlab.ovt.com:8081/-/user_settings/personal_access_tokens` 建立 token，scope 勾 `read_repository` + `write_repository`。
+請使用者到 `https://<COMPANY_GITLAB_URL>/-/user_settings/personal_access_tokens` 建立 token，scope 勾 `read_repository` + `write_repository`。
 
 ### 2. 設定 credential helper
 ```bash
-echo "https://steven.yang:<PAT>@gitlab.ovt.com:8081" > ~/.git-credentials-gitlab-ovt
+echo "https://steven.yang:<PAT>@<COMPANY_GITLAB_URL>" > ~/.git-credentials-gitlab-ovt
 chmod 600 ~/.git-credentials-gitlab-ovt
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-ovt"
 ```
 
 ### 3. 驗證
 ```bash
-git ls-remote https://gitlab.ovt.com:8081/steven.yang/your-project.git
+git ls-remote https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/your-project.git
 ```
 
 ## 日常操作
 
 ```bash
-git clone https://gitlab.ovt.com:8081/<群組>/<專案>.git
+git clone https://<COMPANY_GITLAB_URL>/<群組>/<專案>.git
 git pull
 git push
 ```

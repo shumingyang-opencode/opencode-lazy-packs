@@ -21,8 +21,8 @@
 
 - [ ] OpenCode 已安裝（若無，先執行 `00-環境建置`）
 - [ ] Python / uvx 已安裝（mcp-atlassian 基於 Python）
-- [ ] 公司 JIRA 網址：`https://jira.ovt.com/`
-- [ ] 公司 Confluence 網址：`https://confluence.ovt.com/`
+- [ ] 公司 JIRA 網址：`https://<COMPANY_JIRA_URL>/`
+- [ ] 公司 Confluence 網址：`https://<COMPANY_CONFLUENCE_URL>/`
 - [ ] 公司內部網路連線（或 VPN）
 - [ ] 公司帳號（請向 IT 確認 JIRA 與 Confluence 是否為同一個 SSO 帳號，或分開的兩組帳號）
 
@@ -47,14 +47,14 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 登入公司 JIRA 並產生 PAT：
 
-1. 開啟瀏覽器至 `https://jira.ovt.com/`
+1. 開啟瀏覽器至 `https://<COMPANY_JIRA_URL>/`
 2. 右上角頭像 → **Profile** → **Personal Access Tokens** → **Create token**
 3. 輸入名稱（如 `opencode-mcp`）、設定過期時間（建議 365 天）
 4. 點擊 **Create**，**立即複製 Token**（關閉視窗後不再顯示）
 
 登入公司 Confluence 並產生 PAT：
 
-1. 開啟瀏覽器至 `https://confluence.ovt.com/`
+1. 開啟瀏覽器至 `https://<COMPANY_CONFLUENCE_URL>/`
 2. 右上角頭像 → **Profile** → **Personal Access Tokens** → **Create token**
 3. 同上步驟
 
@@ -73,9 +73,9 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
   "command": ["uvx", "mcp-atlassian"],
   "enabled": true,
   "environment": {
-    "JIRA_URL": "https://jira.ovt.com",
+    "JIRA_URL": "https://<COMPANY_JIRA_URL>",
     "JIRA_PERSONAL_TOKEN": "<YOUR_PAT>",
-    "CONFLUENCE_URL": "https://confluence.ovt.com",
+    "CONFLUENCE_URL": "https://<COMPANY_CONFLUENCE_URL>",
     "CONFLUENCE_PERSONAL_TOKEN": "<YOUR_PAT>",
     "JIRA_SSL_VERIFY": "false",
     "CONFLUENCE_SSL_VERIFY": "false",
@@ -147,9 +147,9 @@ powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
   "command": ["uvx", "mcp-atlassian"],
   "enabled": true,
   "environment": {
-    "JIRA_URL": "https://jira.ovt.com",
+    "JIRA_URL": "https://<COMPANY_JIRA_URL>",
     "JIRA_PERSONAL_TOKEN": "<YOUR_JIRA_PAT>",
-    "CONFLUENCE_URL": "https://confluence.ovt.com",
+    "CONFLUENCE_URL": "https://<COMPANY_CONFLUENCE_URL>",
     "CONFLUENCE_PERSONAL_TOKEN": "<YOUR_CONFLUENCE_PAT>",
     "JIRA_SSL_VERIFY": "false",
     "CONFLUENCE_SSL_VERIFY": "false",
@@ -395,8 +395,8 @@ mcp-atlassian 提供 72 個工具，以下是常用工具分類：
 ```md
 ✅ #20 公司 JIRA & Confluence 已安裝完成！
 - 套件：sooperset/mcp-atlassian
-- JIRA 網址：https://jira.ovt.com/
-- Confluence 網址：https://confluence.ovt.com/
+- JIRA 網址：https://<COMPANY_JIRA_URL>/
+- Confluence 網址：https://<COMPANY_CONFLUENCE_URL>/
 - PAT 設定：單 PAT / 雙 PAT（依實際情況）
 - SSL 驗證：已關閉（公司內部憑證）
 - 常用空間：OTCAPP、APP（Application）
@@ -422,9 +422,9 @@ mcp-atlassian 提供 72 個工具，以下是常用工具分類：
       "command": "uvx",
       "args": ["mcp-atlassian"],
       "env": {
-        "JIRA_URL": "https://jira.ovt.com",
+        "JIRA_URL": "https://<COMPANY_JIRA_URL>",
         "JIRA_PERSONAL_TOKEN": "<YOUR_PAT>",
-        "CONFLUENCE_URL": "https://confluence.ovt.com",
+        "CONFLUENCE_URL": "https://<COMPANY_CONFLUENCE_URL>",
         "CONFLUENCE_PERSONAL_TOKEN": "<YOUR_PAT>",
         "JIRA_SSL_VERIFY": "false",
         "CONFLUENCE_SSL_VERIFY": "false",

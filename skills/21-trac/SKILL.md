@@ -40,7 +40,7 @@ description: 安裝公司 Trac 整合 — 讓 OpenCode 操作公司內部 Trac T
 ### 1. 安裝 trac-mcp-server
 
 ```bash
-uv tool install --from "git+https://gitlab.ovt.com:8081/steven.yang/trac-mcp-server.git" trac-mcp-server  # 替換為你自己的 fork（若已 fork）
+uv tool install --from "git+https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/trac-mcp-server.git" trac-mcp-server  # 替換為你自己的 fork（若已 fork）
 ```
 
 安裝成功會顯示 `Installed 1 executable: trac-mcp`。
@@ -162,7 +162,7 @@ uv tool install --from "git+https://gitlab.ovt.com:8081/steven.yang/trac-mcp-ser
 
 ## 多電腦同步設定
 
-每台新電腦只需：① 安裝 uv ② `uv tool install --from "git+https://gitlab.ovt.com:8081/steven.yang/trac-mcp-server.git" trac-mcp-server` ③ 編輯 opencode.json 加入 trac 設定 ④ 重啟 OpenCode。<!-- 可替換為你自已的 trac-mcp-server fork -->
+每台新電腦只需：① 安裝 uv ② `uv tool install --from "git+https://<COMPANY_GITLAB_URL>/<GITLAB_USERNAME>/trac-mcp-server.git" trac-mcp-server` ③ 編輯 opencode.json 加入 trac 設定 ④ 重啟 OpenCode。<!-- 可替換為你自已的 trac-mcp-server fork -->
 
 > 安全提醒：Trac 密碼是敏感憑證，每台電腦**手動填入**。
 
