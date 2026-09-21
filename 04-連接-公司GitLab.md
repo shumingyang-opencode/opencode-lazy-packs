@@ -7,7 +7,7 @@
 
 ## 這個懶人包會幫你做什麼？
 
-讓你可以從本機連接到 OmniVision 內部 GitLab 伺服器：
+讓你可以從本機連接到 <COMPANY_NAME> 內部 GitLab 伺服器：
 - 檢查 Git 安裝
 - 建立 Personal Access Token（PAT）
 - 設定 Git credential helper 記住 PAT
@@ -24,7 +24,7 @@
 | 伺服器網址 | `https://<COMPANY_GITLAB_URL>` |
 | 協定 | HTTPS（使用 PAT 認證） |
 | Git remote 格式 | `https://<COMPANY_GITLAB_URL>/steven.yang/<專案>.git` |
-| 使用者名稱 | `steven.yang` |
+| 使用者名稱 | `<GITLAB_USERNAME>` |
 | Credential 檔案 | `~/.git-credentials-gitlab-ovt` |
 
 ---
@@ -72,7 +72,7 @@ git --version
 
 請使用者手動操作（PAT 無法從 CLI 自動建立）：
 1. 瀏覽器開啟 `https://<COMPANY_GITLAB_URL>/-/user_settings/personal_access_tokens`
-2. 登入帳號 `steven.yang`
+2. 登入帳號 `<GITLAB_USERNAME>`
 3. 填寫：
    - **Token name**：`opencode-local`
    - **Expiration date**：自選（建議設 1 年後）
@@ -88,13 +88,13 @@ git --version
 
 **Windows（PowerShell）：**
 ```powershell
-Set-Content -Path "$env:USERPROFILE\.git-credentials-gitlab-ovt" -Value "https://steven.yang:<PAT>@<COMPANY_GITLAB_URL>"
+Set-Content -Path "$env:USERPROFILE\.git-credentials-gitlab-ovt" -Value "https://<GITLAB_USERNAME>:<PAT>@<COMPANY_GITLAB_URL>"
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-ovt"
 ```
 
 **macOS：**
 ```bash
-echo "https://steven.yang:<PAT>@<COMPANY_GITLAB_URL>" > ~/.git-credentials-gitlab-ovt
+echo "https://<GITLAB_USERNAME>:<PAT>@<COMPANY_GITLAB_URL>" > ~/.git-credentials-gitlab-ovt
 chmod 600 ~/.git-credentials-gitlab-ovt
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-ovt"
 ```
@@ -138,7 +138,7 @@ cd your-project
 ### 步驟六：設定本機 Git 使用者（若尚未設定）
 
 ```bash
-git config --global user.name "steven.yang"
+git config --global user.name "<GITLAB_USERNAME>"
 git config --global user.email "<EMAIL>"
 ```
 

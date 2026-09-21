@@ -5,7 +5,7 @@ description: 連接公司內部 GitLab 伺服器。說「連接公司 GitLab」�
 
 # 連接公司 GitLab
 
-讓 OpenCode 幫你連接到 OmniVision 內部 GitLab（<COMPANY_GITLAB_URL>），走 HTTPS + PAT。
+讓 OpenCode 幫你連接到 <COMPANY_NAME> 內部 GitLab（<COMPANY_GITLAB_URL>），走 HTTPS + PAT。
 
 ## 平台檢查
 
@@ -21,7 +21,7 @@ description: 連接公司內部 GitLab 伺服器。說「連接公司 GitLab」�
 
 ### 2. 設定 credential helper
 ```bash
-echo "https://steven.yang:<PAT>@<COMPANY_GITLAB_URL>" > ~/.git-credentials-gitlab-ovt
+echo "https://<GITLAB_USERNAME>:<PAT>@<COMPANY_GITLAB_URL>" > ~/.git-credentials-gitlab-ovt
 chmod 600 ~/.git-credentials-gitlab-ovt
 git config --global credential.helper "store --file ~/.git-credentials-gitlab-ovt"
 ```

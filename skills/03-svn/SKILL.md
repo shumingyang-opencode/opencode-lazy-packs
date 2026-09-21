@@ -5,7 +5,7 @@ description: 連接公司內部 SVN 伺服器。說「連接 SVN」「設定 SVN
 
 # 連接公司 SVN
 
-讓 OpenCode 幫你連接到 OmniVision 內部 SVN 伺服器。
+讓 OpenCode 幫你連接到 <COMPANY_NAME> 內部 SVN 伺服器。
 
 ## 平台檢查
 

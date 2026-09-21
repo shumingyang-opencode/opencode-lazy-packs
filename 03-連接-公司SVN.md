@@ -7,7 +7,7 @@
 
 ## 這個懶人包會幫你做什麼？
 
-讓你可以從本機連接到 OmniVision 內部 SVN 伺服器：
+讓你可以從本機連接到 <COMPANY_NAME> 內部 SVN 伺服器：
 - 檢查 SVN（Subversion）是否已安裝
 - 設定 SVN 使用者資訊
 - 簽出（checkout）開發專案
