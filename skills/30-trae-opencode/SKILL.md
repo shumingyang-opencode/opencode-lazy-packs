@@ -110,7 +110,7 @@ opencode run "任務描述" [-m provider/model] [-w 路徑]
 | `-m, --model` | `deepseek/deepseek-v4-flash` | 指定模型 |
 | `-w, --working-dir` | `./project` | 工作目錄 |
 | `--auto` | (flag) | 自動核准權限 |
-| `--agent` | `solo` | 指定 Agent 類型 |
+| `--agent` | `<agent-name>` | 指定 Agent 類型 |
 
 ---
 

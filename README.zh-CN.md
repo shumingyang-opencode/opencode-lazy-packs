@@ -64,7 +64,6 @@ npx skills add https://github.com/shumingyang-opencode/opencode-lazy-packs --ski
 | `26-mcp-reference` | 互动式 MCP 设定教学 — 联机模式、安全性、自订 Server |
 | `27-gen-pptx` | 通用简报产制技能 — 六引擎工作流：技术文件/Repo/Spec→可编辑 .pptx |
 | `28-cli-anything` | CLI-Anything — 50+ 软件的 Agent-native CLI harness（Blender、GIMP、Obsidian 等） |
-| `29-solo-agent` | SOLO Agent — 全自动全栈开发（Plan→Build→Test→Deliver），一次需求自动完成规划→构建→测试→交付 |
 | `30-trae-opencode` | TRAE & OpenCode 双向驱动 — OpenCode↔TRAE 双向 CLI 驱动（bytedance/trae-agent） |
 
 安装后对 OpenCode 说该技能对应的关键字即可启动。
@@ -192,7 +191,6 @@ PAT / Token **不要**写入此文件。它们应存放于对应平台的配置�
 | 26 | [MCP 设定教学](26-MCP-設定教學.md) | 教学 | v0.1 | 互动式教学：MCP 概念、三种联机模式、安全性原则、自订 MCP Server | — |
 | 27 | [通用简报产制](27-通用簡報產製.md) | Skill | v0.1 | 六引擎简报工作流：将技术文件、datasheet、Spec、Repo 转为可编辑 .pptx | ✅ |
 | 28 | [安装 CLI-Anything](28-安裝-CLI-Anything.md) | Skill | v0.1 | CLI-Hub Meta-Skill：50+ 软件的 Agent-native CLI harness 安装与发现（HKUDS/CLI-Anything, ⭐44.8K） | ✅ |
-| 29 | [安装 SOLO Agent](29-安裝-SOLO-Agent.md) | Agent | v0.1 | 全自动全栈开发：一次需求完成规划→构建→测试→交付，内建自动错误修正与重试 | ✅ |
 | 30 | [TRAE & OpenCode 双向驱动](30-TRAE-OpenCode-雙向驅動.md) | Skill | v0.2 | OpenCode↔TRAE 双向 CLI 驱动 — 根据平台自动安装 trae-agent 或 opencode-ai | ✅ |
 
 ---
