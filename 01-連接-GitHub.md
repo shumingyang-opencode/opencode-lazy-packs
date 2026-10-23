@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #02：連接 GitHub
+# OpenCode 懶人包 #01：連接 GitHub
 
 > 版本：v0.4
 > 更新日期：2026-07-22

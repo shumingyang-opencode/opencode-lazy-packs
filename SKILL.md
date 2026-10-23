@@ -25,31 +25,16 @@ description: Agents 懶人包全集 — 環境建置、MCP 串接、技能安裝
 | 編號 | Skill 名稱 | 說明 | 前置需求 |
 |------|-----------|------|---------|
 | 00 | `00-env-setup` | 安裝 Node.js、OpenCode、uv | 無 |
-| 02 | `02-github` | 連接 GitHub CLI + 驗證 push | #00 |
-| 03 | `03-svn` | 連接公司 SVN | 公司內網 |
-| 04 | `04-gitlab-internal` | 連接公司 GitLab（SSH） | 公司內網 |
-| 05 | `05-gitlab-personal` | 連接個人 GitLab（HTTPS+PAT） | GitLab 帳號 |
-| 06 | `06-obsidian` | 連接 Obsidian MCPVault | 有 Obsidian vault |
-| 07 | `07-second-brain` | 建立第二大腦三層結構 | Obsidian |
-| 09 | `09-browser` | 安裝 Playwright + open-computer-use | #00 |
-| 10 | `10-workflow-skills` | 安裝開工/收工/初始化技能 | Obsidian |
-| 12 | `12-markitdown` | 安裝 MarkItDown 文件轉換技能 | #00 |
-| 13 | `13-graphify` | 安裝 Graphify 知識圖譜技能 | #00 + uv |
-| 14 | `14-awesome-design-md` | 安裝 Awesome DESIGN.md 品牌設計技能 | #00 |
-| 15 | `15-ui-ux-pro-max` | 安裝 UI/UX Pro Max 設計智能（67 風格、161 規則） | #00 |
-| 16 | `16-superpowers` | 安裝 Superpowers — obra/superpowers v6.0.3（14 skills、完整 SDLC 方法論） | 無 |
-| 17 | `17-find-skills` | 安裝 Find Skills — 從 5000+ 開放技能中搜尋並安裝 | 無 |
-| 18 | `18-frontend-design` | 安裝 Frontend Design — Anthropic 出品 572K 安裝前端設計 | 無 |
-| 19 | `19-feishu-lark` | 安裝飛書 Lark — 文檔/訊息/群組/日曆/多維表格 | #00 + 飛書帳號 |
-| 20 | `20-jira-confluence` | 安裝公司 JIRA & Confluence — Issue 管理、頁面搜尋、操作自動化 | 公司內網 + 帳號 |
-| 21 | `21-trac` | 安裝公司 Trac — Ticket 管理、Wiki 查閱、搜尋自動化 | 公司內網 + 帳號 |
-| 23 | `23-project-plan-feature` | 安裝功能規劃技能 — 10 步驟規劃 + init_plan.py | 無 |
-| 24 | `24-skill-reference` | 互動式 SKILL.md 建立教學 — 從 frontmatter、目錄結構到發布 | 無 |
-| 25 | `25-agents-reference` | 互動式 AGENTS.md 建立教學 — 依專案特性客製專案規範 | 無 |
-| 26 | `26-mcp-reference` | 互動式 MCP 設定教學 — 連線模式、安全性、自訂 MCP Server | #00 |
-| 27 | `27-gen-pptx` | 通用簡報產製 — 六引擎工作流：技術文件/Repo→可編輯 .pptx，專為 RD/FAE/AE 設計 | #00 |
-| 28 | `28-cli-anything` | 安裝 CLI-Anything — HKUDS/CLI-Anything：50+ 軟體的 Agent-native CLI harness（Blender、GIMP、Obsidian 等），支援 cli-hub 發現與安裝 | 無 |
-| 30 | `30-trae-opencode` | 安裝 TRAE & OpenCode 雙向驅動 — OpenCode↔TRAE 雙向 CLI 驅動（bytedance/trae-agent） | #00 |
+| 01 | `01-github` | 連接 GitHub CLI + 驗證 push | #00 |
+| 02 | `02-gitlab-personal` | 連接個人 GitLab（HTTPS+PAT） | GitLab 帳號 |
+| 03 | `03-obsidian` | 連接 Obsidian MCPVault | 有 Obsidian vault |
+| 04 | `04-browser` | 安裝 Playwright + open-computer-use | #00 |
+| 05 | `05-workflow-skills` | 安裝開工/收工/初始化技能 | Obsidian |
+| 06 | `06-markitdown` | 安裝 MarkItDown 文件轉換技能 | #00 |
+| 07 | `07-graphify` | 安裝 Graphify 知識圖譜技能 | #00 + uv |
+| 08 | `08-find-skills` | 安裝 Find Skills — 從 5000+ 開放技能中搜尋並安裝 | 無 |
+| 09 | `09-gen-pptx` | 通用簡報產製 — 六引擎工作流：技術文件/Repo→可編輯 .pptx，專為 RD/FAE/AE 設計 | #00 |
+| 10 | `10-cli-anything` | 安裝 CLI-Anything — HKUDS/CLI-Anything：50+ 軟體的 Agent-native CLI harness（Blender、GIMP、Obsidian 等），支援 cli-hub 發現與安裝 | 無 |
 
 ## 步驟三：讓使用者選擇
 

@@ -1,4 +1,4 @@
-﻿# OpenCode 懶人包 #28：安裝 CLI-Anything
+﻿# OpenCode 懶人包 #10：安裝 CLI-Anything
 
 > 版本：v0.1
 > 更新日期：2026-07-06

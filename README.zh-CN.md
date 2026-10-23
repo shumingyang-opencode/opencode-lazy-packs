@@ -159,37 +159,20 @@ PAT / Token **不要**写入此文件。它们应存放于对应平台的配置�
 
 ## 懒人包清单（支持 OpenCode / Trae IDE / Codex 等）
 
-| 编号 | 名称 | 类型 | 版本 | 说明 | 支持状态 |
-|------|------|------|------|------|---------|
+| 编号 | 名称 | 类型 | 状态 | 说明 | 支持状态 |
+|------|------|------|------|------|----------|
 | 00 | [环境建置](00-環境建置.md) | CLI | v0.3 | OpenCode + Node.js + uv 基础环境安装 | ✅ |
-| ~~01~~ | ~~连接 NotebookLM~~ | ~~MCP~~ | ~~v0.2~~ | ~~NotebookLM MCP 安装与连線：AI 生成简报、图表、音讯、报告~~ | ~~已移除~~ |
-| 02 | [连接 GitHub](02-連接-GitHub.md) | MCP | v0.4 | GitHub CLI 登录认证 + repo commit/push 验证 | ✅ |
-| 03 | [连接公司 SVN](03-連接-公司SVN.md) | MCP | v0.2 | <COMPANY_NAME> 内部 SVN 服务器连線设定 | ✅ |
-| 04 | [连接公司 GitLab](04-連接-公司GitLab.md) | MCP | v0.2 | 透过 HTTPS + PAT 连接内部 GitLab | ✅ |
-| 05 | [连接个人 GitLab](05-連接-個人GitLab.md) | MCP | v0.4 | 透过 HTTPS + PAT 连接 GitLab.com 账号 | ✅ |
-| 06 | [建立第二大脑 Obsidian](06-建立第二大腦-Obsidian.md) | MCP | v0.3 | Obsidian MCP Vault 连接：笔记建立、搜索、管理 | ✅ |
-| 07 | [第二大脑设定指南](07-第二大腦設定指南.md) | 教学 | v0.2 | Obsidian 三层目录结构 + AGENTS.md 规则 + 笔记模板 | — |
-| ~~08~~ | ~~连接 Firebase~~ | ~~MCP~~ | ~~v0.1~~ | ~~Firebase MCP 安装：项目管理、数据库、部署~~ | ~~已移除~~ |
-| 09 | [安装浏览器控制](09-安裝瀏覽器控制.md) | MCP | v0.3 | Playwright MCP + macOS 桌面 UI 自动化操作 | ✅ |
-| 10 | [开工/收工/初始化技能](10-開工收工初始化技能.md) | Skill | v0.1 | 全域三技能：startup（开工自动同步）、shutdown（收工备份）、project-init（新项目初始化） | ✅ |
-| ~~11~~ | ~~生图技能~~ | ~~Skill~~ | ~~v0.3~~ | ~~draw skill：OpenAI gpt-image-2 生成示意图与插画~~ | ~~已移除~~ |
-| 12 | [MarkItDown 文件转换](12-markitdown.md) | Skill | v0.3 | 各种文件自动转 Markdown：PDF/Office/CSV/JSON/图片/音讯/Email/EPUB | ✅ |
-| 13 | [Graphify 知识图谱](13-graphify.md) | Skill | v0.1 | 代码知识图谱引擎：自然语言查询取代 grep，跨文件结构分析 | ✅ |
-| 14 | [Awesome DESIGN.md 品牌设计](14-awesome-design-md.md) | Skill | v0.1 | 一键套用 73 个真实品牌 DESIGN.md（Stripe、Vercel、Apple 等） | ✅ |
-| 15 | [UI/UX Pro Max 设计智能](15-ui-ux-pro-max.md) | Skill | v0.1 | 67 UI 风格 + 161 推理规则 + 57 字体搭配 + 99 UX 指南 | ✅ |
-| 16 | [Superpowers 完整 AI 开发方法论](16-superpowers.md) | Skill | v6.0.3 | 14 skills 覆盖 brainstorm→plan→TDD→review→merge（1.9M+ 安装） | ✅ |
-| 17 | [Find Skills 技能搜索与安装](17-find-skills.md) | Skill | v0.1 | 从 5000+ 开放技能库中搜索并一键安装 | ✅ |
-| 18 | [Frontend Design 辨识度优先前端设计](18-frontend-design.md) | Skill | v0.1 | Anthropic 出品（572K 安装）：拒绝 AI 模板化美学，建立品牌辨识度 | ✅ |
-| 19 | [安装飞书 Lark](19-安裝-飛書Lark.md) | Skill | v0.1 | 飞书文档/消息/群组/日历/多维表格/OA 审批整合 | ✅ |
-| 20 | [安装公司 JIRA & Confluence](20-公司-jira-confluence.md) | MCP | v0.3 | mcp-atlassian：JIRA Issue 管理 + Confluence 页面搜索与操作 | ✅ |
-| 21 | [安装公司 Trac](21-公司-trac.md) | MCP | v0.2 | Trac Ticket 管理 + Wiki 查阅 + 全文搜索自动化 | ✅ |
-| 23 | [功能规划技能](23-功能規劃技能.md) | Skill | v0.1 | 10 步骤功能规划流程 + init_plan.py 自动建文件 | ✅ |
-| 24 | [SKILL.md 建立教学](24-SKILL.md-建立教學.md) | 教学 | v0.1 | 互动式教学：从 frontmatter、目录结构到发布，引导建立第一个 OpenCode 技能 | — |
-| 25 | [AGENTS.md 建立教学](25-AGENTS.md-建立教學.md) | 教学 | v0.1 | 互动式教学：依项目客制 AGENTS.md，涵盖编码惯例、测试规范、Git 流程 | — |
-| 26 | [MCP 设定教学](26-MCP-設定教學.md) | 教学 | v0.1 | 互动式教学：MCP 概念、三种联机模式、安全性原则、自订 MCP Server | — |
-| 27 | [通用简报产制](27-通用簡報產製.md) | Skill | v0.1 | 六引擎简报工作流：将技术文件、datasheet、Spec、Repo 转为可编辑 .pptx | ✅ |
-| 28 | [安装 CLI-Anything](28-安裝-CLI-Anything.md) | Skill | v0.1 | CLI-Hub Meta-Skill：50+ 软件的 Agent-native CLI harness 安装与发现（HKUDS/CLI-Anything, ⭐44.8K） | ✅ |
-| 30 | [TRAE & OpenCode 双向驱动](30-TRAE-OpenCode-雙向驅動.md) | Skill | v0.2 | OpenCode↔TRAE 双向 CLI 驱动 — 根据平台自动安装 trae-agent 或 opencode-ai | ✅ |
+| 01 | [连接 GitHub](01-連接-GitHub.md) | MCP | v0.4 | GitHub CLI 登入认证 + repo commit/push 验证 | ✅ |
+| 02 | [连接个人 GitLab](02-連接-個人GitLab.md) | MCP | v0.4 | 通过 HTTPS + PAT 连接 GitLab.com 账号 | ✅ |
+| 03 | [建立第二大腦 Obsidian](03-建立第二大腦-Obsidian.md) | MCP | v0.3 | Obsidian MCP Vault 连接：笔记建立、搜尋、管理 | ✅ |
+| 04 | [安装浏览器控制](04-安裝瀏覽器控制.md) | MCP | v0.3 | Playwright MCP + macOS 桌面 UI 自动化操作 | ✅ |
+| 05 | [开工/收工/初始化技能](05-開工收工初始化技能.md) | Skill | v0.1 | 全域三技能：startup（开工自动同步）、shutdown（收工备份）、project-init（新项目初始化） | ✅ |
+| 06 | [MarkItDown 文件转换](06-markitdown.md) | Skill | v0.3 | 各种文件自动转 Markdown：PDF/Office/CSV/JSON/图片/音频/Email/EPUB | ✅ |
+| 07 | [Graphify 知识图谱](07-graphify.md) | Skill | v0.1 | 程式码知识图谱引擎：自然语言查询取代 grep，跨档案结构分析 | ✅ |
+| 08 | [Find Skills 技能搜尋與安装](08-find-skills.md) | Skill | v0.1 | 从 5000+ 开放技能库中搜尋并一键安装 | ✅ |
+| 09 | [通用簡報產製](09-通用簡報產製.md) | Skill | v0.1 | 六引擎簡報工作流：将技术文件、datasheet、Spec、Repo 转为可编辑 .pptx，專为 RD/FAE/AE 設计 | ✅ |
+| 10 | [安装 CLI-Anything](10-安裝-CLI-Anything.md) | Skill | v0.1 | CLI-Hub Meta-Skill：50+ 软体的 Agent-native CLI harness 發現與安装，支援 cli-hub 套件管理器（HKUDS/CLI-Anything, ⭐44.8K） | ✅ |
+
 
 ---
 

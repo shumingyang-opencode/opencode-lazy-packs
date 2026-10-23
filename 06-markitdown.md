@@ -1,4 +1,4 @@
-﻿# OpenCode 懶人包 #12：MarkItDown 文件轉換技能
+﻿# OpenCode 懶人包 #06：MarkItDown 文件轉換技能
 
 > 版本：v0.3
 > 更新日期：2026-07-02

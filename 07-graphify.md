@@ -1,4 +1,4 @@
-﻿# OpenCode 懶人包 #13：Graphify 知識圖譜技能
+﻿# OpenCode 懶人包 #07：Graphify 知識圖譜技能
 
 > 版本：v0.1
 > 更新日期：2026-06-21

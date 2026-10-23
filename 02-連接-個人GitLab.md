@@ -1,4 +1,4 @@
-# OpenCode 懶人包 #05：連接個人 GitLab
+# OpenCode 懶人包 #02：連接個人 GitLab
 
 > 版本：v0.4
 > 更新日期：2026-07-22

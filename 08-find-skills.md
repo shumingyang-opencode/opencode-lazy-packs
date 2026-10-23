@@ -1,4 +1,4 @@
-﻿# OpenCode 懶人包 #17：Find Skills — 技能搜尋與安裝
+﻿# OpenCode 懶人包 #08：Find Skills — 技能搜尋與安裝
 
 > 版本：v0.1
 > 更新日期：2026-06-21

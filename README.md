@@ -184,36 +184,16 @@ See the template's "Operation Rules" and "Security Rules" for details.
 | # | Name | Type | Version | Description | Support |
 |---|------|------|---------|-------------|---------|
 | 00 | [Environment Setup](00-環境建置.md) | CLI | v0.3 | OpenCode + Node.js + uv basic env setup | ✅ |
-| ~~01~~ | ~~Connect NotebookLM~~ | ~~MCP~~ | ~~v0.2~~ | ~~NotebookLM MCP - AI presentations, audio, reports~~ | ~~Removed~~ |
-| 02 | [Connect GitHub](02-連接-GitHub.md) | MCP | v0.4 | GitHub CLI auth + repo commit/push verification | ✅ |
-| 03 | [Connect Company SVN](03-連接-公司SVN.md) | MCP | v0.2 | <COMPANY_NAME> internal SVN server setup | ✅ |
-| 04 | [Connect Company GitLab](04-連接-公司GitLab.md) | MCP | v0.2 | Connect via HTTPS + PAT to internal GitLab | ✅ |
-| 05 | [Connect Personal GitLab](05-連接-個人GitLab.md) | MCP | v0.4 | Connect via HTTPS + PAT to GitLab.com | ✅ |
-| 06 | [Connect Obsidian](06-建立第二大腦-Obsidian.md) | MCP | v0.3 | Obsidian MCP Vault - notes, search, management | ✅ |
-| 07 | [Second Brain Setup Guide](07-第二大腦設定指南.md) | Tutorial | v0.2 | Obsidian 3-layer dir structure + templates | — |
-| ~~08~~ | ~~Connect Firebase~~ | ~~MCP~~ | ~~v0.1~~ | ~~Firebase MCP - project management, database, deploy~~ | ~~Removed~~ |
-| 09 | [Install Browser Control](09-安裝瀏覽器控制.md) | MCP | v0.3 | Playwright MCP + macOS desktop UI automation | ✅ |
-| 10 | [Start/Shutdown/Init Skills](10-開工收工初始化技能.md) | Skill | v0.3 | 3 global skills + weekly-report extension: startup (multi-session), shutdown (structured log), project-init, weekly-report | ✅ |
-| ~~11~~ | ~~Draw Skill~~ | ~~Skill~~ | ~~v0.3~~ | ~~draw skill: OpenAI gpt-image-2 image generation~~ | ~~Removed~~ |
-| 12 | [MarkItDown Document Convert](12-markitdown.md) | Skill | v0.3 | Auto-convert PDF/Office/CSV/JSON/Image/Audio to MD | ✅ |
-| 13 | [Graphify Knowledge Graph](13-graphify.md) | Skill | v0.1 | Code knowledge graph engine - NL queries replace grep | ✅ |
-| 14 | [Awesome DESIGN.md Brand Design](14-awesome-design-md.md) | Skill | v0.1 | One-click apply 73 real brand DESIGN.md files | ✅ |
-| 15 | [UI/UX Pro Max Design Intelligence](15-ui-ux-pro-max.md) | Skill | v0.1 | 67 styles + 161 rules + 57 fonts + 99 UX guides | ✅ |
-| 16 | [Superpowers Full AI SDLC](16-superpowers.md) | Skill | v6.0.3 | 14 skills: brainstorm→plan→TDD→review→merge (1.9M+) | ✅ |
-| 17 | [Find Skills](17-find-skills.md) | Skill | v0.1 | Search & install from 5000+ open skills | ✅ |
-| 18 | [Frontend Design](18-frontend-design.md) | Skill | v0.1 | By Anthropic (572K installs) - non-template UI design | ✅ |
-| 19 | [Install Feishu/Lark](19-安裝-飛書Lark.md) | Skill | v0.1 | Feishu docs/messages/groups/calendar/Base/OA | ✅ |
-| 20 | [Install JIRA & Confluence](20-公司-jira-confluence.md) | MCP | v0.3 | mcp-atlassian: Issue & page search/management | ✅ |
-| 21 | [Install Trac](21-公司-trac.md) | MCP | v0.2 | Trac ticket & wiki management, full-text search | ✅ |
-| 23 | [Feature Planning Skill](23-功能規劃技能.md) | Skill | v0.1 | 10-step planning + init_plan.py | ✅ |
-| 24 | [SKILL.md Creation Tutorial](24-SKILL.md-建立教學.md) | Tutorial | v0.1 | Interactive guide: create your first OpenCode skill | — |
-| 25 | [AGENTS.md Creation Tutorial](25-AGENTS.md-建立教學.md) | Tutorial | v0.1 | Interactive guide: customize project AGENTS.md | — |
-| 26 | [MCP Setup Tutorial](26-MCP-設定教學.md) | Tutorial | v0.1 | Interactive guide: MCP concepts, modes, security | — |
-| 27 | [Presentation Generator](27-通用簡報產製.md) | Skill | v0.1 | 6-engine workflow: docs/repo/spec → editable .pptx | ✅ |
-| 28 | [Install CLI-Anything](28-安裝-CLI-Anything.md) | Skill | v0.1 | 50+ agent-native CLI harnesses, cli-hub package mgr | ✅ |
-| 30 | [TRAE ↔ OpenCode Bridge](30-TRAE-OpenCode-雙向驅動.md) | Skill | v0.2 | Bidirectional CLI Bridge — auto-installs trae-agent or opencode-ai based on your platform | ✅ |
-
----
+| 01 | [Connect GitHub](01-連接-GitHub.md) | MCP | v0.4 | GitHub CLI auth + repo commit/push verification | ✅ |
+| 02 | [Connect Personal GitLab](02-連接-個人GitLab.md) | MCP | v0.4 | Connect via HTTPS + PAT to GitLab.com | ✅ |
+| 03 | [Connect Obsidian](03-建立第二大腦-Obsidian.md) | MCP | v0.3 | Obsidian MCP Vault - notes, search, management | ✅ |
+| 04 | [Install Browser Control](04-安裝瀏覽器控制.md) | MCP | v0.3 | Playwright MCP + macOS desktop UI automation | ✅ |
+| 05 | [Start/Shutdown/Init Skills](05-開工收工初始化技能.md) | Skill | v0.3 | 3 global skills + weekly-report extension: startup, shutdown, project-init, weekly-report | ✅ |
+| 06 | [MarkItDown Document Convert](06-markitdown.md) | Skill | v0.3 | Auto-convert PDF/Office/CSV/JSON/Image/Audio to MD | ✅ |
+| 07 | [Graphify Knowledge Graph](07-graphify.md) | Skill | v0.1 | Code knowledge graph engine - NL queries replace grep | ✅ |
+| 08 | [Find Skills](08-find-skills.md) | Skill | v0.1 | Search & install from 5000+ open skills | ✅ |
+| 09 | [Presentation Generator](09-通用簡報產製.md) | Skill | v0.1 | 6-engine workflow: docs/repo/spec → editable .pptx | ✅ |
+| 10 | [Install CLI-Anything](10-安裝-CLI-Anything.md) | Skill | v0.1 | 50+ agent-native CLI harnesses, cli-hub package mgr | ✅ |
 
 ---
 ## Feedback
