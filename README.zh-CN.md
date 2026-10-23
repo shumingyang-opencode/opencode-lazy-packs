@@ -52,7 +52,6 @@ npx skills add https://github.com/shumingyang-opencode/opencode-lazy-packs --ski
 | `14-awesome-design-md` | 品牌设计套用技能 |
 | `15-ui-ux-pro-max` | UI/UX Pro Max 设计智能 |
 | `16-superpowers` | Superpowers — 完整的 AI 软件开发方法论（14 skills, 1.9M 安装） |
-| `17-find-skills` | Find Skills — 技能搜索与安装 |
 | `18-frontend-design` | Frontend Design — 辨识度优先的前端设计 |
 | `19-feishu-lark` | 安装飞书 Lark — 文档/消息/群组/日历/多维表格 |
 | `20-jira-confluence` | 安装公司 JIRA & Confluence — Issue 管理、页面搜索、操作自动化 |
@@ -168,8 +167,7 @@ PAT / Token **不要**写入此文件。它们应存放于对应平台的配置�
 | 05 | [开工/收工/初始化技能](05-開工收工初始化技能.md) | Skill | v0.1 | 全域三技能：startup（开工自动同步）、shutdown（收工备份）、project-init（新项目初始化） | ✅ |
 | 06 | [MarkItDown 文件转换](06-markitdown.md) | Skill | v0.3 | 各种文件自动转 Markdown：PDF/Office/CSV/JSON/图片/音频/Email/EPUB | ✅ |
 | 07 | [Graphify 知识图谱](07-graphify.md) | Skill | v0.1 | 程式码知识图谱引擎：自然语言查询取代 grep，跨档案结构分析 | ✅ |
-| 08 | [Find Skills 技能搜尋與安装](08-find-skills.md) | Skill | v0.1 | 从 5000+ 开放技能库中搜尋并一键安装 | ✅ |
-| 09 | [通用簡報產製](09-通用簡報產製.md) | Skill | v0.1 | 六引擎簡報工作流：将技术文件、datasheet、Spec、Repo 转为可编辑 .pptx，專为 RD/FAE/AE 設计 | ✅ |
+| 08 | [通用簡報產製](08-通用簡報產製.md) | Skill | v0.1 | 六引擎簡報工作流：将技术文件、datasheet、Spec、Repo 转为可编辑 .pptx，專为 RD/FAE/AE 設计 | ✅ |
 
 
 ---

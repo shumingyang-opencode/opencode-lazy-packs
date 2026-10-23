@@ -74,7 +74,6 @@ Available skill names:
 | `14-awesome-design-md` | Brand Design (Awesome DESIGN.md) |
 | `15-ui-ux-pro-max` | UI/UX Pro Max Design Intelligence |
 | `16-superpowers` | Superpowers — Full AI SDLC (14 skills, 1.9M installs) |
-| `17-find-skills` | Find Skills — Search & Install 5000+ Skills |
 | `18-frontend-design` | Frontend Design — Distinctive UI by Anthropic |
 | `19-feishu-lark` | Feishu/Lark Integration — Docs/Messages/Calendar/Base |
 | `20-jira-confluence` | Company JIRA & Confluence — Issue & Page Management |
@@ -190,8 +189,7 @@ See the template's "Operation Rules" and "Security Rules" for details.
 | 05 | [Start/Shutdown/Init Skills](05-開工收工初始化技能.md) | Skill | v0.3 | 3 global skills + weekly-report extension: startup, shutdown, project-init, weekly-report | ✅ |
 | 06 | [MarkItDown Document Convert](06-markitdown.md) | Skill | v0.3 | Auto-convert PDF/Office/CSV/JSON/Image/Audio to MD | ✅ |
 | 07 | [Graphify Knowledge Graph](07-graphify.md) | Skill | v0.1 | Code knowledge graph engine - NL queries replace grep | ✅ |
-| 08 | [Find Skills](08-find-skills.md) | Skill | v0.1 | Search & install from 5000+ open skills | ✅ |
-| 09 | [Presentation Generator](09-通用簡報產製.md) | Skill | v0.1 | 6-engine workflow: docs/repo/spec → editable .pptx | ✅ |
+| 08 | [Presentation Generator](08-通用簡報產製.md) | Skill | v0.1 | 6-engine workflow: docs/repo/spec → editable .pptx | ✅ |
 
 ---
 ## Feedback

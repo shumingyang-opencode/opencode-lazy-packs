@@ -20,7 +20,7 @@ description: Agents 懶人包全集 — 環境建置、MCP 串接、技能安裝
 
 ## 步驟二：認識可用懶人包
 
-這個 repo 的 `skills/` 目錄下有 10 個技能。全部支援 `npx skills add` 一鍵安裝（OpenCode 用戶）。
+這個 repo 的 `skills/` 目錄下有 8 個技能。全部支援 `npx skills add` 一鍵安裝（OpenCode 用戶）。
 
 | 編號 | Skill 名稱 | 說明 | 前置需求 |
 |------|-----------|------|---------|
@@ -32,8 +32,7 @@ description: Agents 懶人包全集 — 環境建置、MCP 串接、技能安裝
 | 05 | `05-workflow-skills` | 安裝開工/收工/初始化技能 | Obsidian |
 | 06 | `06-markitdown` | 安裝 MarkItDown 文件轉換技能 | #00 |
 | 07 | `07-graphify` | 安裝 Graphify 知識圖譜技能 | #00 + uv |
-| 08 | `08-find-skills` | 安裝 Find Skills — 從 5000+ 開放技能中搜尋並安裝 | 無 |
-| 09 | `09-gen-pptx` | 通用簡報產製 — 六引擎工作流：技術文件/Repo→可編輯 .pptx，專為 RD/FAE/AE 設計 | #00 |
+| 08 | `08-gen-pptx` | 通用簡報產製 — 六引擎工作流：技術文件/Repo→可編輯 .pptx，專為 RD/FAE/AE 設計 | #00 |
 
 ## 步驟三：讓使用者選擇
 
