@@ -185,7 +185,7 @@ See the template's "Operation Rules" and "Security Rules" for details.
 | 01 | [Connect GitHub](01-連接-GitHub.md) | MCP | v0.4 | GitHub CLI auth + repo commit/push verification | ✅ |
 | 02 | [Connect Personal GitLab](02-連接-個人GitLab.md) | MCP | v0.4 | Connect via HTTPS + PAT to GitLab.com | ✅ |
 | 03 | [Connect Obsidian](03-建立第二大腦-Obsidian.md) | MCP | v0.3 | Obsidian MCP Vault - notes, search, management | ✅ |
-| 04 | [Install Browser Control](04-安裝瀏覽器控制.md) | MCP | v0.3 | Playwright MCP + macOS desktop UI automation | ✅ |
+| 04 | [Install Browser Control](04-安裝瀏覽器控制.md) | MCP | v0.4 | ego-lite browser + macOS desktop UI automation | ✅ |
 | 05 | [Start/Shutdown/Init Skills](05-開工收工初始化技能.md) | Skill | v0.3 | 3 global skills + weekly-report extension: startup, shutdown, project-init, weekly-report | ✅ |
 | 06 | [MarkItDown Document Convert](06-markitdown.md) | Skill | v0.3 | Auto-convert PDF/Office/CSV/JSON/Image/Audio to MD | ✅ |
 | 07 | [Graphify Knowledge Graph](07-graphify.md) | Skill | v0.1 | Code knowledge graph engine - NL queries replace grep | ✅ |

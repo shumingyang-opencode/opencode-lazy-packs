@@ -163,7 +163,7 @@ PAT / Token **不要**寫入此檔案。它們應存放於對應平台的設定�
 | 01 | [連接 GitHub](01-連接-GitHub.md) | MCP | v0.4 | GitHub CLI 登入認證 + repo commit/push 驗證 | ✅ |
 | 02 | [連接個人 GitLab](02-連接-個人GitLab.md) | MCP | v0.4 | 透過 HTTPS + PAT 連接 GitLab.com 帳號 | ✅ |
 | 03 | [建立第二大腦 Obsidian](03-建立第二大腦-Obsidian.md) | MCP | v0.3 | Obsidian MCP Vault 連接：筆記建立、搜尋、管理 | ✅ |
-| 04 | [安裝瀏覽器控制](04-安裝瀏覽器控制.md) | MCP | v0.3 | Playwright MCP + macOS 桌面 UI 自動化操作 | ✅ |
+| 04 | [安裝瀏覽器控制](04-安裝瀏覽器控制.md) | MCP | v0.4 | ego-lite 瀏覽器 + macOS 桌面 UI 自動化 | ✅ |
 | 05 | [開工/收工/初始化技能](05-開工收工初始化技能.md) | Skill | v0.1 | 全域三技能：startup（開工自動同步）、shutdown（收工備份）、project-init（新專案初始化） | ✅ |
 | 06 | [MarkItDown 文件轉換](06-markitdown.md) | Skill | v0.3 | 各種文件自動轉 Markdown：PDF/Office/CSV/JSON/圖片/音訊/Email/EPUB | ✅ |
 | 07 | [Graphify 知識圖譜](07-graphify.md) | Skill | v0.1 | 程式碼知識圖譜引擎：自然語言查詢取代 grep，跨檔案結構分析 | ✅ |
