@@ -21,7 +21,7 @@ mkdir -p ~/.agents/skills/project-init
 - **shutdown**：說「收工」→ Git commit/push + 補結構化 session 區塊（討論/問題/解決/下一步）至 Obsidian + 待辦事項彙整分析
 - **project-init**：說「初始化專案」→ AGENTS.md + Git + GitHub + Obsidian → 可選接續功能規劃
 
-（完整內容見 [懶人包 #10：開工收工初始化技能](../../10-開工收工初始化技能.md) 步驟二至步驟四）
+（完整內容見 [懶人包 #05：開工收工初始化技能](../../05-開工收工初始化技能.md) 步驟二至步驟四）
 
 > **⚠️ 已知坑：** `project-init` 技能產生 `opencode.json` 時，key 必須用 `"command"` 而非 `"customCommands"`（OpenCode IDE 不支援後者）。詳見 `SKILL.md` 中的 JSON 範本與下方修正後的內容。**若你已手動建立此技能，請確認該 key 是 `command`。**
 
