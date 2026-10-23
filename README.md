@@ -84,7 +84,6 @@ Available skill names:
 | `25-agents-reference` | Interactive AGENTS.md Creation Tutorial |
 | `26-mcp-reference` | Interactive MCP Setup Tutorial |
 | `27-gen-pptx` | Presentation Generator — Spec/Repo → Editable .pptx |
-| `28-cli-anything` | CLI-Anything — 50+ Agent-native CLI Harnesses (Blender, GIMP, Obsidian, etc.) |
 | `30-trae-opencode` | TRAE ↔ OpenCode Bridge — Bidirectional CLI integration (bytedance/trae-agent) |
 
 Once installed, just say the corresponding keyword to OpenCode.
@@ -193,7 +192,6 @@ See the template's "Operation Rules" and "Security Rules" for details.
 | 07 | [Graphify Knowledge Graph](07-graphify.md) | Skill | v0.1 | Code knowledge graph engine - NL queries replace grep | ✅ |
 | 08 | [Find Skills](08-find-skills.md) | Skill | v0.1 | Search & install from 5000+ open skills | ✅ |
 | 09 | [Presentation Generator](09-通用簡報產製.md) | Skill | v0.1 | 6-engine workflow: docs/repo/spec → editable .pptx | ✅ |
-| 10 | [Install CLI-Anything](10-安裝-CLI-Anything.md) | Skill | v0.1 | 50+ agent-native CLI harnesses, cli-hub package mgr | ✅ |
 
 ---
 ## Feedback

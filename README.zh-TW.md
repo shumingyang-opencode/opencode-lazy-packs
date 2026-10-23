@@ -62,7 +62,6 @@ npx skills add https://github.com/shumingyang-opencode/opencode-lazy-packs --ski
 | `25-agents-reference` | 互動式 AGENTS.md 建立教學 — 依專案客製專案規範 |
 | `26-mcp-reference` | 互動式 MCP 設定教學 — 連線模式、安全性、自訂 Server |
 | `27-gen-pptx` | 通用簡報產製技能 — 六引擎工作流：技術文件/Repo/Spec→可編輯 .pptx |
-| `28-cli-anything` | CLI-Anything — 50+ 軟體的 Agent-native CLI harness 發現與安裝（Blender、GIMP、Obsidian 等） |
 | `30-trae-opencode` | TRAE & OpenCode 雙向驅動 — OpenCode↔TRAE 雙向 CLI 驅動（bytedance/trae-agent） |
 
 安裝後對 OpenCode 說該技能對應的關鍵字即可啟動。
@@ -171,7 +170,6 @@ PAT / Token **不要**寫入此檔案。它們應存放於對應平台的設定�
 | 07 | [Graphify 知識圖譜](07-graphify.md) | Skill | v0.1 | 程式碼知識圖譜引擎：自然語言查詢取代 grep，跨檔案結構分析 | ✅ |
 | 08 | [Find Skills 技能搜尋與安裝](08-find-skills.md) | Skill | v0.1 | 從 5000+ 開放技能庫中搜尋並一鍵安裝 | ✅ |
 | 09 | [通用簡報產製](09-通用簡報產製.md) | Skill | v0.1 | 六引擎簡報工作流：將技術文件、datasheet、Spec、Repo 轉為可編輯 .pptx，專為 RD/FAE/AE 設計 | ✅ |
-| 10 | [安裝 CLI-Anything](10-安裝-CLI-Anything.md) | Skill | v0.1 | CLI-Hub Meta-Skill：50+ 軟體的 Agent-native CLI harness 發現與安裝，支援 cli-hub 套件管理器（HKUDS/CLI-Anything, ⭐44.8K） | ✅ |
 
 
 ---
