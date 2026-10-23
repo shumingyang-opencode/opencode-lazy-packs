@@ -24,6 +24,7 @@
 ## 提醒
 
 - 使用者說「更新 Agents 懶人包」→ 只動本資料夾
+- handoff 技能自訂修改紀錄：`~/.config/opencode/custom-skills/handoff.md`（skills.sh 更新後 re-apply）
 
 ## 雙倉同步流程
 
