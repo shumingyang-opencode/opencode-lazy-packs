@@ -16,10 +16,7 @@ Manage the full lifecycle of a feature planning document set: detect project roo
 
 Before starting, verify the environment:
 
-1. **codebase-memory-mcp** — required for index pre/post-check
-   - Run `codebase-memory-mcp --version` to verify
-   - If missing: tell user to install #22 first
-2. **Python 3** — required for init_plan.py
+1. **Python 3** — required for init_plan.py
    - Run `python3 --version` to verify
 
 ## Workflow
@@ -35,12 +32,10 @@ Before starting, verify the environment:
    - `N` or Enter → use `docs/`
    - `y` → ask user to type directory name
 
-### Step 1: Pre-check — Index + Audit existing analysis docs
+### Step 1: Pre-check — Audit existing analysis docs
 
-1. Run `codebase-memory-mcp index_repository` with `repo_path=project_root`, `mode="full"`, `persistence=true`
-2. Use `get_architecture` + `search_graph` to discover current code structure
-3. Cross-reference against existing analysis docs (e.g., `docs/00_Analysis/`)
-4. If inconsistencies found: **stop** and request user to fix analysis docs first
+1. Review existing analysis docs (e.g., `docs/00_Analysis/`) against the current codebase
+2. If inconsistencies found: **stop** and request user to fix analysis docs first
 
 ### Step 2: Initialize the planning directory
 
@@ -80,12 +75,11 @@ Write each file sequentially. For NA steps, append `_NA` to filename.
 | 09 | 階段規劃 | When: MVP → enhanced milestones |
 | 10 | 使用範例 | Example: complete end-to-end demo |
 
-### Step 4: Post-check — Re-index + Audit analysis docs
+### Step 4: Post-check — Audit analysis docs
 
-1. Run `codebase-memory-mcp index_repository` again (mode=full, persistence=true)
-2. Re-check analysis docs against the final codebase
-3. If new modules or patterns were added that are not documented, request user to update analysis docs
-4. Only consider done when analysis docs reflect the final code
+1. Re-check analysis docs against the final codebase
+2. If new modules or patterns were added that are not documented, request user to update analysis docs
+3. Only consider done when analysis docs reflect the final code
 
 ## References
 

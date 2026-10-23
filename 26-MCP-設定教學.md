@@ -44,8 +44,6 @@ OpenCode 本身只能操作文字與檔案。當你需要它：
 | #10 | obsidian | 讀寫 Obsidian vault |
 | #20 | mcp-atlassian | JIRA + Confluence |
 | #21 | trac-mcp-server | Trac Ticket/Wiki |
-| #22 | codebase-memory-mcp | 程式碼知識圖譜 |
-
 > 你想連接什麼類型的服務？
 > 1. 瀏覽器控制（像 Playwright）
 > 2. 資料庫（PostgreSQL、MySQL 等）

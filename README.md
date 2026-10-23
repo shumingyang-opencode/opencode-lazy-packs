@@ -79,7 +79,6 @@ Available skill names:
 | `19-feishu-lark` | Feishu/Lark Integration — Docs/Messages/Calendar/Base |
 | `20-jira-confluence` | Company JIRA & Confluence — Issue & Page Management |
 | `21-trac` | Company Trac — Ticket & Wiki Management |
-| `22-codebase-memory-mcp` | Codebase Memory MCP — Code Knowledge Graph (158 langs, Cypher) |
 | `23-project-plan-feature` | Feature Planning — 10-Step Plan + init_plan.py |
 | `24-skill-reference` | Interactive SKILL.md Creation Tutorial |
 | `25-agents-reference` | Interactive AGENTS.md Creation Tutorial |
@@ -206,8 +205,7 @@ See the template's "Operation Rules" and "Security Rules" for details.
 | 19 | [Install Feishu/Lark](19-安裝-飛書Lark.md) | Skill | v0.1 | Feishu docs/messages/groups/calendar/Base/OA | ✅ |
 | 20 | [Install JIRA & Confluence](20-公司-jira-confluence.md) | MCP | v0.3 | mcp-atlassian: Issue & page search/management | ✅ |
 | 21 | [Install Trac](21-公司-trac.md) | MCP | v0.2 | Trac ticket & wiki management, full-text search | ✅ |
-| 22 | [Codebase Memory MCP](22-codebase-memory-mcp.md) | MCP | v0.1 | Code knowledge graph: 158 langs, Hybrid LSP, Cypher | ✅ |
-| 23 | [Feature Planning Skill](23-功能規劃技能.md) | Skill | v0.1 | 10-step planning + init_plan.py + codebase check | ✅ |
+| 23 | [Feature Planning Skill](23-功能規劃技能.md) | Skill | v0.1 | 10-step planning + init_plan.py | ✅ |
 | 24 | [SKILL.md Creation Tutorial](24-SKILL.md-建立教學.md) | Tutorial | v0.1 | Interactive guide: create your first OpenCode skill | — |
 | 25 | [AGENTS.md Creation Tutorial](25-AGENTS.md-建立教學.md) | Tutorial | v0.1 | Interactive guide: customize project AGENTS.md | — |
 | 26 | [MCP Setup Tutorial](26-MCP-設定教學.md) | Tutorial | v0.1 | Interactive guide: MCP concepts, modes, security | — |

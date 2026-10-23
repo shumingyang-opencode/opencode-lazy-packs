@@ -57,7 +57,6 @@ npx skills add https://github.com/shumingyang-opencode/opencode-lazy-packs --ski
 | `19-feishu-lark` | 安装飞书 Lark — 文档/消息/群组/日历/多维表格 |
 | `20-jira-confluence` | 安装公司 JIRA & Confluence — Issue 管理、页面搜索、操作自动化 |
 | `21-trac` | 安装公司 Trac — Ticket 管理、Wiki 查阅、搜索自动化 |
-| `22-codebase-memory-mcp` | 安装 Codebase Memory MCP — 代码知识图谱（158 语言、Hybrid LSP、呼叫图分析、Cypher 查询） |
 | `23-project-plan-feature` | 功能规划技能 — 10 步骤规划 + init_plan.py 自动建文件 |
 | `24-skill-reference` | 互动式 SKILL.md 建立教学 — 引导从零建立技能 |
 | `25-agents-reference` | 互动式 AGENTS.md 建立教学 — 依项目客制项目规范 |
@@ -184,8 +183,7 @@ PAT / Token **不要**写入此文件。它们应存放于对应平台的配置�
 | 19 | [安装飞书 Lark](19-安裝-飛書Lark.md) | Skill | v0.1 | 飞书文档/消息/群组/日历/多维表格/OA 审批整合 | ✅ |
 | 20 | [安装公司 JIRA & Confluence](20-公司-jira-confluence.md) | MCP | v0.3 | mcp-atlassian：JIRA Issue 管理 + Confluence 页面搜索与操作 | ✅ |
 | 21 | [安装公司 Trac](21-公司-trac.md) | MCP | v0.2 | Trac Ticket 管理 + Wiki 查阅 + 全文搜索自动化 | ✅ |
-| 22 | [Codebase Memory MCP](22-codebase-memory-mcp.md) | MCP | v0.1 | 代码知识图谱：158 语言、Hybrid LSP 型别解析、14 MCP 工具、零依赖 | ✅ |
-| 23 | [功能规划技能](23-功能規劃技能.md) | Skill | v0.1 | 10 步骤功能规划流程 + init_plan.py 自动建文件 + codebase-memory 索引检查 | ✅ |
+| 23 | [功能规划技能](23-功能規劃技能.md) | Skill | v0.1 | 10 步骤功能规划流程 + init_plan.py 自动建文件 | ✅ |
 | 24 | [SKILL.md 建立教学](24-SKILL.md-建立教學.md) | 教学 | v0.1 | 互动式教学：从 frontmatter、目录结构到发布，引导建立第一个 OpenCode 技能 | — |
 | 25 | [AGENTS.md 建立教学](25-AGENTS.md-建立教學.md) | 教学 | v0.1 | 互动式教学：依项目客制 AGENTS.md，涵盖编码惯例、测试规范、Git 流程 | — |
 | 26 | [MCP 设定教学](26-MCP-設定教學.md) | 教学 | v0.1 | 互动式教学：MCP 概念、三种联机模式、安全性原则、自订 MCP Server | — |

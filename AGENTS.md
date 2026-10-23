@@ -83,7 +83,6 @@
 | gitlab | GitLab | GitLab API 雙實例 | 工作機 |
 | mcp-atlassian | Atlassian | JIRA + Confluence | 工作機 |
 | trac | Trac | Ticket/Wiki 管理 | 工作機 |
-| codebase-memory-mcp | 程式碼 | 知識圖譜引擎 | 所有機器 |
 
 ## 全局 MCP 列表（Trae IDE）
 
@@ -98,6 +97,5 @@
 | gitlab | GitLab | GitLab API 雙實例 | 工作機 |
 | mcp-atlassian | Atlassian | JIRA + Confluence | 工作機 |
 | trac | Trac | Ticket/Wiki 管理 | 工作機 |
-| codebase-memory-mcp | 程式碼 | 知識圖譜引擎 | 所有機器 |
 
 
